@@ -38,18 +38,12 @@ namespace DataAccessLayer
                 command.Parameters.Add(new SqlParameter("@IDProvincia", EntidadPersona.IDProvincia) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@IDRegion", EntidadPersona.IDRegion) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@IDSector", EntidadPersona.IDSector) { SqlDbType = SqlDbType.Int });
-                command.Parameters.Add(new SqlParameter("@CodigoPostal", EntidadPersona.IDTelefono) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@TelefonoCasa", EntidadPersona.TelefonoCasa) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@TelefonoOficina", EntidadPersona.TelefonoOficina) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@TelOtro", EntidadPersona.TelOtro) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@TelMovil", EntidadPersona.TelMovil) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@NombreContacto", EntidadPersona.NombreContacto) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@TeleContacto", EntidadPersona.TeleContacto) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@Direccion1", EntidadPersona.Direccion1) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@Direccion2", EntidadPersona.Direccion2) { SqlDbType = SqlDbType.Decimal });
                 command.Parameters.Add(new SqlParameter("@Email", EntidadPersona.Email) { SqlDbType = SqlDbType.DateTime });
-                command.Parameters.Add(new SqlParameter("@Notas", EntidadPersona.Notas) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@Estado", EntidadPersona.Estado) { SqlDbType = SqlDbType.Bit });
+                command.Parameters.Add(new SqlParameter("@Notas", EntidadPersona.Observaciones) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@Peso", EntidadPersona.Peso) { SqlDbType = SqlDbType.Decimal });
+                command.Parameters.Add(new SqlParameter("@Altura", EntidadPersona.Altura) { SqlDbType = SqlDbType.Decimal });
+                command.Parameters.Add(new SqlParameter("@Activo", EntidadPersona.Activo) { SqlDbType = SqlDbType.Bit });
+                command.Parameters.Add(new SqlParameter("@EnvioMail", EntidadPersona.EnvioEmail) { SqlDbType = SqlDbType.Bit });
                 
                 command.ExecuteNonQuery();
 
