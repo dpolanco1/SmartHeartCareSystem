@@ -37,8 +37,8 @@ namespace aPresentationLayer
 
         private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
-            
+
+          
         }
 
     }

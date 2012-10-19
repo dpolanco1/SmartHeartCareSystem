@@ -46,7 +46,7 @@ namespace aPresentationLayer
 
         private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            BussinesLogicLayer.Bl_Controles.LimipiarFormulario(this);
+            BussinesLogicLayer.Bl_ValidarControles.LimipiarFormulario(this);
         }
     }
 }
