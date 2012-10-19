@@ -39,7 +39,7 @@ namespace DataAccessLayer
                 command.Parameters.Add(new SqlParameter("@IDRegion", EntidadPersona.IDRegion) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@IDSector", EntidadPersona.IDSector) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@Email", EntidadPersona.Email) { SqlDbType = SqlDbType.DateTime });
-                command.Parameters.Add(new SqlParameter("@Notas", EntidadPersona.Observaciones) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@Observaciones", EntidadPersona.Observaciones) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Peso", EntidadPersona.Peso) { SqlDbType = SqlDbType.Decimal });
                 command.Parameters.Add(new SqlParameter("@Altura", EntidadPersona.Altura) { SqlDbType = SqlDbType.Decimal });
                 command.Parameters.Add(new SqlParameter("@Activo", EntidadPersona.Activo) { SqlDbType = SqlDbType.Bit });

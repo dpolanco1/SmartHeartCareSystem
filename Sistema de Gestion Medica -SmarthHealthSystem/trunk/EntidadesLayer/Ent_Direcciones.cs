@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EntidadesLayer
 {
-    class Ent_Direcciones
+    public class Ent_Direcciones
     {
         public int IDPersona { get; set; }
         public string TipoDireccion { get; set; }

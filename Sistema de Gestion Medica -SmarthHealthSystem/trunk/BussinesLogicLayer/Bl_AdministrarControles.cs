@@ -25,24 +25,27 @@ namespace BussinesLogicLayer
         }
 
         // Para Habilitar los TextBox que esten dentro del control
-        public void HabilitarText(Control control)
+        public static void HabilitarText(Control control)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.HabilitarText(contHijo);
+                if (contHijo.HasChildren) HabilitarText(contHijo);
                 if (contHijo is TextBox)
                 {
+                    contHijo.Enabled =  true;
+                }else if (contHijo is ComboBox){
+
                     contHijo.Enabled = true;
                 }
             }
         }
 
         // Para Deshabilitar los TextBox que esten dentro del control
-        public void DeshabilitarText(Control control)
+        public static void DeshabilitarText(Control control)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.DeshabilitarText(contHijo);
+                if (contHijo.HasChildren) DeshabilitarText(contHijo);
                 if (contHijo is TextBox)
                 {
                     contHijo.Enabled = false;
@@ -51,11 +54,11 @@ namespace BussinesLogicLayer
         }
 
         // Para Habilitar los DatagridView que esten dentro del Control
-        public void HabilitarDGV(Control control)
+        public static void HabilitarDGV(Control control)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.HabilitarDGV(contHijo);
+                if (contHijo.HasChildren) HabilitarDGV(contHijo);
                 if (contHijo is DataGridView)
                 {
                     contHijo.Enabled = true;
@@ -64,11 +67,11 @@ namespace BussinesLogicLayer
         }
 
         // Para deshabilitar los DatagridView que esten dentro del Control
-        public void DeshabilitarDGV(Control control)
+        public static void DeshabilitarDGV(Control control)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.DeshabilitarDGV(contHijo);
+                if (contHijo.HasChildren) DeshabilitarDGV(contHijo);
                 if (contHijo is DataGridView)
                 {
                     contHijo.Enabled = false;
@@ -77,11 +80,11 @@ namespace BussinesLogicLayer
         }
 
         // Para limpiar las celdas de un DatagridView que esten dentro del Control
-        public void VaciarDGV(Control control)
+        public static void VaciarDGV(Control control)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.VaciarDGV(contHijo);
+                if (contHijo.HasChildren) VaciarDGV(contHijo);
                 if (contHijo is DataGridView)
                 {
                     DataGridView DGV = new DataGridView();
@@ -93,11 +96,11 @@ namespace BussinesLogicLayer
         }
 
         // Para Pasar Color a los TextBox Dentro del Control
-        public void ColorText(Control control, Color color)
+        public static void ColorText(Control control, Color color)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.ColorText(contHijo, color);
+                if (contHijo.HasChildren) ColorText(contHijo, color);
                 if (contHijo is TextBox)
                 {
                     contHijo.BackColor = color;
@@ -106,11 +109,11 @@ namespace BussinesLogicLayer
         }
 
         // Para limpiar Los MaskTextox
-        public void VaciarMaskText(Control control)
+        public static void VaciarMaskText(Control control)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.VaciarMaskText(contHijo);
+                if (contHijo.HasChildren) VaciarMaskText(contHijo);
                 if (contHijo is MaskedTextBox)
                 {
                     contHijo.Text = String.Empty;
@@ -120,11 +123,11 @@ namespace BussinesLogicLayer
         }
 
         // Para Pasar Color a los MaskText Dentro del control
-        public void ColorMaskText(Control control, Color color)
+        public static void ColorMaskText(Control control, Color color)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.ColorMaskText(contHijo, color);
+                if (contHijo.HasChildren) ColorMaskText(contHijo, color);
                 if (contHijo is MaskedTextBox)
                 {
                     contHijo.BackColor = color;
@@ -134,11 +137,11 @@ namespace BussinesLogicLayer
         }
 
         // Para Habilitar  los MaskText Dentro del control
-        public void HabilitarMaskText(Control control)
+        public static void HabilitarMaskText(Control control)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.HabilitarMaskText(contHijo);
+                if (contHijo.HasChildren) HabilitarMaskText(contHijo);
                 if (contHijo is MaskedTextBox)
                 {
                     contHijo.Enabled = true;
@@ -148,11 +151,11 @@ namespace BussinesLogicLayer
         }
 
         // Para Deshabilitar  los MaskText Dentro del control
-        public void DeshabilitarMaskText(Control control)
+        public static void DeshabilitarMaskText(Control control)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.DeshabilitarMaskText(contHijo);
+                if (contHijo.HasChildren) DeshabilitarMaskText(contHijo);
                 if (contHijo is MaskedTextBox)
                 {
                     contHijo.Enabled = false;
@@ -161,11 +164,11 @@ namespace BussinesLogicLayer
 
         }
 
-        public void HabilitarTodo(Control control)
+        public static void HabilitarTodo(Control control)
         {
             foreach (Control contHijo in control.Controls)
             {
-                if (contHijo.HasChildren) this.HabilitarText(contHijo);
+                if (contHijo.HasChildren) HabilitarText(contHijo);
                 contHijo.Enabled = true;
             }
 

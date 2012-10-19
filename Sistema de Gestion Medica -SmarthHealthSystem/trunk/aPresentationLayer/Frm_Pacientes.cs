@@ -38,7 +38,16 @@ namespace aPresentationLayer
         private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Bl_AdministrarControles.VaciarText(frm_pacientes);
-          
+            Bl_AdministrarControles.HabilitarText(frm_pacientes);
+            txtIDPaciente.Focus();
+         
+        }
+
+        private void btnGuardar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Bl_AdministrarControles.VaciarText(frm_pacientes);
+            Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+            
         }
 
     }
