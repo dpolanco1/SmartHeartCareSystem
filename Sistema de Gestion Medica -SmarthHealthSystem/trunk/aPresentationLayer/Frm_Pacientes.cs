@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BussinesLogicLayer;
+
 
 namespace aPresentationLayer
 {
@@ -31,6 +33,12 @@ namespace aPresentationLayer
         public Frm_Pacientes()
         {
             InitializeComponent();
+        }
+
+        private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+            
         }
 
     }

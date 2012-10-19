@@ -199,7 +199,7 @@
             // tbpPrincipalPacientes
             // 
             this.tbpPrincipalPacientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbpPrincipalPacientes.Location = new System.Drawing.Point(0, 65);
+            this.tbpPrincipalPacientes.Location = new System.Drawing.Point(0, 69);
             this.tbpPrincipalPacientes.Name = "tbpPrincipalPacientes";
             this.tbpPrincipalPacientes.SelectedTabPage = this.tabPacientes;
             this.tbpPrincipalPacientes.Size = new System.Drawing.Size(1157, 664);
@@ -1138,6 +1138,7 @@
             this.btnNuevo.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N));
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnNuevo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNuevo_ItemClick);
             // 
             // btnGuardar
             // 
@@ -1219,28 +1220,28 @@
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl1.Size = new System.Drawing.Size(1157, 65);
+            this.barDockControl1.Size = new System.Drawing.Size(1157, 69);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 725);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1157, 25);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 727);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1157, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 660);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 658);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1157, 65);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 660);
+            this.barDockControlRight.Location = new System.Drawing.Point(1157, 69);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 658);
             // 
             // Frm_Pacientes
             // 
