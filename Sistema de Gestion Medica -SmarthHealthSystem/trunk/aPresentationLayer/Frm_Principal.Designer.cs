@@ -248,7 +248,7 @@
             // 
             // navBarControl
             // 
-            this.navBarControl.ActiveGroup = this.grupoActividades;
+            this.navBarControl.ActiveGroup = this.grupoMantenimientos;
             this.navBarControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.grupoMail,
@@ -281,7 +281,6 @@
             // grupoActividades
             // 
             this.grupoActividades.Caption = "Actividades";
-            this.grupoActividades.Expanded = true;
             this.grupoActividades.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.itemHistorialClinico),
             new DevExpress.XtraNavBar.NavBarItemLink(this.itemConsultas),
@@ -364,6 +363,7 @@
             // grupoMantenimientos
             // 
             this.grupoMantenimientos.Caption = "Mantenimientos";
+            this.grupoMantenimientos.Expanded = true;
             this.grupoMantenimientos.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.ItemPacientes),
             new DevExpress.XtraNavBar.NavBarItemLink(this.itemEmpleados)});
@@ -374,6 +374,7 @@
             // 
             this.ItemPacientes.Caption = "Pacientes";
             this.ItemPacientes.Name = "ItemPacientes";
+            this.ItemPacientes.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ItemPacientes_LinkPressed);
             // 
             // itemEmpleados
             // 

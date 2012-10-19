@@ -29,34 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar1 = new DevExpress.XtraBars.Bar();
-            this.bar2 = new DevExpress.XtraBars.Bar();
-            this.btnNuevo = new DevExpress.XtraBars.BarButtonItem();
-            this.btnGuardar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEditar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnCancelar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnImprimir = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEnviar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEliminar = new DevExpress.XtraBars.BarButtonItem();
-            this.bar3 = new DevExpress.XtraBars.Bar();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.tabHistorialClinico = new DevExpress.XtraTab.XtraTabControl();
             this.tabHistorial = new DevExpress.XtraTab.XtraTabPage();
             this.grpAntecedenteFamiliar = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.memoExEdit3 = new DevExpress.XtraEditors.MemoExEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.memoExEdit2 = new DevExpress.XtraEditors.MemoExEdit();
+            this.memoExEdit1 = new DevExpress.XtraEditors.MemoExEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
             this.checkBox38 = new System.Windows.Forms.CheckBox();
-            this.checkBox41 = new System.Windows.Forms.CheckBox();
-            this.checkBox42 = new System.Windows.Forms.CheckBox();
-            this.checkBox43 = new System.Windows.Forms.CheckBox();
-            this.checkBox44 = new System.Windows.Forms.CheckBox();
             this.grpAntecedenteFarmaceuticos = new DevExpress.XtraEditors.GroupControl();
             this.checkBox35 = new System.Windows.Forms.CheckBox();
             this.checkBox34 = new System.Windows.Forms.CheckBox();
@@ -83,7 +67,6 @@
             this.lblDescripPer = new DevExpress.XtraEditors.LabelControl();
             this.checkBox25 = new System.Windows.Forms.CheckBox();
             this.memoDescripcionAntPer = new DevExpress.XtraEditors.MemoEdit();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
             this.checkBox23 = new System.Windows.Forms.CheckBox();
             this.checkBox22 = new System.Windows.Forms.CheckBox();
             this.checkBox21 = new System.Windows.Forms.CheckBox();
@@ -113,76 +96,32 @@
             this.grpDatosGenerales = new DevExpress.XtraEditors.GroupControl();
             this.txtRemitidopor = new DevExpress.XtraEditors.TextEdit();
             this.lblRemitente = new DevExpress.XtraEditors.LabelControl();
-            this.lblFechaIngreso = new DevExpress.XtraEditors.LabelControl();
-            this.dateFechaIngreso = new DevExpress.XtraEditors.DateEdit();
             this.searchLookUpEdit1 = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblBuscar = new DevExpress.XtraEditors.LabelControl();
             this.lblEdad = new DevExpress.XtraEditors.LabelControl();
-            this.lblOcupacion = new DevExpress.XtraEditors.LabelControl();
-            this.cmbOcupacion = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.lblEstadoCivil = new DevExpress.XtraEditors.LabelControl();
-            this.cmbEstadoCivil = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblGenero = new DevExpress.XtraEditors.LabelControl();
             this.cmbGenero = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtNombres = new DevExpress.XtraEditors.TextEdit();
             this.lblNombre = new DevExpress.XtraEditors.LabelControl();
             this.txtEdad = new DevExpress.XtraEditors.TextEdit();
-            this.tabExamenesFisicos = new DevExpress.XtraTab.XtraTabPage();
-            this.grpDiagnosticos = new DevExpress.XtraEditors.GroupControl();
-            this.dtgDiagnosticos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpExamenLaboratorio = new DevExpress.XtraEditors.GroupControl();
-            this.tdgLaboratorios = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpEco = new DevExpress.XtraEditors.GroupControl();
-            this.dtgEcocardiogramas = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpRXtorax = new DevExpress.XtraEditors.GroupControl();
-            this.dtgRXTorax = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpElectroCardiograma = new DevExpress.XtraEditors.GroupControl();
-            this.dtgElectroCardiogramas = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpExamenNeurologico = new DevExpress.XtraEditors.GroupControl();
-            this.dtgExamenesNeurologicos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grpExamenesFisicos = new DevExpress.XtraEditors.GroupControl();
-            this.dtgExamenesFisicos = new System.Windows.Forms.DataGridView();
-            this.IDExamenExamenFisico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaExamenFisico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDPacienteExamenFisico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombresExamenFisico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabListaHistorialesClinicos = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            this.bar1 = new DevExpress.XtraBars.Bar();
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.txtHistorial = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPeso = new DevExpress.XtraEditors.SpinEdit();
+            this.lblPeso = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.tabHistorialClinico)).BeginInit();
             this.tabHistorialClinico.SuspendLayout();
             this.tabHistorial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpAntecedenteFamiliar)).BeginInit();
             this.grpAntecedenteFamiliar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoExEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoExEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoExEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpAntecedenteFarmaceuticos)).BeginInit();
             this.grpAntecedenteFarmaceuticos.SuspendLayout();
@@ -199,205 +138,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpDatosGenerales)).BeginInit();
             this.grpDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemitidopor.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateFechaIngreso.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateFechaIngreso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbOcupacion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbEstadoCivil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGenero.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEdad.Properties)).BeginInit();
-            this.tabExamenesFisicos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpDiagnosticos)).BeginInit();
-            this.grpDiagnosticos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDiagnosticos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpExamenLaboratorio)).BeginInit();
-            this.grpExamenLaboratorio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tdgLaboratorios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpEco)).BeginInit();
-            this.grpEco.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEcocardiogramas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpRXtorax)).BeginInit();
-            this.grpRXtorax.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgRXTorax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpElectroCardiograma)).BeginInit();
-            this.grpElectroCardiograma.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgElectroCardiogramas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpExamenNeurologico)).BeginInit();
-            this.grpExamenNeurologico.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgExamenesNeurologicos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpExamenesFisicos)).BeginInit();
-            this.grpExamenesFisicos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgExamenesFisicos)).BeginInit();
             this.tabListaHistorialesClinicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHistorial.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPeso.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // barManager1
-            // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar1,
-            this.bar2,
-            this.bar3});
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btnNuevo,
-            this.btnGuardar,
-            this.btnEditar,
-            this.btnCancelar,
-            this.btnImprimir,
-            this.btnEnviar,
-            this.btnEliminar});
-            this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 7;
-            this.barManager1.StatusBar = this.bar3;
-            // 
-            // bar1
-            // 
-            this.bar1.BarName = "Tools";
-            this.bar1.DockCol = 0;
-            this.bar1.DockRow = 1;
-            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar1.Text = "Tools";
-            // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockRow = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnNuevo),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnGuardar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEditar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnCancelar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnImprimir),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEnviar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar)});
-            this.bar2.OptionsBar.AllowQuickCustomization = false;
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Caption = "Nuevo";
-            this.btnNuevo.Glyph = global::aPresentationLayer.Properties.Resources.add;
-            this.btnNuevo.Id = 0;
-            this.btnNuevo.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N));
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Caption = "Guardar";
-            this.btnGuardar.Glyph = global::aPresentationLayer.Properties.Resources.save;
-            this.btnGuardar.Id = 1;
-            this.btnGuardar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G));
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Caption = "Editar";
-            this.btnEditar.Glyph = global::aPresentationLayer.Properties.Resources.Edit;
-            this.btnEditar.Id = 2;
-            this.btnEditar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Caption = "Cancelar";
-            this.btnCancelar.Glyph = global::aPresentationLayer.Properties.Resources.Cancel;
-            this.btnCancelar.Id = 3;
-            this.btnCancelar.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Caption = "Imprimir";
-            this.btnImprimir.Glyph = global::aPresentationLayer.Properties.Resources.Imprimir;
-            this.btnImprimir.Id = 4;
-            this.btnImprimir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I));
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Caption = "Enviar";
-            this.btnEnviar.Glyph = global::aPresentationLayer.Properties.Resources.send;
-            this.btnEnviar.Id = 5;
-            this.btnEnviar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Caption = "Eliminar";
-            this.btnEliminar.Glyph = global::aPresentationLayer.Properties.Resources.Delete;
-            this.btnEliminar.Id = 6;
-            this.btnEliminar.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
-            this.btnEliminar.Name = "btnEliminar";
-            // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockRow = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1157, 69);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 727);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1157, 23);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 658);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1157, 69);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 658);
             // 
             // tabHistorialClinico
             // 
-            this.tabHistorialClinico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabHistorialClinico.Location = new System.Drawing.Point(0, 69);
+            this.tabHistorialClinico.Location = new System.Drawing.Point(12, 55);
             this.tabHistorialClinico.Name = "tabHistorialClinico";
             this.tabHistorialClinico.SelectedTabPage = this.tabHistorial;
-            this.tabHistorialClinico.Size = new System.Drawing.Size(1157, 658);
+            this.tabHistorialClinico.Size = new System.Drawing.Size(1110, 623);
             this.tabHistorialClinico.TabIndex = 4;
             this.tabHistorialClinico.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabHistorial,
-            this.tabExamenesFisicos,
             this.tabListaHistorialesClinicos});
             // 
             // tabHistorial
@@ -409,52 +170,81 @@
             this.tabHistorial.Controls.Add(this.grpSintomasyEvolucion);
             this.tabHistorial.Controls.Add(this.grpDatosGenerales);
             this.tabHistorial.Name = "tabHistorial";
-            this.tabHistorial.Size = new System.Drawing.Size(1151, 632);
+            this.tabHistorial.Size = new System.Drawing.Size(1104, 597);
             this.tabHistorial.Text = "Historico de Paciente";
             // 
             // grpAntecedenteFamiliar
             // 
-            this.grpAntecedenteFamiliar.Controls.Add(this.textEdit3);
-            this.grpAntecedenteFamiliar.Controls.Add(this.textEdit2);
-            this.grpAntecedenteFamiliar.Controls.Add(this.textEdit1);
+            this.grpAntecedenteFamiliar.Controls.Add(this.memoExEdit3);
+            this.grpAntecedenteFamiliar.Controls.Add(this.labelControl6);
+            this.grpAntecedenteFamiliar.Controls.Add(this.memoExEdit2);
+            this.grpAntecedenteFamiliar.Controls.Add(this.memoExEdit1);
+            this.grpAntecedenteFamiliar.Controls.Add(this.labelControl5);
+            this.grpAntecedenteFamiliar.Controls.Add(this.labelControl4);
             this.grpAntecedenteFamiliar.Controls.Add(this.labelControl3);
             this.grpAntecedenteFamiliar.Controls.Add(this.memoEdit2);
             this.grpAntecedenteFamiliar.Controls.Add(this.checkBox38);
-            this.grpAntecedenteFamiliar.Controls.Add(this.checkBox41);
-            this.grpAntecedenteFamiliar.Controls.Add(this.checkBox42);
-            this.grpAntecedenteFamiliar.Controls.Add(this.checkBox43);
-            this.grpAntecedenteFamiliar.Controls.Add(this.checkBox44);
             this.grpAntecedenteFamiliar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpAntecedenteFamiliar.Location = new System.Drawing.Point(0, 504);
+            this.grpAntecedenteFamiliar.Location = new System.Drawing.Point(0, 522);
             this.grpAntecedenteFamiliar.Name = "grpAntecedenteFamiliar";
-            this.grpAntecedenteFamiliar.Size = new System.Drawing.Size(1151, 128);
+            this.grpAntecedenteFamiliar.Size = new System.Drawing.Size(1104, 112);
             this.grpAntecedenteFamiliar.TabIndex = 11;
             this.grpAntecedenteFamiliar.Text = "Antecedentes Familiares:";
             // 
-            // textEdit3
+            // memoExEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(392, 25);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(94, 20);
-            this.textEdit3.TabIndex = 52;
+            this.memoExEdit3.Location = new System.Drawing.Point(416, 29);
+            this.memoExEdit3.Name = "memoExEdit3";
+            this.memoExEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.memoExEdit3.Size = new System.Drawing.Size(135, 20);
+            this.memoExEdit3.TabIndex = 58;
             // 
-            // textEdit2
+            // labelControl6
             // 
-            this.textEdit2.Location = new System.Drawing.Point(236, 25);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(94, 20);
-            this.textEdit2.TabIndex = 51;
+            this.labelControl6.Location = new System.Drawing.Point(380, 32);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(24, 13);
+            this.labelControl6.TabIndex = 57;
+            this.labelControl6.Text = "Hnos";
             // 
-            // textEdit1
+            // memoExEdit2
             // 
-            this.textEdit1.Location = new System.Drawing.Point(76, 27);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(94, 20);
-            this.textEdit1.TabIndex = 50;
+            this.memoExEdit2.Location = new System.Drawing.Point(228, 29);
+            this.memoExEdit2.Name = "memoExEdit2";
+            this.memoExEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.memoExEdit2.Size = new System.Drawing.Size(135, 20);
+            this.memoExEdit2.TabIndex = 56;
+            // 
+            // memoExEdit1
+            // 
+            this.memoExEdit1.Location = new System.Drawing.Point(51, 29);
+            this.memoExEdit1.Name = "memoExEdit1";
+            this.memoExEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.memoExEdit1.Size = new System.Drawing.Size(135, 20);
+            this.memoExEdit1.TabIndex = 55;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(192, 32);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(30, 13);
+            this.labelControl5.TabIndex = 54;
+            this.labelControl5.Text = "Madre";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(12, 32);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(28, 13);
+            this.labelControl4.TabIndex = 53;
+            this.labelControl4.Text = "Padre";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(571, 29);
+            this.labelControl3.Location = new System.Drawing.Point(566, 25);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(52, 13);
             this.labelControl3.TabIndex = 49;
@@ -464,7 +254,7 @@
             // 
             this.memoEdit2.Location = new System.Drawing.Point(629, 27);
             this.memoEdit2.Name = "memoEdit2";
-            this.memoEdit2.Size = new System.Drawing.Size(455, 38);
+            this.memoEdit2.Size = new System.Drawing.Size(475, 38);
             this.memoEdit2.TabIndex = 25;
             // 
             // checkBox38
@@ -477,50 +267,6 @@
             this.checkBox38.TabIndex = 24;
             this.checkBox38.Text = "Otros";
             this.checkBox38.UseVisualStyleBackColor = true;
-            // 
-            // checkBox41
-            // 
-            this.checkBox41.AutoSize = true;
-            this.checkBox41.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox41.Location = new System.Drawing.Point(336, 28);
-            this.checkBox41.Name = "checkBox41";
-            this.checkBox41.Size = new System.Drawing.Size(50, 17);
-            this.checkBox41.TabIndex = 3;
-            this.checkBox41.Text = "Hnos";
-            this.checkBox41.UseVisualStyleBackColor = true;
-            // 
-            // checkBox42
-            // 
-            this.checkBox42.AutoSize = true;
-            this.checkBox42.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox42.Location = new System.Drawing.Point(174, 28);
-            this.checkBox42.Name = "checkBox42";
-            this.checkBox42.Size = new System.Drawing.Size(56, 17);
-            this.checkBox42.TabIndex = 2;
-            this.checkBox42.Text = "Madre";
-            this.checkBox42.UseVisualStyleBackColor = true;
-            // 
-            // checkBox43
-            // 
-            this.checkBox43.AutoSize = true;
-            this.checkBox43.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox43.Location = new System.Drawing.Point(16, 29);
-            this.checkBox43.Name = "checkBox43";
-            this.checkBox43.Size = new System.Drawing.Size(54, 17);
-            this.checkBox43.TabIndex = 1;
-            this.checkBox43.Text = "Padre";
-            this.checkBox43.UseVisualStyleBackColor = true;
-            // 
-            // checkBox44
-            // 
-            this.checkBox44.AutoSize = true;
-            this.checkBox44.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox44.Location = new System.Drawing.Point(498, 27);
-            this.checkBox44.Name = "checkBox44";
-            this.checkBox44.Size = new System.Drawing.Size(53, 17);
-            this.checkBox44.TabIndex = 0;
-            this.checkBox44.Text = "Otros";
-            this.checkBox44.UseVisualStyleBackColor = true;
             // 
             // grpAntecedenteFarmaceuticos
             // 
@@ -536,9 +282,9 @@
             this.grpAntecedenteFarmaceuticos.Controls.Add(this.checkBox32);
             this.grpAntecedenteFarmaceuticos.Controls.Add(this.checkBox33);
             this.grpAntecedenteFarmaceuticos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpAntecedenteFarmaceuticos.Location = new System.Drawing.Point(0, 434);
+            this.grpAntecedenteFarmaceuticos.Location = new System.Drawing.Point(0, 452);
             this.grpAntecedenteFarmaceuticos.Name = "grpAntecedenteFarmaceuticos";
-            this.grpAntecedenteFarmaceuticos.Size = new System.Drawing.Size(1151, 70);
+            this.grpAntecedenteFarmaceuticos.Size = new System.Drawing.Size(1104, 70);
             this.grpAntecedenteFarmaceuticos.TabIndex = 10;
             this.grpAntecedenteFarmaceuticos.Text = "Hábitos Farmaologicos:";
             // 
@@ -576,7 +322,7 @@
             // 
             this.memoEdit1.Location = new System.Drawing.Point(629, 27);
             this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(455, 38);
+            this.memoEdit1.Size = new System.Drawing.Size(475, 38);
             this.memoEdit1.TabIndex = 25;
             // 
             // checkBox26
@@ -668,9 +414,9 @@
             this.grpAntecedentesHabitosToxicos.Controls.Add(this.checkBox50);
             this.grpAntecedentesHabitosToxicos.Controls.Add(this.checkBox51);
             this.grpAntecedentesHabitosToxicos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpAntecedentesHabitosToxicos.Location = new System.Drawing.Point(0, 361);
+            this.grpAntecedentesHabitosToxicos.Location = new System.Drawing.Point(0, 385);
             this.grpAntecedentesHabitosToxicos.Name = "grpAntecedentesHabitosToxicos";
-            this.grpAntecedentesHabitosToxicos.Size = new System.Drawing.Size(1151, 73);
+            this.grpAntecedentesHabitosToxicos.Size = new System.Drawing.Size(1104, 67);
             this.grpAntecedentesHabitosToxicos.TabIndex = 9;
             this.grpAntecedentesHabitosToxicos.Text = "Habitos Toxicos:";
             // 
@@ -684,9 +430,9 @@
             // 
             // memoDescripcHabiToxi
             // 
-            this.memoDescripcHabiToxi.Location = new System.Drawing.Point(629, 27);
+            this.memoDescripcHabiToxi.Location = new System.Drawing.Point(637, 25);
             this.memoDescripcHabiToxi.Name = "memoDescripcHabiToxi";
-            this.memoDescripcHabiToxi.Size = new System.Drawing.Size(455, 38);
+            this.memoDescripcHabiToxi.Size = new System.Drawing.Size(475, 38);
             this.memoDescripcHabiToxi.TabIndex = 25;
             // 
             // checkBox27
@@ -771,7 +517,6 @@
             this.grpAntecedetesPersonales.Controls.Add(this.lblDescripPer);
             this.grpAntecedetesPersonales.Controls.Add(this.checkBox25);
             this.grpAntecedetesPersonales.Controls.Add(this.memoDescripcionAntPer);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox24);
             this.grpAntecedetesPersonales.Controls.Add(this.checkBox23);
             this.grpAntecedetesPersonales.Controls.Add(this.checkBox22);
             this.grpAntecedetesPersonales.Controls.Add(this.checkBox21);
@@ -797,9 +542,9 @@
             this.grpAntecedetesPersonales.Controls.Add(this.checkBox1);
             this.grpAntecedetesPersonales.Controls.Add(this.chkInfartoMioPrev);
             this.grpAntecedetesPersonales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpAntecedetesPersonales.Location = new System.Drawing.Point(0, 160);
+            this.grpAntecedetesPersonales.Location = new System.Drawing.Point(0, 171);
             this.grpAntecedetesPersonales.Name = "grpAntecedetesPersonales";
-            this.grpAntecedetesPersonales.Size = new System.Drawing.Size(1151, 201);
+            this.grpAntecedetesPersonales.Size = new System.Drawing.Size(1104, 214);
             this.grpAntecedetesPersonales.TabIndex = 8;
             this.grpAntecedetesPersonales.Text = "Antecedentes Personales:";
             // 
@@ -825,21 +570,10 @@
             // memoDescripcionAntPer
             // 
             this.memoDescripcionAntPer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.memoDescripcionAntPer.Location = new System.Drawing.Point(2, 161);
+            this.memoDescripcionAntPer.Location = new System.Drawing.Point(2, 156);
             this.memoDescripcionAntPer.Name = "memoDescripcionAntPer";
-            this.memoDescripcionAntPer.Size = new System.Drawing.Size(1147, 38);
+            this.memoDescripcionAntPer.Size = new System.Drawing.Size(1100, 56);
             this.memoDescripcionAntPer.TabIndex = 25;
-            // 
-            // checkBox24
-            // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox24.Location = new System.Drawing.Point(998, 35);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(53, 17);
-            this.checkBox24.TabIndex = 24;
-            this.checkBox24.Text = "Otros";
-            this.checkBox24.UseVisualStyleBackColor = true;
             // 
             // checkBox23
             // 
@@ -1109,9 +843,9 @@
             // 
             this.grpSintomasyEvolucion.Controls.Add(this.memoSintomasyEvolucion);
             this.grpSintomasyEvolucion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpSintomasyEvolucion.Location = new System.Drawing.Point(0, 100);
+            this.grpSintomasyEvolucion.Location = new System.Drawing.Point(0, 98);
             this.grpSintomasyEvolucion.Name = "grpSintomasyEvolucion";
-            this.grpSintomasyEvolucion.Size = new System.Drawing.Size(1151, 60);
+            this.grpSintomasyEvolucion.Size = new System.Drawing.Size(1104, 73);
             this.grpSintomasyEvolucion.TabIndex = 7;
             this.grpSintomasyEvolucion.Text = "Sintomas y Evolución:";
             // 
@@ -1120,22 +854,20 @@
             this.memoSintomasyEvolucion.Dock = System.Windows.Forms.DockStyle.Top;
             this.memoSintomasyEvolucion.Location = new System.Drawing.Point(2, 22);
             this.memoSintomasyEvolucion.Name = "memoSintomasyEvolucion";
-            this.memoSintomasyEvolucion.Size = new System.Drawing.Size(1147, 35);
+            this.memoSintomasyEvolucion.Size = new System.Drawing.Size(1100, 50);
             this.memoSintomasyEvolucion.TabIndex = 0;
             // 
             // grpDatosGenerales
             // 
+            this.grpDatosGenerales.Controls.Add(this.txtPeso);
+            this.grpDatosGenerales.Controls.Add(this.lblPeso);
+            this.grpDatosGenerales.Controls.Add(this.txtHistorial);
+            this.grpDatosGenerales.Controls.Add(this.labelControl7);
             this.grpDatosGenerales.Controls.Add(this.txtRemitidopor);
             this.grpDatosGenerales.Controls.Add(this.lblRemitente);
-            this.grpDatosGenerales.Controls.Add(this.lblFechaIngreso);
-            this.grpDatosGenerales.Controls.Add(this.dateFechaIngreso);
             this.grpDatosGenerales.Controls.Add(this.searchLookUpEdit1);
             this.grpDatosGenerales.Controls.Add(this.lblBuscar);
             this.grpDatosGenerales.Controls.Add(this.lblEdad);
-            this.grpDatosGenerales.Controls.Add(this.lblOcupacion);
-            this.grpDatosGenerales.Controls.Add(this.cmbOcupacion);
-            this.grpDatosGenerales.Controls.Add(this.lblEstadoCivil);
-            this.grpDatosGenerales.Controls.Add(this.cmbEstadoCivil);
             this.grpDatosGenerales.Controls.Add(this.lblGenero);
             this.grpDatosGenerales.Controls.Add(this.cmbGenero);
             this.grpDatosGenerales.Controls.Add(this.txtNombres);
@@ -1144,53 +876,33 @@
             this.grpDatosGenerales.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpDatosGenerales.Location = new System.Drawing.Point(0, 0);
             this.grpDatosGenerales.Name = "grpDatosGenerales";
-            this.grpDatosGenerales.Size = new System.Drawing.Size(1151, 100);
+            this.grpDatosGenerales.Size = new System.Drawing.Size(1104, 98);
             this.grpDatosGenerales.TabIndex = 6;
             this.grpDatosGenerales.Text = "Datos Generales:";
             // 
             // txtRemitidopor
             // 
-            this.txtRemitidopor.Location = new System.Drawing.Point(502, 25);
+            this.txtRemitidopor.Location = new System.Drawing.Point(637, 25);
             this.txtRemitidopor.Name = "txtRemitidopor";
-            this.txtRemitidopor.Size = new System.Drawing.Size(252, 20);
+            this.txtRemitidopor.Size = new System.Drawing.Size(204, 20);
             this.txtRemitidopor.TabIndex = 55;
             // 
             // lblRemitente
             // 
-            this.lblRemitente.Location = new System.Drawing.Point(432, 28);
+            this.lblRemitente.Location = new System.Drawing.Point(567, 28);
             this.lblRemitente.Name = "lblRemitente";
             this.lblRemitente.Size = new System.Drawing.Size(64, 13);
             this.lblRemitente.TabIndex = 54;
             this.lblRemitente.Text = "Remitido Por:";
             // 
-            // lblFechaIngreso
-            // 
-            this.lblFechaIngreso.Location = new System.Drawing.Point(958, 51);
-            this.lblFechaIngreso.Name = "lblFechaIngreso";
-            this.lblFechaIngreso.Size = new System.Drawing.Size(84, 13);
-            this.lblFechaIngreso.TabIndex = 53;
-            this.lblFechaIngreso.Text = "Fecha de Ingreso";
-            // 
-            // dateFechaIngreso
-            // 
-            this.dateFechaIngreso.EditValue = null;
-            this.dateFechaIngreso.Location = new System.Drawing.Point(958, 70);
-            this.dateFechaIngreso.Name = "dateFechaIngreso";
-            this.dateFechaIngreso.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateFechaIngreso.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateFechaIngreso.Size = new System.Drawing.Size(103, 20);
-            this.dateFechaIngreso.TabIndex = 52;
-            // 
             // searchLookUpEdit1
             // 
-            this.searchLookUpEdit1.Location = new System.Drawing.Point(51, 25);
+            this.searchLookUpEdit1.Location = new System.Drawing.Point(211, 25);
             this.searchLookUpEdit1.Name = "searchLookUpEdit1";
             this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.searchLookUpEdit1.Properties.View = this.searchLookUpEdit1View;
-            this.searchLookUpEdit1.Size = new System.Drawing.Size(370, 20);
+            this.searchLookUpEdit1.Size = new System.Drawing.Size(142, 20);
             this.searchLookUpEdit1.TabIndex = 51;
             // 
             // searchLookUpEdit1View
@@ -1202,7 +914,7 @@
             // 
             // lblBuscar
             // 
-            this.lblBuscar.Location = new System.Drawing.Point(9, 28);
+            this.lblBuscar.Location = new System.Drawing.Point(169, 28);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(36, 13);
             this.lblBuscar.TabIndex = 50;
@@ -1210,49 +922,15 @@
             // 
             // lblEdad
             // 
-            this.lblEdad.Location = new System.Drawing.Point(427, 51);
+            this.lblEdad.Location = new System.Drawing.Point(523, 51);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(28, 13);
             this.lblEdad.TabIndex = 48;
             this.lblEdad.Text = "Edad:";
             // 
-            // lblOcupacion
-            // 
-            this.lblOcupacion.Location = new System.Drawing.Point(637, 51);
-            this.lblOcupacion.Name = "lblOcupacion";
-            this.lblOcupacion.Size = new System.Drawing.Size(54, 13);
-            this.lblOcupacion.TabIndex = 46;
-            this.lblOcupacion.Text = "Ocupación:";
-            // 
-            // cmbOcupacion
-            // 
-            this.cmbOcupacion.Location = new System.Drawing.Point(637, 70);
-            this.cmbOcupacion.Name = "cmbOcupacion";
-            this.cmbOcupacion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbOcupacion.Size = new System.Drawing.Size(204, 20);
-            this.cmbOcupacion.TabIndex = 47;
-            // 
-            // lblEstadoCivil
-            // 
-            this.lblEstadoCivil.Location = new System.Drawing.Point(847, 51);
-            this.lblEstadoCivil.Name = "lblEstadoCivil";
-            this.lblEstadoCivil.Size = new System.Drawing.Size(59, 13);
-            this.lblEstadoCivil.TabIndex = 44;
-            this.lblEstadoCivil.Text = "Estado Civil:";
-            // 
-            // cmbEstadoCivil
-            // 
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(847, 70);
-            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
-            this.cmbEstadoCivil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbEstadoCivil.Size = new System.Drawing.Size(105, 20);
-            this.cmbEstadoCivil.TabIndex = 45;
-            // 
             // lblGenero
             // 
-            this.lblGenero.Location = new System.Drawing.Point(538, 51);
+            this.lblGenero.Location = new System.Drawing.Point(634, 51);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(39, 13);
             this.lblGenero.TabIndex = 42;
@@ -1260,7 +938,7 @@
             // 
             // cmbGenero
             // 
-            this.cmbGenero.Location = new System.Drawing.Point(538, 70);
+            this.cmbGenero.Location = new System.Drawing.Point(634, 70);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1269,14 +947,14 @@
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(9, 70);
+            this.txtNombres.Location = new System.Drawing.Point(105, 70);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(412, 20);
             this.txtNombres.TabIndex = 39;
             // 
             // lblNombre
             // 
-            this.lblNombre.Location = new System.Drawing.Point(9, 51);
+            this.lblNombre.Location = new System.Drawing.Point(105, 51);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(100, 13);
             this.lblNombre.TabIndex = 38;
@@ -1284,407 +962,16 @@
             // 
             // txtEdad
             // 
-            this.txtEdad.Location = new System.Drawing.Point(427, 70);
+            this.txtEdad.Location = new System.Drawing.Point(523, 70);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(105, 20);
             this.txtEdad.TabIndex = 49;
-            // 
-            // tabExamenesFisicos
-            // 
-            this.tabExamenesFisicos.Controls.Add(this.grpDiagnosticos);
-            this.tabExamenesFisicos.Controls.Add(this.grpExamenLaboratorio);
-            this.tabExamenesFisicos.Controls.Add(this.grpEco);
-            this.tabExamenesFisicos.Controls.Add(this.grpRXtorax);
-            this.tabExamenesFisicos.Controls.Add(this.grpElectroCardiograma);
-            this.tabExamenesFisicos.Controls.Add(this.grpExamenNeurologico);
-            this.tabExamenesFisicos.Controls.Add(this.grpExamenesFisicos);
-            this.tabExamenesFisicos.Name = "tabExamenesFisicos";
-            this.tabExamenesFisicos.Size = new System.Drawing.Size(1151, 632);
-            this.tabExamenesFisicos.Text = "Examenes Realizados";
-            // 
-            // grpDiagnosticos
-            // 
-            this.grpDiagnosticos.Controls.Add(this.dtgDiagnosticos);
-            this.grpDiagnosticos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpDiagnosticos.Location = new System.Drawing.Point(0, 522);
-            this.grpDiagnosticos.Name = "grpDiagnosticos";
-            this.grpDiagnosticos.Size = new System.Drawing.Size(1151, 115);
-            this.grpDiagnosticos.TabIndex = 8;
-            this.grpDiagnosticos.Text = "Diagnosticos Realizados:";
-            // 
-            // dtgDiagnosticos
-            // 
-            this.dtgDiagnosticos.AllowUserToOrderColumns = true;
-            this.dtgDiagnosticos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgDiagnosticos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgDiagnosticos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dtgDiagnosticos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgDiagnosticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDiagnosticos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24});
-            this.dtgDiagnosticos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtgDiagnosticos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dtgDiagnosticos.EnableHeadersVisualStyles = false;
-            this.dtgDiagnosticos.Location = new System.Drawing.Point(2, 22);
-            this.dtgDiagnosticos.Name = "dtgDiagnosticos";
-            this.dtgDiagnosticos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgDiagnosticos.RowHeadersVisible = false;
-            this.dtgDiagnosticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgDiagnosticos.Size = new System.Drawing.Size(1147, 85);
-            this.dtgDiagnosticos.TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.HeaderText = "No.Examen";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.HeaderText = "Paciente";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            // 
-            // grpExamenLaboratorio
-            // 
-            this.grpExamenLaboratorio.Controls.Add(this.tdgLaboratorios);
-            this.grpExamenLaboratorio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpExamenLaboratorio.Location = new System.Drawing.Point(0, 434);
-            this.grpExamenLaboratorio.Name = "grpExamenLaboratorio";
-            this.grpExamenLaboratorio.Size = new System.Drawing.Size(1151, 88);
-            this.grpExamenLaboratorio.TabIndex = 7;
-            this.grpExamenLaboratorio.Text = "Resultados de Laboratorio:";
-            // 
-            // tdgLaboratorios
-            // 
-            this.tdgLaboratorios.AllowUserToOrderColumns = true;
-            this.tdgLaboratorios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tdgLaboratorios.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tdgLaboratorios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.tdgLaboratorios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tdgLaboratorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tdgLaboratorios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20});
-            this.tdgLaboratorios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tdgLaboratorios.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.tdgLaboratorios.EnableHeadersVisualStyles = false;
-            this.tdgLaboratorios.Location = new System.Drawing.Point(2, 22);
-            this.tdgLaboratorios.Name = "tdgLaboratorios";
-            this.tdgLaboratorios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tdgLaboratorios.RowHeadersVisible = false;
-            this.tdgLaboratorios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.tdgLaboratorios.Size = new System.Drawing.Size(1147, 66);
-            this.tdgLaboratorios.TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.HeaderText = "No.Examen";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.HeaderText = "Paciente";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // grpEco
-            // 
-            this.grpEco.Controls.Add(this.dtgEcocardiogramas);
-            this.grpEco.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpEco.Location = new System.Drawing.Point(0, 348);
-            this.grpEco.Name = "grpEco";
-            this.grpEco.Size = new System.Drawing.Size(1151, 86);
-            this.grpEco.TabIndex = 6;
-            this.grpEco.Text = "Resultados Ecocardiograma:";
-            // 
-            // dtgEcocardiogramas
-            // 
-            this.dtgEcocardiogramas.AllowUserToOrderColumns = true;
-            this.dtgEcocardiogramas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgEcocardiogramas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgEcocardiogramas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dtgEcocardiogramas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgEcocardiogramas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEcocardiogramas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16});
-            this.dtgEcocardiogramas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtgEcocardiogramas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dtgEcocardiogramas.EnableHeadersVisualStyles = false;
-            this.dtgEcocardiogramas.Location = new System.Drawing.Point(2, 22);
-            this.dtgEcocardiogramas.Name = "dtgEcocardiogramas";
-            this.dtgEcocardiogramas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgEcocardiogramas.RowHeadersVisible = false;
-            this.dtgEcocardiogramas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgEcocardiogramas.Size = new System.Drawing.Size(1147, 65);
-            this.dtgEcocardiogramas.TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "No.Examen";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.HeaderText = "Paciente";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // grpRXtorax
-            // 
-            this.grpRXtorax.Controls.Add(this.dtgRXTorax);
-            this.grpRXtorax.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpRXtorax.Location = new System.Drawing.Point(0, 268);
-            this.grpRXtorax.Name = "grpRXtorax";
-            this.grpRXtorax.Size = new System.Drawing.Size(1151, 80);
-            this.grpRXtorax.TabIndex = 5;
-            this.grpRXtorax.Text = "Resultados RX Torax:";
-            // 
-            // dtgRXTorax
-            // 
-            this.dtgRXTorax.AllowUserToOrderColumns = true;
-            this.dtgRXTorax.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgRXTorax.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgRXTorax.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dtgRXTorax.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgRXTorax.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgRXTorax.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12});
-            this.dtgRXTorax.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtgRXTorax.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dtgRXTorax.EnableHeadersVisualStyles = false;
-            this.dtgRXTorax.Location = new System.Drawing.Point(2, 22);
-            this.dtgRXTorax.Name = "dtgRXTorax";
-            this.dtgRXTorax.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgRXTorax.RowHeadersVisible = false;
-            this.dtgRXTorax.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgRXTorax.Size = new System.Drawing.Size(1147, 59);
-            this.dtgRXTorax.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "No.Examen";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Paciente";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // grpElectroCardiograma
-            // 
-            this.grpElectroCardiograma.Controls.Add(this.dtgElectroCardiogramas);
-            this.grpElectroCardiograma.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpElectroCardiograma.Location = new System.Drawing.Point(0, 188);
-            this.grpElectroCardiograma.Name = "grpElectroCardiograma";
-            this.grpElectroCardiograma.Size = new System.Drawing.Size(1151, 80);
-            this.grpElectroCardiograma.TabIndex = 4;
-            this.grpElectroCardiograma.Text = "Resultados Electro Cardiograma:";
-            // 
-            // dtgElectroCardiogramas
-            // 
-            this.dtgElectroCardiogramas.AllowUserToOrderColumns = true;
-            this.dtgElectroCardiogramas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgElectroCardiogramas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgElectroCardiogramas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dtgElectroCardiogramas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgElectroCardiogramas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgElectroCardiogramas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.dtgElectroCardiogramas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtgElectroCardiogramas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dtgElectroCardiogramas.EnableHeadersVisualStyles = false;
-            this.dtgElectroCardiogramas.Location = new System.Drawing.Point(2, 22);
-            this.dtgElectroCardiogramas.Name = "dtgElectroCardiogramas";
-            this.dtgElectroCardiogramas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgElectroCardiogramas.RowHeadersVisible = false;
-            this.dtgElectroCardiogramas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgElectroCardiogramas.Size = new System.Drawing.Size(1147, 59);
-            this.dtgElectroCardiogramas.TabIndex = 5;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "No.Examen";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Paciente";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // grpExamenNeurologico
-            // 
-            this.grpExamenNeurologico.Controls.Add(this.dtgExamenesNeurologicos);
-            this.grpExamenNeurologico.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpExamenNeurologico.Location = new System.Drawing.Point(0, 93);
-            this.grpExamenNeurologico.Name = "grpExamenNeurologico";
-            this.grpExamenNeurologico.Size = new System.Drawing.Size(1151, 95);
-            this.grpExamenNeurologico.TabIndex = 2;
-            this.grpExamenNeurologico.Text = "Resultados Examen Neurológico:";
-            // 
-            // dtgExamenesNeurologicos
-            // 
-            this.dtgExamenesNeurologicos.AllowUserToOrderColumns = true;
-            this.dtgExamenesNeurologicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgExamenesNeurologicos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgExamenesNeurologicos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dtgExamenesNeurologicos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgExamenesNeurologicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgExamenesNeurologicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dtgExamenesNeurologicos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtgExamenesNeurologicos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dtgExamenesNeurologicos.EnableHeadersVisualStyles = false;
-            this.dtgExamenesNeurologicos.Location = new System.Drawing.Point(2, 22);
-            this.dtgExamenesNeurologicos.Name = "dtgExamenesNeurologicos";
-            this.dtgExamenesNeurologicos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgExamenesNeurologicos.RowHeadersVisible = false;
-            this.dtgExamenesNeurologicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgExamenesNeurologicos.Size = new System.Drawing.Size(1147, 74);
-            this.dtgExamenesNeurologicos.TabIndex = 4;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "No.Examen";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Paciente";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // grpExamenesFisicos
-            // 
-            this.grpExamenesFisicos.Controls.Add(this.dtgExamenesFisicos);
-            this.grpExamenesFisicos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpExamenesFisicos.Location = new System.Drawing.Point(0, 0);
-            this.grpExamenesFisicos.Name = "grpExamenesFisicos";
-            this.grpExamenesFisicos.Size = new System.Drawing.Size(1151, 93);
-            this.grpExamenesFisicos.TabIndex = 1;
-            this.grpExamenesFisicos.Text = "Examenes Fisicos:";
-            // 
-            // dtgExamenesFisicos
-            // 
-            this.dtgExamenesFisicos.AllowUserToOrderColumns = true;
-            this.dtgExamenesFisicos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgExamenesFisicos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgExamenesFisicos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dtgExamenesFisicos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgExamenesFisicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgExamenesFisicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDExamenExamenFisico,
-            this.FechaExamenFisico,
-            this.IDPacienteExamenFisico,
-            this.NombresExamenFisico});
-            this.dtgExamenesFisicos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtgExamenesFisicos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dtgExamenesFisicos.EnableHeadersVisualStyles = false;
-            this.dtgExamenesFisicos.Location = new System.Drawing.Point(2, 22);
-            this.dtgExamenesFisicos.Name = "dtgExamenesFisicos";
-            this.dtgExamenesFisicos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgExamenesFisicos.RowHeadersVisible = false;
-            this.dtgExamenesFisicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgExamenesFisicos.Size = new System.Drawing.Size(1147, 71);
-            this.dtgExamenesFisicos.TabIndex = 3;
-            // 
-            // IDExamenExamenFisico
-            // 
-            this.IDExamenExamenFisico.HeaderText = "No.Examen";
-            this.IDExamenExamenFisico.Name = "IDExamenExamenFisico";
-            // 
-            // FechaExamenFisico
-            // 
-            this.FechaExamenFisico.HeaderText = "Fecha";
-            this.FechaExamenFisico.Name = "FechaExamenFisico";
-            // 
-            // IDPacienteExamenFisico
-            // 
-            this.IDPacienteExamenFisico.HeaderText = "Paciente";
-            this.IDPacienteExamenFisico.Name = "IDPacienteExamenFisico";
-            // 
-            // NombresExamenFisico
-            // 
-            this.NombresExamenFisico.HeaderText = "Nombres";
-            this.NombresExamenFisico.Name = "NombresExamenFisico";
             // 
             // tabListaHistorialesClinicos
             // 
             this.tabListaHistorialesClinicos.Controls.Add(this.gridControl1);
             this.tabListaHistorialesClinicos.Name = "tabListaHistorialesClinicos";
-            this.tabListaHistorialesClinicos.Size = new System.Drawing.Size(1151, 632);
+            this.tabListaHistorialesClinicos.Size = new System.Drawing.Size(1104, 597);
             this.tabListaHistorialesClinicos.Text = "lista de Historiales Clinicos";
             // 
             // gridControl1
@@ -1692,9 +979,8 @@
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1151, 632);
+            this.gridControl1.Size = new System.Drawing.Size(1104, 597);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -1704,29 +990,84 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
+            // bar1
+            // 
+            this.bar1.BarName = "Tools";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 1;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.Text = "Tools";
+            // 
+            // bar2
+            // 
+            this.bar2.BarName = "Main menu";
+            this.bar2.DockCol = 0;
+            this.bar2.DockRow = 0;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.FloatLocation = new System.Drawing.Point(92, 138);
+            this.bar2.OptionsBar.DisableClose = true;
+            this.bar2.OptionsBar.DrawSizeGrip = true;
+            this.bar2.OptionsBar.MultiLine = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
+            this.bar2.Text = "Main menu";
+            // 
+            // txtHistorial
+            // 
+            this.txtHistorial.Location = new System.Drawing.Point(57, 25);
+            this.txtHistorial.Name = "txtHistorial";
+            this.txtHistorial.Size = new System.Drawing.Size(89, 20);
+            this.txtHistorial.TabIndex = 57;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(9, 28);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(42, 13);
+            this.labelControl7.TabIndex = 56;
+            this.labelControl7.Text = "Historial:";
+            // 
+            // txtPeso
+            // 
+            this.txtPeso.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtPeso.Location = new System.Drawing.Point(733, 70);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtPeso.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtPeso.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtPeso.Size = new System.Drawing.Size(101, 20);
+            this.txtPeso.TabIndex = 59;
+            // 
+            // lblPeso
+            // 
+            this.lblPeso.Location = new System.Drawing.Point(733, 51);
+            this.lblPeso.Name = "lblPeso";
+            this.lblPeso.Size = new System.Drawing.Size(27, 13);
+            this.lblPeso.TabIndex = 58;
+            this.lblPeso.Text = "Peso:";
+            // 
             // Frm_HistorialClinico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 750);
+            this.ClientSize = new System.Drawing.Size(1110, 713);
             this.Controls.Add(this.tabHistorialClinico);
-            this.Controls.Add(this.barDockControlLeft);
-            this.Controls.Add(this.barDockControlRight);
-            this.Controls.Add(this.barDockControlBottom);
-            this.Controls.Add(this.barDockControlTop);
             this.Name = "Frm_HistorialClinico";
             this.Text = "Historial Clinico del Paciente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabHistorialClinico)).EndInit();
             this.tabHistorialClinico.ResumeLayout(false);
             this.tabHistorial.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpAntecedenteFamiliar)).EndInit();
             this.grpAntecedenteFamiliar.ResumeLayout(false);
             this.grpAntecedenteFamiliar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoExEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoExEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoExEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpAntecedenteFarmaceuticos)).EndInit();
             this.grpAntecedenteFarmaceuticos.ResumeLayout(false);
@@ -1747,88 +1088,29 @@
             this.grpDatosGenerales.ResumeLayout(false);
             this.grpDatosGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemitidopor.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateFechaIngreso.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateFechaIngreso.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbOcupacion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbEstadoCivil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGenero.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEdad.Properties)).EndInit();
-            this.tabExamenesFisicos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpDiagnosticos)).EndInit();
-            this.grpDiagnosticos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDiagnosticos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpExamenLaboratorio)).EndInit();
-            this.grpExamenLaboratorio.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tdgLaboratorios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpEco)).EndInit();
-            this.grpEco.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEcocardiogramas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpRXtorax)).EndInit();
-            this.grpRXtorax.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgRXTorax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpElectroCardiograma)).EndInit();
-            this.grpElectroCardiograma.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgElectroCardiogramas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpExamenNeurologico)).EndInit();
-            this.grpExamenNeurologico.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgExamenesNeurologicos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpExamenesFisicos)).EndInit();
-            this.grpExamenesFisicos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgExamenesFisicos)).EndInit();
             this.tabListaHistorialesClinicos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHistorial.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPeso.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraBars.Bar bar1;
-        private DevExpress.XtraBars.Bar bar2;
-        private DevExpress.XtraBars.BarButtonItem btnNuevo;
-        private DevExpress.XtraBars.BarButtonItem btnGuardar;
-        private DevExpress.XtraBars.BarButtonItem btnEditar;
-        private DevExpress.XtraBars.BarButtonItem btnCancelar;
-        private DevExpress.XtraBars.BarButtonItem btnImprimir;
-        private DevExpress.XtraBars.BarButtonItem btnEnviar;
-        private DevExpress.XtraBars.BarButtonItem btnEliminar;
-        private DevExpress.XtraBars.Bar bar3;
-        private DevExpress.XtraBars.BarDockControl barDockControlTop;
-        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
-        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
-        private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraTab.XtraTabControl tabHistorialClinico;
         private DevExpress.XtraTab.XtraTabPage tabHistorial;
-        private DevExpress.XtraTab.XtraTabPage tabExamenesFisicos;
-        private DevExpress.XtraEditors.GroupControl grpExamenesFisicos;
         private DevExpress.XtraTab.XtraTabPage tabListaHistorialesClinicos;
-        private System.Windows.Forms.DataGridView dtgExamenesFisicos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDExamenExamenFisico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaExamenFisico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDPacienteExamenFisico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombresExamenFisico;
-        private DevExpress.XtraEditors.GroupControl grpExamenNeurologico;
-        private System.Windows.Forms.DataGridView dtgExamenesNeurologicos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DevExpress.XtraEditors.GroupControl grpAntecedenteFamiliar;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.MemoEdit memoEdit2;
         private System.Windows.Forms.CheckBox checkBox38;
-        private System.Windows.Forms.CheckBox checkBox41;
-        private System.Windows.Forms.CheckBox checkBox42;
-        private System.Windows.Forms.CheckBox checkBox43;
-        private System.Windows.Forms.CheckBox checkBox44;
         private DevExpress.XtraEditors.GroupControl grpAntecedenteFarmaceuticos;
         private System.Windows.Forms.CheckBox checkBox35;
         private System.Windows.Forms.CheckBox checkBox34;
@@ -1855,7 +1137,6 @@
         private DevExpress.XtraEditors.LabelControl lblDescripPer;
         private System.Windows.Forms.CheckBox checkBox25;
         private DevExpress.XtraEditors.MemoEdit memoDescripcionAntPer;
-        private System.Windows.Forms.CheckBox checkBox24;
         private System.Windows.Forms.CheckBox checkBox23;
         private System.Windows.Forms.CheckBox checkBox22;
         private System.Windows.Forms.CheckBox checkBox21;
@@ -1885,52 +1166,28 @@
         private DevExpress.XtraEditors.GroupControl grpDatosGenerales;
         private DevExpress.XtraEditors.TextEdit txtRemitidopor;
         private DevExpress.XtraEditors.LabelControl lblRemitente;
-        private DevExpress.XtraEditors.LabelControl lblFechaIngreso;
-        private DevExpress.XtraEditors.DateEdit dateFechaIngreso;
         private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraEditors.LabelControl lblBuscar;
         private DevExpress.XtraEditors.LabelControl lblEdad;
-        private DevExpress.XtraEditors.LabelControl lblOcupacion;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbOcupacion;
-        private DevExpress.XtraEditors.LabelControl lblEstadoCivil;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbEstadoCivil;
         private DevExpress.XtraEditors.LabelControl lblGenero;
         private DevExpress.XtraEditors.ComboBoxEdit cmbGenero;
         private DevExpress.XtraEditors.TextEdit txtNombres;
         private DevExpress.XtraEditors.LabelControl lblNombre;
         private DevExpress.XtraEditors.TextEdit txtEdad;
-        private DevExpress.XtraEditors.GroupControl grpDiagnosticos;
-        private System.Windows.Forms.DataGridView dtgDiagnosticos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private DevExpress.XtraEditors.GroupControl grpExamenLaboratorio;
-        private System.Windows.Forms.DataGridView tdgLaboratorios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private DevExpress.XtraEditors.GroupControl grpEco;
-        private System.Windows.Forms.DataGridView dtgEcocardiogramas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private DevExpress.XtraEditors.GroupControl grpRXtorax;
-        private System.Windows.Forms.DataGridView dtgRXTorax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private DevExpress.XtraEditors.GroupControl grpElectroCardiograma;
-        private System.Windows.Forms.DataGridView dtgElectroCardiogramas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.MemoExEdit memoExEdit3;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.MemoExEdit memoExEdit2;
+        private DevExpress.XtraEditors.MemoExEdit memoExEdit1;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraBars.Bar bar1;
+        private DevExpress.XtraBars.Bar bar2;
+        private DevExpress.XtraEditors.TextEdit txtHistorial;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.SpinEdit txtPeso;
+        private DevExpress.XtraEditors.LabelControl lblPeso;
     }
 }

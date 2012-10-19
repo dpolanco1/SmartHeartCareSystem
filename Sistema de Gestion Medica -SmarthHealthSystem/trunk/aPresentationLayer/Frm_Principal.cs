@@ -28,5 +28,12 @@ namespace WindowsApplication1
             Frm_HistorialClinico.frm_HistorialClinico().Show();
         }
 
+        private void ItemPacientes_LinkPressed(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+          
+            Frm_Pacientes.frm_Pacientes().MdiParent = this;
+            Frm_Pacientes.frm_Pacientes().Show();
+        }
+
     }
 }
