@@ -109,8 +109,6 @@
             this.txtIdentificacion = new DevExpress.XtraEditors.TextEdit();
             this.lblIdentificacion = new DevExpress.XtraEditors.LabelControl();
             this.lblIDtipoidentificacion = new DevExpress.XtraEditors.LabelControl();
-            this.txtNSS = new DevExpress.XtraEditors.TextEdit();
-            this.lblNSS = new DevExpress.XtraEditors.LabelControl();
             this.txtApellidos = new DevExpress.XtraEditors.TextEdit();
             this.lblApellidos = new DevExpress.XtraEditors.LabelControl();
             this.txtNombres = new DevExpress.XtraEditors.TextEdit();
@@ -137,6 +135,8 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.txtNSS = new DevExpress.XtraEditors.TextEdit();
+            this.lblNSS = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).BeginInit();
             this.tbpPrincipalPacientes.SuspendLayout();
             this.tabPacientes.SuspendLayout();
@@ -177,7 +177,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbGenero.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNivelAcademico.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNSS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellidos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDPaciente.Properties)).BeginInit();
@@ -187,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNSS.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barDockControlTop
@@ -553,6 +553,8 @@
             // 
             // grpDatos
             // 
+            this.grpDatos.Controls.Add(this.txtNSS);
+            this.grpDatos.Controls.Add(this.lblNSS);
             this.grpDatos.Controls.Add(this.cmbTipoSangre);
             this.grpDatos.Controls.Add(this.labelControl2);
             this.grpDatos.Controls.Add(this.txtAltura);
@@ -593,8 +595,6 @@
             this.grpDatos.Controls.Add(this.txtIdentificacion);
             this.grpDatos.Controls.Add(this.lblIdentificacion);
             this.grpDatos.Controls.Add(this.lblIDtipoidentificacion);
-            this.grpDatos.Controls.Add(this.txtNSS);
-            this.grpDatos.Controls.Add(this.lblNSS);
             this.grpDatos.Controls.Add(this.txtApellidos);
             this.grpDatos.Controls.Add(this.lblApellidos);
             this.grpDatos.Controls.Add(this.txtNombres);
@@ -767,16 +767,16 @@
             // 
             // cmbTipoPaciente
             // 
-            this.cmbTipoPaciente.Location = new System.Drawing.Point(631, 98);
+            this.cmbTipoPaciente.Location = new System.Drawing.Point(514, 98);
             this.cmbTipoPaciente.Name = "cmbTipoPaciente";
             this.cmbTipoPaciente.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbTipoPaciente.Size = new System.Drawing.Size(110, 20);
+            this.cmbTipoPaciente.Size = new System.Drawing.Size(102, 20);
             this.cmbTipoPaciente.TabIndex = 42;
             // 
             // lblTipoCliente
             // 
-            this.lblTipoCliente.Location = new System.Drawing.Point(631, 79);
+            this.lblTipoCliente.Location = new System.Drawing.Point(514, 79);
             this.lblTipoCliente.Name = "lblTipoCliente";
             this.lblTipoCliente.Size = new System.Drawing.Size(64, 13);
             this.lblTipoCliente.TabIndex = 41;
@@ -988,21 +988,6 @@
             this.lblIDtipoidentificacion.Size = new System.Drawing.Size(91, 13);
             this.lblIDtipoidentificacion.TabIndex = 8;
             this.lblIDtipoidentificacion.Text = "Tipo Identificacion:";
-            // 
-            // txtNSS
-            // 
-            this.txtNSS.Location = new System.Drawing.Point(514, 98);
-            this.txtNSS.Name = "txtNSS";
-            this.txtNSS.Size = new System.Drawing.Size(111, 20);
-            this.txtNSS.TabIndex = 7;
-            // 
-            // lblNSS
-            // 
-            this.lblNSS.Location = new System.Drawing.Point(514, 79);
-            this.lblNSS.Name = "lblNSS";
-            this.lblNSS.Size = new System.Drawing.Size(23, 13);
-            this.lblNSS.TabIndex = 6;
-            this.lblNSS.Text = "NSS:";
             // 
             // txtApellidos
             // 
@@ -1243,6 +1228,21 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1157, 69);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 658);
             // 
+            // txtNSS
+            // 
+            this.txtNSS.Location = new System.Drawing.Point(622, 99);
+            this.txtNSS.Name = "txtNSS";
+            this.txtNSS.Size = new System.Drawing.Size(119, 20);
+            this.txtNSS.TabIndex = 64;
+            // 
+            // lblNSS
+            // 
+            this.lblNSS.Location = new System.Drawing.Point(622, 80);
+            this.lblNSS.Name = "lblNSS";
+            this.lblNSS.Size = new System.Drawing.Size(23, 13);
+            this.lblNSS.TabIndex = 63;
+            this.lblNSS.Text = "NSS:";
+            // 
             // Frm_Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1298,7 +1298,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbGenero.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNivelAcademico.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNSS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellidos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIDPaciente.Properties)).EndInit();
@@ -1308,6 +1307,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNSS.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1391,8 +1391,6 @@
         private DevExpress.XtraEditors.TextEdit txtIdentificacion;
         private DevExpress.XtraEditors.LabelControl lblIdentificacion;
         private DevExpress.XtraEditors.LabelControl lblIDtipoidentificacion;
-        private DevExpress.XtraEditors.TextEdit txtNSS;
-        private DevExpress.XtraEditors.LabelControl lblNSS;
         private DevExpress.XtraEditors.TextEdit txtApellidos;
         private DevExpress.XtraEditors.LabelControl lblApellidos;
         private DevExpress.XtraEditors.TextEdit txtNombres;
@@ -1419,5 +1417,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraEditors.TextEdit txtNSS;
+        private DevExpress.XtraEditors.LabelControl lblNSS;
     }
 }

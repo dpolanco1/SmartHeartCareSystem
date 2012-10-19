@@ -35,13 +35,15 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ent_Consultas.cs" />
+    <Compile Include="Ent_Contacto.cs" />
+    <Compile Include="Ent_Direcciones.cs" />
     <Compile Include="Ent_Persona.cs" />
+    <Compile Include="Ent_Telefono.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

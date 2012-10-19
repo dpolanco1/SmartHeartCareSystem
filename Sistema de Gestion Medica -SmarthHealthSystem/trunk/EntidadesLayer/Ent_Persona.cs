@@ -13,31 +13,27 @@ namespace EntidadesLayer
 		 public  string Apellidos {get;set;}
 		 public  int IDTipoIdentifacion {get;set;}
 		 public  string Identificacion {get;set;}
-		 public  string NSS {get;set;}
 		 public  DateTime FechaNacimiento {get;set;}
 		 public  int IDNivelAcademico {get;set;}
+         public int IDOcupacion { get; set; }
 		 public  char Genero {get;set;}
 		 public  char EstadoCivil {get;set;}
-		 public  int IDNacionalidad {get;set;}
-		 public  int IDPais {get;set;}	
-		 public  int  IDProvincia {get;set;}
-         public int IDOcupacion { get; set; }
-		 public  int IDRegion {get;set;}
-		 public  int IDSector {get;set;}
-		 public  string CodiPostal {get;set;}
-		 public  int IDTelefono {get;set;}
-		 public  string NombreContacto {get;set;}
-		 public  string TeleContacto {get;set;}
-		 public  string Direccion1 {get;set;}
-		 public  string Direccion2 {get;set;}
-		 public  string Email {get;set;}
-		 public  int IDEstado {get;set;}
-		 public  DateTime FechaIngrero {get;set;}
-         public  int IDAnotaciones { get; set; }
          public string TipoSangre { get; set; }
          public int TipoPaciente { get; set; }
+         public char NSS { get; set; }
+         public int Email { get; set; }
+		 public  int IDNacionalidad {get;set;}
+		 public  int IDPais {get;set;}
+         public int IDRegion { get; set; }
+		 public  int  IDProvincia {get;set;}
+		 public  int IDSector {get;set;}
+		 public  DateTime FechaIngrero {get;set;}
          public decimal Peso { get; set; }
          public decimal Altura { get; set; }
+         public bool PacienteActivo { get; set; }
+         public bool EnvioEmail { get; set; }
+         public string Observaciones { get; set; }
+
 
 
     }
