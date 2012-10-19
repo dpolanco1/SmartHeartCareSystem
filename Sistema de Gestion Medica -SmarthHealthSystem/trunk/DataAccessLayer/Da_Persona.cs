@@ -11,7 +11,7 @@ namespace DataAccessLayer
     public class Da_Persona
     {
      
-        public bool Insertar(Ent_Persona EntidadPersona) 
+        public bool Insert(Ent_Persona EntidadPersona) 
         {
             bool flag = false;
             
@@ -63,7 +63,7 @@ namespace DataAccessLayer
             return flag;
         
         }
-        public bool actualizar() 
+        public bool Update() 
         
         {
 
@@ -72,7 +72,7 @@ namespace DataAccessLayer
             return flag;
         
         }
-        public bool eliminar() 
+        public bool Delete() 
         
         {
             bool flag = false;
@@ -80,7 +80,7 @@ namespace DataAccessLayer
             return flag;
         
         }
-        public bool buscar()
+        public bool Search()
         
         {
             bool flag = false;

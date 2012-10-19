@@ -10,7 +10,7 @@ namespace DataAccessLayer
     class Da_Contacto
     {
 
-        public bool Insertar(Ent_Contacto EntidadContacto)
+        public bool Insert(Ent_Contacto EntidadContacto)
         {
             bool flag = false;
 
@@ -43,7 +43,7 @@ namespace DataAccessLayer
             return flag;
 
         }
-        public bool actualizar()
+        public bool Update()
         {
 
             bool flag = false;
@@ -51,14 +51,14 @@ namespace DataAccessLayer
             return flag;
 
         }
-        public bool eliminar()
+        public bool Delete()
         {
             bool flag = false;
 
             return flag;
 
         }
-        public bool buscar()
+        public bool Search()
         {
             bool flag = false;
 

@@ -11,7 +11,7 @@ namespace DataAccessLayer
     public class Da_Direcciones
     {
 
-        public bool Insertar(Ent_Direcciones EntidadDirecciones)
+        public bool Insert(Ent_Direcciones EntidadDirecciones)
         {
             bool flag = false;
 
@@ -44,7 +44,7 @@ namespace DataAccessLayer
             return flag;
 
         }
-        public bool actualizar()
+        public bool Update()
         {
 
             bool flag = false;
@@ -52,14 +52,14 @@ namespace DataAccessLayer
             return flag;
 
         }
-        public bool eliminar()
+        public bool Delete()
         {
             bool flag = false;
 
             return flag;
 
         }
-        public bool buscar()
+        public bool Search()
         {
             bool flag = false;
 
