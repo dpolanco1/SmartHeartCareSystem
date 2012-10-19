@@ -30,7 +30,7 @@ namespace EntidadesLayer
 		 public  DateTime FechaIngrero {get;set;}
          public decimal Peso { get; set; }
          public decimal Altura { get; set; }
-         public bool PacienteActivo { get; set; }
+         public bool Activo { get; set; }
          public bool EnvioEmail { get; set; }
          public string Observaciones { get; set; }
 
