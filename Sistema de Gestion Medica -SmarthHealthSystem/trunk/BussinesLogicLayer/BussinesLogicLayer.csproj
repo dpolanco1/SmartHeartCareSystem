@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bl_AdministrarControles.cs" />
     <Compile Include="Bl_Persona.cs" />
     <Compile Include="Bl_ValidarControles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

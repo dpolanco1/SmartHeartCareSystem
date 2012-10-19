@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BussinesLogicLayer;
 
 namespace aPresentationLayer
 {
@@ -46,7 +47,7 @@ namespace aPresentationLayer
 
         private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            BussinesLogicLayer.Bl_ValidarControles.LimipiarFormulario(this);
+            Bl_AdministrarControles.VaciarText(frm_historialclinico);
         }
     }
 }
