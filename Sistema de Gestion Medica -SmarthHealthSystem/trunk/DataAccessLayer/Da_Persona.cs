@@ -11,7 +11,7 @@ namespace DataAccessLayer
     public class Da_Persona
     {
      
-        public bool Insertar(Ent_Persona EntidadPersona,) 
+        public bool Insertar(Ent_Persona EntidadPersona) 
         {
             bool flag = false;
             

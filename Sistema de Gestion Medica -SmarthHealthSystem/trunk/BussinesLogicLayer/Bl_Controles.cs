@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace BussinesLogicLayer
 {
-    abstract class Bl_Controles
+  public  abstract class Bl_Controles
     {
 
         public bool ValidarEmail(string email)
@@ -21,7 +21,7 @@ namespace BussinesLogicLayer
                 return false;
         }
 
-        public void LimipiarFormulario(Control formulario) {
+        public static void LimipiarFormulario(Control formulario) {
 
             foreach  (Control controles in formulario.Controls)
             {

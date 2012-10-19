@@ -11,6 +11,9 @@ namespace aPresentationLayer
 {
     public partial class Frm_HistorialClinico : DevExpress.XtraEditors.XtraForm
     {
+
+   
+
         //Hago que el formulario sea singleton....
 
         private static Frm_HistorialClinico frm_historialclinico; // Referencia estática al mismo formulario
@@ -32,6 +35,18 @@ namespace aPresentationLayer
         public Frm_HistorialClinico()
         {
             InitializeComponent();
+        }
+
+        private void btnGuardar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+          
+
+
+        }
+
+        private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            BussinesLogicLayer.Bl_Controles.LimipiarFormulario(this);
         }
     }
 }

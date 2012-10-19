@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.navbarImageListLarge = new System.Windows.Forms.ImageList(this.components);
-            this.navbarImageList = new System.Windows.Forms.ImageList(this.components);
-            this.barManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.navbarImageListLarge = new System.Windows.Forms.ImageList();
+            this.navbarImageList = new System.Windows.Forms.ImageList();
+            this.barManager = new DevExpress.XtraBars.BarManager();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.menuArchivo = new DevExpress.XtraBars.BarSubItem();
             this.iNew = new DevExpress.XtraBars.BarButtonItem();
@@ -52,10 +51,9 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
-            this.grupoActividades = new DevExpress.XtraNavBar.NavBarGroup();
-            this.itemHistorialClinico = new DevExpress.XtraNavBar.NavBarItem();
-            this.itemConsultas = new DevExpress.XtraNavBar.NavBarItem();
-            this.itemRecetario = new DevExpress.XtraNavBar.NavBarItem();
+            this.grupoMantenimientos = new DevExpress.XtraNavBar.NavBarGroup();
+            this.ItemPacientes = new DevExpress.XtraNavBar.NavBarItem();
+            this.itemEmpleados = new DevExpress.XtraNavBar.NavBarItem();
             this.grupoMail = new DevExpress.XtraNavBar.NavBarGroup();
             this.inboxItem = new DevExpress.XtraNavBar.NavBarItem();
             this.outboxItem = new DevExpress.XtraNavBar.NavBarItem();
@@ -64,9 +62,10 @@
             this.grupoOrganizador = new DevExpress.XtraNavBar.NavBarGroup();
             this.calendarItem = new DevExpress.XtraNavBar.NavBarItem();
             this.tasksItem = new DevExpress.XtraNavBar.NavBarItem();
-            this.grupoMantenimientos = new DevExpress.XtraNavBar.NavBarGroup();
-            this.ItemPacientes = new DevExpress.XtraNavBar.NavBarItem();
-            this.itemEmpleados = new DevExpress.XtraNavBar.NavBarItem();
+            this.grupoActividades = new DevExpress.XtraNavBar.NavBarGroup();
+            this.itemHistorialClinico = new DevExpress.XtraNavBar.NavBarItem();
+            this.itemConsultas = new DevExpress.XtraNavBar.NavBarItem();
+            this.itemRecetario = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
             this.SuspendLayout();
@@ -248,7 +247,7 @@
             // 
             // navBarControl
             // 
-            this.navBarControl.ActiveGroup = this.grupoMantenimientos;
+            this.navBarControl.ActiveGroup = this.grupoActividades;
             this.navBarControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.grupoMail,
@@ -278,31 +277,25 @@
             this.navBarControl.TabIndex = 5;
             this.navBarControl.Text = "navBarControl1";
             // 
-            // grupoActividades
+            // grupoMantenimientos
             // 
-            this.grupoActividades.Caption = "Actividades";
-            this.grupoActividades.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.itemHistorialClinico),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.itemConsultas),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.itemRecetario)});
-            this.grupoActividades.LargeImageIndex = 1;
-            this.grupoActividades.Name = "grupoActividades";
+            this.grupoMantenimientos.Caption = "Mantenimientos";
+            this.grupoMantenimientos.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.ItemPacientes),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.itemEmpleados)});
+            this.grupoMantenimientos.LargeImageIndex = 1;
+            this.grupoMantenimientos.Name = "grupoMantenimientos";
             // 
-            // itemHistorialClinico
+            // ItemPacientes
             // 
-            this.itemHistorialClinico.Caption = "Historial Clinico";
-            this.itemHistorialClinico.Name = "itemHistorialClinico";
-            this.itemHistorialClinico.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.itemHistorialClinico_LinkClicked);
+            this.ItemPacientes.Caption = "Pacientes";
+            this.ItemPacientes.Name = "ItemPacientes";
+            this.ItemPacientes.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ItemPacientes_LinkPressed);
             // 
-            // itemConsultas
+            // itemEmpleados
             // 
-            this.itemConsultas.Caption = "Consultas";
-            this.itemConsultas.Name = "itemConsultas";
-            // 
-            // itemRecetario
-            // 
-            this.itemRecetario.Caption = "Recetario Médico";
-            this.itemRecetario.Name = "itemRecetario";
+            this.itemEmpleados.Caption = "Empleados";
+            this.itemEmpleados.Name = "itemEmpleados";
             // 
             // grupoMail
             // 
@@ -360,26 +353,32 @@
             this.tasksItem.Name = "tasksItem";
             this.tasksItem.SmallImageIndex = 5;
             // 
-            // grupoMantenimientos
+            // grupoActividades
             // 
-            this.grupoMantenimientos.Caption = "Mantenimientos";
-            this.grupoMantenimientos.Expanded = true;
-            this.grupoMantenimientos.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.ItemPacientes),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.itemEmpleados)});
-            this.grupoMantenimientos.LargeImageIndex = 1;
-            this.grupoMantenimientos.Name = "grupoMantenimientos";
+            this.grupoActividades.Caption = "Actividades";
+            this.grupoActividades.Expanded = true;
+            this.grupoActividades.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.itemHistorialClinico),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.itemConsultas),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.itemRecetario)});
+            this.grupoActividades.LargeImageIndex = 1;
+            this.grupoActividades.Name = "grupoActividades";
             // 
-            // ItemPacientes
+            // itemHistorialClinico
             // 
-            this.ItemPacientes.Caption = "Pacientes";
-            this.ItemPacientes.Name = "ItemPacientes";
-            this.ItemPacientes.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.ItemPacientes_LinkPressed);
+            this.itemHistorialClinico.Caption = "Historial Clinico";
+            this.itemHistorialClinico.Name = "itemHistorialClinico";
+            this.itemHistorialClinico.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.itemHistorialClinico_LinkClicked);
             // 
-            // itemEmpleados
+            // itemConsultas
             // 
-            this.itemEmpleados.Caption = "Empleados";
-            this.itemEmpleados.Name = "itemEmpleados";
+            this.itemConsultas.Caption = "Consultas";
+            this.itemConsultas.Name = "itemConsultas";
+            // 
+            // itemRecetario
+            // 
+            this.itemRecetario.Caption = "Recetario Médico";
+            this.itemRecetario.Name = "itemRecetario";
             // 
             // Form1
             // 
