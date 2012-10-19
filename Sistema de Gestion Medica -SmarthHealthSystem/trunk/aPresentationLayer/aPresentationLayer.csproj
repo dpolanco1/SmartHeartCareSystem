@@ -244,6 +244,10 @@
       <Project>{7FE7EC09-500E-4D89-8FCB-E438AB28B45C}</Project>
       <Name>BussinesLogicLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EntidadesLayer\EntidadesLayer.csproj">
+      <Project>{7BC33D24-2CB8-446C-81CD-D2C6EC66F205}</Project>
+      <Name>EntidadesLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

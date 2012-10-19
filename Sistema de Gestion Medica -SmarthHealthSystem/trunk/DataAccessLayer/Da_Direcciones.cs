@@ -11,8 +11,10 @@ namespace DataAccessLayer
     public class Da_Direcciones
     {
 
-        public bool Insert(Ent_Direcciones EntidadDirecciones)
+
+            public bool Insert(Ent_Direcciones EntidadDirecciones)
         {
+           
             bool flag = false;
 
             try

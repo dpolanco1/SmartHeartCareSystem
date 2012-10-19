@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using EntidadesLayer;
+using DataAccessLayer;
+
+namespace BussinesLogicLayer
+{
+    public class Bl_Direcciones
+    {
+        private static Da_Direcciones GetDaDirecciones()//metodo singleton
+        {
+            Da_Direcciones daDirecciones = new Da_Direcciones();
+            return daDirecciones;
+        }
+
+
+
+        public static bool Insert(Ent_Direcciones entDirecciones)
+        {
+
+            //instancio el metodo
+            Da_Direcciones daDirecciones = GetDaDirecciones();
+
+            //Validaciones De Lugar
+            bool flag = false;
+
+            if (entDirecciones.IDPersona.Equals(String.Empty) || entDirecciones.TipoDireccion.Equals(String.Empty) || entDirecciones.Direccion.Equals(String.Empty) )
+
+            {
+             flag= false;
+            
+            }   else if (daDirecciones.Insert(entDirecciones))            
+            {
+                 
+                 flag= true;
+            }        
+
+            return flag;
+
+
+        }
+
+        public void Update(Ent_Persona entDirecciones)
+        {
+
+            //Validaciones De Lugar
+
+
+
+
+
+        }
+
+        public void Delete(Ent_Persona entDirecciones)
+        {
+
+
+        }
+
+        public void Search(Ent_Persona entDirecciones)
+        {
+
+
+        }
+    }
+}

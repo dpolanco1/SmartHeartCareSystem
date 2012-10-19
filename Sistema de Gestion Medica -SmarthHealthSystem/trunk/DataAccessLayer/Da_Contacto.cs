@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 namespace DataAccessLayer
 {
-    class Da_Contacto
+    public class Da_Contacto
     {
 
         public bool Insert(Ent_Contacto EntidadContacto)

@@ -11,17 +11,37 @@ namespace BussinesLogicLayer
     public class Bl_Persona
     {
 
-    Da_Persona daPersona = new Da_Persona();
+        private static Da_Persona GetDaPersona()//metodo singleton
+        {
+            Da_Persona daPersona = new Da_Persona();
+            return daPersona;
+        }
 
-        public void Insert(Ent_Persona entPersona)
-        { 
+        public static bool Insert(Ent_Persona entPersona)
+        {
+            //instancio el metodo
+            Da_Persona daPersona = GetDaPersona();
+
             //Validaciones De Lugar
+            bool flag = false;
 
+            if (entPersona.Nombres.Equals(String.Empty) || entPersona.Apellidos.Equals(String.Empty) || entPersona.IDTipoIdentifacion.Equals(String.Empty) ||
+                entPersona.Identificacion.Equals(String.Empty) || entPersona.FechaNacimiento.Equals(String.Empty) || entPersona.Genero.Equals(String.Empty) ||
+                entPersona.TipoPaciente.Equals(String.Empty))
 
-           daPersona.Insertar(entPersona);
+            { 
+            
+               flag = false;
+            
+            }else if ( Da_Persona.Insert(entPersona))
+            
+            {
 
-                
-        
+                flag = true;
+
+            }
+
+            return flag;
         }
 
         public void Update(Ent_Persona entPersona)

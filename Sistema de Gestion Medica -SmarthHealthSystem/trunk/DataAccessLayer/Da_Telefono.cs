@@ -8,7 +8,7 @@ using System.Data;
 
 namespace DataAccessLayer
 {
-    class Da_Telefono
+    public class Da_Telefono
     {
 
         public bool Insert(Ent_Telefono EntidadTelefono)

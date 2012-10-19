@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BussinesLogicLayer;
+using EntidadesLayer;
 
 
 namespace aPresentationLayer
@@ -45,8 +46,10 @@ namespace aPresentationLayer
 
         private void btnGuardar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
             Bl_AdministrarControles.VaciarText(frm_pacientes);
             Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+
             
         }
 
