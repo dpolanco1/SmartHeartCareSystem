@@ -94,6 +94,10 @@
             this.grpSintomasyEvolucion = new DevExpress.XtraEditors.GroupControl();
             this.memoSintomasyEvolucion = new DevExpress.XtraEditors.MemoEdit();
             this.grpDatosGenerales = new DevExpress.XtraEditors.GroupControl();
+            this.txtPeso = new DevExpress.XtraEditors.SpinEdit();
+            this.lblPeso = new DevExpress.XtraEditors.LabelControl();
+            this.txtHistorial = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtRemitidopor = new DevExpress.XtraEditors.TextEdit();
             this.lblRemitente = new DevExpress.XtraEditors.LabelControl();
             this.searchLookUpEdit1 = new DevExpress.XtraEditors.SearchLookUpEdit();
@@ -110,10 +114,21 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();
-            this.txtHistorial = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPeso = new DevExpress.XtraEditors.SpinEdit();
-            this.lblPeso = new DevExpress.XtraEditors.LabelControl();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar3 = new DevExpress.XtraBars.Bar();
+            this.btnNuevo = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGuardar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEditar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCancelar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnImprimir = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEnviar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEliminar = new DevExpress.XtraBars.BarButtonItem();
+            this.bar4 = new DevExpress.XtraBars.Bar();
+            this.bar5 = new DevExpress.XtraBars.Bar();
+            this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.tabHistorialClinico)).BeginInit();
             this.tabHistorialClinico.SuspendLayout();
             this.tabHistorial.SuspendLayout();
@@ -137,6 +152,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.memoSintomasyEvolucion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpDatosGenerales)).BeginInit();
             this.grpDatosGenerales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPeso.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHistorial.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemitidopor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
@@ -146,13 +163,13 @@
             this.tabListaHistorialesClinicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHistorial.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPeso.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabHistorialClinico
             // 
-            this.tabHistorialClinico.Location = new System.Drawing.Point(12, 55);
+            this.tabHistorialClinico.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabHistorialClinico.Location = new System.Drawing.Point(0, 69);
             this.tabHistorialClinico.Name = "tabHistorialClinico";
             this.tabHistorialClinico.SelectedTabPage = this.tabHistorial;
             this.tabHistorialClinico.Size = new System.Drawing.Size(1110, 623);
@@ -880,6 +897,45 @@
             this.grpDatosGenerales.TabIndex = 6;
             this.grpDatosGenerales.Text = "Datos Generales:";
             // 
+            // txtPeso
+            // 
+            this.txtPeso.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtPeso.Location = new System.Drawing.Point(733, 70);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtPeso.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.txtPeso.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtPeso.Size = new System.Drawing.Size(101, 20);
+            this.txtPeso.TabIndex = 59;
+            // 
+            // lblPeso
+            // 
+            this.lblPeso.Location = new System.Drawing.Point(733, 51);
+            this.lblPeso.Name = "lblPeso";
+            this.lblPeso.Size = new System.Drawing.Size(27, 13);
+            this.lblPeso.TabIndex = 58;
+            this.lblPeso.Text = "Peso:";
+            // 
+            // txtHistorial
+            // 
+            this.txtHistorial.Location = new System.Drawing.Point(57, 25);
+            this.txtHistorial.Name = "txtHistorial";
+            this.txtHistorial.Size = new System.Drawing.Size(89, 20);
+            this.txtHistorial.TabIndex = 57;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(9, 28);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(42, 13);
+            this.labelControl7.TabIndex = 56;
+            this.labelControl7.Text = "Historial:";
+            // 
             // txtRemitidopor
             // 
             this.txtRemitidopor.Location = new System.Drawing.Point(637, 25);
@@ -1011,44 +1067,157 @@
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
-            // txtHistorial
+            // barManager1
             // 
-            this.txtHistorial.Location = new System.Drawing.Point(57, 25);
-            this.txtHistorial.Name = "txtHistorial";
-            this.txtHistorial.Size = new System.Drawing.Size(89, 20);
-            this.txtHistorial.TabIndex = 57;
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bar3,
+            this.bar4,
+            this.bar5});
+            this.barManager1.DockControls.Add(this.barDockControl1);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnNuevo,
+            this.btnGuardar,
+            this.btnEditar,
+            this.btnCancelar,
+            this.btnImprimir,
+            this.btnEnviar,
+            this.btnEliminar});
+            this.barManager1.MainMenu = this.bar4;
+            this.barManager1.MaxItemId = 8;
+            this.barManager1.StatusBar = this.bar5;
             // 
-            // labelControl7
+            // bar3
             // 
-            this.labelControl7.Location = new System.Drawing.Point(9, 28);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(42, 13);
-            this.labelControl7.TabIndex = 56;
-            this.labelControl7.Text = "Historial:";
+            this.bar3.BarName = "Custom 2";
+            this.bar3.DockCol = 0;
+            this.bar3.DockRow = 0;
+            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnNuevo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, this.btnGuardar, "", false, false, true, 0),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEditar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnCancelar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnImprimir),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEnviar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar)});
+            this.bar3.OptionsBar.AllowQuickCustomization = false;
+            this.bar3.Text = "Custom 2";
             // 
-            // txtPeso
+            // btnNuevo
             // 
-            this.txtPeso.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtPeso.Location = new System.Drawing.Point(733, 70);
-            this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtPeso.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.txtPeso.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtPeso.Size = new System.Drawing.Size(101, 20);
-            this.txtPeso.TabIndex = 59;
+            this.btnNuevo.Caption = "Nuevo";
+            this.btnNuevo.Glyph = global::aPresentationLayer.Properties.Resources.add;
+            this.btnNuevo.Id = 1;
+            this.btnNuevo.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N));
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // lblPeso
+            // btnGuardar
             // 
-            this.lblPeso.Location = new System.Drawing.Point(733, 51);
-            this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(27, 13);
-            this.lblPeso.TabIndex = 58;
-            this.lblPeso.Text = "Peso:";
+            this.btnGuardar.Caption = "Guardar";
+            this.btnGuardar.Glyph = global::aPresentationLayer.Properties.Resources.save;
+            this.btnGuardar.Id = 2;
+            this.btnGuardar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G));
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Caption = "Editar";
+            this.btnEditar.Glyph = global::aPresentationLayer.Properties.Resources.Edit;
+            this.btnEditar.Id = 3;
+            this.btnEditar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Caption = "Cancelar";
+            this.btnCancelar.Glyph = global::aPresentationLayer.Properties.Resources.Cancel;
+            this.btnCancelar.Id = 4;
+            this.btnCancelar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C));
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Caption = "Imprimir";
+            this.btnImprimir.Glyph = global::aPresentationLayer.Properties.Resources.Imprimir;
+            this.btnImprimir.Id = 5;
+            this.btnImprimir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I));
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Caption = "Enviar";
+            this.btnEnviar.Glyph = global::aPresentationLayer.Properties.Resources.send;
+            this.btnEnviar.Id = 6;
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Caption = "Eliminar";
+            this.btnEliminar.Glyph = global::aPresentationLayer.Properties.Resources.Delete;
+            this.btnEliminar.Id = 7;
+            this.btnEliminar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // bar4
+            // 
+            this.bar4.BarName = "Custom 3";
+            this.bar4.DockCol = 0;
+            this.bar4.DockRow = 1;
+            this.bar4.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar4.OptionsBar.MultiLine = true;
+            this.bar4.OptionsBar.UseWholeRow = true;
+            this.bar4.Text = "Custom 3";
+            // 
+            // bar5
+            // 
+            this.bar5.BarName = "Custom 4";
+            this.bar5.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+            this.bar5.DockCol = 0;
+            this.bar5.DockRow = 0;
+            this.bar5.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.bar5.OptionsBar.AllowQuickCustomization = false;
+            this.bar5.OptionsBar.DrawDragBorder = false;
+            this.bar5.OptionsBar.UseWholeRow = true;
+            this.bar5.Text = "Custom 4";
+            // 
+            // barDockControl1
+            // 
+            this.barDockControl1.CausesValidation = false;
+            this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControl1.Location = new System.Drawing.Point(0, 0);
+            this.barDockControl1.Size = new System.Drawing.Size(1110, 69);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 690);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1110, 23);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 621);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1110, 69);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 621);
             // 
             // Frm_HistorialClinico
             // 
@@ -1056,6 +1225,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 713);
             this.Controls.Add(this.tabHistorialClinico);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControl1);
             this.Name = "Frm_HistorialClinico";
             this.Text = "Historial Clinico del Paciente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1087,6 +1260,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpDatosGenerales)).EndInit();
             this.grpDatosGenerales.ResumeLayout(false);
             this.grpDatosGenerales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPeso.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHistorial.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemitidopor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
@@ -1096,8 +1271,7 @@
             this.tabListaHistorialesClinicos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHistorial.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPeso.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1189,5 +1363,20 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.SpinEdit txtPeso;
         private DevExpress.XtraEditors.LabelControl lblPeso;
+        private DevExpress.XtraBars.BarManager barManager1;
+        protected DevExpress.XtraBars.Bar bar3;
+        protected DevExpress.XtraBars.BarButtonItem btnNuevo;
+        protected DevExpress.XtraBars.BarButtonItem btnGuardar;
+        protected DevExpress.XtraBars.BarButtonItem btnEditar;
+        protected DevExpress.XtraBars.BarButtonItem btnCancelar;
+        protected DevExpress.XtraBars.BarButtonItem btnImprimir;
+        protected DevExpress.XtraBars.BarButtonItem btnEnviar;
+        protected DevExpress.XtraBars.BarButtonItem btnEliminar;
+        protected DevExpress.XtraBars.Bar bar4;
+        protected DevExpress.XtraBars.Bar bar5;
+        private DevExpress.XtraBars.BarDockControl barDockControl1;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
     }
 }
