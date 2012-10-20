@@ -15,6 +15,11 @@ namespace aPresentationLayer
 {
     public partial class Frm_Pacientes : DevExpress.XtraEditors.XtraForm
     {
+          //Entidades
+                    Ent_Paciente paciente = new Ent_Paciente();
+                    Ent_Direcciones direcciones = new Ent_Direcciones();
+                    Ent_Telefono telefonos = new Ent_Telefono();
+                    Ent_Contacto contacto = new Ent_Contacto();
 
         private static Frm_Pacientes frm_pacientes; // Referencia estática al mismo formulario
 
@@ -65,6 +70,50 @@ namespace aPresentationLayer
 
         private void btnGuardar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            //Valores Entidad Paciente
+            paciente.IDPaciente = txtIDPaciente.Text;
+            paciente.Nombres = txtNombres.Text;
+            paciente.Apellidos = txtApellidos.Text;
+            paciente.IDTipoIdentifacion = cmbTipoIdentificacion.SelectedIndex;
+            paciente.Identificacion = txtIdentificacion.Text;
+            paciente.FechaNacimiento = txtFechaNacimiento.Value;
+            paciente.IDNivelAcademico = cmbNivelAcademico.SelectedIndex;
+            paciente.IDOcupacion = cmbOcupacion.SelectedIndex;
+            paciente.Genero = Convert.ToChar(cmbGenero.Text);
+            paciente.EstadoCivil = Convert.ToChar(cmbEstadoCivil.Text);
+            paciente.TipoSangre = Convert.ToChar(cmbTipoSangre.Text);
+            paciente.TipoPaciente = cmbTipoPaciente.SelectedIndex;
+            paciente.NSS = txtNSS.Text;
+            paciente.Email = txtEmail.Text;
+            paciente.IDNacionalidad = cmbNacionalidad.SelectedIndex;
+            paciente.IDPais = cmbPais.SelectedIndex;
+            paciente.IDRegion = cmbRegion.SelectedIndex;
+            paciente.IDSector = cmbRegion.SelectedIndex;
+            paciente.FechaIngrero = txtFechaIngreso.Value;
+            paciente.Peso = txtPeso.Value;
+            paciente.Altura = txtAltura.Value;
+            paciente.Activo = chkActivo.Checked;
+            paciente.EnvioEmail = chkEnviarEmail.Checked;
+            paciente.Observaciones = txtObservaciones.Text;
+
+            //Valores Entidad Direcciones
+
+            for (int i = 0; i < dtgDirecciones.RowCount - 2; i++)
+            {
+                direcciones.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
+                direcciones.Direccion = dtgDirecciones.Rows[i].Cells[0].ToString();
+            }
+         
+           
+
+          
+
+
+
+
+
+                Bl_Paciente.Insert(paciente, direcciones, telefonos, contacto);
+               
 
 
             //Limpio los Txt
@@ -80,6 +129,11 @@ namespace aPresentationLayer
             Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
 
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(""+dtgDirecciones.Rows[i].Cells[0].ToString());
         }
 
     }

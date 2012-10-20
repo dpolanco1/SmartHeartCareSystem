@@ -18,10 +18,10 @@ namespace EntidadesLayer
          public int IDOcupacion { get; set; }
 		 public  char Genero {get;set;}
 		 public  char EstadoCivil {get;set;}
-         public string TipoSangre { get; set; }
+         public char TipoSangre { get; set; }
          public int TipoPaciente { get; set; }
-         public char NSS { get; set; }
-         public int Email { get; set; }
+         public string NSS { get; set; }
+         public string Email { get; set; }
 		 public  int IDNacionalidad {get;set;}
 		 public  int IDPais {get;set;}
          public int IDRegion { get; set; }

@@ -12,7 +12,7 @@ namespace DataAccessLayer
     {
 
 
-            public bool Insert(Ent_Direcciones EntidadDirecciones)
+            public static bool Insert(Ent_Direcciones EntidadDirecciones)
         {
            
             bool flag = false;
@@ -26,12 +26,16 @@ namespace DataAccessLayer
                 Da_Connection.Get.Open();
 
                 command.Parameters.Add(new SqlParameter("@IDPersona", EntidadDirecciones.IDPaciente) { SqlDbType = SqlDbType.Int });
-                command.Parameters.Add(new SqlParameter("@TipoDireccion", EntidadDirecciones.TipoDireccion) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Direccion", EntidadDirecciones.Direccion) { SqlDbType = SqlDbType.NVarChar});
+                //Ejecuto el Query
                 command.ExecuteNonQuery();
 
                 flag = true;
             }
+            catch (Exception ex)
+            {
+
+            } // end catch
             finally
             {
 

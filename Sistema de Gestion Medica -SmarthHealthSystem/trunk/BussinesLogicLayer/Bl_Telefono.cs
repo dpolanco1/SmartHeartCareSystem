@@ -24,12 +24,12 @@ namespace BussinesLogicLayer
             //Validaciones De Lugar
             bool flag = false;
 
-            if (entTelefono.IDPersona.Equals(String.Empty) || entTelefono.TipoTelefono.Equals(String.Empty) || entTelefono.Telefono.Equals(String.Empty) )
+            if (entTelefono.IDPaciente.Equals(String.Empty) || entTelefono.Telefono.Equals(String.Empty) )
 
             {
              flag= false;
             
-            }   else if (daTelefono.Insert(entTelefono))            
+            }   else if (Da_Telefono.Insert(daTelefono))            
             {
                  
                  flag= true;

@@ -10,26 +10,29 @@ namespace DataAccessLayer
 {
     public class Da_Telefono
     {
-
-        public bool Insert(Ent_Telefono EntidadTelefono)
+       public static bool Insert(Ent_Telefono EntidadTelefono)
         {
             bool flag = false;
 
             try
             {
+     
                 //conecction = new DAConecction();
-                SqlCommand command = new SqlCommand("Spr_InsertTelefono", Da_Connection.Get);
+                SqlCommand command = new SqlCommand("Spr_InsertTelefonos", Da_Connection.Get);
                 command.CommandType = CommandType.StoredProcedure;
 
                 Da_Connection.Get.Open();
 
-                command.Parameters.Add(new SqlParameter("@IDPersona", EntidadTelefono.IDPersona) { SqlDbType = SqlDbType.Int });
-                command.Parameters.Add(new SqlParameter("@TipoTelefono", EntidadTelefono.TipoTelefono) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@IDPersona", EntidadTelefono.IDPaciente) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@Telefono", EntidadTelefono.Telefono) { SqlDbType = SqlDbType.NVarChar });
                 command.ExecuteNonQuery();
 
                 flag = true;
             }
+            catch (Exception ex)
+            {
+
+            } // end catch
             finally
             {
 
@@ -66,5 +69,6 @@ namespace DataAccessLayer
             return flag;
 
         }
+
     }
 }

@@ -11,7 +11,7 @@ namespace DataAccessLayer
     public class Da_Paciente
     {
 
-        public static bool Insert(Ent_Paciente EntidadPaciente, Ent_Direcciones EntidadDirecciones, Ent_Telefono EntidadTelefono, Ent_Contacto EntidadContacto) 
+        public static bool Insert(Ent_Paciente EntidadPaciente) 
         {
             bool flag = false;
             
@@ -32,8 +32,8 @@ namespace DataAccessLayer
                 command.Parameters.Add(new SqlParameter("@FechaNacimiento", EntidadPaciente.FechaNacimiento) { SqlDbType = SqlDbType.Date });
                 command.Parameters.Add(new SqlParameter("@NivelAcademico", EntidadPaciente.IDNivelAcademico) { SqlDbType = SqlDbType.Int});
                 command.Parameters.Add(new SqlParameter("@FechaIngrero", EntidadPaciente.FechaIngrero) { SqlDbType = SqlDbType.Date });
-                command.Parameters.Add(new SqlParameter("@Sexo", EntidadPaciente.Genero) { SqlDbType = SqlDbType.Char });
-                command.Parameters.Add(new SqlParameter("@EstadoCivil", EntidadPaciente.EstadoCivil) { SqlDbType = SqlDbType.Char });
+                command.Parameters.Add(new SqlParameter("@Sexo", EntidadPaciente.Genero) { SqlDbType = SqlDbType.NChar });
+                command.Parameters.Add(new SqlParameter("@EstadoCivil", EntidadPaciente.EstadoCivil) { SqlDbType = SqlDbType.NChar });
                 command.Parameters.Add(new SqlParameter("@Nacionalidad", EntidadPaciente.IDNacionalidad) { SqlDbType = SqlDbType.Int});
                 command.Parameters.Add(new SqlParameter("@IDPais", EntidadPaciente.IDPais) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@IDProvincia", EntidadPaciente.IDProvincia) { SqlDbType = SqlDbType.Int });
@@ -45,16 +45,9 @@ namespace DataAccessLayer
                 command.Parameters.Add(new SqlParameter("@Altura", EntidadPaciente.Altura) { SqlDbType = SqlDbType.Decimal });
                 command.Parameters.Add(new SqlParameter("@Activo", EntidadPaciente.Activo) { SqlDbType = SqlDbType.Bit });
                 command.Parameters.Add(new SqlParameter("@EnvioMail", EntidadPaciente.EnvioEmail) { SqlDbType = SqlDbType.Bit });
-                
-                //Paso los valores para la tabla Direcciones
-                
-                command.Parameters.Add (new SqlParameter("@IDPaciente", EntidadDirecciones.IDPaciente) { SqlDbType = SqlDbType.NVarChar });
-
-                //Paso los valores para la tabla Telefonos
-
-                //Paso los valores para la tabla Contactos
-
-
+                command.Parameters.Add(new SqlParameter("@TipoPaciente", EntidadPaciente.TipoPaciente) { SqlDbType = SqlDbType.Int });
+                command.Parameters.Add(new SqlParameter("@TipoSangre", EntidadPaciente.TipoSangre) { SqlDbType = SqlDbType.NChar});
+                //Ejecuto el Query
                 command.ExecuteNonQuery();
 
                 flag = true;
