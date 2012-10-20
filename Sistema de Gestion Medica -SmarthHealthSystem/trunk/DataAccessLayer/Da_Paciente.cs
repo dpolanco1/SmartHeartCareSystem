@@ -88,28 +88,23 @@ namespace DataAccessLayer
             return flag;
         
         }
-
-        public static DataTable  SearchID()
+        public static int ObtenerIDPacienteMax()
         {
-            SqlDataAdapter da =new SqlDataAdapter();
-            DataTable tb = new DataTable();
-
             try
             {
-                //conecction = new DAConecction();
-                SqlCommand command = new SqlCommand("Spt_Select_IDPaciente", Da_Connection.Get);
-                command.CommandType = CommandType.StoredProcedure;
 
+                SqlCommand ObjCmd = new SqlCommand("SELECT MAX(IDPaciente) FROM Paciente ", Da_Connection.Get);
+                ObjCmd.CommandType = CommandType.Text;
                 Da_Connection.Get.Open();
 
-                //da = new SqlDataAdapter();
-                //tb = new DataTable();
+                var dr = ObjCmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    return dr.GetInt32(0) + 1;//obtengo el ultimo registro y le sumo uno para visualizarlo en el frmPacientes
 
-                da.Fill(tb);
-
-                return (tb);
+                }
             }
-            catch (Exception e) { Console.Write(e); Console.Read(); }
+
             finally
             {
 
@@ -119,8 +114,7 @@ namespace DataAccessLayer
                 }
 
             }
-
-            return (tb);
+            return 0;
         }
     }
 }
