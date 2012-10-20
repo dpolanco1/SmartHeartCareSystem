@@ -67,13 +67,13 @@ namespace BussinesLogicLayer
 
 
         }
-        public static DataTable SearchID()
+      public static int ObtenerIDPacienteMax()
+
         {
-                 return   Da_Paciente.SearchID();
 
+            return Da_Paciente.ObtenerIDPacienteMax();
+        
         }
-
-
 
     }
 }

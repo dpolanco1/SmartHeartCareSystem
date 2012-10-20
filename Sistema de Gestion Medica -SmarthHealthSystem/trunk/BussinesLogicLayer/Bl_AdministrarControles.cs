@@ -5,6 +5,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 
+
+
 namespace BussinesLogicLayer
 {
     public abstract class Bl_AdministrarControles
@@ -19,6 +21,21 @@ namespace BussinesLogicLayer
                 if (contHijo is TextBox)
                 {
                     contHijo.Text = String.Empty;
+                } else if (contHijo is ComboBox) 
+                {
+                    contHijo.Text = String.Empty;
+
+                }
+                else if (contHijo is DateTimePicker) 
+                {
+
+                    contHijo.Text = Convert.ToString(DateTime.Today);
+
+                }
+                else if (contHijo is NumericUpDown)
+                {
+                    contHijo.Text = String.Empty;
+
                 }
             }
 
@@ -36,6 +53,15 @@ namespace BussinesLogicLayer
                 }else if (contHijo is ComboBox){
 
                     contHijo.Enabled = true;
+                }else if (contHijo is DateTimePicker) 
+                {
+                    contHijo.Enabled = true;
+
+                }
+                else if (contHijo is NumericUpDown)
+                {
+                    contHijo.Enabled = true;
+
                 }
             }
         }
@@ -49,6 +75,21 @@ namespace BussinesLogicLayer
                 if (contHijo is TextBox)
                 {
                     contHijo.Enabled = false;
+                }
+                else if (contHijo is ComboBox)
+                {
+
+                    contHijo.Enabled = false;
+                }
+                else if (contHijo is DateTimePicker)
+                {
+                    contHijo.Enabled = false;
+
+                }
+                else if (contHijo is NumericUpDown)
+                {
+                    contHijo.Enabled = false;
+
                 }
             }
         }
