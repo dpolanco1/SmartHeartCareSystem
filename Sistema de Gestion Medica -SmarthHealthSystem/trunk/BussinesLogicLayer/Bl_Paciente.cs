@@ -5,6 +5,7 @@ using System.Text;
 using EntidadesLayer;
 using DataAccessLayer;
 using System.Data;
+using System.Windows.Forms;
 
 
 namespace BussinesLogicLayer
@@ -34,7 +35,7 @@ namespace BussinesLogicLayer
             
                flag = false;
             
-            }else if ( Da_Paciente.Insert(entPaciente))
+            }else if ( 1==1/*Da_Paciente.Insert(entPaciente)*/)
             
             {
 
@@ -70,8 +71,17 @@ namespace BussinesLogicLayer
       public static int ObtenerIDPacienteMax()
 
         {
+            if (Da_Paciente.ObtenerIDPacienteMax() >= 0)
+            {
+                return Da_Paciente.ObtenerIDPacienteMax();
 
-            return Da_Paciente.ObtenerIDPacienteMax();
+            }
+            else 
+            {
+
+                return 1;
+            }
+             
         
         }
 

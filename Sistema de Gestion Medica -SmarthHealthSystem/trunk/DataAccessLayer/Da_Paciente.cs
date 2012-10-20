@@ -10,8 +10,8 @@ namespace DataAccessLayer
 {
     public class Da_Paciente
     {
-     
-        public static bool Insert(Ent_Paciente EntidadPaciente) 
+
+        public static bool Insert(Ent_Paciente EntidadPaciente, Ent_Direcciones EntidadDirecciones, Ent_Telefono EntidadTelefono, Ent_Contacto EntidadContacto) 
         {
             bool flag = false;
             
@@ -23,6 +23,7 @@ namespace DataAccessLayer
 
                 Da_Connection.Get.Open();
 
+                //Paso los valores para la tabla Pacientes.
                 command.Parameters.Add(new SqlParameter("@Nombres", EntidadPaciente.Nombres) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Apellidos", EntidadPaciente.Apellidos) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@IDTipoIdentifacion", EntidadPaciente.IDTipoIdentifacion) { SqlDbType = SqlDbType.Int });
@@ -45,10 +46,23 @@ namespace DataAccessLayer
                 command.Parameters.Add(new SqlParameter("@Activo", EntidadPaciente.Activo) { SqlDbType = SqlDbType.Bit });
                 command.Parameters.Add(new SqlParameter("@EnvioMail", EntidadPaciente.EnvioEmail) { SqlDbType = SqlDbType.Bit });
                 
+                //Paso los valores para la tabla Direcciones
+                
+                command.Parameters.Add (new SqlParameter("@IDPaciente", EntidadDirecciones.IDPaciente) { SqlDbType = SqlDbType.NVarChar });
+
+                //Paso los valores para la tabla Telefonos
+
+                //Paso los valores para la tabla Contactos
+
+
                 command.ExecuteNonQuery();
 
                 flag = true;
             }
+            catch (Exception ex)
+            {
+                
+            } // end catch
             finally
             {
 

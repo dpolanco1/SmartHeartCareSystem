@@ -7,7 +7,7 @@ namespace EntidadesLayer
 {
     public class Ent_Contacto
     {
-        public int IDPersona { get; set; }
+        public int IDPaciente { get; set; }
         public string Contacto { get; set; }
         public string Telefono { get; set; }
     }
