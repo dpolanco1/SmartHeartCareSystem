@@ -11,7 +11,7 @@ namespace DataAccessLayer
     public class Da_Telefono
     {
 
-        public static bool Insert(Ent_Telefono EntidadTelefono)
+        public bool Insert(Ent_Telefono EntidadTelefono)
         {
             bool flag = false;
 

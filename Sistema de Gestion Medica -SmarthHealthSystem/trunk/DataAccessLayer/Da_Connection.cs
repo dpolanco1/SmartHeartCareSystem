@@ -20,7 +20,8 @@ namespace DataAccessLayer
                     {
                         if (_connection == null)
                             //_connection = new SqlConnection(@"data source = francis-pc\SQLEXPRESS; integrated security = true; initial catalog = SCP; user id = sa; password = francis3009");
-                            _connection = new SqlConnection(@"workstation id=SmartHearthCareDb.mssql.somee.com;packet size=4096;user id=AppCodee;pwd=AppCodee123;data source=SmartHearthCareDb.mssql.somee.com;persist security info=False;initial catalog=SmartHearthCareDb");
+                           // _connection = new SqlConnection(@"workstation id=SmartHearthCareDb.mssql.somee.com;packet size=4096;user id=AppCodee;pwd=AppCodee123;data source=SmartHearthCareDb.mssql.somee.com;persist security info=False;initial catalog=SmartHearthCareDb");
+                        _connection = new SqlConnection(@"Data Source=HPDV6;Initial Catalog=SmartHearthCareDb;Integrated Security=True");
                         return _connection;
                     }
                 }

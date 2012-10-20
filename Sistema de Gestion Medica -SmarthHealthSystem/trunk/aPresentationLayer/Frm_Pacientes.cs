@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BussinesLogicLayer;
 using EntidadesLayer;
+using System.Xml;
 
 
 namespace aPresentationLayer
@@ -40,6 +41,7 @@ namespace aPresentationLayer
         {
             Bl_AdministrarControles.VaciarText(frm_pacientes);
             Bl_AdministrarControles.HabilitarText(frm_pacientes);
+            dtgDirecciones.DataSource = Bl_Paciente.SearchID();
             txtIDPaciente.Focus();
          
         }

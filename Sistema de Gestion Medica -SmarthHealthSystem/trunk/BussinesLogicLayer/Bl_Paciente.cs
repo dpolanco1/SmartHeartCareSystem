@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using EntidadesLayer;
 using DataAccessLayer;
+using System.Data;
 
 
 namespace BussinesLogicLayer
 {
-    public class Bl_Persona
+    public class Bl_Paciente
     {
 
         private static Da_Paciente GetDaPersona()//metodo singleton
@@ -64,6 +65,11 @@ namespace BussinesLogicLayer
         public void Search(Ent_Paciente entPaciente)
         {
 
+
+        }
+        public static DataTable SearchID()
+        {
+                 return   Da_Paciente.SearchID();
 
         }
 

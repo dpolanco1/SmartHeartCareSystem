@@ -88,5 +88,39 @@ namespace DataAccessLayer
             return flag;
         
         }
+
+        public static DataTable  SearchID()
+        {
+            SqlDataAdapter da =new SqlDataAdapter();
+            DataTable tb = new DataTable();
+
+            try
+            {
+                //conecction = new DAConecction();
+                SqlCommand command = new SqlCommand("Spt_Select_IDPaciente", Da_Connection.Get);
+                command.CommandType = CommandType.StoredProcedure;
+
+                Da_Connection.Get.Open();
+
+                //da = new SqlDataAdapter();
+                //tb = new DataTable();
+
+                da.Fill(tb);
+
+                return (tb);
+            }
+            catch (Exception e) { Console.Write(e); Console.Read(); }
+            finally
+            {
+
+                if (Da_Connection.Get.State != ConnectionState.Closed)
+                {
+                    Da_Connection.Get.Close();
+                }
+
+            }
+
+            return (tb);
+        }
     }
 }
