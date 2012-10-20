@@ -42,7 +42,7 @@
     <Compile Include="Ent_Consultas.cs" />
     <Compile Include="Ent_Contacto.cs" />
     <Compile Include="Ent_Direcciones.cs" />
-    <Compile Include="Ent_Persona.cs" />
+    <Compile Include="Ent_Paciente.cs" />
     <Compile Include="Ent_Telefono.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

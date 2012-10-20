@@ -10,37 +10,45 @@ namespace BussinesLogicLayer
     public class Bl_Contacto
     {
 
-        Da_Persona daPersona = new Da_Persona();
-
-        public void Insert(Ent_Persona entPersona)
+        private static Da_Contacto GetDaContacto()//metodo singleton
         {
-            //Validaciones De Lugar
-
-
-            daPersona.Insert(entPersona);
-
-
-
+            Da_Contacto daContacto = new Da_Contacto();
+            return daContacto;
         }
 
-        public void Update(Ent_Persona entPersona)
+
+        public static void Insert(Ent_Contacto entContacto)
         {
+            //instancio el metodo
+            Da_Contacto daContacto = GetDaContacto();
 
             //Validaciones De Lugar
 
 
+            daContacto.Insert(entContacto);
 
 
 
         }
 
-        public void Delete(Ent_Persona entPersona)
+        public void Update(Ent_Paciente entPersona)
+        {
+
+            //Validaciones De Lugar
+
+
+
+
+
+        }
+
+        public void Delete(Ent_Paciente entPersona)
         {
 
 
         }
 
-        public void Search(Ent_Persona entPersona)
+        public void Search(Ent_Paciente entPersona)
         {
 
 

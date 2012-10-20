@@ -5,10 +5,10 @@ using System.Text;
 
 namespace EntidadesLayer
 {
-    public class Ent_Persona
+    public class Ent_Paciente
     {
           
-         public string IDPersona {get;set;}
+         public string IDPaciente {get;set;}
 		 public  string Nombres {get;set;}
 		 public  string Apellidos {get;set;}
 		 public  int IDTipoIdentifacion {get;set;}

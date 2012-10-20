@@ -42,7 +42,7 @@ namespace BussinesLogicLayer
 
         }
 
-        public void Update(Ent_Persona entDirecciones)
+        public void Update(Ent_Paciente entDirecciones)
         {
 
             //Validaciones De Lugar
@@ -53,13 +53,13 @@ namespace BussinesLogicLayer
 
         }
 
-        public void Delete(Ent_Persona entDirecciones)
+        public void Delete(Ent_Paciente entDirecciones)
         {
 
 
         }
 
-        public void Search(Ent_Persona entDirecciones)
+        public void Search(Ent_Paciente entDirecciones)
         {
 
 
