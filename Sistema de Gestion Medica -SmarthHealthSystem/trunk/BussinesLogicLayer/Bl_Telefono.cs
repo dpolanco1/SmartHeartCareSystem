@@ -29,7 +29,7 @@ namespace BussinesLogicLayer
             {
              flag= false;
             
-            }   else if (Da_Telefono.Insert(daTelefono))            
+            }   else if (Da_Telefono.Insert(entTelefono))            
             {
                  
                  flag= true;

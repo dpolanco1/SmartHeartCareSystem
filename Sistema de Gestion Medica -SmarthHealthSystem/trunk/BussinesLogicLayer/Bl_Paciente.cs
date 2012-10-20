@@ -63,7 +63,7 @@ namespace BussinesLogicLayer
             
                flag = false;
             
-            }else if ( Da_Paciente.Insert(entPaciente) && Da_Direcciones.Insert(entDirecciones) && Da_ && Da_Contacto.Insert(entContactos) )
+            }else if ( Da_Paciente.Insert(entPaciente) && Da_Direcciones.Insert(entDirecciones) && Da_Telefono.Insert(entTelefonos) && Da_Contacto.Insert(entContactos) )
             
             {
 

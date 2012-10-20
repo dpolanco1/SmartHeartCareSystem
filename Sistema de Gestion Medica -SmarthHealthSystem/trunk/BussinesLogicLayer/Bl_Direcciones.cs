@@ -26,12 +26,12 @@ namespace BussinesLogicLayer
             //Validaciones De Lugar
             bool flag = false;
 
-            if (entDirecciones.IDPaciente.Equals(String.Empty) || entDirecciones.TipoDireccion.Equals(String.Empty) || entDirecciones.Direccion.Equals(String.Empty) )
+            if (entDirecciones.IDPaciente.Equals(String.Empty)  || entDirecciones.Direccion.Equals(String.Empty) )
 
             {
              flag= false;
             
-            }   else if (daDirecciones.Insert(entDirecciones))            
+            }   else if (Da_Direcciones.Insert(entDirecciones))            
             {
                  
                  flag= true;

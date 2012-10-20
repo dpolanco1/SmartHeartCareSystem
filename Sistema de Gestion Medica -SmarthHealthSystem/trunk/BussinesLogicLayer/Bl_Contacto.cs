@@ -25,7 +25,7 @@ namespace BussinesLogicLayer
             //Validaciones De Lugar
 
 
-            daContacto.Insert(entContacto);
+            Da_Contacto.Insert(entContacto);
 
 
 

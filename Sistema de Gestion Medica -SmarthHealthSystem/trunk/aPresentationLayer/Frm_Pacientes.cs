@@ -111,8 +111,7 @@ namespace aPresentationLayer
 
 
 
-
-                Bl_Paciente.Insert(paciente, direcciones, telefonos, contacto);
+            //    Bl_Paciente.Insert(paciente, direcciones, telefonos, contacto);
                
 
 
@@ -133,7 +132,7 @@ namespace aPresentationLayer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(""+dtgDirecciones.Rows[i].Cells[0].ToString());
+         
         }
 
     }
