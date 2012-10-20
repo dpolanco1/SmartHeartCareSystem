@@ -34,6 +34,11 @@ namespace BussinesLogicLayer
                 }
                 else if (contHijo is NumericUpDown)
                 {
+                    contHijo.Text = "0.0";
+
+                }
+                else if (contHijo is RichTextBox)
+                {
                     contHijo.Text = String.Empty;
 
                 }
@@ -63,6 +68,11 @@ namespace BussinesLogicLayer
                     contHijo.Enabled = true;
 
                 }
+                else if (contHijo is RichTextBox)
+                {
+                    contHijo.Enabled = true;
+
+                }
             }
         }
 
@@ -87,6 +97,11 @@ namespace BussinesLogicLayer
 
                 }
                 else if (contHijo is NumericUpDown)
+                {
+                    contHijo.Enabled = false;
+
+                }
+                else if (contHijo is RichTextBox)
                 {
                     contHijo.Enabled = false;
 

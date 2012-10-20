@@ -31,15 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.tbpPrincipalPacientes = new DevExpress.XtraTab.XtraTabControl();
             this.tabPacientes = new DevExpress.XtraTab.XtraTabPage();
             this.grpUbicaciones = new DevExpress.XtraEditors.GroupControl();
             this.dtgContactos = new System.Windows.Forms.DataGridView();
-            this.TipoPersona = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgTelefonos = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgDirecciones = new System.Windows.Forms.DataGridView();
@@ -48,18 +44,12 @@
             this.txtObservaciones = new System.Windows.Forms.RichTextBox();
             this.grpMasDatos = new DevExpress.XtraEditors.GroupControl();
             this.TabMasInfo = new DevExpress.XtraTab.XtraTabControl();
-            this.tbpVisitas = new DevExpress.XtraTab.XtraTabPage();
-            this.dtgVisita = new System.Windows.Forms.DataGridView();
-            this.IDVisita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoVisita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MotivoVisita = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabHistorialClinico = new DevExpress.XtraTab.XtraTabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgHistorialClinico = new System.Windows.Forms.DataGridView();
             this.FechaHistorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesional = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbpObservaciones = new DevExpress.XtraTab.XtraTabPage();
-            this.dtgObservaciones = new System.Windows.Forms.DataGridView();
+            this.tbpConsultas = new DevExpress.XtraTab.XtraTabPage();
+            this.dtgConsultas = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -135,6 +125,8 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).BeginInit();
             this.tbpPrincipalPacientes.SuspendLayout();
             this.tabPacientes.SuspendLayout();
@@ -149,12 +141,10 @@
             this.grpMasDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabMasInfo)).BeginInit();
             this.TabMasInfo.SuspendLayout();
-            this.tbpVisitas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgVisita)).BeginInit();
             this.tabHistorialClinico.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tbpObservaciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgObservaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialClinico)).BeginInit();
+            this.tbpConsultas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpDatos)).BeginInit();
             this.grpDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAltura)).BeginInit();
@@ -175,7 +165,7 @@
             // tbpPrincipalPacientes
             // 
             this.tbpPrincipalPacientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbpPrincipalPacientes.Location = new System.Drawing.Point(0, 65);
+            this.tbpPrincipalPacientes.Location = new System.Drawing.Point(0, 69);
             this.tbpPrincipalPacientes.Name = "tbpPrincipalPacientes";
             this.tbpPrincipalPacientes.SelectedTabPage = this.tabPacientes;
             this.tbpPrincipalPacientes.Size = new System.Drawing.Size(1157, 664);
@@ -217,7 +207,6 @@
             this.dtgContactos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgContactos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TipoPersona,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewComboBoxColumn2});
             this.dtgContactos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
@@ -229,25 +218,6 @@
             this.dtgContactos.RowHeadersVisible = false;
             this.dtgContactos.Size = new System.Drawing.Size(354, 90);
             this.dtgContactos.TabIndex = 26;
-            // 
-            // TipoPersona
-            // 
-            this.TipoPersona.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.TipoPersona.HeaderText = "Tipo de Persona";
-            this.TipoPersona.Name = "TipoPersona";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewComboBoxColumn2
-            // 
-            this.dataGridViewComboBoxColumn2.HeaderText = "Teléfono";
-            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dtgTelefonos
             // 
@@ -336,33 +306,30 @@
             this.TabMasInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.TabMasInfo.Location = new System.Drawing.Point(2, 27);
             this.TabMasInfo.Name = "TabMasInfo";
-            this.TabMasInfo.SelectedTabPage = this.tbpVisitas;
+            this.TabMasInfo.SelectedTabPage = this.tabHistorialClinico;
             this.TabMasInfo.Size = new System.Drawing.Size(1143, 176);
             this.TabMasInfo.TabIndex = 31;
             this.TabMasInfo.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.tbpVisitas,
             this.tabHistorialClinico,
-            this.tbpObservaciones});
+            this.tbpConsultas});
             // 
-            // tbpVisitas
+            // tabHistorialClinico
             // 
-            this.tbpVisitas.Controls.Add(this.dtgVisita);
-            this.tbpVisitas.Name = "tbpVisitas";
-            this.tbpVisitas.Size = new System.Drawing.Size(1137, 150);
-            this.tbpVisitas.Text = "Visitas";
+            this.tabHistorialClinico.Controls.Add(this.dtgHistorialClinico);
+            this.tabHistorialClinico.Name = "tabHistorialClinico";
+            this.tabHistorialClinico.Size = new System.Drawing.Size(1137, 150);
+            this.tabHistorialClinico.Text = "Historial Clinico";
             // 
-            // dtgVisita
+            // dtgHistorialClinico
             // 
-            this.dtgVisita.AllowUserToOrderColumns = true;
-            this.dtgVisita.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgVisita.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgVisita.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dtgVisita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgVisita.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDVisita,
-            this.Fecha,
-            this.TipoVisita,
-            this.MotivoVisita});
+            this.dtgHistorialClinico.AllowUserToOrderColumns = true;
+            this.dtgHistorialClinico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgHistorialClinico.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgHistorialClinico.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dtgHistorialClinico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgHistorialClinico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FechaHistorial,
+            this.Profesional});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -370,69 +337,16 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgVisita.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgVisita.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgVisita.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dtgVisita.Location = new System.Drawing.Point(0, 0);
-            this.dtgVisita.MultiSelect = false;
-            this.dtgVisita.Name = "dtgVisita";
-            this.dtgVisita.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgVisita.Size = new System.Drawing.Size(1137, 150);
-            this.dtgVisita.TabIndex = 0;
-            // 
-            // IDVisita
-            // 
-            this.IDVisita.HeaderText = "No. Visita";
-            this.IDVisita.Name = "IDVisita";
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // TipoVisita
-            // 
-            this.TipoVisita.HeaderText = "Tipo de Visita";
-            this.TipoVisita.Name = "TipoVisita";
-            // 
-            // MotivoVisita
-            // 
-            this.MotivoVisita.HeaderText = "Motivo Visita";
-            this.MotivoVisita.Name = "MotivoVisita";
-            // 
-            // tabHistorialClinico
-            // 
-            this.tabHistorialClinico.Controls.Add(this.dataGridView1);
-            this.tabHistorialClinico.Name = "tabHistorialClinico";
-            this.tabHistorialClinico.Size = new System.Drawing.Size(1137, 150);
-            this.tabHistorialClinico.Text = "Historial Clinico";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FechaHistorial,
-            this.Profesional});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1137, 150);
-            this.dataGridView1.TabIndex = 1;
+            this.dtgHistorialClinico.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgHistorialClinico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgHistorialClinico.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dtgHistorialClinico.Enabled = false;
+            this.dtgHistorialClinico.Location = new System.Drawing.Point(0, 0);
+            this.dtgHistorialClinico.MultiSelect = false;
+            this.dtgHistorialClinico.Name = "dtgHistorialClinico";
+            this.dtgHistorialClinico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgHistorialClinico.Size = new System.Drawing.Size(1137, 150);
+            this.dtgHistorialClinico.TabIndex = 1;
             // 
             // FechaHistorial
             // 
@@ -444,40 +358,41 @@
             this.Profesional.HeaderText = "Profesional";
             this.Profesional.Name = "Profesional";
             // 
-            // tbpObservaciones
+            // tbpConsultas
             // 
-            this.tbpObservaciones.Controls.Add(this.dtgObservaciones);
-            this.tbpObservaciones.Name = "tbpObservaciones";
-            this.tbpObservaciones.Size = new System.Drawing.Size(1137, 150);
-            this.tbpObservaciones.Text = "Observaciones";
+            this.tbpConsultas.Controls.Add(this.dtgConsultas);
+            this.tbpConsultas.Name = "tbpConsultas";
+            this.tbpConsultas.Size = new System.Drawing.Size(1137, 150);
+            this.tbpConsultas.Text = "Consultas";
             // 
-            // dtgObservaciones
+            // dtgConsultas
             // 
-            this.dtgObservaciones.AllowUserToOrderColumns = true;
-            this.dtgObservaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgObservaciones.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtgObservaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dtgObservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgObservaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgConsultas.AllowUserToOrderColumns = true;
+            this.dtgConsultas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgConsultas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgConsultas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dtgConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgConsultas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.Observacion});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgObservaciones.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgObservaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgObservaciones.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dtgObservaciones.Location = new System.Drawing.Point(0, 0);
-            this.dtgObservaciones.MultiSelect = false;
-            this.dtgObservaciones.Name = "dtgObservaciones";
-            this.dtgObservaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgObservaciones.Size = new System.Drawing.Size(1137, 150);
-            this.dtgObservaciones.TabIndex = 2;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgConsultas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgConsultas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgConsultas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dtgConsultas.Enabled = false;
+            this.dtgConsultas.Location = new System.Drawing.Point(0, 0);
+            this.dtgConsultas.MultiSelect = false;
+            this.dtgConsultas.Name = "dtgConsultas";
+            this.dtgConsultas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgConsultas.Size = new System.Drawing.Size(1137, 150);
+            this.dtgConsultas.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -1199,28 +1114,41 @@
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl1.Size = new System.Drawing.Size(1157, 65);
+            this.barDockControl1.Size = new System.Drawing.Size(1157, 69);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 725);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1157, 25);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 727);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1157, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 660);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 658);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1157, 65);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 660);
+            this.barDockControlRight.Location = new System.Drawing.Point(1157, 69);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 658);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre Contacto";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewComboBoxColumn2
+            // 
+            this.dataGridViewComboBoxColumn2.HeaderText = "Teléfono";
+            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
+            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Frm_Pacientes
             // 
@@ -1250,12 +1178,10 @@
             this.grpMasDatos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabMasInfo)).EndInit();
             this.TabMasInfo.ResumeLayout(false);
-            this.tbpVisitas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgVisita)).EndInit();
             this.tabHistorialClinico.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tbpObservaciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgObservaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHistorialClinico)).EndInit();
+            this.tbpConsultas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpDatos)).EndInit();
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();
@@ -1276,26 +1202,17 @@
         private DevExpress.XtraTab.XtraTabPage tabPacientes;
         private DevExpress.XtraEditors.GroupControl grpUbicaciones;
         private System.Windows.Forms.DataGridView dtgContactos;
-        private System.Windows.Forms.DataGridViewComboBoxColumn TipoPersona;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn2;
         private System.Windows.Forms.DataGridView dtgTelefonos;
         private System.Windows.Forms.DataGridView dtgDirecciones;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl grpMasDatos;
         private DevExpress.XtraTab.XtraTabControl TabMasInfo;
-        private DevExpress.XtraTab.XtraTabPage tbpVisitas;
-        private System.Windows.Forms.DataGridView dtgVisita;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDVisita;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoVisita;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MotivoVisita;
         private DevExpress.XtraTab.XtraTabPage tabHistorialClinico;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgHistorialClinico;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaHistorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesional;
-        private DevExpress.XtraTab.XtraTabPage tbpObservaciones;
-        private System.Windows.Forms.DataGridView dtgObservaciones;
+        private DevExpress.XtraTab.XtraTabPage tbpConsultas;
+        private System.Windows.Forms.DataGridView dtgConsultas;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
@@ -1374,5 +1291,7 @@
         private System.Windows.Forms.TextBox txtNSS;
         private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn2;
     }
 }

@@ -62,9 +62,19 @@ namespace aPresentationLayer
 
         private void btnGuardar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+
+
+            //Limpio los Txt
             Bl_AdministrarControles.VaciarText(frm_pacientes);
+
+            //Limpio los DatagriedView
+            Bl_AdministrarControles.VaciarDGV(frm_pacientes);
+            
+            //Deshabilito los Txt
             Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+
+            //Deshabilito los Datagried
+            Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
 
             
         }
