@@ -98,22 +98,32 @@ namespace aPresentationLayer
 
             //Valores Entidad Direcciones
 
-            for (int i = 0; i < dtgDirecciones.RowCount - 2; i++)
+            for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
             {
                 direcciones.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
-                direcciones.Direccion = dtgDirecciones.Rows[i].Cells[0].ToString();
+                direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
+            }
+
+            //Valores Entidad Telefonos
+
+            for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
+            {
+                telefonos.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
+                telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
+            }
+
+            //Valores Entidad Conctacto
+
+            for (int i = 0; i < dtgContactos.RowCount - 1; i++)
+            {
+                contacto.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
+                contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
+                contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
             }
          
-           
-
-          
-
-
-
-
-            //    Bl_Paciente.Insert(paciente, direcciones, telefonos, contacto);
+            //Metodo Insertar Paciente sobrecargado
+            Bl_Paciente.Insert(paciente, direcciones, telefonos, contacto);
                
-
 
             //Limpio los Txt
             Bl_AdministrarControles.VaciarText(frm_pacientes);
@@ -128,11 +138,6 @@ namespace aPresentationLayer
             Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
 
             
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-         
         }
 
     }
