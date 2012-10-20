@@ -39,10 +39,24 @@ namespace aPresentationLayer
 
         private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
+            //Limpio los Txt
             Bl_AdministrarControles.VaciarText(frm_pacientes);
+            
+            //Limpio los DatagriedView
+            Bl_AdministrarControles.VaciarDGV(frm_pacientes);
+
+            //Habilitos los Txt
             Bl_AdministrarControles.HabilitarText(frm_pacientes);
-            dtgDirecciones.DataSource = Bl_Paciente.SearchID();
-            txtIDPaciente.Focus();
+
+            //obtengo el siguiente ID que se va a generar de Paciente
+            txtIDPaciente.Text = Bl_Paciente.ObtenerIDPacienteMax().ToString();
+
+            //Deshabilito el CampoIDPaciente
+            txtIDPaciente.Enabled = false;
+
+            //Paso el Foco Al Nombre
+            txtNombres.Focus();
          
         }
 
