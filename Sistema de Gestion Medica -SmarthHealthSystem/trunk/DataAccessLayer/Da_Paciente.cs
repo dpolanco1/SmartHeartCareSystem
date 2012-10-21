@@ -28,25 +28,29 @@ namespace DataAccessLayer
                 command.Parameters.Add(new SqlParameter("@Apellidos", EntidadPaciente.Apellidos) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@IDTipoIdentifacion", EntidadPaciente.IDTipoIdentifacion) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@Identificacion", EntidadPaciente.Identificacion) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@NSS", EntidadPaciente.NSS) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@FechaNacimiento", EntidadPaciente.FechaNacimiento) { SqlDbType = SqlDbType.Date });
-                command.Parameters.Add(new SqlParameter("@NivelAcademico", EntidadPaciente.IDNivelAcademico) { SqlDbType = SqlDbType.Int});
-                command.Parameters.Add(new SqlParameter("@FechaIngrero", EntidadPaciente.FechaIngrero) { SqlDbType = SqlDbType.Date });
-                command.Parameters.Add(new SqlParameter("@Sexo", EntidadPaciente.Genero) { SqlDbType = SqlDbType.NChar });
+                command.Parameters.Add(new SqlParameter("@FechaNacimiento", EntidadPaciente.FechaNacimiento) { SqlDbType = SqlDbType.DateTime });
+                command.Parameters.Add(new SqlParameter("@IDNivelAcademico", EntidadPaciente.IDNivelAcademico) { SqlDbType = SqlDbType.Int });
+                command.Parameters.Add(new SqlParameter("@IDOcupacion", EntidadPaciente.IDOcupacion) { SqlDbType = SqlDbType.Int });
+                command.Parameters.Add(new SqlParameter("@Genero", EntidadPaciente.Genero) { SqlDbType = SqlDbType.NChar });
                 command.Parameters.Add(new SqlParameter("@EstadoCivil", EntidadPaciente.EstadoCivil) { SqlDbType = SqlDbType.NChar });
-                command.Parameters.Add(new SqlParameter("@Nacionalidad", EntidadPaciente.IDNacionalidad) { SqlDbType = SqlDbType.Int});
+                command.Parameters.Add(new SqlParameter("@TipoSangre", EntidadPaciente.TipoSangre) { SqlDbType = SqlDbType.NChar });
+                command.Parameters.Add(new SqlParameter("@IDTipoPaciente", EntidadPaciente.TipoPaciente) { SqlDbType = SqlDbType.Int });
+                command.Parameters.Add(new SqlParameter("@NSS", EntidadPaciente.NSS) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@Email", EntidadPaciente.Email) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@IDNacionalidad", EntidadPaciente.IDNacionalidad) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@IDPais", EntidadPaciente.IDPais) { SqlDbType = SqlDbType.Int });
-                command.Parameters.Add(new SqlParameter("@IDProvincia", EntidadPaciente.IDProvincia) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@IDRegion", EntidadPaciente.IDRegion) { SqlDbType = SqlDbType.Int });
+                command.Parameters.Add(new SqlParameter("@IDProvincia", EntidadPaciente.IDProvincia) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@IDSector", EntidadPaciente.IDSector) { SqlDbType = SqlDbType.Int });
-                command.Parameters.Add(new SqlParameter("@Email", EntidadPaciente.Email) { SqlDbType = SqlDbType.DateTime });
-                command.Parameters.Add(new SqlParameter("@Observaciones", EntidadPaciente.Observaciones) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@FechaIngrero", EntidadPaciente.FechaIngrero) { SqlDbType = SqlDbType.DateTime});
                 command.Parameters.Add(new SqlParameter("@Peso", EntidadPaciente.Peso) { SqlDbType = SqlDbType.Decimal });
                 command.Parameters.Add(new SqlParameter("@Altura", EntidadPaciente.Altura) { SqlDbType = SqlDbType.Decimal });
                 command.Parameters.Add(new SqlParameter("@Activo", EntidadPaciente.Activo) { SqlDbType = SqlDbType.Bit });
-                command.Parameters.Add(new SqlParameter("@EnvioMail", EntidadPaciente.EnvioEmail) { SqlDbType = SqlDbType.Bit });
-                command.Parameters.Add(new SqlParameter("@TipoPaciente", EntidadPaciente.TipoPaciente) { SqlDbType = SqlDbType.Int });
-                command.Parameters.Add(new SqlParameter("@TipoSangre", EntidadPaciente.TipoSangre) { SqlDbType = SqlDbType.NChar});
+                command.Parameters.Add(new SqlParameter("@EnvioEmail", EntidadPaciente.EnvioEmail) { SqlDbType = SqlDbType.Bit });
+                command.Parameters.Add(new SqlParameter("@Observaciones", EntidadPaciente.Observaciones) { SqlDbType = SqlDbType.NVarChar });
+               
+  
+
                 //Ejecuto el Query
                 command.ExecuteNonQuery();
 
@@ -70,6 +74,18 @@ namespace DataAccessLayer
             return flag;
         
         }
+
+
+        /*
+
+	
+
+         public bool Activo { get; set; }
+         public bool EnvioEmail { get; set; }
+         public string Observaciones { get; set; }
+         
+         
+         */
         public bool Update() 
         
         {
