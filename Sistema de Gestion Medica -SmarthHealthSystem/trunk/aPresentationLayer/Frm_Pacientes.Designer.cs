@@ -59,6 +59,7 @@
             this.lblTelefono = new DevExpress.XtraEditors.LabelControl();
             this.lblDirecciones = new DevExpress.XtraEditors.LabelControl();
             this.grpDatos = new DevExpress.XtraEditors.GroupControl();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNSS = new System.Windows.Forms.TextBox();
             this.txtIdentificacion = new System.Windows.Forms.TextBox();
@@ -127,7 +128,6 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).BeginInit();
             this.tbpPrincipalPacientes.SuspendLayout();
             this.tabPacientes.SuspendLayout();
@@ -507,6 +507,16 @@
             this.grpDatos.TabIndex = 5;
             this.grpDatos.Text = "Datos del Paciente";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(447, 182);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // txtEmail
             // 
             this.txtEmail.Enabled = false;
@@ -526,7 +536,7 @@
             // txtIdentificacion
             // 
             this.txtIdentificacion.Enabled = false;
-            this.txtIdentificacion.Location = new System.Drawing.Point(622, 53);
+            this.txtIdentificacion.Location = new System.Drawing.Point(648, 53);
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.Size = new System.Drawing.Size(119, 21);
             this.txtIdentificacion.TabIndex = 4;
@@ -578,6 +588,7 @@
             // 
             // cmbSector
             // 
+            this.cmbSector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSector.Enabled = false;
             this.cmbSector.FormattingEnabled = true;
             this.cmbSector.Items.AddRange(new object[] {
@@ -590,6 +601,7 @@
             // 
             // cmbProvincia
             // 
+            this.cmbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProvincia.Enabled = false;
             this.cmbProvincia.FormattingEnabled = true;
             this.cmbProvincia.Items.AddRange(new object[] {
@@ -607,6 +619,7 @@
             // 
             // cmbRegion
             // 
+            this.cmbRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRegion.Enabled = false;
             this.cmbRegion.FormattingEnabled = true;
             this.cmbRegion.Items.AddRange(new object[] {
@@ -620,6 +633,7 @@
             // 
             // cmbPais
             // 
+            this.cmbPais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPais.Enabled = false;
             this.cmbPais.FormattingEnabled = true;
             this.cmbPais.Items.AddRange(new object[] {
@@ -634,6 +648,7 @@
             // 
             // cmbNacionalidad
             // 
+            this.cmbNacionalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNacionalidad.Enabled = false;
             this.cmbNacionalidad.FormattingEnabled = true;
             this.cmbNacionalidad.Items.AddRange(new object[] {
@@ -648,6 +663,7 @@
             // 
             // cmbTipoPaciente
             // 
+            this.cmbTipoPaciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoPaciente.Enabled = false;
             this.cmbTipoPaciente.FormattingEnabled = true;
             this.cmbTipoPaciente.Items.AddRange(new object[] {
@@ -661,6 +677,7 @@
             // 
             // cmbEstadoCivil
             // 
+            this.cmbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoCivil.Enabled = false;
             this.cmbEstadoCivil.FormattingEnabled = true;
             this.cmbEstadoCivil.Items.AddRange(new object[] {
@@ -674,6 +691,7 @@
             // 
             // cmbGenero
             // 
+            this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGenero.Enabled = false;
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Items.AddRange(new object[] {
@@ -686,6 +704,7 @@
             // 
             // cmbOcupacion
             // 
+            this.cmbOcupacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOcupacion.Enabled = false;
             this.cmbOcupacion.FormattingEnabled = true;
             this.cmbOcupacion.Items.AddRange(new object[] {
@@ -725,6 +744,7 @@
             // 
             // cmbNivelAcademico
             // 
+            this.cmbNivelAcademico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNivelAcademico.Enabled = false;
             this.cmbNivelAcademico.FormattingEnabled = true;
             this.cmbNivelAcademico.Items.AddRange(new object[] {
@@ -742,13 +762,14 @@
             // 
             this.txtFechaNacimiento.Enabled = false;
             this.txtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtFechaNacimiento.Location = new System.Drawing.Point(747, 54);
+            this.txtFechaNacimiento.Location = new System.Drawing.Point(773, 54);
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
-            this.txtFechaNacimiento.Size = new System.Drawing.Size(168, 21);
+            this.txtFechaNacimiento.Size = new System.Drawing.Size(142, 21);
             this.txtFechaNacimiento.TabIndex = 5;
             // 
             // cmbTipoIdentificacion
             // 
+            this.cmbTipoIdentificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoIdentificacion.Enabled = false;
             this.cmbTipoIdentificacion.FormattingEnabled = true;
             this.cmbTipoIdentificacion.Items.AddRange(new object[] {
@@ -757,7 +778,7 @@
             "Licencia de Conducir"});
             this.cmbTipoIdentificacion.Location = new System.Drawing.Point(514, 52);
             this.cmbTipoIdentificacion.Name = "cmbTipoIdentificacion";
-            this.cmbTipoIdentificacion.Size = new System.Drawing.Size(102, 21);
+            this.cmbTipoIdentificacion.Size = new System.Drawing.Size(128, 21);
             this.cmbTipoIdentificacion.TabIndex = 3;
             // 
             // txtNombres
@@ -786,6 +807,7 @@
             // 
             // cmbTipoSangre
             // 
+            this.cmbTipoSangre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoSangre.Enabled = false;
             this.cmbTipoSangre.FormattingEnabled = true;
             this.cmbTipoSangre.Items.AddRange(new object[] {
@@ -969,7 +991,7 @@
             // 
             // lblFechaNacimiento
             // 
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(747, 35);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(773, 35);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(103, 13);
             this.lblFechaNacimiento.TabIndex = 23;
@@ -985,9 +1007,10 @@
             // 
             // lblGenero
             // 
+            this.lblGenero.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGenero.Location = new System.Drawing.Point(225, 79);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(39, 13);
+            this.lblGenero.Size = new System.Drawing.Size(44, 13);
             this.lblGenero.TabIndex = 16;
             this.lblGenero.Text = "Genero:";
             // 
@@ -1001,33 +1024,37 @@
             // 
             // lblIdentificacion
             // 
-            this.lblIdentificacion.Location = new System.Drawing.Point(622, 35);
+            this.lblIdentificacion.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdentificacion.Location = new System.Drawing.Point(648, 35);
             this.lblIdentificacion.Name = "lblIdentificacion";
-            this.lblIdentificacion.Size = new System.Drawing.Size(64, 13);
+            this.lblIdentificacion.Size = new System.Drawing.Size(80, 13);
             this.lblIdentificacion.TabIndex = 10;
-            this.lblIdentificacion.Text = "Identificacion";
+            this.lblIdentificacion.Text = "Identificacion:";
             // 
             // lblIDtipoidentificacion
             // 
+            this.lblIDtipoidentificacion.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDtipoidentificacion.Location = new System.Drawing.Point(514, 35);
             this.lblIDtipoidentificacion.Name = "lblIDtipoidentificacion";
-            this.lblIDtipoidentificacion.Size = new System.Drawing.Size(91, 13);
+            this.lblIDtipoidentificacion.Size = new System.Drawing.Size(107, 13);
             this.lblIDtipoidentificacion.TabIndex = 8;
             this.lblIDtipoidentificacion.Text = "Tipo Identificacion:";
             // 
             // lblApellidos
             // 
+            this.lblApellidos.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellidos.Location = new System.Drawing.Point(304, 35);
             this.lblApellidos.Name = "lblApellidos";
-            this.lblApellidos.Size = new System.Drawing.Size(46, 13);
+            this.lblApellidos.Size = new System.Drawing.Size(54, 13);
             this.lblApellidos.TabIndex = 4;
             this.lblApellidos.Text = "Apellidos:";
             // 
             // lblNombre
             // 
+            this.lblNombre.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(93, 35);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(46, 13);
+            this.lblNombre.Size = new System.Drawing.Size(53, 13);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombres:";
             // 
@@ -1215,16 +1242,6 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1157, 69);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 658);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(447, 182);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 64;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Frm_Pacientes
             // 
