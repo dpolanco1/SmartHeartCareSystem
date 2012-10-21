@@ -76,7 +76,7 @@ namespace aPresentationLayer
             paciente.Apellidos = txtApellidos.Text;
             paciente.IDTipoIdentifacion = cmbTipoIdentificacion.SelectedIndex;
             paciente.Identificacion = txtIdentificacion.Text;
-            paciente.FechaNacimiento = Convert.ToDateTime(txtFechaNacimiento.Value.ToString("yyyy/MM/DD"));
+            paciente.FechaNacimiento = Convert.ToDateTime(txtFechaNacimiento.Value.ToString("yyyy-MM-dd"));
             paciente.IDNivelAcademico = cmbNivelAcademico.SelectedIndex;
             paciente.IDOcupacion = cmbOcupacion.SelectedIndex;
             paciente.Genero = cmbGenero.Text;
@@ -86,10 +86,10 @@ namespace aPresentationLayer
             paciente.NSS = txtNSS.Text;
             paciente.Email = txtEmail.Text;
             paciente.IDNacionalidad = cmbNacionalidad.SelectedIndex;
-            paciente.IDPais = cmbPais.SelectedIndex;
+            paciente.IDPais =  cmbPais.SelectedIndex;
             paciente.IDRegion = cmbRegion.SelectedIndex;
             paciente.IDSector = cmbRegion.SelectedIndex;
-            paciente.FechaIngrero = Convert.ToDateTime(txtFechaIngreso.Value.ToString("yyyy/MM/DD"));
+            paciente.FechaIngrero = Convert.ToDateTime(txtFechaIngreso.Value.ToString("yyyy-MM-dd"));
             paciente.Peso = txtPeso.Value;
             paciente.Altura = txtAltura.Value;
             paciente.Activo = chkActivo.Checked;
@@ -152,6 +152,11 @@ namespace aPresentationLayer
             
             }
               
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+         
         }
 
     }
