@@ -73,6 +73,11 @@ namespace BussinesLogicLayer
                     contHijo.Enabled = true;
 
                 }
+                else if (contHijo is CheckBox)
+                {
+                    contHijo.Enabled = true;
+
+                }
             }
         }
 
@@ -102,6 +107,11 @@ namespace BussinesLogicLayer
 
                 }
                 else if (contHijo is RichTextBox)
+                {
+                    contHijo.Enabled = false;
+
+                }
+                else if (contHijo is CheckBox)
                 {
                     contHijo.Enabled = false;
 

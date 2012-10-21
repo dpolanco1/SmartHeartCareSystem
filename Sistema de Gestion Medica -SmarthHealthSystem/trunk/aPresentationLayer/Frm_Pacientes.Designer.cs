@@ -578,6 +578,9 @@
             // 
             this.cmbSector.Enabled = false;
             this.cmbSector.FormattingEnabled = true;
+            this.cmbSector.Items.AddRange(new object[] {
+            "Villa Juana",
+            "Los mina"});
             this.cmbSector.Location = new System.Drawing.Point(747, 142);
             this.cmbSector.Name = "cmbSector";
             this.cmbSector.Size = new System.Drawing.Size(168, 21);
@@ -587,6 +590,14 @@
             // 
             this.cmbProvincia.Enabled = false;
             this.cmbProvincia.FormattingEnabled = true;
+            this.cmbProvincia.Items.AddRange(new object[] {
+            "Santo Domingo Norte",
+            "Santo Domingo Este",
+            "Distrito Nacional",
+            "La Vega",
+            "Santiago",
+            "Puerto Plata",
+            "San Juan"});
             this.cmbProvincia.Location = new System.Drawing.Point(514, 143);
             this.cmbProvincia.Name = "cmbProvincia";
             this.cmbProvincia.Size = new System.Drawing.Size(227, 21);
@@ -596,6 +607,10 @@
             // 
             this.cmbRegion.Enabled = false;
             this.cmbRegion.FormattingEnabled = true;
+            this.cmbRegion.Items.AddRange(new object[] {
+            "Cibao Central",
+            "Distrito Nacional",
+            "Sur"});
             this.cmbRegion.Location = new System.Drawing.Point(312, 143);
             this.cmbRegion.Name = "cmbRegion";
             this.cmbRegion.Size = new System.Drawing.Size(196, 21);
@@ -605,6 +620,11 @@
             // 
             this.cmbPais.Enabled = false;
             this.cmbPais.FormattingEnabled = true;
+            this.cmbPais.Items.AddRange(new object[] {
+            "Republica Dominicana",
+            "USA",
+            "Canada",
+            "Haiti"});
             this.cmbPais.Location = new System.Drawing.Point(136, 143);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(170, 21);
@@ -614,6 +634,11 @@
             // 
             this.cmbNacionalidad.Enabled = false;
             this.cmbNacionalidad.FormattingEnabled = true;
+            this.cmbNacionalidad.Items.AddRange(new object[] {
+            "Dominicana",
+            "Estadounidense",
+            "Canadiense",
+            "Haitiano"});
             this.cmbNacionalidad.Location = new System.Drawing.Point(11, 142);
             this.cmbNacionalidad.Name = "cmbNacionalidad";
             this.cmbNacionalidad.Size = new System.Drawing.Size(119, 21);
@@ -624,17 +649,9 @@
             this.cmbTipoPaciente.Enabled = false;
             this.cmbTipoPaciente.FormattingEnabled = true;
             this.cmbTipoPaciente.Items.AddRange(new object[] {
-            "A",
-            "A+",
-            "A-",
-            "B",
-            "B+",
-            "B-",
-            "O",
-            "O+",
-            "O-",
-            "AB-\t",
-            "AB+"});
+            "Recurrente",
+            "Normal",
+            "Cuidado Intensivo"});
             this.cmbTipoPaciente.Location = new System.Drawing.Point(514, 97);
             this.cmbTipoPaciente.Name = "cmbTipoPaciente";
             this.cmbTipoPaciente.Size = new System.Drawing.Size(102, 21);
@@ -644,6 +661,10 @@
             // 
             this.cmbEstadoCivil.Enabled = false;
             this.cmbEstadoCivil.FormattingEnabled = true;
+            this.cmbEstadoCivil.Items.AddRange(new object[] {
+            "C",
+            "S",
+            "V"});
             this.cmbEstadoCivil.Location = new System.Drawing.Point(324, 97);
             this.cmbEstadoCivil.Name = "cmbEstadoCivil";
             this.cmbEstadoCivil.Size = new System.Drawing.Size(108, 21);
@@ -653,6 +674,9 @@
             // 
             this.cmbGenero.Enabled = false;
             this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "F",
+            "M"});
             this.cmbGenero.Location = new System.Drawing.Point(225, 97);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(93, 21);
@@ -662,6 +686,36 @@
             // 
             this.cmbOcupacion.Enabled = false;
             this.cmbOcupacion.FormattingEnabled = true;
+            this.cmbOcupacion.Items.AddRange(new object[] {
+            "Restaurante y Gerentes de Servicios de Alimentos",
+            "Gerentes de Producción Primaria (excepto agricultura)",
+            "Ocupaciones Profesionales en Servicios Empresariales a la Gestión",
+            "Ajustadores de Seguros y Reclamos Examinadores",
+            "Los biólogos y especialistas asimilados",
+            "Arquitectos",
+            "Médicos Especialistas",
+            "Médicos Generales y Médicos de familia",
+            "Dentistas",
+            "Los farmacéuticos",
+            "Fisioterapeutas",
+            "Enfermeras Registradas",
+            "Tecnólogos Médicos de radiación",
+            "Higienistas Dentales y terapeutas dentales",
+            " Las enfermeras prácticas con licencia",
+            " psicólogos",
+            " Trabajadores Sociales",
+            "  \tChefs",
+            " Cocineros",
+            " Contratistas y Supervisores, Oficios Carpintería",
+            " Contratistas y Supervisores, Oficios Mecánico",
+            " Electricistas (excepto Sistema Industrial y Electricidad)",
+            " Electricistas Industriales",
+            " Fontaneros",
+            " Los soldadores y operadores de máquinas afines",
+            " Mécanico Equipos Especiales",
+            "  Operadores de grúas",
+            "  Perforadores y Blasters - Minería de Superficie, Canteras y Construcción",
+            "  Supervisores, Petróleo y Gas Perforación y Servicio"});
             this.cmbOcupacion.Location = new System.Drawing.Point(11, 97);
             this.cmbOcupacion.Name = "cmbOcupacion";
             this.cmbOcupacion.Size = new System.Drawing.Size(208, 21);
@@ -671,6 +725,12 @@
             // 
             this.cmbNivelAcademico.Enabled = false;
             this.cmbNivelAcademico.FormattingEnabled = true;
+            this.cmbNivelAcademico.Items.AddRange(new object[] {
+            "Estudiante Básica",
+            "Estudiante Educación Media",
+            "Estudiante Universitario",
+            "Profesional",
+            "N/A"});
             this.cmbNivelAcademico.Location = new System.Drawing.Point(921, 54);
             this.cmbNivelAcademico.Name = "cmbNivelAcademico";
             this.cmbNivelAcademico.Size = new System.Drawing.Size(221, 21);
@@ -689,6 +749,10 @@
             // 
             this.cmbTipoIdentificacion.Enabled = false;
             this.cmbTipoIdentificacion.FormattingEnabled = true;
+            this.cmbTipoIdentificacion.Items.AddRange(new object[] {
+            "Cedula",
+            "Pasaporte",
+            "Licencia de Conducir"});
             this.cmbTipoIdentificacion.Location = new System.Drawing.Point(514, 52);
             this.cmbTipoIdentificacion.Name = "cmbTipoIdentificacion";
             this.cmbTipoIdentificacion.Size = new System.Drawing.Size(102, 21);

@@ -17,17 +17,29 @@ namespace BussinesLogicLayer
         }
 
 
-        public static void Insert(Ent_Contacto entContacto)
+        public static bool Insert(Ent_Contacto entContacto)
         {
             //instancio el metodo
             Da_Contacto daContacto = GetDaContacto();
 
-            //Validaciones De Lugar
+             //Validaciones De Lugar
+            bool flag = false;
 
 
-            Da_Contacto.Insert(entContacto);
+            if (entContacto.IDPaciente.Equals(String.Empty) || entContacto.Contacto.Equals(String.Empty) || entContacto.Telefono.Equals(String.Empty))
+
+            {
+                flag = false;
+
+            }
+            else if (Da_Contacto.Insert(entContacto)) 
+            {
+                flag = true;
+            
+            }
 
 
+            return flag;
 
         }
 

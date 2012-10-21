@@ -19,38 +19,11 @@ namespace BussinesLogicLayer
             return daPersona;
         }
 
-        private static Da_Direcciones GetDaDirecciones()//metodo singleton
-        {
-            Da_Direcciones daDirecciones = new Da_Direcciones();
-            return daDirecciones;
-        }
 
-        private static Da_Telefono GetDaTelefonos()//metodo singleton
-        {
-            Da_Telefono daTelefono = new Da_Telefono();
-            return daTelefono;
-        }
-
-        private static Da_Contacto GetDaContactos()//metodo singleton
-        {
-            Da_Contacto daContacto = new Da_Contacto();
-            return daContacto;
-        }
-
-
-        public static bool Insert(Ent_Paciente entPaciente,Ent_Direcciones entDirecciones,Ent_Telefono entTelefonos,Ent_Contacto entContactos)
+        public static bool Insert(Ent_Paciente entPaciente)
         {
             //instancio el metodo
             Da_Paciente daPersona = GetDaPersona();
-
-            //instancio el metodo
-            Da_Direcciones daDirecciones = GetDaDirecciones();
-
-            //instancio el metodo
-            Da_Telefono datelefonos = GetDaTelefonos();
-
-            //instancio el metodo
-            Da_Contacto daContactos = GetDaContactos();
 
             //Validaciones De Lugar
             bool flag = false;
@@ -63,7 +36,7 @@ namespace BussinesLogicLayer
             
                flag = false;
             
-            }else if ( Da_Paciente.Insert(entPaciente) && Da_Direcciones.Insert(entDirecciones) && Da_Telefono.Insert(entTelefonos) && Da_Contacto.Insert(entContactos) )
+            }else if ( Da_Paciente.Insert(entPaciente))
             
             {
 

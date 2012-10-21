@@ -76,12 +76,12 @@ namespace aPresentationLayer
             paciente.Apellidos = txtApellidos.Text;
             paciente.IDTipoIdentifacion = cmbTipoIdentificacion.SelectedIndex;
             paciente.Identificacion = txtIdentificacion.Text;
-            paciente.FechaNacimiento = txtFechaNacimiento.Value;
+            paciente.FechaNacimiento = Convert.ToDateTime(txtFechaNacimiento.Value.ToString("yyyy/MM/DD"));
             paciente.IDNivelAcademico = cmbNivelAcademico.SelectedIndex;
             paciente.IDOcupacion = cmbOcupacion.SelectedIndex;
-            paciente.Genero = Convert.ToChar(cmbGenero.Text);
-            paciente.EstadoCivil = Convert.ToChar(cmbEstadoCivil.Text);
-            paciente.TipoSangre = Convert.ToChar(cmbTipoSangre.Text);
+            paciente.Genero = cmbGenero.Text;
+            paciente.EstadoCivil = cmbEstadoCivil.Text;
+            paciente.TipoSangre = cmbTipoSangre.Text;
             paciente.TipoPaciente = cmbTipoPaciente.SelectedIndex;
             paciente.NSS = txtNSS.Text;
             paciente.Email = txtEmail.Text;
@@ -89,55 +89,69 @@ namespace aPresentationLayer
             paciente.IDPais = cmbPais.SelectedIndex;
             paciente.IDRegion = cmbRegion.SelectedIndex;
             paciente.IDSector = cmbRegion.SelectedIndex;
-            paciente.FechaIngrero = txtFechaIngreso.Value;
+            paciente.FechaIngrero = Convert.ToDateTime(txtFechaIngreso.Value.ToString("yyyy/MM/DD"));
             paciente.Peso = txtPeso.Value;
             paciente.Altura = txtAltura.Value;
             paciente.Activo = chkActivo.Checked;
             paciente.EnvioEmail = chkEnviarEmail.Checked;
             paciente.Observaciones = txtObservaciones.Text;
 
-            //Valores Entidad Direcciones
-
-            for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
+            if (Bl_Paciente.Insert(paciente))
             {
-                direcciones.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
-                direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
+
+               /* //Valores Entidad Direcciones
+                if (dtgDirecciones.Rows.Count != 0)
+                {
+                    for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
+                    {
+                        direcciones.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
+                        direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
+                         Bl_Direcciones.Insert(direcciones);
+                    }
+
+                    //Valores Entidad Telefonos
+                }else if (dtgTelefonos.Rows.Count != 0)
+                {
+                    for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
+                    {
+                        telefonos.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
+                        telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
+                        Bl_Telefono.Insert(telefonos);
+                    }
+
+                    //Valores Entidad Conctacto
+                }else if (dtgContactos.Rows.Count != 0)
+                    {
+                        for (int i = 0; i < dtgContactos.RowCount - 1; i++)
+                        {
+                            contacto.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
+                            contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
+                            contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
+                            Bl_Contacto.Insert(contacto);
+                        }
+                    }*/
+
+                MessageBox.Show("El paciente fue insertado correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Limpio los Txt
+                Bl_AdministrarControles.VaciarText(frm_pacientes);
+
+                //Limpio los DatagriedView
+                Bl_AdministrarControles.VaciarDGV(frm_pacientes);
+
+                //Deshabilito los Txt
+                Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+
+                //Deshabilito los Datagried
+                Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
             }
-
-            //Valores Entidad Telefonos
-
-            for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
+            else 
             {
-                telefonos.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
-                telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
-            }
 
-            //Valores Entidad Conctacto
-
-            for (int i = 0; i < dtgContactos.RowCount - 1; i++)
-            {
-                contacto.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
-                contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
-                contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
-            }
-         
-            //Metodo Insertar Paciente sobrecargado
-            Bl_Paciente.Insert(paciente, direcciones, telefonos, contacto);
-               
-
-            //Limpio los Txt
-            Bl_AdministrarControles.VaciarText(frm_pacientes);
-
-            //Limpio los DatagriedView
-            Bl_AdministrarControles.VaciarDGV(frm_pacientes);
+                MessageBox.Show("Hubo problemas para la inserccion de los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
             
-            //Deshabilito los Txt
-            Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
-
-            //Deshabilito los Datagried
-            Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
-
-            
+            }
+              
         }
 
     }

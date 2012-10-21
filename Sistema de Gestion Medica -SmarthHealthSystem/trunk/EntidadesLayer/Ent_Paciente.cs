@@ -16,9 +16,9 @@ namespace EntidadesLayer
 		 public  DateTime FechaNacimiento {get;set;}
 		 public  int IDNivelAcademico {get;set;}
          public int IDOcupacion { get; set; }
-		 public  char Genero {get;set;}
-		 public  char EstadoCivil {get;set;}
-         public char TipoSangre { get; set; }
+		 public  string Genero {get;set;}
+		 public  string EstadoCivil {get;set;}
+         public string TipoSangre { get; set; }
          public int TipoPaciente { get; set; }
          public string NSS { get; set; }
          public string Email { get; set; }
