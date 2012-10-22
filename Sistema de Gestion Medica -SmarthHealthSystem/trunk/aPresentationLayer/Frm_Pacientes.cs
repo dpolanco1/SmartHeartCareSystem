@@ -57,9 +57,6 @@ namespace aPresentationLayer
             //Habilitos los Txt
             Bl_AdministrarControles.HabilitarDGV(frm_pacientes);
 
-            //obtengo el siguiente ID que se va a generar de Paciente
-            txtIDPaciente.Text = Bl_Paciente.ObtenerIDPacienteMax().ToString();
-
             //Deshabilito el CampoIDPaciente
             txtIDPaciente.Enabled = false;
 

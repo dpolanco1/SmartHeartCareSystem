@@ -69,22 +69,6 @@ namespace BussinesLogicLayer
 
 
         }
-      public static int ObtenerIDPacienteMax()
-
-        {
-            if (Da_Paciente.ObtenerIDPacienteMax() >= 0)
-            {
-                return Da_Paciente.ObtenerIDPacienteMax();
-
-            }
-            else 
-            {
-
-                return 1;
-            }
-             
-        
-        }
-
+      
     }
 }

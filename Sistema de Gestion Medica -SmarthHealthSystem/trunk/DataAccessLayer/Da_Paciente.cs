@@ -76,16 +76,6 @@ namespace DataAccessLayer
         }
 
 
-        /*
-
-	
-
-         public bool Activo { get; set; }
-         public bool EnvioEmail { get; set; }
-         public string Observaciones { get; set; }
-         
-         
-         */
         public bool Update() 
         
         {
@@ -111,33 +101,6 @@ namespace DataAccessLayer
             return flag;
         
         }
-        public static int ObtenerIDPacienteMax()
-        {
-            try
-            {
-
-                SqlCommand ObjCmd = new SqlCommand("SELECT MAX(IDPaciente) FROM Paciente ", Da_Connection.Get);
-                ObjCmd.CommandType = CommandType.Text;
-                Da_Connection.Get.Open();
-
-                var dr = ObjCmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    return dr.GetInt32(0) + 1;//obtengo el ultimo registro y le sumo uno para visualizarlo en el frmPacientes
-
-                }
-            }
-
-            finally
-            {
-
-                if (Da_Connection.Get.State != ConnectionState.Closed)
-                {
-                    Da_Connection.Get.Close();
-                }
-
-            }
-            return 0;
-        }
+     
     }
 }
