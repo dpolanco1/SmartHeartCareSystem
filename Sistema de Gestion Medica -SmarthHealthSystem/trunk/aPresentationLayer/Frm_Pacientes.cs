@@ -11,6 +11,7 @@ using EntidadesLayer;
 using System.Xml;
 
 
+
 namespace aPresentationLayer
 {
     public partial class Frm_Pacientes : DevExpress.XtraEditors.XtraForm
@@ -104,6 +105,8 @@ namespace aPresentationLayer
                 paciente.Activo = chkActivo.Checked;
                 paciente.EnvioEmail = chkEnviarEmail.Checked;
                 paciente.Observaciones = txtObservaciones.Text;
+
+
 
                 if (Bl_Paciente.Insert(paciente))
                 {

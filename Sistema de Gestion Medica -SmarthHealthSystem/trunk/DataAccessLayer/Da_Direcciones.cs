@@ -17,14 +17,20 @@ namespace DataAccessLayer
            
             bool flag = false;
 
-            try
-            {
-                //conecction = new DAConecction();
+            //Utilizo la clase Command Insertar en un StroreProcedure
                 SqlCommand command = new SqlCommand("Spr_InsertDirecciones", Da_Connection.Get);
                 command.CommandType = CommandType.StoredProcedure;
 
+                //Abro la conecxion 
                 Da_Connection.Get.Open();
 
+                //utilizo un Objeto de tipo Transacction que maneje el insert
+                SqlTransaction transaction;
+                transaction = Da_Connection.BeginTransaction();
+
+
+                try
+                {
                 command.Parameters.Add(new SqlParameter("@IDPaciente", EntidadDirecciones.IDPaciente) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@Direccion", EntidadDirecciones.Direccion) { SqlDbType = SqlDbType.NVarChar});
                 //Ejecuto el Query
@@ -34,7 +40,10 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
+                //Anulo la Transaccion
+                transaction.Rollback();
                 Console.WriteLine(ex);
+
             } // end catch
             finally
             {

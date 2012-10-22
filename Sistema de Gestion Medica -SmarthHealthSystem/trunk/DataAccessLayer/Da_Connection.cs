@@ -25,8 +25,13 @@ namespace DataAccessLayer
                         return _connection;
                     }
                 }
-            
-            }
+
+
+                internal static SqlTransaction BeginTransaction()
+                {
+                    throw new NotImplementedException();
+                }
+    }
 
 
   

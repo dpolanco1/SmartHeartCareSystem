@@ -14,15 +14,21 @@ namespace DataAccessLayer
         public static bool Insert(Ent_Paciente EntidadPaciente) 
         {
             bool flag = false;
-            
-            try
-            {
-                //conecction = new DAConecction();
+
+            //Utilizo la clase Command Insertar en un StroreProcedure
                 SqlCommand command = new SqlCommand("Spr_InsertPersona", Da_Connection.Get);
                 command.CommandType = CommandType.StoredProcedure;
 
+            //Abro la conecxion 
                 Da_Connection.Get.Open();
-
+            
+            //utilizo un Objeti de tipo Transacction que maneje el insert
+                SqlTransaction transaction;
+                transaction = Da_Connection.BeginTransaction();
+             
+            try
+                {
+                
                 //Paso los valores para la tabla Pacientes.
                 command.Parameters.Add(new SqlParameter("@Nombres", EntidadPaciente.Nombres) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Apellidos", EntidadPaciente.Apellidos) { SqlDbType = SqlDbType.NVarChar });
@@ -58,6 +64,8 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
+                //Hago RollBack y anulo el Insert.
+                transaction.Rollback();
                 Console.WriteLine(ex);
             } // end catch
             finally
@@ -70,7 +78,7 @@ namespace DataAccessLayer
             
             }
 
-
+            //retorno el resultado
             return flag;
         
         }
