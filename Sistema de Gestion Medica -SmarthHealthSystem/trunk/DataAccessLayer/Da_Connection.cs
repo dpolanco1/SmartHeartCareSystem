@@ -27,12 +27,6 @@ namespace DataAccessLayer
                 }
 
 
-                internal static SqlTransaction BeginTransaction()
-                {
-                    throw new NotImplementedException();
-                }
     }
 
-
-  
 }

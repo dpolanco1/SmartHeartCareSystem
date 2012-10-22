@@ -14,7 +14,11 @@ namespace DataAccessLayer
         {
             bool flag = false;
 
-           
+
+            try
+             
+            {
+
                 //conecction = new DAConecction();
                 SqlCommand command = new SqlCommand("Spr_InsertContactos", Da_Connection.Get);
                 command.CommandType = CommandType.StoredProcedure;
@@ -22,27 +26,19 @@ namespace DataAccessLayer
                 //Abro la conecxion
                 Da_Connection.Get.Open();
 
-                //utilizo un Objeto de tipo Transacction que maneje el insert
-                SqlTransaction transaction;
-                transaction = Da_Connection.BeginTransaction();
-             
-            try
-             
-            {
-                command.Parameters.Add(new SqlParameter("@IDPersona", EntidadContacto.IDPaciente) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@Contacto", EntidadContacto.Contacto) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Telefono", EntidadContacto.Telefono) { SqlDbType = SqlDbType.NVarChar });
+                
+                //Realizo el Query
                 command.ExecuteNonQuery();
 
-                //realizo un Commit si todo estuvo bien
-                transaction.Commit();
+          
 
                 flag = true;
             }
             catch (Exception ex)
             {
-                //Anulo la Transaccion en caso de error.
-                transaction.Rollback();
+               
                 Console.WriteLine(ex);
             } // end catch
             finally

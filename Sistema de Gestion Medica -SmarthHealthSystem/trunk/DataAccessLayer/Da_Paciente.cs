@@ -15,19 +15,15 @@ namespace DataAccessLayer
         {
             bool flag = false;
 
-            //Utilizo la clase Command Insertar en un StroreProcedure
-                SqlCommand command = new SqlCommand("Spr_InsertPersona", Da_Connection.Get);
-                command.CommandType = CommandType.StoredProcedure;
-
-            //Abro la conecxion 
-                Da_Connection.Get.Open();
-            
-            //utilizo un Objeti de tipo Transacction que maneje el insert
-                SqlTransaction transaction;
-                transaction = Da_Connection.BeginTransaction();
-             
             try
                 {
+
+                    //Utilizo la clase Command Insertar en un StroreProcedure
+                    SqlCommand command = new SqlCommand("Spr_InsertPersona", Da_Connection.Get);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    //Abro la conecxion 
+                    Da_Connection.Get.Open();
                 
                 //Paso los valores para la tabla Pacientes.
                 command.Parameters.Add(new SqlParameter("@Nombres", EntidadPaciente.Nombres) { SqlDbType = SqlDbType.NVarChar });
@@ -55,21 +51,16 @@ namespace DataAccessLayer
                 command.Parameters.Add(new SqlParameter("@EnvioEmail", EntidadPaciente.EnvioEmail) { SqlDbType = SqlDbType.Bit });
                 command.Parameters.Add(new SqlParameter("@Observaciones", EntidadPaciente.Observaciones) { SqlDbType = SqlDbType.NVarChar });
                
-  
-
                 //Ejecuto el Query
                 command.ExecuteNonQuery();
 
-                //realizo un Commit si todo estuvo bien
-                transaction.Commit();
 
 
                 flag = true;
             }
             catch (Exception ex)
             {
-                //Hago RollBack y anulo el Insert.
-                transaction.Rollback();
+        
                 Console.WriteLine(ex);
             } // end catch
             finally
