@@ -165,7 +165,7 @@
             // tbpPrincipalPacientes
             // 
             this.tbpPrincipalPacientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbpPrincipalPacientes.Location = new System.Drawing.Point(0, 65);
+            this.tbpPrincipalPacientes.Location = new System.Drawing.Point(0, 69);
             this.tbpPrincipalPacientes.Name = "tbpPrincipalPacientes";
             this.tbpPrincipalPacientes.SelectedTabPage = this.tabPacientes;
             this.tbpPrincipalPacientes.Size = new System.Drawing.Size(1157, 664);
@@ -190,7 +190,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 364);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1151, 92);
+            this.groupControl1.Size = new System.Drawing.Size(1151, 72);
             this.groupControl1.TabIndex = 13;
             this.groupControl1.Text = "Observaciones:";
             // 
@@ -200,7 +200,7 @@
             this.txtObservaciones.Enabled = false;
             this.txtObservaciones.Location = new System.Drawing.Point(2, 22);
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(1147, 68);
+            this.txtObservaciones.Size = new System.Drawing.Size(1147, 48);
             this.txtObservaciones.TabIndex = 27;
             this.txtObservaciones.Text = "";
             // 
@@ -940,16 +940,16 @@
             // 
             this.grpMasDatos.Controls.Add(this.TabMasInfo);
             this.grpMasDatos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpMasDatos.Location = new System.Drawing.Point(0, 456);
+            this.grpMasDatos.Location = new System.Drawing.Point(0, 432);
             this.grpMasDatos.Name = "grpMasDatos";
-            this.grpMasDatos.Size = new System.Drawing.Size(1151, 182);
+            this.grpMasDatos.Size = new System.Drawing.Size(1151, 206);
             this.grpMasDatos.TabIndex = 11;
             this.grpMasDatos.Text = "Mas Datos:";
             // 
             // TabMasInfo
             // 
-            this.TabMasInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TabMasInfo.Location = new System.Drawing.Point(2, 25);
+            this.TabMasInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TabMasInfo.Location = new System.Drawing.Point(2, 22);
             this.TabMasInfo.Name = "TabMasInfo";
             this.TabMasInfo.SelectedTabPage = this.tabHistorialClinico;
             this.TabMasInfo.Size = new System.Drawing.Size(1147, 155);
@@ -1208,7 +1208,7 @@
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl1.Size = new System.Drawing.Size(1157, 65);
+            this.barDockControl1.Size = new System.Drawing.Size(1157, 69);
             // 
             // barDockControlBottom
             // 
@@ -1221,15 +1221,15 @@
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 662);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 658);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1157, 65);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 662);
+            this.barDockControlRight.Location = new System.Drawing.Point(1157, 69);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 658);
             // 
             // Frm_Pacientes
             // 
