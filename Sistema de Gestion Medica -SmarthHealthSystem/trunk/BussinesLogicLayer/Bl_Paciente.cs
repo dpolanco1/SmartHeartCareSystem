@@ -63,11 +63,9 @@ namespace BussinesLogicLayer
 
 
         }
-
-        public void Search(Ent_Paciente entPaciente)
+        public static DataSet SearchAll()
         {
-
-
+            return Da_Paciente.SearchAll();
         }
       
     }

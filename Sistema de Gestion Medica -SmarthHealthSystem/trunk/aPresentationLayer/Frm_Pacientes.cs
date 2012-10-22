@@ -23,6 +23,11 @@ namespace aPresentationLayer
                     Ent_Telefono telefonos = new Ent_Telefono();
                     Ent_Contacto contacto = new Ent_Contacto();
 
+        //variables del Sistema
+                    private static bool Nuevo {get;set;}
+                    private static bool Editando { get; set; }
+        
+
         private static Frm_Pacientes frm_pacientes; // Referencia estática al mismo formulario
 
         public static Frm_Pacientes frm_Pacientes() // Método estatico que hace referencia a el mismo
@@ -49,6 +54,12 @@ namespace aPresentationLayer
                  //Si tengo seleccionado el tabPacientes entonces que se realice 
             if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes)
             {
+                /*Cambio las variable del sistema a Nuevo = True (indicando que es un nuevo registro) y 
+                Editando = False (me aseguro que este en false)*/
+
+                Nuevo = true;
+                Editando = false;
+
                 //Limpio los Txt
                 Bl_AdministrarControles.VaciarText(frm_pacientes);
 
@@ -61,6 +72,17 @@ namespace aPresentationLayer
                 //Habilitos los Txt
                 Bl_AdministrarControles.HabilitarDGV(frm_pacientes);
 
+                //Botones habilitados y Deshabilitados
+
+                btnNuevo.Enabled = false;
+                btnGuardar.Enabled = true;
+                btnEditar.Enabled = false;
+                btnCancelar.Enabled = true;
+                btnImprimir.Enabled = false;
+                btnEnviar.Enabled = false;
+                btnEliminar.Enabled = false;
+
+
                 //Deshabilito el CampoIDPaciente
                 txtIDPaciente.Enabled = false;
 
@@ -68,12 +90,12 @@ namespace aPresentationLayer
                 txtNombres.Focus();
             
             }//fin del If 
-        }
+        }//fin del Boton Nuevo
 
         private void btnGuardar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-                //Si tengo seleccionado el tabPacientes y los botones estan enable true entonces que se realice 
-            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true) 
+                //Si tengo seleccionado el tabPacientes, los botones estan enable true y estoy en un registro Nuevo entonces que se realice 
+            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true && Nuevo == true) 
             {
                 //Validar los datos importantes
 
@@ -165,17 +187,26 @@ namespace aPresentationLayer
 
                             MessageBox.Show("El paciente fue insertado correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            //Limpio los Txt
-                            Bl_AdministrarControles.VaciarText(frm_pacientes);
 
-                            //Limpio los DatagriedView
-                            Bl_AdministrarControles.VaciarDGV(frm_pacientes);
+
+                            //Botones habilitados y Deshabilitados
+
+                            btnNuevo.Enabled = true;
+                            btnGuardar.Enabled = false;
+                            btnEditar.Enabled = true;
+                            btnCancelar.Enabled = false;
+                            btnImprimir.Enabled = true;
+                            btnEnviar.Enabled = true;
+                            btnEliminar.Enabled = true;
 
                             //Deshabilito los Txt
                             Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
 
                             //Deshabilito los Datagried
                             Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+
+
+
 
                         }//fin de todos los insert
 
@@ -193,7 +224,82 @@ namespace aPresentationLayer
 
             }//fin del If Tabcontrol
             
-        }//fin del metodo del Boton Guardar
+        }//fin del Boton Guardar
+
+        private void btnEditar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //Si tengo seleccionado el tabPacientes entonces que se realice 
+            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes)
+            {
+                /*Cambio las variable del sistema a Nuevo = false (me aseguro que este en false) y 
+                  Editando = False (indicando que el registro existe) */
+
+                Editando = true;
+                Nuevo = false;
+
+                //Botones habilitados y Deshabilitados
+
+                btnNuevo.Enabled = false;
+                btnGuardar.Enabled = true;
+                btnEditar.Enabled = false;
+                btnCancelar.Enabled = true;
+                btnImprimir.Enabled = true;
+                btnEnviar.Enabled = true;
+                btnEliminar.Enabled = false;
+
+
+                //Habilitos los Txt
+                Bl_AdministrarControles.HabilitarText(frm_pacientes);
+
+                //Habilitos los Txt
+                Bl_AdministrarControles.HabilitarDGV(frm_pacientes);
+
+                //Deshabilito el CampoIDPaciente
+                txtIDPaciente.Enabled = false;
+
+                //Paso el Foco Al Nombre
+                txtNombres.Focus();
+            }//fin del if
+
+        }
+
+        private void btnCancelar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes)
+            {
+
+                //Botones habilitados y Deshabilitados
+
+                btnNuevo.Enabled = true;
+                btnGuardar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnCancelar.Enabled = false;
+                btnImprimir.Enabled = true;
+                btnEnviar.Enabled = true;
+                btnEliminar.Enabled = true;
+
+                //Limpio los Txt
+                Bl_AdministrarControles.VaciarText(frm_pacientes);
+
+                //Limpio los DatagriedView
+                Bl_AdministrarControles.VaciarDGV(frm_pacientes);
+
+                //Deshabilito los Txt
+                Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+
+                //Deshabilito los Datagried
+                Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+            
+            }// fin del if
+
+                           
+        }
+
+        private void Frm_Pacientes_Load(object sender, EventArgs e)
+        {
+            dtgListaPacientes.DataSource = Bl_Paciente.SearchAll().Tables[0];
+
+        }//fin del Metodo Load
 
     }
 }

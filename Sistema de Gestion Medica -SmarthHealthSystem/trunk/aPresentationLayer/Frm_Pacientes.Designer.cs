@@ -398,7 +398,7 @@
             // txtNSS
             // 
             this.txtNSS.Enabled = false;
-            this.txtNSS.Location = new System.Drawing.Point(622, 97);
+            this.txtNSS.Location = new System.Drawing.Point(622, 99);
             this.txtNSS.Name = "txtNSS";
             this.txtNSS.Size = new System.Drawing.Size(119, 21);
             this.txtNSS.TabIndex = 12;
@@ -406,7 +406,7 @@
             // txtIdentificacion
             // 
             this.txtIdentificacion.Enabled = false;
-            this.txtIdentificacion.Location = new System.Drawing.Point(648, 53);
+            this.txtIdentificacion.Location = new System.Drawing.Point(648, 52);
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.Size = new System.Drawing.Size(119, 21);
             this.txtIdentificacion.TabIndex = 4;
@@ -482,7 +482,7 @@
             "Santiago",
             "Puerto Plata",
             "San Juan"});
-            this.cmbProvincia.Location = new System.Drawing.Point(514, 143);
+            this.cmbProvincia.Location = new System.Drawing.Point(514, 142);
             this.cmbProvincia.Name = "cmbProvincia";
             this.cmbProvincia.Size = new System.Drawing.Size(227, 21);
             this.cmbProvincia.TabIndex = 17;
@@ -496,7 +496,7 @@
             "Cibao Central",
             "Distrito Nacional",
             "Sur"});
-            this.cmbRegion.Location = new System.Drawing.Point(312, 143);
+            this.cmbRegion.Location = new System.Drawing.Point(312, 142);
             this.cmbRegion.Name = "cmbRegion";
             this.cmbRegion.Size = new System.Drawing.Size(196, 21);
             this.cmbRegion.TabIndex = 16;
@@ -511,7 +511,7 @@
             "USA",
             "Canada",
             "Haiti"});
-            this.cmbPais.Location = new System.Drawing.Point(136, 143);
+            this.cmbPais.Location = new System.Drawing.Point(136, 142);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(170, 21);
             this.cmbPais.TabIndex = 15;
@@ -537,13 +537,14 @@
             this.cmbTipoPaciente.Enabled = false;
             this.cmbTipoPaciente.FormattingEnabled = true;
             this.cmbTipoPaciente.Items.AddRange(new object[] {
-            "Recurrente",
-            "Normal",
-            "Cuidado Intensivo"});
-            this.cmbTipoPaciente.Location = new System.Drawing.Point(514, 97);
+            "",
+            "Asegurado",
+            "No Asegurado"});
+            this.cmbTipoPaciente.Location = new System.Drawing.Point(872, 52);
             this.cmbTipoPaciente.Name = "cmbTipoPaciente";
-            this.cmbTipoPaciente.Size = new System.Drawing.Size(102, 21);
-            this.cmbTipoPaciente.TabIndex = 11;
+            this.cmbTipoPaciente.Size = new System.Drawing.Size(126, 21);
+            this.cmbTipoPaciente.Sorted = true;
+            this.cmbTipoPaciente.TabIndex = 6;
             // 
             // cmbEstadoCivil
             // 
@@ -551,13 +552,15 @@
             this.cmbEstadoCivil.Enabled = false;
             this.cmbEstadoCivil.FormattingEnabled = true;
             this.cmbEstadoCivil.Items.AddRange(new object[] {
+            "",
             "C",
             "S",
             "V"});
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(324, 97);
+            this.cmbEstadoCivil.Location = new System.Drawing.Point(432, 99);
             this.cmbEstadoCivil.Name = "cmbEstadoCivil";
             this.cmbEstadoCivil.Size = new System.Drawing.Size(108, 21);
-            this.cmbEstadoCivil.TabIndex = 9;
+            this.cmbEstadoCivil.Sorted = true;
+            this.cmbEstadoCivil.TabIndex = 10;
             // 
             // cmbGenero
             // 
@@ -565,12 +568,14 @@
             this.cmbGenero.Enabled = false;
             this.cmbGenero.FormattingEnabled = true;
             this.cmbGenero.Items.AddRange(new object[] {
+            "",
             "F",
             "M"});
-            this.cmbGenero.Location = new System.Drawing.Point(225, 97);
+            this.cmbGenero.Location = new System.Drawing.Point(773, 52);
             this.cmbGenero.Name = "cmbGenero";
             this.cmbGenero.Size = new System.Drawing.Size(93, 21);
-            this.cmbGenero.TabIndex = 8;
+            this.cmbGenero.Sorted = true;
+            this.cmbGenero.TabIndex = 5;
             // 
             // cmbOcupacion
             // 
@@ -607,10 +612,10 @@
             "  Operadores de grúas",
             "  Perforadores y Blasters - Minería de Superficie, Canteras y Construcción",
             "  Supervisores, Petróleo y Gas Perforación y Servicio"});
-            this.cmbOcupacion.Location = new System.Drawing.Point(11, 97);
+            this.cmbOcupacion.Location = new System.Drawing.Point(11, 99);
             this.cmbOcupacion.Name = "cmbOcupacion";
             this.cmbOcupacion.Size = new System.Drawing.Size(208, 21);
-            this.cmbOcupacion.TabIndex = 7;
+            this.cmbOcupacion.TabIndex = 8;
             // 
             // cmbNivelAcademico
             // 
@@ -618,24 +623,25 @@
             this.cmbNivelAcademico.Enabled = false;
             this.cmbNivelAcademico.FormattingEnabled = true;
             this.cmbNivelAcademico.Items.AddRange(new object[] {
+            "",
             "Estudiante Básica",
             "Estudiante Educación Media",
             "Estudiante Universitario",
-            "Profesional",
-            "N/A"});
-            this.cmbNivelAcademico.Location = new System.Drawing.Point(921, 54);
+            "Profesional"});
+            this.cmbNivelAcademico.Location = new System.Drawing.Point(225, 99);
             this.cmbNivelAcademico.Name = "cmbNivelAcademico";
-            this.cmbNivelAcademico.Size = new System.Drawing.Size(221, 21);
-            this.cmbNivelAcademico.TabIndex = 6;
+            this.cmbNivelAcademico.Size = new System.Drawing.Size(201, 21);
+            this.cmbNivelAcademico.Sorted = true;
+            this.cmbNivelAcademico.TabIndex = 9;
             // 
             // txtFechaNacimiento
             // 
             this.txtFechaNacimiento.Enabled = false;
             this.txtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtFechaNacimiento.Location = new System.Drawing.Point(773, 54);
+            this.txtFechaNacimiento.Location = new System.Drawing.Point(1004, 52);
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
-            this.txtFechaNacimiento.Size = new System.Drawing.Size(142, 21);
-            this.txtFechaNacimiento.TabIndex = 5;
+            this.txtFechaNacimiento.Size = new System.Drawing.Size(138, 21);
+            this.txtFechaNacimiento.TabIndex = 7;
             // 
             // cmbTipoIdentificacion
             // 
@@ -643,12 +649,15 @@
             this.cmbTipoIdentificacion.Enabled = false;
             this.cmbTipoIdentificacion.FormattingEnabled = true;
             this.cmbTipoIdentificacion.Items.AddRange(new object[] {
+            "",
             "Cedula",
-            "Pasaporte",
-            "Licencia de Conducir"});
+            "Licencia de Conducir",
+            "NA",
+            "Pasaporte"});
             this.cmbTipoIdentificacion.Location = new System.Drawing.Point(514, 52);
             this.cmbTipoIdentificacion.Name = "cmbTipoIdentificacion";
             this.cmbTipoIdentificacion.Size = new System.Drawing.Size(128, 21);
+            this.cmbTipoIdentificacion.Sorted = true;
             this.cmbTipoIdentificacion.TabIndex = 3;
             // 
             // txtNombres
@@ -681,25 +690,27 @@
             this.cmbTipoSangre.Enabled = false;
             this.cmbTipoSangre.FormattingEnabled = true;
             this.cmbTipoSangre.Items.AddRange(new object[] {
+            "",
             "A",
-            "A+",
             "A-",
-            "B",
-            "B+",
-            "B-",
-            "O",
-            "O+",
-            "O-",
+            "A+",
             "AB-\t",
-            "AB+"});
-            this.cmbTipoSangre.Location = new System.Drawing.Point(438, 98);
+            "AB+",
+            "B",
+            "B-",
+            "B+",
+            "O",
+            "O-",
+            "O+"});
+            this.cmbTipoSangre.Location = new System.Drawing.Point(546, 99);
             this.cmbTipoSangre.Name = "cmbTipoSangre";
             this.cmbTipoSangre.Size = new System.Drawing.Size(70, 21);
-            this.cmbTipoSangre.TabIndex = 10;
+            this.cmbTipoSangre.Sorted = true;
+            this.cmbTipoSangre.TabIndex = 11;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(438, 80);
+            this.labelControl2.Location = new System.Drawing.Point(546, 81);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(61, 13);
             this.labelControl2.TabIndex = 61;
@@ -769,7 +780,7 @@
             // 
             this.chkEnviarEmail.AutoSize = true;
             this.chkEnviarEmail.Enabled = false;
-            this.chkEnviarEmail.Location = new System.Drawing.Point(1042, 147);
+            this.chkEnviarEmail.Location = new System.Drawing.Point(1051, 165);
             this.chkEnviarEmail.Name = "chkEnviarEmail";
             this.chkEnviarEmail.Size = new System.Drawing.Size(83, 17);
             this.chkEnviarEmail.TabIndex = 23;
@@ -780,7 +791,7 @@
             // 
             this.chkActivo.AutoSize = true;
             this.chkActivo.Enabled = false;
-            this.chkActivo.Location = new System.Drawing.Point(1042, 124);
+            this.chkActivo.Location = new System.Drawing.Point(1051, 142);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(56, 17);
             this.chkActivo.TabIndex = 22;
@@ -797,9 +808,10 @@
             // 
             // lblTipoCliente
             // 
-            this.lblTipoCliente.Location = new System.Drawing.Point(514, 79);
+            this.lblTipoCliente.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoCliente.Location = new System.Drawing.Point(872, 34);
             this.lblTipoCliente.Name = "lblTipoCliente";
-            this.lblTipoCliente.Size = new System.Drawing.Size(64, 13);
+            this.lblTipoCliente.Size = new System.Drawing.Size(76, 13);
             this.lblTipoCliente.TabIndex = 41;
             this.lblTipoCliente.Text = "Tipo Paciente";
             // 
@@ -861,7 +873,7 @@
             // 
             // lblFechaNacimiento
             // 
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(773, 35);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(1004, 33);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(103, 13);
             this.lblFechaNacimiento.TabIndex = 23;
@@ -869,7 +881,7 @@
             // 
             // lblEstadoCivil
             // 
-            this.lblEstadoCivil.Location = new System.Drawing.Point(324, 79);
+            this.lblEstadoCivil.Location = new System.Drawing.Point(432, 81);
             this.lblEstadoCivil.Name = "lblEstadoCivil";
             this.lblEstadoCivil.Size = new System.Drawing.Size(59, 13);
             this.lblEstadoCivil.TabIndex = 18;
@@ -878,7 +890,7 @@
             // lblGenero
             // 
             this.lblGenero.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenero.Location = new System.Drawing.Point(225, 79);
+            this.lblGenero.Location = new System.Drawing.Point(773, 34);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(44, 13);
             this.lblGenero.TabIndex = 16;
@@ -886,7 +898,7 @@
             // 
             // lblNivelAcademico
             // 
-            this.lblNivelAcademico.Location = new System.Drawing.Point(921, 35);
+            this.lblNivelAcademico.Location = new System.Drawing.Point(225, 79);
             this.lblNivelAcademico.Name = "lblNivelAcademico";
             this.lblNivelAcademico.Size = new System.Drawing.Size(81, 13);
             this.lblNivelAcademico.TabIndex = 14;
@@ -1130,6 +1142,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Caption = "Guardar";
+            this.btnGuardar.Enabled = false;
             this.btnGuardar.Glyph = global::aPresentationLayer.Properties.Resources.save;
             this.btnGuardar.Id = 2;
             this.btnGuardar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G));
@@ -1140,24 +1153,29 @@
             // btnEditar
             // 
             this.btnEditar.Caption = "Editar";
+            this.btnEditar.Enabled = false;
             this.btnEditar.Glyph = global::aPresentationLayer.Properties.Resources.Edit;
             this.btnEditar.Id = 3;
             this.btnEditar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnEditar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEditar_ItemClick);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Caption = "Cancelar";
+            this.btnCancelar.Enabled = false;
             this.btnCancelar.Glyph = global::aPresentationLayer.Properties.Resources.Cancel;
             this.btnCancelar.Id = 4;
             this.btnCancelar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C));
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnCancelar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCancelar_ItemClick);
             // 
             // btnImprimir
             // 
             this.btnImprimir.Caption = "Imprimir";
+            this.btnImprimir.Enabled = false;
             this.btnImprimir.Glyph = global::aPresentationLayer.Properties.Resources.Imprimir;
             this.btnImprimir.Id = 5;
             this.btnImprimir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I));
@@ -1167,6 +1185,7 @@
             // btnEnviar
             // 
             this.btnEnviar.Caption = "Enviar";
+            this.btnEnviar.Enabled = false;
             this.btnEnviar.Glyph = global::aPresentationLayer.Properties.Resources.send;
             this.btnEnviar.Id = 6;
             this.btnEnviar.Name = "btnEnviar";
@@ -1175,6 +1194,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Caption = "Eliminar";
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Glyph = global::aPresentationLayer.Properties.Resources.Delete;
             this.btnEliminar.Id = 7;
             this.btnEliminar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
@@ -1244,6 +1264,7 @@
             this.Name = "Frm_Pacientes";
             this.Text = "Mantenimiento de Pacientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_Pacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).EndInit();
             this.tbpPrincipalPacientes.ResumeLayout(false);
             this.tabPacientes.ResumeLayout(false);
