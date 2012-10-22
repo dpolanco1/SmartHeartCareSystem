@@ -9,6 +9,7 @@ using DevExpress.XtraEditors;
 using BussinesLogicLayer;
 using EntidadesLayer;
 using System.Xml;
+using System.Transactions;
 
 
 
@@ -106,7 +107,10 @@ namespace aPresentationLayer
                 paciente.EnvioEmail = chkEnviarEmail.Checked;
                 paciente.Observaciones = txtObservaciones.Text;
 
+//utilizo un objeto de tipo transacction scope para que se ejecute todo al mismo tiempo solo si no existe problemas
 
+         using (TransactionScope scope = new TransactionScope())
+        {
 
                 if (Bl_Paciente.Insert(paciente))
                 {
@@ -121,9 +125,11 @@ namespace aPresentationLayer
                             Bl_Direcciones.Insert(direcciones);
                         }
 
-                        //   Valores Entidad Telefonos
-                    }
+                        
+                    }//fin del Bl_Direcciones.Insert
 
+
+                    //   Valores Entidad Telefonos
                     if (dtgTelefonos.Rows.Count != 0)
                     {
                         for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
@@ -133,9 +139,11 @@ namespace aPresentationLayer
                             Bl_Telefono.Insert(telefonos);
                         }
 
-                        // Valores Entidad Conctacto
-                    }
+                       
+                    }//fin del insert Bl_Telefono.Insert
 
+
+                     // Valores Entidad Conctacto
                     if (dtgContactos.Rows.Count != 0)
                     {
                         for (int i = 0; i < dtgContactos.RowCount - 1; i++)
@@ -145,9 +153,12 @@ namespace aPresentationLayer
                             contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
                             Bl_Contacto.Insert(contacto);
                         }
-                    }
+                    }//fin del insert Bl_Contacto.Insert
 
-                    MessageBox.Show("El paciente fue insertado correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //completo el rango de Metodos enviado los valores.
+                    scope.Complete();
+
+              MessageBox.Show("El paciente fue insertado correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //Limpio los Txt
                     Bl_AdministrarControles.VaciarText(frm_pacientes);
@@ -160,7 +171,10 @@ namespace aPresentationLayer
 
                     //Deshabilito los Datagried
                     Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
-                }
+
+                }//fin de todos los insert
+
+                    //si existe un problema entonces muestro un mensaje de aviso al usuario.
                 else
                 {
 
@@ -168,13 +182,12 @@ namespace aPresentationLayer
 
                 }
 
-               
-            
-            }
+         }//fin del Scope Transacction
 
-          
-              
-        }
+        }//fin del else comprobando los campos obligatorios.
+
+  
+        }//fin del metodo del Boton Guardar
 
         private void button1_Click(object sender, EventArgs e)
         {

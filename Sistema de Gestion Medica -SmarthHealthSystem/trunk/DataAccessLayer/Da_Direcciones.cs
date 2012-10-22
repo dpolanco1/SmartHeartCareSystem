@@ -36,11 +36,15 @@ namespace DataAccessLayer
                 //Ejecuto el Query
                 command.ExecuteNonQuery();
 
+                //realizo un Commit si todo estuvo bien
+                transaction.Commit();
+
+
                 flag = true;
             }
             catch (Exception ex)
             {
-                //Anulo la Transaccion
+                //Anulo la Transaccion en caso de error
                 transaction.Rollback();
                 Console.WriteLine(ex);
 

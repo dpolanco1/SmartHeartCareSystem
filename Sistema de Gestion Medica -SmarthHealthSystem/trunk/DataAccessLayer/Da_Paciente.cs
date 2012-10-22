@@ -60,6 +60,10 @@ namespace DataAccessLayer
                 //Ejecuto el Query
                 command.ExecuteNonQuery();
 
+                //realizo un Commit si todo estuvo bien
+                transaction.Commit();
+
+
                 flag = true;
             }
             catch (Exception ex)

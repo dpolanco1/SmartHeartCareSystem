@@ -34,11 +34,14 @@ namespace DataAccessLayer
                 command.Parameters.Add(new SqlParameter("@Telefono", EntidadContacto.Telefono) { SqlDbType = SqlDbType.NVarChar });
                 command.ExecuteNonQuery();
 
+                //realizo un Commit si todo estuvo bien
+                transaction.Commit();
+
                 flag = true;
             }
             catch (Exception ex)
             {
-                //Anulo la Transaccion
+                //Anulo la Transaccion en caso de error.
                 transaction.Rollback();
                 Console.WriteLine(ex);
             } // end catch
