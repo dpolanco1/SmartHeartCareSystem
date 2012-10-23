@@ -63,7 +63,7 @@ namespace BussinesLogicLayer
 
 
         }
-        public static DataSet SearchAll()
+        public static DataTable SearchAll()
         {
             return Da_Paciente.SearchAll();
         }

@@ -96,58 +96,23 @@ namespace DataAccessLayer
             return flag;
         
         }
-        public static DataSet SearchAll()
+        public static DataTable SearchAll()
         {
-            var listaPacientes = new List<Ent_Paciente>();
-            DataSet dataset = new DataSet();
+
+            DataTable dt = new DataTable();
+      
             try
             {
 
-                SqlCommand Query = new SqlCommand("SELECT * FROM Pacientes ", Da_Connection.Get);
-                Query.CommandType = CommandType.Text;
                 Da_Connection.Get.Open();
-
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(Query);
-
-                dataAdapter.Fill(dataset); 
-                /*var dr = Query.ExecuteReader();
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = new SqlCommand("Spr_SearchAllPacientes", Da_Connection.Get);
+               
+                da.Fill(dt);
+               
+                return dt;
                
 
-                while (dr.Read())
-                {
-
-                    listaPacientes.Add(new Ent_Paciente {
-
-                        IDPaciente = dr.GetString(0),//dr.GetOrdinal("IDPaciente")
-                        Nombres = dr.GetString(1),//dr.GetOrdinal("Nombres")
-                        Apellidos = dr.GetString(2),//dr.GetOrdinal("Apellidos")
-                        IDTipoIdentifacion = dr.GetInt32(3),//dr.GetOrdinal("IDTipoIdentifacion")
-                        Identificacion = dr.GetString(4),//dr.GetOrdinal("Identificacion")
-                        FechaNacimiento = dr.GetDateTime(5),//dr.GetOrdinal("FechaNacimiento")
-                        IDNivelAcademico = dr.GetInt32(6),//dr.GetOrdinal("IDNivelAcademico")
-                        IDOcupacion = dr.GetInt32(7),//dr.GetOrdinal("IDOcupacion")
-                        Genero = dr.GetString(8),//dr.GetOrdinal("Genero")
-                        EstadoCivil = dr.GetString(9),//dr.GetOrdinal("EstadoCivil")
-                        TipoSangre = dr.GetString(10),//dr.GetOrdinal("TipoSangre")
-                        TipoPaciente = dr.GetInt32(11),//dr.GetOrdinal("IDTipoPaciente")
-                        NSS = dr.GetString(12),//dr.GetOrdinal("NSS")
-                        Email = dr.GetString(13),//dr.GetOrdinal("Email")
-                        IDNacionalidad = dr.GetInt32(14),//dr.GetOrdinal("IDNacionalidad")
-                        IDPais = dr.GetInt32(15),//dr.GetOrdinal("IDPais")
-                        IDRegion = dr.GetInt32(16),//dr.GetOrdinal("IDRegion")
-                        IDProvincia = dr.GetInt32(17),//dr.GetOrdinal("IDProvincia")
-                        IDSector = dr.GetInt32(18),//dr.GetOrdinal("IDSector")
-                        FechaIngrero = dr.GetDateTime(19),//dr.GetOrdinal("FechaIngrero")
-                        Peso = dr.GetDecimal(20),//dr.GetOrdinal("Peso")
-                        Altura = dr.GetDecimal(21),//dr.GetOrdinal("Altura")
-                        Activo = dr.GetBoolean(22),//dr.GetOrdinal("Activo")
-                        EnvioEmail = dr.GetBoolean(23),//dr.GetOrdinal("EnvioEmail")
-                        Observaciones = dr.GetString(24),//dr.GetOrdinal("Observaciones")
-                    });
-
-                }*/
-
-                return dataset;
             }catch(Exception e)
             {
                 Console.WriteLine(e.Message);
@@ -163,8 +128,8 @@ namespace DataAccessLayer
                 }
 
             }//fin del Finally
-
-            return dataset;
+                
+            return dt;
         }//fin del Metodo
      
     }

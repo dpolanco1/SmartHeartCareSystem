@@ -110,6 +110,9 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabListaPacientes = new DevExpress.XtraTab.XtraTabPage();
+            this.grpFiltroListaPacientes = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.btnCargar = new DevExpress.XtraEditors.SimpleButton();
             this.dtgListaPacientes = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -150,6 +153,8 @@
             this.tbpConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultas)).BeginInit();
             this.tabListaPacientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpFiltroListaPacientes)).BeginInit();
+            this.grpFiltroListaPacientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -1068,18 +1073,47 @@
             // 
             // tabListaPacientes
             // 
+            this.tabListaPacientes.Controls.Add(this.grpFiltroListaPacientes);
             this.tabListaPacientes.Controls.Add(this.dtgListaPacientes);
             this.tabListaPacientes.Name = "tabListaPacientes";
             this.tabListaPacientes.Size = new System.Drawing.Size(1151, 638);
             this.tabListaPacientes.Text = "Lista de Pacientes";
             // 
+            // grpFiltroListaPacientes
+            // 
+            this.grpFiltroListaPacientes.Controls.Add(this.labelControl3);
+            this.grpFiltroListaPacientes.Controls.Add(this.btnCargar);
+            this.grpFiltroListaPacientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grpFiltroListaPacientes.Location = new System.Drawing.Point(0, 0);
+            this.grpFiltroListaPacientes.Name = "grpFiltroListaPacientes";
+            this.grpFiltroListaPacientes.Size = new System.Drawing.Size(1151, 56);
+            this.grpFiltroListaPacientes.TabIndex = 1;
+            this.grpFiltroListaPacientes.Text = "Lista de Pacienes";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(40, 35);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(81, 13);
+            this.labelControl3.TabIndex = 1;
+            this.labelControl3.Text = "Buscar Pacientes";
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Location = new System.Drawing.Point(140, 28);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(99, 23);
+            this.btnCargar.TabIndex = 0;
+            this.btnCargar.Text = "Cargar Pacientes";
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
             // dtgListaPacientes
             // 
-            this.dtgListaPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgListaPacientes.Location = new System.Drawing.Point(0, 0);
+            this.dtgListaPacientes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dtgListaPacientes.Location = new System.Drawing.Point(0, 57);
             this.dtgListaPacientes.MainView = this.gridView1;
             this.dtgListaPacientes.Name = "dtgListaPacientes";
-            this.dtgListaPacientes.Size = new System.Drawing.Size(1151, 638);
+            this.dtgListaPacientes.Size = new System.Drawing.Size(1151, 581);
             this.dtgListaPacientes.TabIndex = 0;
             this.dtgListaPacientes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -1264,7 +1298,6 @@
             this.Name = "Frm_Pacientes";
             this.Text = "Mantenimiento de Pacientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Frm_Pacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).EndInit();
             this.tbpPrincipalPacientes.ResumeLayout(false);
             this.tabPacientes.ResumeLayout(false);
@@ -1290,6 +1323,9 @@
             this.tbpConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultas)).EndInit();
             this.tabListaPacientes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpFiltroListaPacientes)).EndInit();
+            this.grpFiltroListaPacientes.ResumeLayout(false);
+            this.grpFiltroListaPacientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -1395,5 +1431,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.RichTextBox txtObservaciones;
+        private DevExpress.XtraEditors.GroupControl grpFiltroListaPacientes;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SimpleButton btnCargar;
     }
 }

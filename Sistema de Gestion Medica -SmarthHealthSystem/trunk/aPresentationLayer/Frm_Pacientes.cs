@@ -295,11 +295,9 @@ namespace aPresentationLayer
                            
         }
 
-        private void Frm_Pacientes_Load(object sender, EventArgs e)
+        private void btnCargar_Click(object sender, EventArgs e)
         {
-            dtgListaPacientes.DataSource = Bl_Paciente.SearchAll().Tables[0];
-
-        }//fin del Metodo Load
-
+            dtgListaPacientes.DataSource = Bl_Paciente.SearchAll();
+        }
     }
 }
