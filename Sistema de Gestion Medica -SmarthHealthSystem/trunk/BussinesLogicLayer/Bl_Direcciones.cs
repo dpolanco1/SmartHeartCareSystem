@@ -42,10 +42,27 @@ namespace BussinesLogicLayer
 
         }
 
-        public void Update(Ent_Paciente entDirecciones)
+        public static bool Update(Ent_Direcciones entDirecciones)
         {
 
+            //instancio el metodo
+            Da_Direcciones daDirecciones = GetDaDirecciones();
+
             //Validaciones De Lugar
+            bool flag = false;
+
+            if (entDirecciones.IDPaciente.Equals(String.Empty) || entDirecciones.Direccion.Equals(String.Empty))
+            {
+                flag = false;
+
+            }
+            else if (Da_Direcciones.Update(entDirecciones))
+            {
+
+                flag = true;
+            }
+
+            return flag;
 
 
 

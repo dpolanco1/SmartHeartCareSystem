@@ -94,6 +94,11 @@ namespace aPresentationLayer
 
         private void btnGuardar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
+            //utilizo un objeto de tipo transacction scope para que se ejecute todo al mismo tiempo solo si no existe problemas
+
+            using (TransactionScope scope = new TransactionScope())
+            {
                 //Si tengo seleccionado el tabPacientes, los botones estan enable true y estoy en un registro Nuevo entonces que se realice 
             if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true) 
             {
@@ -109,7 +114,7 @@ namespace aPresentationLayer
                 else
                 {
                     //Valores Entidad Paciente
-                    paciente.IDPaciente = txtIDPaciente.Text;
+                    paciente.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
                     paciente.Nombres = txtNombres.Text;
                     paciente.Apellidos = txtApellidos.Text;
                     paciente.IDTipoIdentifacion = cmbTipoIdentificacion.SelectedIndex;
@@ -133,11 +138,6 @@ namespace aPresentationLayer
                     paciente.Activo = chkActivo.Checked;
                     paciente.EnvioEmail = chkEnviarEmail.Checked;
                     paciente.Observaciones = txtObservaciones.Text;
-
-                    //utilizo un objeto de tipo transacction scope para que se ejecute todo al mismo tiempo solo si no existe problemas
-
-                    using (TransactionScope scope = new TransactionScope())
-                    {
 
                         if (Bl_Paciente.Insert(paciente) && Nuevo == true)
                         {
@@ -207,18 +207,15 @@ namespace aPresentationLayer
                         }//fin de todos los insert con Nuevo
                         
                             //si existe un problema entonces muestro un mensaje de aviso al usuario.
-                        else if (Bl_Paciente.Update(paciente))
+                        else if (Bl_Paciente.Update(paciente) && Editando == true)
                         {
-
-                            if (Bl_Paciente.Insert(paciente) && Nuevo == true)
-                            {
 
                                 //Valores Entidad Direcciones
                                 if (dtgDirecciones.Rows.Count != 0)
                                 {
                                     for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
                                     {
-
+                                        direcciones.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
                                         direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
                                         Bl_Direcciones.Insert(direcciones);
                                     }
@@ -232,7 +229,7 @@ namespace aPresentationLayer
                                 {
                                     for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
                                     {
-
+                                        telefonos.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
                                         telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
                                         Bl_Telefono.Insert(telefonos);
                                     }
@@ -246,19 +243,14 @@ namespace aPresentationLayer
                                 {
                                     for (int i = 0; i < dtgContactos.RowCount - 1; i++)
                                     {
-
+                                        contacto.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
                                         contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
                                         contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
                                         Bl_Contacto.Insert(contacto);
                                     }
                                 }//fin del insert Bl_Contacto.Insert
 
-                                //completo el rango de Metodos enviado los valores.
-                                scope.Complete();
-
                                 MessageBox.Show("La edición se realizó fue insertado correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
 
                                 //Botones habilitados y Deshabilitados
 
@@ -277,8 +269,6 @@ namespace aPresentationLayer
                                 Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
 
 
-
-
                             }
                             else
                             {
@@ -286,16 +276,17 @@ namespace aPresentationLayer
                                 MessageBox.Show("Hubo problemas para la inserccion de los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                             }
-                        }//Fin del Update
 
-                        //completo el rango de Metodos enviado los valores.
-                        scope.Complete();
-
-                    }//fin del Scope Transacction
+                         
 
                 }//fin del else comprobando los campos obligatorios.
 
-            }//fin del If Tabcontrol
+                 //si todo esta bien y es el fin del If Tabcontrol envia los datos al sevidor
+                scope.Complete();
+
+            }//If Tabcontrol
+           
+          }//completo el rango de Metodos enviado los valores.
             
         }//fin del Boton Guardar
 

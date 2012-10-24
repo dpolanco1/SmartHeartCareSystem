@@ -40,12 +40,27 @@ namespace BussinesLogicLayer
 
         }
 
-        public void Update(Da_Telefono daTelefono)
+        public static bool Update(Ent_Telefono entTelefono)
         {
 
+            //instancio el metodo
+            Da_Telefono daTelefono = GetDaTelefono();
+
             //Validaciones De Lugar
+            bool flag = false;
 
+            if (entTelefono.IDPaciente.Equals(String.Empty) || entTelefono.Telefono.Equals(String.Empty))
+            {
+                flag = false;
 
+            }
+            else if (Da_Telefono.Update(entTelefono))
+            {
+
+                flag = true;
+            }
+
+            return flag;
 
 
 

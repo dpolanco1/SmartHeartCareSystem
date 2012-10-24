@@ -8,7 +8,7 @@ namespace EntidadesLayer
     public class Ent_Paciente
     {
           
-         public string IDPaciente {get;set;}
+         public int IDPaciente {get;set;}
 		 public  string Nombres {get;set;}
 		 public  string Apellidos {get;set;}
 		 public  int IDTipoIdentifacion {get;set;}
