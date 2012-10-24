@@ -47,13 +47,31 @@ namespace BussinesLogicLayer
             return flag;
         }
 
-        public void Update(Ent_Paciente entPaciente)
+        public static bool Update(Ent_Paciente entPaciente)
         {
 
+            //instancio el metodo
+            Da_Paciente daPersona = GetDaPersona();
+
             //Validaciones De Lugar
+            bool flag = false;
 
+            if (entPaciente.Nombres.Equals(String.Empty) || entPaciente.Apellidos.Equals(String.Empty) || entPaciente.IDTipoIdentifacion.Equals(String.Empty) ||
+                entPaciente.Identificacion.Equals(String.Empty) || entPaciente.FechaNacimiento.Equals(String.Empty) || entPaciente.Genero.Equals(String.Empty) ||
+                entPaciente.TipoPaciente.Equals(String.Empty))
+            {
 
-            
+                flag = false;
+
+            }
+            else if (Da_Paciente.Update(entPaciente))
+            {
+
+                flag = true;
+
+            }
+
+            return flag;
 
 
         }

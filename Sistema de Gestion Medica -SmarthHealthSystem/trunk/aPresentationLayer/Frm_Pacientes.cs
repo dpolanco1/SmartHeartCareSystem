@@ -95,7 +95,7 @@ namespace aPresentationLayer
         private void btnGuardar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
                 //Si tengo seleccionado el tabPacientes, los botones estan enable true y estoy en un registro Nuevo entonces que se realice 
-            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true && Nuevo == true) 
+            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true) 
             {
                 //Validar los datos importantes
 
@@ -139,7 +139,7 @@ namespace aPresentationLayer
                     using (TransactionScope scope = new TransactionScope())
                     {
 
-                        if (Bl_Paciente.Insert(paciente))
+                        if (Bl_Paciente.Insert(paciente) && Nuevo == true)
                         {
 
                             //Valores Entidad Direcciones
@@ -182,12 +182,8 @@ namespace aPresentationLayer
                                 }
                             }//fin del insert Bl_Contacto.Insert
 
-                            //completo el rango de Metodos enviado los valores.
-                            scope.Complete();
 
                             MessageBox.Show("El paciente fue insertado correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
 
                             //Botones habilitados y Deshabilitados
 
@@ -208,15 +204,92 @@ namespace aPresentationLayer
 
 
 
-                        }//fin de todos los insert
-
+                        }//fin de todos los insert con Nuevo
+                        
                             //si existe un problema entonces muestro un mensaje de aviso al usuario.
-                        else
+                        else if (Bl_Paciente.Update(paciente))
                         {
 
-                            MessageBox.Show("Hubo problemas para la inserccion de los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (Bl_Paciente.Insert(paciente) && Nuevo == true)
+                            {
 
-                        }
+                                //Valores Entidad Direcciones
+                                if (dtgDirecciones.Rows.Count != 0)
+                                {
+                                    for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
+                                    {
+
+                                        direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
+                                        Bl_Direcciones.Insert(direcciones);
+                                    }
+
+
+                                }//fin del Bl_Direcciones.Insert
+
+
+                                //   Valores Entidad Telefonos
+                                if (dtgTelefonos.Rows.Count != 0)
+                                {
+                                    for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
+                                    {
+
+                                        telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
+                                        Bl_Telefono.Insert(telefonos);
+                                    }
+
+
+                                }//fin del insert Bl_Telefono.Insert
+
+
+                                // Valores Entidad Conctacto
+                                if (dtgContactos.Rows.Count != 0)
+                                {
+                                    for (int i = 0; i < dtgContactos.RowCount - 1; i++)
+                                    {
+
+                                        contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
+                                        contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
+                                        Bl_Contacto.Insert(contacto);
+                                    }
+                                }//fin del insert Bl_Contacto.Insert
+
+                                //completo el rango de Metodos enviado los valores.
+                                scope.Complete();
+
+                                MessageBox.Show("La edición se realizó fue insertado correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+                                //Botones habilitados y Deshabilitados
+
+                                btnNuevo.Enabled = true;
+                                btnGuardar.Enabled = false;
+                                btnEditar.Enabled = true;
+                                btnCancelar.Enabled = false;
+                                btnImprimir.Enabled = true;
+                                btnEnviar.Enabled = true;
+                                btnEliminar.Enabled = true;
+
+                                //Deshabilito los Txt
+                                Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+
+                                //Deshabilito los Datagried
+                                Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+
+
+
+
+                            }
+                            else
+                            {
+
+                                MessageBox.Show("Hubo problemas para la inserccion de los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            }
+                        }//Fin del Update
+
+                        //completo el rango de Metodos enviado los valores.
+                        scope.Complete();
 
                     }//fin del Scope Transacction
 

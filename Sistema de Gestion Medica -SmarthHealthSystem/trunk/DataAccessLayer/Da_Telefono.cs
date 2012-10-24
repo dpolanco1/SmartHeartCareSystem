@@ -52,13 +52,44 @@ namespace DataAccessLayer
         }//fin del Metodo Insert
 
 
-        public bool Update()
+        public static bool Update(Ent_Telefono EntidadTelefono)
         {
 
             bool flag = false;
 
-            return flag;
+            try
+            {
 
+                //conecction = new DAConecction();
+                SqlCommand command = new SqlCommand("Spr_UpdateTelefonos", Da_Connection.Get);
+                command.CommandType = CommandType.StoredProcedure;
+
+                //Abro la conecxion
+                Da_Connection.Get.Open();
+
+                command.Parameters.Add(new SqlParameter("@Telefono", EntidadTelefono.Telefono) { SqlDbType = SqlDbType.NVarChar });
+                command.ExecuteNonQuery();
+
+
+                flag = true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex);
+            } // end catch
+            finally
+            {
+
+                if (Da_Connection.Get.State != ConnectionState.Closed)
+                {
+                    Da_Connection.Get.Close();
+                }
+
+            }
+
+
+            return flag;
         }
         public bool Delete()
         {
