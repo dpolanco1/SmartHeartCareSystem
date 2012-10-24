@@ -38,11 +38,14 @@
             this.txtObservaciones = new System.Windows.Forms.RichTextBox();
             this.grpUbicaciones = new DevExpress.XtraEditors.GroupControl();
             this.dtgContactos = new System.Windows.Forms.DataGridView();
+            this.IDContacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgTelefonos = new System.Windows.Forms.DataGridView();
+            this.IDTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgDirecciones = new System.Windows.Forms.DataGridView();
+            this.IDDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblContactos = new DevExpress.XtraEditors.LabelControl();
             this.lblTelefono = new DevExpress.XtraEditors.LabelControl();
@@ -170,7 +173,7 @@
             // tbpPrincipalPacientes
             // 
             this.tbpPrincipalPacientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbpPrincipalPacientes.Location = new System.Drawing.Point(0, 69);
+            this.tbpPrincipalPacientes.Location = new System.Drawing.Point(0, 65);
             this.tbpPrincipalPacientes.Name = "tbpPrincipalPacientes";
             this.tbpPrincipalPacientes.SelectedTabPage = this.tabPacientes;
             this.tbpPrincipalPacientes.Size = new System.Drawing.Size(1157, 664);
@@ -232,6 +235,7 @@
             this.dtgContactos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgContactos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDContacto,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewComboBoxColumn2});
             this.dtgContactos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
@@ -243,6 +247,12 @@
             this.dtgContactos.RowHeadersVisible = false;
             this.dtgContactos.Size = new System.Drawing.Size(354, 90);
             this.dtgContactos.TabIndex = 26;
+            // 
+            // IDContacto
+            // 
+            this.IDContacto.HeaderText = "ID";
+            this.IDContacto.Name = "IDContacto";
+            this.IDContacto.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -265,6 +275,7 @@
             this.dtgTelefonos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgTelefonos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDTelefono,
             this.dataGridViewTextBoxColumn1});
             this.dtgTelefonos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgTelefonos.Enabled = false;
@@ -276,6 +287,12 @@
             this.dtgTelefonos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dtgTelefonos.Size = new System.Drawing.Size(285, 90);
             this.dtgTelefonos.TabIndex = 25;
+            // 
+            // IDTelefono
+            // 
+            this.IDTelefono.HeaderText = "ID";
+            this.IDTelefono.Name = "IDTelefono";
+            this.IDTelefono.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -291,6 +308,7 @@
             this.dtgDirecciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgDirecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDirecciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDDireccion,
             this.Direccion});
             this.dtgDirecciones.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgDirecciones.Enabled = false;
@@ -302,6 +320,12 @@
             this.dtgDirecciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dtgDirecciones.Size = new System.Drawing.Size(482, 90);
             this.dtgDirecciones.TabIndex = 24;
+            // 
+            // IDDireccion
+            // 
+            this.IDDireccion.HeaderText = "ID";
+            this.IDDireccion.Name = "IDDireccion";
+            this.IDDireccion.ReadOnly = true;
             // 
             // Direccion
             // 
@@ -1262,28 +1286,28 @@
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl1.Size = new System.Drawing.Size(1157, 69);
+            this.barDockControl1.Size = new System.Drawing.Size(1157, 65);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 727);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1157, 23);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 725);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1157, 25);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 658);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 660);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1157, 69);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 658);
+            this.barDockControlRight.Location = new System.Drawing.Point(1157, 65);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 660);
             // 
             // Frm_Pacientes
             // 
@@ -1404,8 +1428,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.LabelControl lblNSS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.TextBox txtIDPaciente;
         private System.Windows.Forms.ComboBox cmbTipoIdentificacion;
         private System.Windows.Forms.TextBox txtNombres;
@@ -1427,12 +1449,17 @@
         private System.Windows.Forms.TextBox txtNSS;
         private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.TextBox txtApellidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.RichTextBox txtObservaciones;
         private DevExpress.XtraEditors.GroupControl grpFiltroListaPacientes;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.SimpleButton btnCargar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDContacto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDTelefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDDireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
     }
 }

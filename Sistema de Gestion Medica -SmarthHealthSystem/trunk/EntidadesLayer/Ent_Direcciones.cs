@@ -7,7 +7,7 @@ namespace EntidadesLayer
 {
     public class Ent_Direcciones
     {
-        public int IDPaciente { get; set; }
+        public string IDPaciente { get; set; }
         public string Direccion { get; set; }
     }
 }

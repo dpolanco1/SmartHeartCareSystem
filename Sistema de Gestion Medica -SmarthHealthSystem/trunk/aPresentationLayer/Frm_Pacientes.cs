@@ -94,6 +94,8 @@ namespace aPresentationLayer
 
         private void btnGuardar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            try
+            {
 
             //utilizo un objeto de tipo transacction scope para que se ejecute todo al mismo tiempo solo si no existe problemas
 
@@ -114,7 +116,7 @@ namespace aPresentationLayer
                 else
                 {
                     //Valores Entidad Paciente
-                    paciente.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
+                    paciente.IDPaciente = txtIDPaciente.Text.Trim();
                     paciente.Nombres = txtNombres.Text;
                     paciente.Apellidos = txtApellidos.Text;
                     paciente.IDTipoIdentifacion = cmbTipoIdentificacion.SelectedIndex;
@@ -215,7 +217,7 @@ namespace aPresentationLayer
                                 {
                                     for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
                                     {
-                                        direcciones.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
+                                        direcciones.IDPaciente = txtIDPaciente.Text.Trim();
                                         direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
                                         Bl_Direcciones.Insert(direcciones);
                                     }
@@ -229,7 +231,7 @@ namespace aPresentationLayer
                                 {
                                     for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
                                     {
-                                        telefonos.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
+                                        telefonos.IDPaciente = txtIDPaciente.Text.Trim();
                                         telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
                                         Bl_Telefono.Insert(telefonos);
                                     }
@@ -243,7 +245,7 @@ namespace aPresentationLayer
                                 {
                                     for (int i = 0; i < dtgContactos.RowCount - 1; i++)
                                     {
-                                        contacto.IDPaciente = Convert.ToInt32(txtIDPaciente.Text);
+                                        contacto.IDPaciente = txtIDPaciente.Text.Trim();
                                         contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
                                         contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
                                         Bl_Contacto.Insert(contacto);
@@ -277,8 +279,6 @@ namespace aPresentationLayer
 
                             }
 
-                         
-
                 }//fin del else comprobando los campos obligatorios.
 
                  //si todo esta bien y es el fin del If Tabcontrol envia los datos al sevidor
@@ -287,6 +287,13 @@ namespace aPresentationLayer
             }//If Tabcontrol
            
           }//completo el rango de Metodos enviado los valores.
+
+
+            }//fin del Try
+            catch (Exception error)
+            {
+                MessageBox.Show("Hubo problemas para la inserccion de los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes "+error.Message, "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
         }//fin del Boton Guardar
 

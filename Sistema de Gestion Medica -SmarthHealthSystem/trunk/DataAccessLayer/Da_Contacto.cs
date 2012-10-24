@@ -70,7 +70,7 @@ namespace DataAccessLayer
                 //Abro la conecxion
                 Da_Connection.Get.Open();
 
-                command.Parameters.Add(new SqlParameter("@IDPaciente", EntidadContacto.IDPaciente) { SqlDbType = SqlDbType.Int });
+                command.Parameters.Add(new SqlParameter("@IDPaciente", EntidadContacto.IDPaciente) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Contacto", EntidadContacto.Contacto) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Telefono", EntidadContacto.Telefono) { SqlDbType = SqlDbType.NVarChar });
 
