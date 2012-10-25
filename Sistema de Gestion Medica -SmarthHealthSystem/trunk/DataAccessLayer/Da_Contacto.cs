@@ -26,7 +26,7 @@ namespace DataAccessLayer
                 //Abro la conecxion
                 Da_Connection.Get.Open();
 
-                command.Parameters.Add(new SqlParameter("@Contacto", EntidadContacto.Contacto) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@Contacto", EntidadContacto.IDContacto) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Telefono", EntidadContacto.Telefono) { SqlDbType = SqlDbType.NVarChar });
                 
                 //Realizo el Query
@@ -70,8 +70,9 @@ namespace DataAccessLayer
                 //Abro la conecxion
                 Da_Connection.Get.Open();
 
+                command.Parameters.Add(new SqlParameter("@IDContacto", EntidadContacto.IDContacto) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@IDPaciente", EntidadContacto.IDPaciente) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@Contacto", EntidadContacto.Contacto) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@Contacto", EntidadContacto.IDContacto) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Telefono", EntidadContacto.Telefono) { SqlDbType = SqlDbType.NVarChar });
 
                 //Realizo el Query

@@ -66,7 +66,8 @@ namespace DataAccessLayer
 
                 //Abro la conecxion
                 Da_Connection.Get.Open();
-
+                
+                command.Parameters.Add(new SqlParameter("@IDTelefono", EntidadTelefono.IDTelefono) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@IDPaciente", EntidadTelefono.IDPaciente) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Telefono", EntidadTelefono.Telefono) { SqlDbType = SqlDbType.NVarChar });
                 command.ExecuteNonQuery();

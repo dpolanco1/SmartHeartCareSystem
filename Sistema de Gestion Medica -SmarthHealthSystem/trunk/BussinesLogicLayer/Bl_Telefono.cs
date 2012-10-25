@@ -24,7 +24,7 @@ namespace BussinesLogicLayer
             //Validaciones De Lugar
             bool flag = false;
 
-            if (entTelefono.IDPaciente.Equals(String.Empty) || entTelefono.Telefono.Equals(String.Empty) )
+            if (string.IsNullOrEmpty(entTelefono.Telefono) )
 
             {
              flag= false;

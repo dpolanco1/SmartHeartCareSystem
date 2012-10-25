@@ -26,7 +26,7 @@ namespace BussinesLogicLayer
             bool flag = false;
 
 
-            if (entContacto.IDPaciente.Equals(String.Empty) || entContacto.Contacto.Equals(String.Empty) || entContacto.Telefono.Equals(String.Empty))
+            if (string.IsNullOrEmpty(entContacto.IDContacto) ||string.IsNullOrEmpty(entContacto.Telefono))
 
             {
                 flag = false;
@@ -53,7 +53,7 @@ namespace BussinesLogicLayer
             bool flag = false;
 
 
-            if (entContacto.IDPaciente.Equals(String.Empty) || entContacto.Contacto.Equals(String.Empty) || entContacto.Telefono.Equals(String.Empty))
+            if (entContacto.IDPaciente.Equals(String.Empty) || entContacto.IDContacto.Equals(String.Empty) || entContacto.Telefono.Equals(String.Empty))
             {
                 flag = false;
 

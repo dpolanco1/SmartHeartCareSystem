@@ -26,7 +26,7 @@ namespace BussinesLogicLayer
             //Validaciones De Lugar
             bool flag = false;
 
-            if (entDirecciones.IDPaciente.Equals(String.Empty)  || entDirecciones.Direccion.Equals(String.Empty) )
+            if (String.IsNullOrEmpty(entDirecciones.Direccion))
 
             {
              flag= false;
