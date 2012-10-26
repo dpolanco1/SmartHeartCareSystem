@@ -58,7 +58,7 @@ namespace BussinesLogicLayer
                 flag = false;
 
             }
-            else if (Da_Contacto.Insert(entContacto))
+            else if (Da_Contacto.Update(entContacto))
             {
                 flag = true;
 
