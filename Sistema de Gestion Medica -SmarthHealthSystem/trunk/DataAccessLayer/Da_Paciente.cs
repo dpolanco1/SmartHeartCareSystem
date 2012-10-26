@@ -77,8 +77,6 @@ namespace DataAccessLayer
             return flag;
         
         }
-
-
         public static bool Update(Ent_Paciente EntidadPaciente) 
         
         {
@@ -148,11 +146,48 @@ namespace DataAccessLayer
             return flag;
         
         }
-        public bool Delete() 
+        public static bool Delete(Ent_Paciente EntidadPaciente) 
         
         {
             bool flag = false;
 
+            try
+            {
+
+                //Utilizo la clase Command Insertar en un StroreProcedure
+                SqlCommand command = new SqlCommand("Spr_DeletePaciente", Da_Connection.Get);
+                command.CommandType = CommandType.StoredProcedure;
+
+                //Abro la conecxion 
+                Da_Connection.Get.Open();
+
+                //Paso los valores para la tabla Pacientes.
+                command.Parameters.Add(new SqlParameter("@IDPaciente", EntidadPaciente.IDPaciente) { SqlDbType = SqlDbType.NVarChar });
+               
+
+                //Ejecuto el Query
+                command.ExecuteNonQuery();
+
+
+
+                flag = true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex);
+            } // end catch
+            finally
+            {
+
+                if (Da_Connection.Get.State != ConnectionState.Closed)
+                {
+                    Da_Connection.Get.Close();
+                }
+
+            }
+
+            //retorno el resultado
             return flag;
         
         }
@@ -191,6 +226,42 @@ namespace DataAccessLayer
                 
             return dt;
         }//fin del Metodo
-     
+        public static int SearchIDPaciente()
+        {
+            try
+            {
+
+                //Utilizo la clase Command 
+                SqlCommand command = new SqlCommand("Spr_SearchIDPaciente", Da_Connection.Get);
+                command.CommandType = CommandType.StoredProcedure;
+
+                Da_Connection.Get.Open();
+
+                var dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    return dr.GetInt32(0);
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+
+            }
+
+            finally
+            {
+
+                if (Da_Connection.Get.State != ConnectionState.Closed)
+                {
+                    Da_Connection.Get.Close();
+                }
+
+            }//fin del Finally
+
+            return 0;
+        }
     }
 }

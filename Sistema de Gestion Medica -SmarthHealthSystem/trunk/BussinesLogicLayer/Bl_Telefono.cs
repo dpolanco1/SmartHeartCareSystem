@@ -66,8 +66,26 @@ namespace BussinesLogicLayer
 
         }
 
-        public void Delete(Da_Telefono daTelefono)
+        public static bool Delete(Ent_Telefono entTelefono)
         {
+            //instancio el metodo
+            Da_Telefono daTelefono = GetDaTelefono();
+
+            //Validaciones De Lugar
+            bool flag = false;
+
+            if (entTelefono.IDPaciente.Equals(String.Empty))
+            {
+                flag = false;
+
+            }
+            else if (Da_Telefono.Delete(entTelefono))
+            {
+
+                flag = true;
+            }
+
+            return flag;
 
 
         }

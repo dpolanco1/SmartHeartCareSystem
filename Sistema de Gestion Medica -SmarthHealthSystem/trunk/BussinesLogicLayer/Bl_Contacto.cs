@@ -26,7 +26,7 @@ namespace BussinesLogicLayer
             bool flag = false;
 
 
-            if (string.IsNullOrEmpty(entContacto.IDContacto) ||string.IsNullOrEmpty(entContacto.Telefono))
+            if (string.IsNullOrEmpty(entContacto.Contacto) ||string.IsNullOrEmpty(entContacto.Telefono))
 
             {
                 flag = false;
@@ -73,8 +73,29 @@ namespace BussinesLogicLayer
 
         }
 
-        public void Delete(Ent_Paciente entPersona)
+        public static bool Delete(Ent_Contacto entContacto)
         {
+            //instancio el metodo
+            Da_Contacto daContacto = GetDaContacto();
+
+            //Validaciones De Lugar
+            bool flag = false;
+
+
+            if (entContacto.IDPaciente.Equals(String.Empty))
+            {
+                flag = false;
+
+            }
+            else if (Da_Contacto.Delete(entContacto))
+            {
+                flag = true;
+
+            }
+
+
+            return flag;
+
 
 
         }

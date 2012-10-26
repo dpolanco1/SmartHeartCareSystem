@@ -64,19 +64,33 @@ namespace BussinesLogicLayer
 
             return flag;
 
-
-
-
-
         }
 
-        public void Delete(Ent_Paciente entDirecciones)
+        public static bool Delete(Ent_Direcciones entDirecciones)
         {
+            //instancio el metodo
+            Da_Direcciones daDirecciones = GetDaDirecciones();
+
+            //Validaciones De Lugar
+            bool flag = false;
+
+            if (entDirecciones.IDPaciente.Equals(String.Empty))
+            {
+                flag = false;
+
+            }
+            else if (Da_Direcciones.Delete(entDirecciones))
+            {
+
+                flag = true;
+            }
+
+            return flag;
 
 
         }
 
-        public void Search(Ent_Paciente entDirecciones)
+        public void Search(Ent_Direcciones entDirecciones)
         {
 
 

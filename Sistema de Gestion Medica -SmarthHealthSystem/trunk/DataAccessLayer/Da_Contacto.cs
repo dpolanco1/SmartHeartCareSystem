@@ -26,7 +26,7 @@ namespace DataAccessLayer
                 //Abro la conecxion
                 Da_Connection.Get.Open();
 
-                command.Parameters.Add(new SqlParameter("@Contacto", EntidadContacto.IDContacto) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@Contacto", EntidadContacto.Contacto) { SqlDbType = SqlDbType.NVarChar });
                 command.Parameters.Add(new SqlParameter("@Telefono", EntidadContacto.Telefono) { SqlDbType = SqlDbType.NVarChar });
                 
                 //Realizo el Query
@@ -101,9 +101,47 @@ namespace DataAccessLayer
             return flag;
 
         }
-        public bool Delete()
+        public static bool Delete(Ent_Contacto EntidadContacto)
         {
             bool flag = false;
+
+
+            try
+            {
+
+                //conecction = new DAConecction();
+                SqlCommand command = new SqlCommand("Spr_DeleteContactos", Da_Connection.Get);
+                command.CommandType = CommandType.StoredProcedure;
+
+                //Abro la conecxion
+                Da_Connection.Get.Open();
+
+             
+                command.Parameters.Add(new SqlParameter("@IDPaciente", EntidadContacto.IDPaciente) { SqlDbType = SqlDbType.NVarChar });
+
+
+                //Realizo el Query
+                command.ExecuteNonQuery();
+
+
+
+                flag = true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex);
+            } // end catch
+            finally
+            {
+
+                if (Da_Connection.Get.State != ConnectionState.Closed)
+                {
+                    Da_Connection.Get.Close();
+                }
+
+            }
+
 
             return flag;
 

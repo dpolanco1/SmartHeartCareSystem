@@ -38,15 +38,8 @@
             this.txtObservaciones = new System.Windows.Forms.RichTextBox();
             this.grpUbicaciones = new DevExpress.XtraEditors.GroupControl();
             this.dtgContactos = new System.Windows.Forms.DataGridView();
-            this.IDContacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgTelefonos = new System.Windows.Forms.DataGridView();
-            this.IDTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgDirecciones = new System.Windows.Forms.DataGridView();
-            this.IDDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblContactos = new DevExpress.XtraEditors.LabelControl();
             this.lblTelefono = new DevExpress.XtraEditors.LabelControl();
             this.lblDirecciones = new DevExpress.XtraEditors.LabelControl();
@@ -133,6 +126,10 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).BeginInit();
             this.tbpPrincipalPacientes.SuspendLayout();
             this.tabPacientes.SuspendLayout();
@@ -235,7 +232,6 @@
             this.dtgContactos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgContactos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDContacto,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewComboBoxColumn2});
             this.dtgContactos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
@@ -248,26 +244,6 @@
             this.dtgContactos.Size = new System.Drawing.Size(354, 90);
             this.dtgContactos.TabIndex = 26;
             // 
-            // IDContacto
-            // 
-            this.IDContacto.HeaderText = "ID";
-            this.IDContacto.Name = "IDContacto";
-            this.IDContacto.ReadOnly = true;
-            this.IDContacto.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre Contacto";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewComboBoxColumn2
-            // 
-            this.dataGridViewComboBoxColumn2.HeaderText = "Teléfono";
-            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // dtgTelefonos
             // 
             this.dtgTelefonos.AllowUserToOrderColumns = true;
@@ -276,7 +252,6 @@
             this.dtgTelefonos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgTelefonos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDTelefono,
             this.dataGridViewTextBoxColumn1});
             this.dtgTelefonos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgTelefonos.Enabled = false;
@@ -289,19 +264,6 @@
             this.dtgTelefonos.Size = new System.Drawing.Size(285, 90);
             this.dtgTelefonos.TabIndex = 25;
             // 
-            // IDTelefono
-            // 
-            this.IDTelefono.HeaderText = "ID";
-            this.IDTelefono.Name = "IDTelefono";
-            this.IDTelefono.ReadOnly = true;
-            this.IDTelefono.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Teléfono";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
             // dtgDirecciones
             // 
             this.dtgDirecciones.AllowUserToOrderColumns = true;
@@ -310,7 +272,6 @@
             this.dtgDirecciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgDirecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDirecciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDDireccion,
             this.Direccion});
             this.dtgDirecciones.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgDirecciones.Enabled = false;
@@ -322,19 +283,6 @@
             this.dtgDirecciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dtgDirecciones.Size = new System.Drawing.Size(482, 90);
             this.dtgDirecciones.TabIndex = 24;
-            // 
-            // IDDireccion
-            // 
-            this.IDDireccion.HeaderText = "ID";
-            this.IDDireccion.Name = "IDDireccion";
-            this.IDDireccion.ReadOnly = true;
-            this.IDDireccion.Visible = false;
-            // 
-            // Direccion
-            // 
-            this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Direccion.HeaderText = "Direccción";
-            this.Direccion.Name = "Direccion";
             // 
             // lblContactos
             // 
@@ -1312,6 +1260,31 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1157, 69);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 658);
             // 
+            // Direccion
+            // 
+            this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Direccion.HeaderText = "Direccción";
+            this.Direccion.Name = "Direccion";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Teléfono";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre Contacto";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewComboBoxColumn2
+            // 
+            this.dataGridViewComboBoxColumn2.HeaderText = "Teléfono";
+            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
+            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // Frm_Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1457,12 +1430,9 @@
         private DevExpress.XtraEditors.GroupControl grpFiltroListaPacientes;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.SimpleButton btnCargar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDContacto;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDDireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
     }
 }

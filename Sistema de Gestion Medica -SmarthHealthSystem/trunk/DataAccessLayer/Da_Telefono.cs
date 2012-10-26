@@ -50,8 +50,6 @@ namespace DataAccessLayer
 
             return flag;
         }//fin del Metodo Insert
-
-
         public static bool Update(Ent_Telefono EntidadTelefono)
         {
 
@@ -93,9 +91,41 @@ namespace DataAccessLayer
 
             return flag;
         }
-        public bool Delete()
+        public static bool Delete(Ent_Telefono EntidadTelefono)
         {
             bool flag = false;
+
+            try
+            {
+
+                //conecction = new DAConecction();
+                SqlCommand command = new SqlCommand("Spr_DeleteTelefonos", Da_Connection.Get);
+                command.CommandType = CommandType.StoredProcedure;
+
+                //Abro la conecxion
+                Da_Connection.Get.Open();
+
+                command.Parameters.Add(new SqlParameter("@IDPaciente", EntidadTelefono.IDPaciente) { SqlDbType = SqlDbType.NVarChar });
+                command.ExecuteNonQuery();
+
+
+                flag = true;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex);
+            } // end catch
+            finally
+            {
+
+                if (Da_Connection.Get.State != ConnectionState.Closed)
+                {
+                    Da_Connection.Get.Close();
+                }
+
+            }
+
 
             return flag;
 
