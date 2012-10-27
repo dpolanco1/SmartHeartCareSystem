@@ -110,6 +110,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabListaPacientes = new DevExpress.XtraTab.XtraTabPage();
+            this.dtgListaPacientes = new System.Windows.Forms.DataGridView();
             this.grpFiltroListaPacientes = new DevExpress.XtraEditors.GroupControl();
             this.txtFiltro = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -129,8 +130,6 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnCargar = new DevExpress.XtraEditors.SimpleButton();
-            this.dtgListaPacientes = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.menuEmergente = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).BeginInit();
             this.tbpPrincipalPacientes.SuspendLayout();
@@ -155,12 +154,11 @@
             this.tbpConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultas)).BeginInit();
             this.tabListaPacientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpFiltroListaPacientes)).BeginInit();
             this.grpFiltroListaPacientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFiltro.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // barDockControlTop
@@ -1076,11 +1074,27 @@
             // 
             // tabListaPacientes
             // 
-            this.tabListaPacientes.Controls.Add(this.grpFiltroListaPacientes);
             this.tabListaPacientes.Controls.Add(this.dtgListaPacientes);
+            this.tabListaPacientes.Controls.Add(this.grpFiltroListaPacientes);
             this.tabListaPacientes.Name = "tabListaPacientes";
             this.tabListaPacientes.Size = new System.Drawing.Size(1151, 638);
             this.tabListaPacientes.Text = "Lista de Pacientes";
+            // 
+            // dtgListaPacientes
+            // 
+            this.dtgListaPacientes.AllowUserToAddRows = false;
+            this.dtgListaPacientes.AllowUserToDeleteRows = false;
+            this.dtgListaPacientes.AllowUserToOrderColumns = true;
+            this.dtgListaPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgListaPacientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedHeaders;
+            this.dtgListaPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgListaPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgListaPacientes.Location = new System.Drawing.Point(0, 56);
+            this.dtgListaPacientes.Name = "dtgListaPacientes";
+            this.dtgListaPacientes.ReadOnly = true;
+            this.dtgListaPacientes.Size = new System.Drawing.Size(1151, 582);
+            this.dtgListaPacientes.TabIndex = 2;
+            this.dtgListaPacientes.Click += new System.EventHandler(this.dtgListaPacientes_Click);
             // 
             // grpFiltroListaPacientes
             // 
@@ -1285,22 +1299,6 @@
             this.btnCargar.Text = "Cargar Pacientes";
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // dtgListaPacientes
-            // 
-            this.dtgListaPacientes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dtgListaPacientes.Location = new System.Drawing.Point(0, 57);
-            this.dtgListaPacientes.MainView = this.gridView1;
-            this.dtgListaPacientes.Name = "dtgListaPacientes";
-            this.dtgListaPacientes.Size = new System.Drawing.Size(1151, 581);
-            this.dtgListaPacientes.TabIndex = 0;
-            this.dtgListaPacientes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.dtgListaPacientes;
-            this.gridView1.Name = "gridView1";
-            // 
             // menuEmergente
             // 
             this.menuEmergente.Name = "contextMenuStrip1";
@@ -1343,12 +1341,11 @@
             this.tbpConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultas)).EndInit();
             this.tabListaPacientes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpFiltroListaPacientes)).EndInit();
             this.grpFiltroListaPacientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtFiltro.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgListaPacientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1406,8 +1403,6 @@
         private DevExpress.XtraEditors.LabelControl lblNombre;
         private DevExpress.XtraEditors.LabelControl lblIDPaciente;
         private DevExpress.XtraTab.XtraTabPage tabListaPacientes;
-        private DevExpress.XtraGrid.GridControl dtgListaPacientes;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraBars.BarManager barManager1;
         protected DevExpress.XtraBars.Bar bar1;
         protected DevExpress.XtraBars.BarButtonItem btnNuevo;
@@ -1456,5 +1451,6 @@
         private DevExpress.XtraEditors.TextEdit txtFiltro;
         private DevExpress.XtraBars.BarButtonItem btnBuscar;
         private System.Windows.Forms.ContextMenuStrip menuEmergente;
+        private System.Windows.Forms.DataGridView dtgListaPacientes;
     }
 }

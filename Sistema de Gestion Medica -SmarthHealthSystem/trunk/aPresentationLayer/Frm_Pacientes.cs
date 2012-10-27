@@ -424,5 +424,37 @@ namespace aPresentationLayer
         {
             Frm_Buscar.frm_Buscar().Show(this);
         }
+
+        private void dtgListaPacientes_Click(object sender, EventArgs e)
+        {
+            if (dtgListaPacientes.Rows.Count != 0) 
+           {
+               //Obtengo el indice de la fila seleccionada
+                   int fila = dtgListaPacientes.CurrentRow.Index;
+
+               txtIDPaciente.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[0].Value);
+               txtNombres.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[1].Value);
+               txtApellidos.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[2].Value);
+               cmbTipoIdentificacion.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[3].Value);
+               txtIdentificacion.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[4].Value);
+               cmbTipoPaciente.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[5].Value);
+               cmbGenero.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[6].Value);
+               txtEmail.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[7].Value);
+               txtFechaNacimiento.Value = Convert.ToDateTime(dtgListaPacientes.Rows[fila].Cells[8].Value);
+               cmbOcupacion.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[9].Value);
+                cmbEstadoCivil.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[10].Value);
+                cmbTipoSangre.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[11].Value);
+                txtNSS.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[12].Value);
+                txtFechaIngreso.Value = Convert.ToDateTime(dtgListaPacientes.Rows[fila].Cells[13].Value);
+                txtPeso.Value = Convert.ToDecimal(dtgListaPacientes.Rows[fila].Cells[14].Value);
+                txtAltura.Value = Convert.ToDecimal(dtgListaPacientes.Rows[fila].Cells[15].Value);
+                chkActivo.Checked = Convert.ToBoolean(dtgListaPacientes.Rows[fila].Cells[16].Value);
+                chkEnviarEmail.Checked = Convert.ToBoolean(dtgListaPacientes.Rows[fila].Cells[17].Value);
+                txtObservaciones.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[18].Value);
+
+      
+            }
+        }
+
     }
 }
