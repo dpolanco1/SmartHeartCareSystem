@@ -131,6 +131,7 @@
             this.btnCargar = new DevExpress.XtraEditors.SimpleButton();
             this.dtgListaPacientes = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.menuEmergente = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).BeginInit();
             this.tbpPrincipalPacientes.SuspendLayout();
             this.tabPacientes.SuspendLayout();
@@ -1139,7 +1140,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnImprimir),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEnviar),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnBuscar)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.Caption, this.btnBuscar, "Buscar", true)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.Text = "Custom 2";
             // 
@@ -1220,7 +1221,10 @@
             this.btnBuscar.Caption = "Buscar";
             this.btnBuscar.Glyph = global::aPresentationLayer.Properties.Resources.Zoom_icon;
             this.btnBuscar.Id = 8;
+            this.btnBuscar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
             this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnBuscar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBuscar_ItemClick);
             // 
             // bar2
             // 
@@ -1296,6 +1300,10 @@
             // 
             this.gridView1.GridControl = this.dtgListaPacientes;
             this.gridView1.Name = "gridView1";
+            // 
+            // menuEmergente
+            // 
+            this.menuEmergente.Name = "contextMenuStrip1";
             // 
             // Frm_Pacientes
             // 
@@ -1447,5 +1455,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private DevExpress.XtraEditors.TextEdit txtFiltro;
         private DevExpress.XtraBars.BarButtonItem btnBuscar;
+        private System.Windows.Forms.ContextMenuStrip menuEmergente;
     }
 }

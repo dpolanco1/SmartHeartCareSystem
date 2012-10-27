@@ -17,16 +17,16 @@ namespace aPresentationLayer
 {
     public partial class Frm_Pacientes : DevExpress.XtraEditors.XtraForm
     {
-          //Entidades
-                    Ent_Paciente paciente = new Ent_Paciente();
-                    Ent_Direcciones direcciones = new Ent_Direcciones();
-                    Ent_Telefono telefonos = new Ent_Telefono();
-                    Ent_Contacto contacto = new Ent_Contacto();
+        //Entidades
+        Ent_Paciente paciente = new Ent_Paciente();
+        Ent_Direcciones direcciones = new Ent_Direcciones();
+        Ent_Telefono telefonos = new Ent_Telefono();
+        Ent_Contacto contacto = new Ent_Contacto();
 
         //variables del Sistema
-                    private  static  bool NUEVO {get;set;}
-                    private static bool EDITANDO { get; set; }
-        
+        private static bool NUEVO { get; set; }
+        private static bool EDITANDO { get; set; }
+
 
         private static Frm_Pacientes frm_pacientes; // Referencia estática al mismo formulario
 
@@ -51,7 +51,7 @@ namespace aPresentationLayer
 
         private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-                 //Si tengo seleccionado el tabPacientes entonces que se realice 
+            //Si tengo seleccionado el tabPacientes entonces que se realice 
             if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes)
             {
                 /*Cambio las variable del sistema a Nuevo = True (indicando que es un nuevo registro) y 
@@ -87,7 +87,7 @@ namespace aPresentationLayer
                 //Paso el Foco Al Nombre
                 txtNombres.Focus();
 
-                
+
             }//fin del If 
         }//fin del Boton Nuevo
 
@@ -100,24 +100,24 @@ namespace aPresentationLayer
 
             using (TransactionScope scope = new TransactionScope())
             {
-               
-                    //Si tengo seleccionado el tabPacientes, los botones estan enable true y estoy en un registro Nuevo entonces que se realice 
-                    if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true)
+
+                //Si tengo seleccionado el tabPacientes, los botones estan enable true y estoy en un registro Nuevo entonces que se realice 
+                if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true)
+                {
+                    //Validar los datos importantes
+
+                    if (String.IsNullOrEmpty(txtNombres.Text) || String.IsNullOrEmpty(txtApellidos.Text) ||
+                        String.IsNullOrEmpty(cmbTipoIdentificacion.Text) || String.IsNullOrEmpty(txtIdentificacion.Text) ||
+                        String.IsNullOrEmpty(cmbGenero.Text))
                     {
-                        //Validar los datos importantes
+                        MessageBox.Show("Campos en negrita son obligatorios", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
 
-                        if (String.IsNullOrEmpty(txtNombres.Text) || String.IsNullOrEmpty(txtApellidos.Text) ||
-                            String.IsNullOrEmpty(cmbTipoIdentificacion.Text) || String.IsNullOrEmpty(txtIdentificacion.Text) ||
-                            String.IsNullOrEmpty(cmbGenero.Text))
+                    else
+                    {
+                        try
                         {
-                            MessageBox.Show("Campos en negrita son obligatorios", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                        }
 
-                        else
-                        {
-                            try
-                            {
-               
                             //Valores Entidad Paciente
                             paciente.IDPaciente = txtIDPaciente.Text.Trim();
                             paciente.Nombres = txtNombres.Text;
@@ -147,178 +147,178 @@ namespace aPresentationLayer
 
                             //-----------------------------------------------------INSERT--------------------------------------------------------------------//
 
-                                if (NUEVO == true)
-                                {
-                                    
-                                    Bl_Paciente.Insert(paciente);
-                                    txtIDPaciente.Text = Bl_Paciente.SearchIDPaciente().ToString();
-
-                                    //Valores Entidad Direcciones
-                                    if (dtgDirecciones.Rows.Count != 0)
-                                    {
-                                        for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
-                                        {
-
-                                            direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
-                                            Bl_Direcciones.Insert(direcciones);
-
-
-                                        }//fin del for dtgDirecciones
-
-
-                                    }
-
-                                    if (dtgTelefonos.Rows.Count != 0)
-                                    {
-                                        for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
-                                        {
-
-                                            telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
-                                            Bl_Telefono.Insert(telefonos);
-
-
-                                        }//fin del for dtgTelefonos
-
-
-                                    }
-
-                                    if (dtgContactos.Rows.Count != 0)
-                                    {
-                                        for (int i = 0; i < dtgContactos.RowCount - 1; i++)
-                                        {
-
-                                            contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
-                                            contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
-                                            Bl_Contacto.Insert(contacto);
-
-                                        }//fin del for dtgContactos
-
-                                    }//fin del insert Bl_Contacto.Insert
-
-
-                                    MessageBox.Show("Los datos del paciente fueron insertados correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                    //Botones habilitados y Deshabilitados
-
-                                    btnNuevo.Enabled = true;
-                                    btnGuardar.Enabled = false;
-                                    btnEditar.Enabled = true;
-                                    btnCancelar.Enabled = false;
-                                    btnImprimir.Enabled = true;
-                                    btnEnviar.Enabled = true;
-                                    btnEliminar.Enabled = true;
-
-                                    //Deshabilito los Txt
-                                    Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
-
-                                    //Deshabilito los Datagried
-                                    Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
-
-
-                                }//fin de todos los insert con Nuevo
-
-                                    //-----------------------------------------------------UPDATE--------------------------------------------------------------------//
-
-                                    //si existe un problema entonces muestro un mensaje de aviso al usuario.
-                                else if (EDITANDO == true)
-                                {
-                                   
-                                    txtIDPaciente.Text = Bl_Paciente.SearchIDPaciente().ToString();
-                                    Bl_Paciente.Update(paciente);
-                                    
-
-                                    //Valores Entidad Direcciones
-                                    if (dtgDirecciones.Rows.Count != 0)
-                                    {
-                                        direcciones.IDPaciente = txtIDPaciente.Text.Trim();
-                                        Bl_Direcciones.Delete(direcciones);
-
-                                        for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
-                                        {
-
-                                            direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
-                                            Bl_Direcciones.Insert(direcciones);
-
-                                        }
-
-
-                                    }//fin del Bl_Direcciones.Insert
-
-
-                                    //   Valores Entidad Telefonos
-                                    if (dtgTelefonos.Rows.Count != 0)
-                                    {
-                                        telefonos.IDPaciente = txtIDPaciente.Text.Trim();
-                                        Bl_Telefono.Delete(telefonos);
-
-                                        for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
-                                        {
-                                            telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
-                                            Bl_Telefono.Insert(telefonos);
-                                        }
-
-
-                                    }//fin del insert Bl_Telefono.Insert
-
-
-                                    // Valores Entidad Conctacto
-                                    if (dtgContactos.Rows.Count != 0)
-                                    {
-                                        contacto.IDPaciente = txtIDPaciente.Text.Trim();
-                                        Bl_Contacto.Delete(contacto);
-                                      
-                                        for (int i = 0; i < dtgContactos.RowCount - 1; i++)
-                                        {
-
-                                            contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
-                                            contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
-                                            Bl_Contacto.Insert(contacto);
-
-                                        }//fin del for dtgContactos
-                                    }//fin del insert Bl_Contacto.Insert
-
-                                    MessageBox.Show("La edición se realizó correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                    //Botones habilitados y Deshabilitados
-
-                                    btnNuevo.Enabled = true;
-                                    btnGuardar.Enabled = false;
-                                    btnEditar.Enabled = true;
-                                    btnCancelar.Enabled = false;
-                                    btnImprimir.Enabled = true;
-                                    btnEnviar.Enabled = true;
-                                    btnEliminar.Enabled = true;
-
-                                    //Deshabilito los Txt
-                                    Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
-
-                                    //Deshabilito los Datagried
-                                    Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
-
-
-
-                                }//fin del if
-                            }
-                            catch (Exception)
+                            if (NUEVO == true)
                             {
 
-                                MessageBox.Show("Hubo problemas para insertar los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                    
-                
-                      }//fin del Else ya se asignaron los valores a la entidad Paciente
+                                Bl_Paciente.Insert(paciente);
+                                txtIDPaciente.Text = Bl_Paciente.SearchIDPaciente().ToString();
 
-                  
-                       
+                                //Valores Entidad Direcciones
+                                if (dtgDirecciones.Rows.Count != 0)
+                                {
+                                    for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
+                                    {
 
-                    }//Fin del If TabControl
+                                        direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
+                                        Bl_Direcciones.Insert(direcciones);
 
 
-                    //si todo esta bien y es el fin del If Tabcontrol envia los datos al sevidor
-                    scope.Complete();
+                                    }//fin del for dtgDirecciones
+
+
+                                }
+
+                                if (dtgTelefonos.Rows.Count != 0)
+                                {
+                                    for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
+                                    {
+
+                                        telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
+                                        Bl_Telefono.Insert(telefonos);
+
+
+                                    }//fin del for dtgTelefonos
+
+
+                                }
+
+                                if (dtgContactos.Rows.Count != 0)
+                                {
+                                    for (int i = 0; i < dtgContactos.RowCount - 1; i++)
+                                    {
+
+                                        contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
+                                        contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
+                                        Bl_Contacto.Insert(contacto);
+
+                                    }//fin del for dtgContactos
+
+                                }//fin del insert Bl_Contacto.Insert
+
+
+                                MessageBox.Show("Los datos del paciente fueron insertados correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                //Botones habilitados y Deshabilitados
+
+                                btnNuevo.Enabled = true;
+                                btnGuardar.Enabled = false;
+                                btnEditar.Enabled = true;
+                                btnCancelar.Enabled = false;
+                                btnImprimir.Enabled = true;
+                                btnEnviar.Enabled = true;
+                                btnEliminar.Enabled = true;
+
+                                //Deshabilito los Txt
+                                Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+
+                                //Deshabilito los Datagried
+                                Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+
+
+                            }//fin de todos los insert con Nuevo
+
+                                //-----------------------------------------------------UPDATE--------------------------------------------------------------------//
+
+                                //si existe un problema entonces muestro un mensaje de aviso al usuario.
+                            else if (EDITANDO == true)
+                            {
+
+                                txtIDPaciente.Text = Bl_Paciente.SearchIDPaciente().ToString();
+                                Bl_Paciente.Update(paciente);
+
+
+                                //Valores Entidad Direcciones
+                                if (dtgDirecciones.Rows.Count != 0)
+                                {
+                                    direcciones.IDPaciente = txtIDPaciente.Text.Trim();
+                                    Bl_Direcciones.Delete(direcciones);
+
+                                    for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
+                                    {
+
+                                        direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
+                                        Bl_Direcciones.Insert(direcciones);
+
+                                    }
+
+
+                                }//fin del Bl_Direcciones.Insert
+
+
+                                //   Valores Entidad Telefonos
+                                if (dtgTelefonos.Rows.Count != 0)
+                                {
+                                    telefonos.IDPaciente = txtIDPaciente.Text.Trim();
+                                    Bl_Telefono.Delete(telefonos);
+
+                                    for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
+                                    {
+                                        telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
+                                        Bl_Telefono.Insert(telefonos);
+                                    }
+
+
+                                }//fin del insert Bl_Telefono.Insert
+
+
+                                // Valores Entidad Conctacto
+                                if (dtgContactos.Rows.Count != 0)
+                                {
+                                    contacto.IDPaciente = txtIDPaciente.Text.Trim();
+                                    Bl_Contacto.Delete(contacto);
+
+                                    for (int i = 0; i < dtgContactos.RowCount - 1; i++)
+                                    {
+
+                                        contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
+                                        contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
+                                        Bl_Contacto.Insert(contacto);
+
+                                    }//fin del for dtgContactos
+                                }//fin del insert Bl_Contacto.Insert
+
+                                MessageBox.Show("La edición se realizó correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                //Botones habilitados y Deshabilitados
+
+                                btnNuevo.Enabled = true;
+                                btnGuardar.Enabled = false;
+                                btnEditar.Enabled = true;
+                                btnCancelar.Enabled = false;
+                                btnImprimir.Enabled = true;
+                                btnEnviar.Enabled = true;
+                                btnEliminar.Enabled = true;
+
+                                //Deshabilito los Txt
+                                Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+
+                                //Deshabilito los Datagried
+                                Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+
+
+
+                            }//fin del if
+                        }
+                        catch (Exception)
+                        {
+
+                            MessageBox.Show("Hubo problemas para insertar los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+
+                    }//fin del Else ya se asignaron los valores a la entidad Paciente
+
+
+
+
+                }//Fin del If TabControl
+
+
+                //si todo esta bien y es el fin del If Tabcontrol envia los datos al sevidor
+                scope.Complete();
 
             }//fin del Using Scope
-            
+
         }//fin del Boton Guardar
 
         private void btnEditar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -384,10 +384,10 @@ namespace aPresentationLayer
 
                 //Deshabilito los Datagried
                 Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
-            
+
             }// fin del if
 
-                           
+
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
@@ -406,7 +406,7 @@ namespace aPresentationLayer
             {
                 string filtro = Convert.ToString(txtFiltro.Text.Trim());
 
-                ((DataTable)this.dtgListaPacientes.DataSource).DefaultView.RowFilter = @"Paciente Like '%" + filtro + "%'"+"OR Nombres Like '%" + filtro + "%'" + "OR Nombres Like '%" + filtro + "%'"
+                ((DataTable)this.dtgListaPacientes.DataSource).DefaultView.RowFilter = @"Paciente Like '%" + filtro + "%'" + "OR Nombres Like '%" + filtro + "%'" + "OR Nombres Like '%" + filtro + "%'"
                     + "OR Identificacion Like '%" + filtro + "%'" + "OR Genero Like '%" + filtro + "%'" + "OR Email Like '%" + filtro + "%'"
                     + "OR NSS Like '%" + filtro + "%'";
                 dtgListaPacientes.Refresh();
@@ -417,8 +417,12 @@ namespace aPresentationLayer
                 MessageBox.Show(" Hubo problemas para filtrar la data, comuniquese con el administrador del sistema, disculpe los inconvenientes" + error.Message);
             }
 
-                
+
         }
 
+        private void btnBuscar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Frm_Buscar.frm_Buscar().Show(this);
+        }
     }
 }

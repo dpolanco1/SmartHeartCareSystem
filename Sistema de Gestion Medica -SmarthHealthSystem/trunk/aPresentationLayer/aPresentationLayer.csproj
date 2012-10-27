@@ -82,6 +82,12 @@
     <Compile Include="Frm_Agenda.Designer.cs">
       <DependentUpon>Frm_Agenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Buscar.Designer.cs">
+      <DependentUpon>Frm_Buscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Consultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Frm_Agenda.resx">
       <DependentUpon>Frm_Agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Buscar.resx">
+      <DependentUpon>Frm_Buscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Consultas.resx">
       <DependentUpon>Frm_Consultas.cs</DependentUpon>
