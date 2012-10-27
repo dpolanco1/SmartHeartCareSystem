@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -111,7 +112,7 @@
             this.tabListaPacientes = new DevExpress.XtraTab.XtraTabPage();
             this.grpFiltroListaPacientes = new DevExpress.XtraEditors.GroupControl();
             this.txtFiltro = new DevExpress.XtraEditors.TextEdit();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnNuevo = new DevExpress.XtraBars.BarButtonItem();
             this.btnGuardar = new DevExpress.XtraBars.BarButtonItem();
@@ -120,6 +121,7 @@
             this.btnImprimir = new DevExpress.XtraBars.BarButtonItem();
             this.btnEnviar = new DevExpress.XtraBars.BarButtonItem();
             this.btnEliminar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBuscar = new DevExpress.XtraBars.BarButtonItem();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
@@ -1117,9 +1119,10 @@
             this.btnCancelar,
             this.btnImprimir,
             this.btnEnviar,
-            this.btnEliminar});
+            this.btnEliminar,
+            this.btnBuscar});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 8;
+            this.barManager1.MaxItemId = 9;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar1
@@ -1135,7 +1138,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnCancelar),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnImprimir),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEnviar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBuscar)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.Text = "Custom 2";
             // 
@@ -1211,6 +1215,13 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Caption = "Buscar";
+            this.btnBuscar.Glyph = global::aPresentationLayer.Properties.Resources.Zoom_icon;
+            this.btnBuscar.Id = 8;
+            this.btnBuscar.Name = "btnBuscar";
+            // 
             // bar2
             // 
             this.bar2.BarName = "Custom 3";
@@ -1244,7 +1255,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 727);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 719);
             this.barDockControlBottom.Size = new System.Drawing.Size(1157, 23);
             // 
             // barDockControlLeft
@@ -1252,14 +1263,14 @@
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 658);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 650);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1157, 69);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 658);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 650);
             // 
             // btnCargar
             // 
@@ -1290,7 +1301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 750);
+            this.ClientSize = new System.Drawing.Size(1157, 742);
             this.Controls.Add(this.tbpPrincipalPacientes);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -1435,5 +1446,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private DevExpress.XtraEditors.TextEdit txtFiltro;
+        private DevExpress.XtraBars.BarButtonItem btnBuscar;
     }
 }

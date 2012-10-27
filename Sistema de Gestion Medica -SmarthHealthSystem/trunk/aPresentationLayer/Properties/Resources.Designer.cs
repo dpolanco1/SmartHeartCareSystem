@@ -108,5 +108,12 @@ namespace aPresentationLayer.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap Zoom_icon {
+            get {
+                object obj = ResourceManager.GetObject("Zoom-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
