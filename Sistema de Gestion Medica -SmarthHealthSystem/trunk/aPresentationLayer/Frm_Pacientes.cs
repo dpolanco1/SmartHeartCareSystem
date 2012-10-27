@@ -393,6 +393,11 @@ namespace aPresentationLayer
         private void btnCargar_Click(object sender, EventArgs e)
         {
             dtgListaPacientes.DataSource = Bl_Paciente.SearchAll();
+            
+            for (int i = 8; i <dtgListaPacientes.Columns.Count; i++)
+            {
+                dtgListaPacientes.Columns[i].Visible = false;    
+            }
             btnCargar.Text = "Filtrar";
             txtFiltro.Enabled = true;
             txtFiltro.Focus();
@@ -452,6 +457,9 @@ namespace aPresentationLayer
                 chkEnviarEmail.Checked = Convert.ToBoolean(dtgListaPacientes.Rows[fila].Cells[17].Value);
                 txtObservaciones.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[18].Value);
 
+                Direccion.Visible = false;
+                dtgDirecciones.DataSource = Bl_Direcciones.SearchDireccionesporIDPacient(83);//eso esta mal;
+                //bien
       
             }
         }

@@ -6,29 +6,30 @@ using EntidadesLayer;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace DataAccessLayer
 {
     public class Da_Direcciones
     {
 
 
-            public static bool Insert(Ent_Direcciones EntidadDirecciones)
+        public static bool Insert(Ent_Direcciones EntidadDirecciones)
         {
-           
+
             bool flag = false;
 
 
-                try
-                {
+            try
+            {
 
-                    //Utilizo la clase Command Insertar en un StroreProcedure
-                    SqlCommand command = new SqlCommand("Spr_InsertDirecciones", Da_Connection.Get);
-                    command.CommandType = CommandType.StoredProcedure;
+                //Utilizo la clase Command Insertar en un StroreProcedure
+                SqlCommand command = new SqlCommand("Spr_InsertDirecciones", Da_Connection.Get);
+                command.CommandType = CommandType.StoredProcedure;
 
-                    //Abro la conecxion 
-                    Da_Connection.Get.Open();
+                //Abro la conecxion 
+                Da_Connection.Get.Open();
 
-                command.Parameters.Add(new SqlParameter("@Direccion", EntidadDirecciones.Direccion) { SqlDbType = SqlDbType.NVarChar});
+                command.Parameters.Add(new SqlParameter("@Direccion", EntidadDirecciones.Direccion) { SqlDbType = SqlDbType.NVarChar });
                 //Ejecuto el Query
                 command.ExecuteNonQuery();
 
@@ -36,7 +37,7 @@ namespace DataAccessLayer
             }
             catch (Exception ex)
             {
-    
+
                 Console.WriteLine(ex);
 
             } // end catch
@@ -138,12 +139,86 @@ namespace DataAccessLayer
             return flag;
 
         }
-        public bool Search()
+        public static DataTable SearchDireccionesporIDPaciente(int idPaciente)
         {
-            bool flag = false;
+            DataTable sqlTbl = new DataTable();
 
-            return flag;
+            //nection.Gtry
+            //{
 
+            //    Da_Connection.Get.Open();
+            //    SqlCommand cmd = new SqlCommand("Spr_SearchDireccionesIDPaciente", Da_Connection.Get);
+            //    cmd.CommandType = CommandType.StoredProcedure;
+            //    cmd.Parameters.Add("@idpaciente", SqlDbType.Int);
+            //    cmd.Parameters.AddWithValue("@idpaciente", idPaciente);
+            //    SqlDataReader lector = cmd.ExecuteReader(CommandBehavior.Default);
+
+            //    dt.Load(lector, LoadOption.OverwriteChanges);
+
+
+
+
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+
+            //}
+
+            //finally
+            //{
+
+            //    if (Da_Connection.Get.State != ConnectionState.Closed)espere
+            //    {
+            //        Da_Conet.Close();
+            //    }
+
+            //}//fin del Finally
+
+            //return dt;
+
+            try
+            {
+
+                Da_Connection.Get.Open();
+
+                SqlCommand sqlCmd = new SqlCommand("Spr_SearchDireccionesIDPaciente",Da_Connection.Get);
+
+              //  sqlCmd.CommandText = "";
+                sqlCmd.Connection = Da_Connection.Get;
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                sqlCmd.Parameters.AddWithValue("@IDPaciente",idPaciente);//conio iuuuufufuufufufufufuf dele
+                //sqlCmd.Parameters.
+               SqlDataAdapter da = new SqlDataAdapter(sqlCmd);
+               
+
+                
+                da.Fill(sqlTbl);
+
+               // return sqlTbl;
+                return sqlTbl;
+
+
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+
+            }
+
+            finally
+            {
+
+                if (Da_Connection.Get.State != ConnectionState.Closed)
+                {
+                    Da_Connection.Get.Close();
+                }
+
+            }//fin del Finally
+
+            return sqlTbl;//ayudame ahi
         }
     }
 }
