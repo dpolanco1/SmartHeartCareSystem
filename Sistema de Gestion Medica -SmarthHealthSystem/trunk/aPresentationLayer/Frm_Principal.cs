@@ -35,5 +35,11 @@ namespace WindowsApplication1
             Frm_Pacientes.frm_Pacientes().Show();
         }
 
+        private void itemConsultas_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Frm_Consultas.frm_Consultas().MdiParent = this;
+            Frm_Consultas.frm_Consultas().Show();
+        }
+
     }
 }

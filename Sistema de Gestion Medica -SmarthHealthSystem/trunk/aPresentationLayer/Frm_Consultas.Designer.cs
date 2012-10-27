@@ -28,25 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.bar1 = new DevExpress.XtraBars.Bar();
-            this.bar2 = new DevExpress.XtraBars.Bar();
-            this.bar3 = new DevExpress.XtraBars.Bar();
-            this.btnNuevo = new DevExpress.XtraBars.BarButtonItem();
-            this.btnGuardar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEditar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnCancelar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnImprimir = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEnviar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEliminar = new DevExpress.XtraBars.BarButtonItem();
             this.tabPrincipalConsultas = new DevExpress.XtraTab.XtraTabControl();
             this.tabConsultas = new DevExpress.XtraTab.XtraTabPage();
-            this.tabListadeConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.memoDiagnostico = new DevExpress.XtraEditors.MemoEdit();
             this.memoMovito = new DevExpress.XtraEditors.MemoEdit();
@@ -57,6 +40,8 @@
             this.lblFecha = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblTipoSangre = new DevExpress.XtraEditors.LabelControl();
             this.spinEdit3 = new DevExpress.XtraEditors.SpinEdit();
             this.spinEdit2 = new DevExpress.XtraEditors.SpinEdit();
             this.spinEdit1 = new DevExpress.XtraEditors.SpinEdit();
@@ -80,15 +65,27 @@
             this.searchMedico = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblMedico = new DevExpress.XtraEditors.LabelControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblTipoSangre = new DevExpress.XtraEditors.LabelControl();
+            this.tabListadeConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.bar1 = new DevExpress.XtraBars.Bar();
+            this.btnNuevo = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGuardar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEditar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCancelar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnImprimir = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEnviar = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEliminar = new DevExpress.XtraBars.BarButtonItem();
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.bar3 = new DevExpress.XtraBars.Bar();
+            this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.tabPrincipalConsultas)).BeginInit();
             this.tabPrincipalConsultas.SuspendLayout();
             this.tabConsultas.SuspendLayout();
-            this.tabListadeConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoDiagnostico.Properties)).BeginInit();
@@ -112,158 +109,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreMedico.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchMedico.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            this.tabListadeConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // barManager1
-            // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar1,
-            this.bar2,
-            this.bar3});
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btnNuevo,
-            this.btnGuardar,
-            this.btnEditar,
-            this.btnCancelar,
-            this.btnImprimir,
-            this.btnEnviar,
-            this.btnEliminar});
-            this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 7;
-            this.barManager1.StatusBar = this.bar3;
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1016, 69);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 655);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1016, 23);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 586);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1016, 69);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 586);
-            // 
-            // bar1
-            // 
-            this.bar1.BarName = "Tools";
-            this.bar1.DockCol = 0;
-            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar1.Text = "Tools";
-            // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnNuevo),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnGuardar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEditar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnCancelar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnImprimir),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEnviar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar)});
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
-            // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Caption = "&Nuevo";
-            this.btnNuevo.Glyph = global::aPresentationLayer.Properties.Resources.add;
-            this.btnNuevo.Id = 0;
-            this.btnNuevo.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N));
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Caption = "&Guardar";
-            this.btnGuardar.Glyph = global::aPresentationLayer.Properties.Resources.save;
-            this.btnGuardar.Id = 1;
-            this.btnGuardar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G));
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Caption = "&Editar";
-            this.btnEditar.Glyph = global::aPresentationLayer.Properties.Resources.Edit;
-            this.btnEditar.Id = 2;
-            this.btnEditar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Caption = "&Cancelar";
-            this.btnCancelar.Glyph = global::aPresentationLayer.Properties.Resources.Cancel;
-            this.btnCancelar.Id = 3;
-            this.btnCancelar.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Caption = "&Imprimir";
-            this.btnImprimir.Glyph = global::aPresentationLayer.Properties.Resources.Imprimir;
-            this.btnImprimir.Id = 4;
-            this.btnImprimir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I));
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Caption = "&Enviar";
-            this.btnEnviar.Glyph = global::aPresentationLayer.Properties.Resources.send;
-            this.btnEnviar.Id = 5;
-            this.btnEnviar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Caption = "&Eliminar";
-            this.btnEliminar.Glyph = global::aPresentationLayer.Properties.Resources.Delete;
-            this.btnEliminar.Id = 6;
-            this.btnEliminar.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // tabPrincipalConsultas
             // 
@@ -271,7 +121,7 @@
             this.tabPrincipalConsultas.Location = new System.Drawing.Point(0, 69);
             this.tabPrincipalConsultas.Name = "tabPrincipalConsultas";
             this.tabPrincipalConsultas.SelectedTabPage = this.tabConsultas;
-            this.tabPrincipalConsultas.Size = new System.Drawing.Size(1016, 586);
+            this.tabPrincipalConsultas.Size = new System.Drawing.Size(1015, 484);
             this.tabPrincipalConsultas.TabIndex = 4;
             this.tabPrincipalConsultas.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabConsultas,
@@ -283,15 +133,8 @@
             this.tabConsultas.Controls.Add(this.groupControl1);
             this.tabConsultas.Controls.Add(this.grpDatosMedicos);
             this.tabConsultas.Name = "tabConsultas";
-            this.tabConsultas.Size = new System.Drawing.Size(1010, 560);
+            this.tabConsultas.Size = new System.Drawing.Size(1009, 458);
             this.tabConsultas.Text = "Consulta Médica";
-            // 
-            // tabListadeConsultas
-            // 
-            this.tabListadeConsultas.Controls.Add(this.gridControl1);
-            this.tabListadeConsultas.Name = "tabListadeConsultas";
-            this.tabListadeConsultas.Size = new System.Drawing.Size(1010, 560);
-            this.tabListadeConsultas.Text = "Lista de Consultas Médicas";
             // 
             // groupControl2
             // 
@@ -299,14 +142,12 @@
             this.groupControl2.Controls.Add(this.memoMovito);
             this.groupControl2.Controls.Add(this.labelControl3);
             this.groupControl2.Controls.Add(this.labelControl2);
-            this.groupControl2.Controls.Add(this.dateFechaConsulta);
             this.groupControl2.Controls.Add(this.txtNoConsulta);
-            this.groupControl2.Controls.Add(this.lblFecha);
             this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 197);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1010, 363);
+            this.groupControl2.Size = new System.Drawing.Size(1009, 261);
             this.groupControl2.TabIndex = 10;
             this.groupControl2.Text = "Datos De La Consulta:";
             // 
@@ -343,13 +184,14 @@
             // dateFechaConsulta
             // 
             this.dateFechaConsulta.EditValue = new System.DateTime(2012, 10, 13, 23, 26, 13, 119);
-            this.dateFechaConsulta.Location = new System.Drawing.Point(80, 75);
+            this.dateFechaConsulta.Enabled = false;
+            this.dateFechaConsulta.Location = new System.Drawing.Point(818, 26);
             this.dateFechaConsulta.Name = "dateFechaConsulta";
             this.dateFechaConsulta.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateFechaConsulta.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateFechaConsulta.Size = new System.Drawing.Size(164, 20);
+            this.dateFechaConsulta.Size = new System.Drawing.Size(82, 20);
             this.dateFechaConsulta.TabIndex = 4;
             // 
             // txtNoConsulta
@@ -361,7 +203,7 @@
             // 
             // lblFecha
             // 
-            this.lblFecha.Location = new System.Drawing.Point(41, 78);
+            this.lblFecha.Location = new System.Drawing.Point(779, 29);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(29, 13);
             this.lblFecha.TabIndex = 2;
@@ -394,9 +236,37 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 82);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1010, 115);
+            this.groupControl1.Size = new System.Drawing.Size(1009, 115);
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "Datos Del Paciente:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "A",
+            "A+",
+            "A-",
+            "B",
+            "B+",
+            "B-",
+            "O",
+            "O+",
+            "O-",
+            "AB-\t",
+            "AB+"});
+            this.comboBox1.Location = new System.Drawing.Point(864, 59);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(70, 21);
+            this.comboBox1.TabIndex = 42;
+            // 
+            // lblTipoSangre
+            // 
+            this.lblTipoSangre.Location = new System.Drawing.Point(797, 63);
+            this.lblTipoSangre.Name = "lblTipoSangre";
+            this.lblTipoSangre.Size = new System.Drawing.Size(61, 13);
+            this.lblTipoSangre.TabIndex = 41;
+            this.lblTipoSangre.Text = "Tipo Sangre:";
             // 
             // spinEdit3
             // 
@@ -539,7 +409,7 @@
             this.grpDatosMedicos.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpDatosMedicos.Location = new System.Drawing.Point(0, 0);
             this.grpDatosMedicos.Name = "grpDatosMedicos";
-            this.grpDatosMedicos.Size = new System.Drawing.Size(1010, 82);
+            this.grpDatosMedicos.Size = new System.Drawing.Size(1009, 82);
             this.grpDatosMedicos.TabIndex = 8;
             this.grpDatosMedicos.Text = "Datos Del Medico:";
             // 
@@ -614,42 +484,20 @@
             this.lblMedico.TabIndex = 0;
             this.lblMedico.Text = "Buscar Médico:";
             // 
-            // comboBox1
+            // tabListadeConsultas
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "A",
-            "A+",
-            "A-",
-            "B",
-            "B+",
-            "B-",
-            "O",
-            "O+",
-            "O-",
-            "AB-\t",
-            "AB+"});
-            this.comboBox1.Location = new System.Drawing.Point(864, 59);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(70, 21);
-            this.comboBox1.TabIndex = 42;
-            // 
-            // lblTipoSangre
-            // 
-            this.lblTipoSangre.Location = new System.Drawing.Point(797, 63);
-            this.lblTipoSangre.Name = "lblTipoSangre";
-            this.lblTipoSangre.Size = new System.Drawing.Size(61, 13);
-            this.lblTipoSangre.TabIndex = 41;
-            this.lblTipoSangre.Text = "Tipo Sangre:";
+            this.tabListadeConsultas.Controls.Add(this.gridControl1);
+            this.tabListadeConsultas.Name = "tabListadeConsultas";
+            this.tabListadeConsultas.Size = new System.Drawing.Size(1009, 458);
+            this.tabListadeConsultas.Text = "Lista de Consultas Médicas";
             // 
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1010, 560);
+            this.gridControl1.Size = new System.Drawing.Size(1009, 458);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -659,24 +507,182 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
+            // barManager1
+            // 
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bar1,
+            this.bar2,
+            this.bar3});
+            this.barManager1.DockControls.Add(this.barDockControl1);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.btnNuevo,
+            this.btnGuardar,
+            this.btnEditar,
+            this.btnCancelar,
+            this.btnImprimir,
+            this.btnEnviar,
+            this.btnEliminar});
+            this.barManager1.MainMenu = this.bar2;
+            this.barManager1.MaxItemId = 8;
+            this.barManager1.StatusBar = this.bar3;
+            // 
+            // bar1
+            // 
+            this.bar1.BarName = "Custom 2";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 0;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnNuevo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, this.btnGuardar, "", false, false, true, 0),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEditar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnCancelar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnImprimir),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEnviar),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar)});
+            this.bar1.OptionsBar.AllowQuickCustomization = false;
+            this.bar1.Text = "Custom 2";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Caption = "Nuevo";
+            this.btnNuevo.Glyph = global::aPresentationLayer.Properties.Resources.add;
+            this.btnNuevo.Id = 1;
+            this.btnNuevo.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N));
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Caption = "Guardar";
+            this.btnGuardar.Enabled = false;
+            this.btnGuardar.Glyph = global::aPresentationLayer.Properties.Resources.save;
+            this.btnGuardar.Id = 2;
+            this.btnGuardar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G));
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Caption = "Editar";
+            this.btnEditar.Enabled = false;
+            this.btnEditar.Glyph = global::aPresentationLayer.Properties.Resources.Edit;
+            this.btnEditar.Id = 3;
+            this.btnEditar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Caption = "Cancelar";
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Glyph = global::aPresentationLayer.Properties.Resources.Cancel;
+            this.btnCancelar.Id = 4;
+            this.btnCancelar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C));
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Caption = "Imprimir";
+            this.btnImprimir.Enabled = false;
+            this.btnImprimir.Glyph = global::aPresentationLayer.Properties.Resources.Imprimir;
+            this.btnImprimir.Id = 5;
+            this.btnImprimir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I));
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Caption = "Enviar";
+            this.btnEnviar.Enabled = false;
+            this.btnEnviar.Glyph = global::aPresentationLayer.Properties.Resources.send;
+            this.btnEnviar.Id = 6;
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Caption = "Eliminar";
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.Glyph = global::aPresentationLayer.Properties.Resources.Delete;
+            this.btnEliminar.Id = 7;
+            this.btnEliminar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // bar2
+            // 
+            this.bar2.BarName = "Custom 3";
+            this.bar2.DockCol = 0;
+            this.bar2.DockRow = 1;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.OptionsBar.MultiLine = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
+            this.bar2.Text = "Custom 3";
+            // 
+            // bar3
+            // 
+            this.bar3.BarName = "Custom 4";
+            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+            this.bar3.DockCol = 0;
+            this.bar3.DockRow = 0;
+            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.bar3.OptionsBar.AllowQuickCustomization = false;
+            this.bar3.OptionsBar.DrawDragBorder = false;
+            this.bar3.OptionsBar.UseWholeRow = true;
+            this.bar3.Text = "Custom 4";
+            // 
+            // barDockControl1
+            // 
+            this.barDockControl1.CausesValidation = false;
+            this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControl1.Location = new System.Drawing.Point(0, 0);
+            this.barDockControl1.Size = new System.Drawing.Size(1015, 69);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 553);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1015, 23);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 484);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1015, 69);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 484);
+            // 
             // Frm_Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 678);
+            this.ClientSize = new System.Drawing.Size(1015, 576);
             this.Controls.Add(this.tabPrincipalConsultas);
+            this.Controls.Add(this.dateFechaConsulta);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
-            this.Controls.Add(this.barDockControlTop);
+            this.Controls.Add(this.barDockControl1);
             this.Name = "Frm_Consultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Médica";
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPrincipalConsultas)).EndInit();
             this.tabPrincipalConsultas.ResumeLayout(false);
             this.tabConsultas.ResumeLayout(false);
-            this.tabListadeConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -703,29 +709,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreMedico.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchMedico.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            this.tabListadeConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraBars.Bar bar1;
-        private DevExpress.XtraBars.Bar bar2;
-        private DevExpress.XtraBars.BarButtonItem btnNuevo;
-        private DevExpress.XtraBars.BarButtonItem btnGuardar;
-        private DevExpress.XtraBars.BarButtonItem btnEditar;
-        private DevExpress.XtraBars.BarButtonItem btnCancelar;
-        private DevExpress.XtraBars.BarButtonItem btnImprimir;
-        private DevExpress.XtraBars.BarButtonItem btnEnviar;
-        private DevExpress.XtraBars.BarButtonItem btnEliminar;
-        private DevExpress.XtraBars.Bar bar3;
-        private DevExpress.XtraBars.BarDockControl barDockControlTop;
-        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
-        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
-        private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraTab.XtraTabControl tabPrincipalConsultas;
         private DevExpress.XtraTab.XtraTabPage tabConsultas;
         private DevExpress.XtraEditors.GroupControl groupControl2;
@@ -766,5 +760,20 @@
         private DevExpress.XtraTab.XtraTabPage tabListadeConsultas;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraBars.BarManager barManager1;
+        protected DevExpress.XtraBars.Bar bar1;
+        protected DevExpress.XtraBars.BarButtonItem btnNuevo;
+        protected DevExpress.XtraBars.BarButtonItem btnGuardar;
+        protected DevExpress.XtraBars.BarButtonItem btnEditar;
+        protected DevExpress.XtraBars.BarButtonItem btnCancelar;
+        protected DevExpress.XtraBars.BarButtonItem btnImprimir;
+        protected DevExpress.XtraBars.BarButtonItem btnEnviar;
+        protected DevExpress.XtraBars.BarButtonItem btnEliminar;
+        protected DevExpress.XtraBars.Bar bar2;
+        protected DevExpress.XtraBars.Bar bar3;
+        private DevExpress.XtraBars.BarDockControl barDockControl1;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
     }
 }
