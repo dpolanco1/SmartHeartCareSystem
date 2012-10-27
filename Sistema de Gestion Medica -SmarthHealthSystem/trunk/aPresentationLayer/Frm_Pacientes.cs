@@ -393,6 +393,32 @@ namespace aPresentationLayer
         private void btnCargar_Click(object sender, EventArgs e)
         {
             dtgListaPacientes.DataSource = Bl_Paciente.SearchAll();
+            btnCargar.Text = "Filtrar";
+            txtFiltro.Enabled = true;
+            txtFiltro.Focus();
+
         }
+
+        private void txtFiltro_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            try
+            {
+                string filtro = Convert.ToString(txtFiltro.Text.Trim());
+
+                ((DataTable)this.dtgListaPacientes.DataSource).DefaultView.RowFilter = @"Paciente Like '%" + filtro + "%'"+"OR Nombres Like '%" + filtro + "%'" + "OR Nombres Like '%" + filtro + "%'"
+                    + "OR Identificacion Like '%" + filtro + "%'" + "OR Genero Like '%" + filtro + "%'" + "OR Email Like '%" + filtro + "%'"
+                    + "OR NSS Like '%" + filtro + "%'";
+                dtgListaPacientes.Refresh();
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(" Hubo problemas para filtrar la data, comuniquese con el administrador del sistema, disculpe los inconvenientes" + error.Message);
+            }
+
+                
+        }
+
     }
 }
