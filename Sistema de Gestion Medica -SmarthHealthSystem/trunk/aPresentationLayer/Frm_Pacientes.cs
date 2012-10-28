@@ -259,8 +259,8 @@ namespace aPresentationLayer
                                 {
                                     bool seEliminoDirecciones = true;
 
-                                    direcciones.IDPaciente = txtIDPaciente.Text.Trim();
-                                    if (!Bl_Direcciones.Delete(direcciones)) 
+                                   
+                                    if (!Bl_Direcciones.Delete(Convert.ToInt32(txtIDPaciente.Text.Trim()))) 
                                     {
                                        //si no se elimino entonces pongo false
                                         seEliminoDirecciones = false;
@@ -287,9 +287,8 @@ namespace aPresentationLayer
                                 if (dtgTelefonos.Rows.Count != 0)
                                 {
                                     bool seEliminoTelefonos = true;
-                                    telefonos.IDPaciente = txtIDPaciente.Text.Trim();
-
-                                    if (!Bl_Telefono.Delete(telefonos)) 
+                                  
+                                    if (!Bl_Telefono.Delete(Convert.ToInt32(txtIDPaciente.Text.Trim())))
                                     {
                                         seEliminoTelefonos = false;
                                     }
@@ -312,8 +311,8 @@ namespace aPresentationLayer
                                 if (dtgContactos.Rows.Count != 0)
                                 {
                                     bool seEliminoContactos = true;
-                                    contacto.IDPaciente = txtIDPaciente.Text.Trim();
-                                    if (!Bl_Contacto.Delete(contacto)) 
+                                    
+                                    if (!Bl_Contacto.Delete(Convert.ToInt32(txtIDPaciente.Text.Trim())))
                                     {
                                         seEliminoContactos = false;
                                     
@@ -379,8 +378,8 @@ namespace aPresentationLayer
 
         private void btnEditar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //Si tengo seleccionado el tabPacientes entonces que se realice 
-            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes)
+            //Si tengo seleccionado el tabPacientes y mi capo IDPaciente esta lleno entonces que se realice 
+            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes &&  !string.IsNullOrEmpty(txtIDPaciente.Text))
             {
                 /*Cambio las variable del sistema a Nuevo = false (me aseguro que este en false) y 
                   Editando = False (indicando que el registro existe) */
@@ -416,31 +415,36 @@ namespace aPresentationLayer
 
         private void btnCancelar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes)
+            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true)
             {
+                DialogResult Respuesta = MessageBox.Show("Desea realmente cancelar los cambios?", "Smarth Health Care", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                //Botones habilitados y Deshabilitados
+                if (Respuesta == DialogResult.Yes) 
+                {
+                    //Botones habilitados y Deshabilitados
 
-                btnNuevo.Enabled = true;
-                btnGuardar.Enabled = false;
-                btnEditar.Enabled = false;
-                btnCancelar.Enabled = false;
-                btnImprimir.Enabled = true;
-                btnEnviar.Enabled = true;
-                btnEliminar.Enabled = true;
+                    btnNuevo.Enabled = true;
+                    btnGuardar.Enabled = false;
+                    btnEditar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                    btnImprimir.Enabled = true;
+                    btnEnviar.Enabled = true;
+                    btnEliminar.Enabled = true;
 
-                //Limpio los Txt
-                Bl_AdministrarControles.VaciarText(frm_pacientes);
+                    //Limpio los Txt
+                    Bl_AdministrarControles.VaciarText(frm_pacientes);
 
-                //Limpio los DatagriedView
-                Bl_AdministrarControles.VaciarDGV(frm_pacientes);
+                    //Limpio los DatagriedView
+                    Bl_AdministrarControles.VaciarDGV(frm_pacientes);
 
-                //Deshabilito los Txt
-                Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+                    //Deshabilito los Txt
+                    Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
 
-                //Deshabilito los Datagried
-                Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+                    //Deshabilito los Datagried
+                    Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
 
+                }
+             
             }// fin del if
 
 
@@ -476,12 +480,15 @@ namespace aPresentationLayer
 
             try
             {
-                string filtro = Convert.ToString(txtFiltro.Text.Trim());
+                if (dtgListaPacientes.Rows.Count != 0) 
+                {
+                    string filtro = Convert.ToString(txtFiltro.Text.Trim());
 
-                ((DataTable)this.dtgListaPacientes.DataSource).DefaultView.RowFilter = @"Paciente Like '%" + filtro + "%'" + "OR Nombres Like '%" + filtro + "%'" + "OR Nombres Like '%" + filtro + "%'"
-                    + "OR Identificacion Like '%" + filtro + "%'" + "OR Genero Like '%" + filtro + "%'" + "OR Email Like '%" + filtro + "%'"
-                    + "OR NSS Like '%" + filtro + "%'";
-                dtgListaPacientes.Refresh();
+                    ((DataTable)this.dtgListaPacientes.DataSource).DefaultView.RowFilter = @"Paciente Like '%" + filtro + "%'" + "OR Nombres Like '%" + filtro + "%'" + "OR Nombres Like '%" + filtro + "%'"
+                        + "OR Identificacion Like '%" + filtro + "%'" + "OR Genero Like '%" + filtro + "%'" + "OR Email Like '%" + filtro + "%'"
+                        + "OR NSS Like '%" + filtro + "%'";
+                    dtgListaPacientes.Refresh();
+                }
 
             }
             catch (Exception error)
@@ -557,12 +564,105 @@ namespace aPresentationLayer
 
         private void cmbTipoIdentificacion_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cmbTipoIdentificacion.Text == "NA(Menor Edad)") 
+            if (cmbTipoIdentificacion.Text == "NA(Menor Edad)")
             {
 
                 txtIdentificacion.Enabled = false;
             }
+            else 
+            {
+
+                txtIdentificacion.Enabled = true;
+            }
         }
 
+        private void dtgListaPacientes_DoubleClick(object sender, EventArgs e)
+        {
+            if (dtgListaPacientes.Rows.Count != 0) 
+            {
+                tbpPrincipalPacientes.SelectedTabPage = tabPacientes;
+            }
+           
+        }
+
+        private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && !string.IsNullOrEmpty(txtNombres.Text))
+            {
+
+                using (TransactionScope scope = new TransactionScope())
+                {
+
+                    try
+                    {
+                        
+                        //Si nunguno de los metodos de borrar emite un error entonces borra
+
+                        if (!Bl_Paciente.Delete(Convert.ToInt32(txtIDPaciente.Text.Trim())) && !Bl_Direcciones.Delete(Convert.ToInt32(txtIDPaciente.Text.Trim()))
+                            && !Bl_Telefono.Delete(Convert.ToInt32(txtIDPaciente.Text.Trim())) && !Bl_Contacto.Delete(Convert.ToInt32(txtIDPaciente.Text.Trim())))
+                        {
+
+                            MessageBox.Show("Hubo problemas eliminando los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else 
+                        
+                        {
+                            //Botones habilitados y Deshabilitados
+
+                            btnNuevo.Enabled = true;
+                            btnGuardar.Enabled = false;
+                            btnEditar.Enabled = false;
+                            btnCancelar.Enabled = false;
+                            btnImprimir.Enabled = true;
+                            btnEnviar.Enabled = true;
+                            btnEliminar.Enabled = true;
+
+                            //Limpio los Txt
+                            Bl_AdministrarControles.VaciarText(frm_pacientes);
+
+                            //Limpio los DatagriedView
+                            Bl_AdministrarControles.VaciarDGV(frm_pacientes);
+
+                            //Deshabilito los Txt
+                            Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+
+                            //Deshabilito los Datagried
+                            Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+                        
+                        }
+
+                  
+                    }
+                    catch (Exception)
+                    {
+                        
+                        throw;
+                    }
+                 
+
+                    scope.Complete();
+                
+                }//fin del Scope
+
+
+            }// fin del if
+
+        }
+
+        private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //si presinoo backspace y no esta vacio entonces que filte nuevamente.
+            if (e.KeyChar == 8 && !string.IsNullOrEmpty(txtFiltro.Text)) 
+            {
+                string filtro = Convert.ToString(txtFiltro.Text.Trim());
+
+                ((DataTable)this.dtgListaPacientes.DataSource).DefaultView.RowFilter = @"Paciente Like '%" + filtro + "%'" + "OR Nombres Like '%" + filtro + "%'" + "OR Nombres Like '%" + filtro + "%'"
+                    + "OR Identificacion Like '%" + filtro + "%'" + "OR Genero Like '%" + filtro + "%'" + "OR Email Like '%" + filtro + "%'"
+                    + "OR NSS Like '%" + filtro + "%'";
+                dtgListaPacientes.Refresh();
+            }
+        }
+
+   
     }
 }

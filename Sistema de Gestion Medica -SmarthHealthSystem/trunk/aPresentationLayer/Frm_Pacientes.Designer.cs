@@ -1261,6 +1261,7 @@
             this.dtgListaPacientes.Size = new System.Drawing.Size(1151, 582);
             this.dtgListaPacientes.TabIndex = 2;
             this.dtgListaPacientes.Click += new System.EventHandler(this.dtgListaPacientes_Click);
+            this.dtgListaPacientes.DoubleClick += new System.EventHandler(this.dtgListaPacientes_DoubleClick);
             // 
             // grpFiltroListaPacientes
             // 
@@ -1280,6 +1281,7 @@
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(430, 20);
             this.txtFiltro.TabIndex = 1;
+            this.txtFiltro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltro_KeyPress);
             this.txtFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltro_KeyUp);
             // 
             // barManager1
@@ -1348,7 +1350,6 @@
             // btnEditar
             // 
             this.btnEditar.Caption = "Editar";
-            this.btnEditar.Enabled = false;
             this.btnEditar.Glyph = global::aPresentationLayer.Properties.Resources.Edit;
             this.btnEditar.Id = 3;
             this.btnEditar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
@@ -1359,7 +1360,6 @@
             // btnCancelar
             // 
             this.btnCancelar.Caption = "Cancelar";
-            this.btnCancelar.Enabled = false;
             this.btnCancelar.Glyph = global::aPresentationLayer.Properties.Resources.Cancel;
             this.btnCancelar.Id = 4;
             this.btnCancelar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C));
@@ -1389,12 +1389,12 @@
             // btnEliminar
             // 
             this.btnEliminar.Caption = "Eliminar";
-            this.btnEliminar.Enabled = false;
             this.btnEliminar.Glyph = global::aPresentationLayer.Properties.Resources.Delete;
             this.btnEliminar.Id = 7;
             this.btnEliminar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnEliminar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminar_ItemClick);
             // 
             // btnBuscar
             // 
