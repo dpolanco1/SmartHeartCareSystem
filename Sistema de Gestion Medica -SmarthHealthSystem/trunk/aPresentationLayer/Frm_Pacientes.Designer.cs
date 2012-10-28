@@ -469,8 +469,15 @@
             this.cmbSector.Enabled = false;
             this.cmbSector.FormattingEnabled = true;
             this.cmbSector.Items.AddRange(new object[] {
-            "Villa Juana",
-            "Los mina"});
+            "",
+            "San Juan Bosco",
+            "Simón Bolívar",
+            "Tropical de Metaldom",
+            "Viejo Arroyo Hondo",
+            "Villa Agrícolas",
+            "Villa Consuelo",
+            "Villa Francisca",
+            "Villa Juana"});
             this.cmbSector.Location = new System.Drawing.Point(747, 142);
             this.cmbSector.Name = "cmbSector";
             this.cmbSector.Size = new System.Drawing.Size(168, 21);
@@ -482,13 +489,39 @@
             this.cmbProvincia.Enabled = false;
             this.cmbProvincia.FormattingEnabled = true;
             this.cmbProvincia.Items.AddRange(new object[] {
-            "Santo Domingo Norte",
-            "Santo Domingo Este",
+            "",
+            "Azua",
+            "Bahoruco",
+            "Barahona",
+            "Dajabón",
             "Distrito Nacional",
+            "Duarte",
+            "El Seibo",
+            "Elías Piña",
+            "Espaillat",
+            "Hato Mayor",
+            "Hermanas Mirabal",
+            "Independencia",
+            "La Altagracia",
+            "La Romana",
             "La Vega",
-            "Santiago",
+            "María Trinidad Sánchez",
+            "Monseñor Nouel",
+            "Monte Plata",
+            "Montecristi",
+            "Pedernales",
+            "Peravia",
             "Puerto Plata",
-            "San Juan"});
+            "Samaná",
+            "San Cristóbal",
+            "San José de Ocoa",
+            "San Juan",
+            "San Pedro de Macorís",
+            "Santiago",
+            "Santiago Rodríguez",
+            "Santo Domingo",
+            "Sánchez Ramírez",
+            "Valverde"});
             this.cmbProvincia.Location = new System.Drawing.Point(514, 142);
             this.cmbProvincia.Name = "cmbProvincia";
             this.cmbProvincia.Size = new System.Drawing.Size(227, 21);
@@ -500,9 +533,16 @@
             this.cmbRegion.Enabled = false;
             this.cmbRegion.FormattingEnabled = true;
             this.cmbRegion.Items.AddRange(new object[] {
+            "",
+            "Cibao Oriental",
             "Cibao Central",
-            "Distrito Nacional",
-            "Sur"});
+            "Cibao Norcentral",
+            "Cibao Occidental",
+            "El Valle",
+            "Enriquillo",
+            "Valdesia",
+            "Metropolitana",
+            "Yuma"});
             this.cmbRegion.Location = new System.Drawing.Point(312, 142);
             this.cmbRegion.Name = "cmbRegion";
             this.cmbRegion.Size = new System.Drawing.Size(196, 21);
@@ -514,10 +554,91 @@
             this.cmbPais.Enabled = false;
             this.cmbPais.FormattingEnabled = true;
             this.cmbPais.Items.AddRange(new object[] {
-            "Republica Dominicana",
-            "USA",
+            "",
+            "Afganistan",
+            "Africa del Sur",
+            "Albania",
+            "Alemania",
+            "Andorra",
+            "Angola",
+            "Antigua y Barbuda",
+            "Antillas Holandesas",
+            "Arabia Saudita",
+            "Argelia",
+            "Argentina",
+            "Armenia",
+            "Aruba",
+            "Australia",
+            "Austria",
+            "Azerbaijan",
+            "Bahamas",
+            "Bahrain",
+            "Bangladesh",
+            "Barbados",
+            "Belarusia",
+            "Belgica",
+            "Belice",
+            "Benin",
+            "Bermudas",
+            "Bolivia",
+            "Bosnia",
+            "Botswana",
+            "Brasil",
+            "Brunei Darussulam",
+            "Bulgaria",
+            "Burkina Faso",
+            "Burundi",
+            "Butan",
+            "Camboya",
+            "Camerun",
             "Canada",
-            "Haiti"});
+            "Cape Verde",
+            "Chad",
+            "Chile",
+            "China",
+            "Chipre",
+            "Colombia",
+            "Comoros",
+            "Congo",
+            "Corea del Norte",
+            "Corea del Sur",
+            "Costa de Marfíl",
+            "Costa Rica",
+            "Croasia",
+            "Cuba",
+            "Dinamarca",
+            "Djibouti",
+            "Dominica",
+            "Ecuador",
+            "Egipto",
+            "El Salvador",
+            "Emiratos Arabes Unidos",
+            "Eritrea",
+            "Eslovenia",
+            "España",
+            "Estados Unidos",
+            "Estonia",
+            "Etiopia",
+            "Fiji",
+            "Filipinas",
+            "Finlandia",
+            "Francia",
+            "Gabon",
+            "Gambia",
+            "Georgia",
+            "Ghana",
+            "Granada",
+            "Grecia",
+            "Groenlandia",
+            "Guadalupe",
+            "Guam",
+            "Guatemala",
+            "Guayana Francesa",
+            "Guerney",
+            "Guinea",
+            "Guinea-Bissau",
+            "Guinea Equatorial",
+            "Guyana"});
             this.cmbPais.Location = new System.Drawing.Point(136, 142);
             this.cmbPais.Name = "cmbPais";
             this.cmbPais.Size = new System.Drawing.Size(170, 21);
@@ -590,35 +711,74 @@
             this.cmbOcupacion.Enabled = false;
             this.cmbOcupacion.FormattingEnabled = true;
             this.cmbOcupacion.Items.AddRange(new object[] {
-            "Restaurante y Gerentes de Servicios de Alimentos",
-            "Gerentes de Producción Primaria (excepto agricultura)",
-            "Ocupaciones Profesionales en Servicios Empresariales a la Gestión",
-            "Ajustadores de Seguros y Reclamos Examinadores",
-            "Los biólogos y especialistas asimilados",
-            "Arquitectos",
-            "Médicos Especialistas",
-            "Médicos Generales y Médicos de familia",
-            "Dentistas",
-            "Los farmacéuticos",
-            "Fisioterapeutas",
-            "Enfermeras Registradas",
-            "Tecnólogos Médicos de radiación",
-            "Higienistas Dentales y terapeutas dentales",
-            " Las enfermeras prácticas con licencia",
-            " psicólogos",
-            " Trabajadores Sociales",
-            "  \tChefs",
-            " Cocineros",
-            " Contratistas y Supervisores, Oficios Carpintería",
-            " Contratistas y Supervisores, Oficios Mecánico",
-            " Electricistas (excepto Sistema Industrial y Electricidad)",
-            " Electricistas Industriales",
-            " Fontaneros",
-            " Los soldadores y operadores de máquinas afines",
-            " Mécanico Equipos Especiales",
-            "  Operadores de grúas",
-            "  Perforadores y Blasters - Minería de Superficie, Canteras y Construcción",
-            "  Supervisores, Petróleo y Gas Perforación y Servicio"});
+            "",
+            "Abogad@",
+            "Actor",
+            "Agricultor",
+            "Apicultor",
+            "Arquitect@",
+            "Asesor",
+            "Azafata",
+            "Barbero",
+            "Bibliotecari@",
+            "Bomber@",
+            "Camarer@",
+            "Camioner@",
+            "Cantante",
+            "Carnicero",
+            "Científico",
+            "Cocinero",
+            "Conductor/Chofer",
+            "Contador",
+            "Dentista",
+            "Diseñador de Interiores",
+            "Diseñador de moda",
+            "Diseñador gráfico",
+            "DJ disc jockey",
+            "Electricista",
+            "Empleado",
+            "Empleado bancario",
+            "Enfermera",
+            "Escritor",
+            "Estudiante",
+            "Fotógraf@",
+            "Guardia de Seguridad",
+            "Guía Turística",
+            "Ingeniero Civil",
+            "Ingeniero en Sistemas",
+            "Instructor",
+            "Jardiner@",
+            "Joyer@",
+            "Juez",
+            "Maestr@",
+            "Mariner@",
+            "Mecánico",
+            "Médico",
+            "Modelo",
+            "Niñera",
+            "Obrero",
+            "Panadero",
+            "Peluquer@",
+            "Periodista",
+            "Pescador",
+            "Piloto",
+            "Pintor",
+            "Plomero",
+            "Policía",
+            "Polític@",
+            "Psicólog@",
+            "Psiquiatra",
+            "Químico Farmacéutico",
+            "Recepcionista",
+            "Reporter@",
+            "Secretari@",
+            "Soldado",
+            "Taxista",
+            "Técnico",
+            "Telemarketer",
+            "Vendedor",
+            "Zapater@",
+            "Otro"});
             this.cmbOcupacion.Location = new System.Drawing.Point(11, 99);
             this.cmbOcupacion.Name = "cmbOcupacion";
             this.cmbOcupacion.Size = new System.Drawing.Size(208, 21);
@@ -631,14 +791,16 @@
             this.cmbNivelAcademico.FormattingEnabled = true;
             this.cmbNivelAcademico.Items.AddRange(new object[] {
             "",
-            "Estudiante Básica",
-            "Estudiante Educación Media",
-            "Estudiante Universitario",
-            "Profesional"});
+            "Doctorado",
+            "Licenciatura",
+            "Maestria",
+            "Pos- doctorado",
+            "Preparatoria",
+            "Primaria",
+            "Secundaria"});
             this.cmbNivelAcademico.Location = new System.Drawing.Point(225, 99);
             this.cmbNivelAcademico.Name = "cmbNivelAcademico";
             this.cmbNivelAcademico.Size = new System.Drawing.Size(201, 21);
-            this.cmbNivelAcademico.Sorted = true;
             this.cmbNivelAcademico.TabIndex = 9;
             // 
             // txtFechaNacimiento
@@ -660,11 +822,11 @@
             "Cedula",
             "Licencia de Conducir",
             "NA(Menor Edad)",
+            "Otro",
             "Pasaporte"});
             this.cmbTipoIdentificacion.Location = new System.Drawing.Point(514, 52);
             this.cmbTipoIdentificacion.Name = "cmbTipoIdentificacion";
             this.cmbTipoIdentificacion.Size = new System.Drawing.Size(128, 21);
-            this.cmbTipoIdentificacion.Sorted = true;
             this.cmbTipoIdentificacion.TabIndex = 3;
             this.cmbTipoIdentificacion.SelectedValueChanged += new System.EventHandler(this.cmbTipoIdentificacion_SelectedValueChanged);
             // 
