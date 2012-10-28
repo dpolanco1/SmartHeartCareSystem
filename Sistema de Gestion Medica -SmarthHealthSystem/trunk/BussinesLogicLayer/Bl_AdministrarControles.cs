@@ -155,6 +155,7 @@ namespace BussinesLogicLayer
                 {
                     DataGridView DGV = new DataGridView();
                     DGV = (DataGridView)contHijo;
+                    DGV.DataSource = null;
                     DGV.Rows.Clear();
                 }
             }

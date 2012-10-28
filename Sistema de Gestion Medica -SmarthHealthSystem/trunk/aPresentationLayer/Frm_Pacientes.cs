@@ -18,10 +18,10 @@ namespace aPresentationLayer
     public partial class Frm_Pacientes : DevExpress.XtraEditors.XtraForm
     {
         //Entidades
-        Ent_Paciente paciente = new Ent_Paciente();
-        Ent_Direcciones direcciones = new Ent_Direcciones();
-        Ent_Telefono telefonos = new Ent_Telefono();
-        Ent_Contacto contacto = new Ent_Contacto();
+        readonly Ent_Paciente paciente = new Ent_Paciente();
+        readonly Ent_Direcciones direcciones = new Ent_Direcciones();
+        readonly Ent_Telefono telefonos = new Ent_Telefono();
+        readonly Ent_Contacto contacto = new Ent_Contacto();
 
         //variables del Sistema
         private static bool NUEVO { get; set; }
@@ -87,6 +87,12 @@ namespace aPresentationLayer
                 //Paso el Foco Al Nombre
                 txtNombres.Focus();
 
+                //Hago las columnas de los datagrid visibles
+
+                Direccion.Visible = true;
+                Telefono.Visible = true;
+                NombreContacto.Visible = true;
+                TelefonoContacto.Visible = true;
 
             }//fin del If 
         }//fin del Boton Nuevo
@@ -434,6 +440,10 @@ namespace aPresentationLayer
         {
             if (dtgListaPacientes.Rows.Count != 0) 
            {
+               try
+               {
+
+             
                //Obtengo el indice de la fila seleccionada
                    int fila = dtgListaPacientes.CurrentRow.Index;
 
@@ -447,8 +457,8 @@ namespace aPresentationLayer
                txtEmail.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[7].Value);
                txtFechaNacimiento.Value = Convert.ToDateTime(dtgListaPacientes.Rows[fila].Cells[8].Value);
                cmbOcupacion.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[9].Value);
-                cmbEstadoCivil.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[10].Value);
-                cmbTipoSangre.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[11].Value);
+               cmbEstadoCivil.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[10].Value);
+               cmbTipoSangre.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[11].Value);
                 txtNSS.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[12].Value);
                 txtFechaIngreso.Value = Convert.ToDateTime(dtgListaPacientes.Rows[fila].Cells[13].Value);
                 txtPeso.Value = Convert.ToDecimal(dtgListaPacientes.Rows[fila].Cells[14].Value);
@@ -457,10 +467,29 @@ namespace aPresentationLayer
                 chkEnviarEmail.Checked = Convert.ToBoolean(dtgListaPacientes.Rows[fila].Cells[17].Value);
                 txtObservaciones.Text = Convert.ToString(dtgListaPacientes.Rows[fila].Cells[18].Value);
 
+                //Direcciones
                 Direccion.Visible = false;
-                dtgDirecciones.DataSource = Bl_Direcciones.SearchDireccionesporIDPacient(83);//eso esta mal;
-                //bien
-      
+                dtgDirecciones.DataSource = Bl_Direcciones.SearchDireccionesporIDPaciente(Convert.ToInt32(dtgListaPacientes.Rows[fila].Cells[0].Value));
+                dtgDirecciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+               
+                //Telefonos
+                Telefono.Visible = false;
+                
+                dtgTelefonos.DataSource = Bl_Telefono.SearchTelefonosporIDPaciente(Convert.ToInt32(dtgListaPacientes.Rows[fila].Cells[0].Value));
+                dtgTelefonos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+
+                //Contactos
+                NombreContacto.Visible = false;
+                TelefonoContacto.Visible = false;
+                
+                dtgContactos.DataSource = Bl_Contacto.SearchContactosporIDPaciente(Convert.ToInt32(dtgListaPacientes.Rows[fila].Cells[0].Value));
+                dtgContactos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+
+               }
+               catch (Exception)
+               {
+                   MessageBox.Show("Hubo problemas para devolver los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               }
             }
         }
 

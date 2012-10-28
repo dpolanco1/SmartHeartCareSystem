@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using EntidadesLayer;
 using DataAccessLayer;
+using System.Data;
 
 namespace BussinesLogicLayer
 {
@@ -100,10 +101,10 @@ namespace BussinesLogicLayer
 
         }
 
-        public void Search(Ent_Paciente entPersona)
+        public static DataTable SearchContactosporIDPaciente(int IDPaciente)
         {
-
-
+            // Da_Direcciones dd = new Da_Direcciones();
+            return Da_Contacto.SearchContactosporIDPaciente(IDPaciente);
         }
     }
 }

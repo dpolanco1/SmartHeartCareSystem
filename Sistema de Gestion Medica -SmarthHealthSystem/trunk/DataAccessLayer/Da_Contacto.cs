@@ -146,12 +146,42 @@ namespace DataAccessLayer
             return flag;
 
         }
-        public bool Search()
+        public static DataTable SearchContactosporIDPaciente(int idPaciente)
         {
-            bool flag = false;
+            DataTable sqlTbl = new DataTable();
 
-            return flag;
+            try
+            {
 
+                Da_Connection.Get.Open();
+
+                SqlCommand command = new SqlCommand("Spr_SearchContactosIDPaciente", Da_Connection.Get);
+                command.Connection = Da_Connection.Get;
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@IDPaciente", idPaciente);
+                SqlDataAdapter da = new SqlDataAdapter(command);
+
+                da.Fill(sqlTbl);
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+
+            }
+
+            finally
+            {
+
+                if (Da_Connection.Get.State != ConnectionState.Closed)
+                {
+                    Da_Connection.Get.Close();
+                }
+
+            }//fin del Finally
+
+            return sqlTbl;//ayudame ahi
         }
     }
 }

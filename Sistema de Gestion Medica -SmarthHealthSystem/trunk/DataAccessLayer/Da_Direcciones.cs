@@ -143,62 +143,18 @@ namespace DataAccessLayer
         {
             DataTable sqlTbl = new DataTable();
 
-            //nection.Gtry
-            //{
-
-            //    Da_Connection.Get.Open();
-            //    SqlCommand cmd = new SqlCommand("Spr_SearchDireccionesIDPaciente", Da_Connection.Get);
-            //    cmd.CommandType = CommandType.StoredProcedure;
-            //    cmd.Parameters.Add("@idpaciente", SqlDbType.Int);
-            //    cmd.Parameters.AddWithValue("@idpaciente", idPaciente);
-            //    SqlDataReader lector = cmd.ExecuteReader(CommandBehavior.Default);
-
-            //    dt.Load(lector, LoadOption.OverwriteChanges);
-
-
-
-
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e.Message);
-
-            //}
-
-            //finally
-            //{
-
-            //    if (Da_Connection.Get.State != ConnectionState.Closed)espere
-            //    {
-            //        Da_Conet.Close();
-            //    }
-
-            //}//fin del Finally
-
-            //return dt;
-
             try
             {
 
                 Da_Connection.Get.Open();
 
-                SqlCommand sqlCmd = new SqlCommand("Spr_SearchDireccionesIDPaciente",Da_Connection.Get);
+                SqlCommand command = new SqlCommand("Spr_SearchDireccionesIDPaciente", Da_Connection.Get);
+                command.Connection = Da_Connection.Get;
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@IDPaciente", idPaciente);
+                SqlDataAdapter da = new SqlDataAdapter(command);
 
-              //  sqlCmd.CommandText = "";
-                sqlCmd.Connection = Da_Connection.Get;
-                sqlCmd.CommandType = CommandType.StoredProcedure;
-                sqlCmd.Parameters.AddWithValue("@IDPaciente",idPaciente);//conio iuuuufufuufufufufufuf dele
-                //sqlCmd.Parameters.
-               SqlDataAdapter da = new SqlDataAdapter(sqlCmd);
-               
-
-                
                 da.Fill(sqlTbl);
-
-               // return sqlTbl;
-                return sqlTbl;
-
-
 
 
             }

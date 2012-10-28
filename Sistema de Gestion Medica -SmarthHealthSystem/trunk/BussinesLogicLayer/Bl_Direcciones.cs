@@ -91,7 +91,7 @@ namespace BussinesLogicLayer
 
         }
 
-        public static  DataTable SearchDireccionesporIDPacient(int IDPaciente)
+        public static  DataTable SearchDireccionesporIDPaciente(int IDPaciente)
         {
            // Da_Direcciones dd = new Da_Direcciones();
             return Da_Direcciones.SearchDireccionesporIDPaciente(IDPaciente);
