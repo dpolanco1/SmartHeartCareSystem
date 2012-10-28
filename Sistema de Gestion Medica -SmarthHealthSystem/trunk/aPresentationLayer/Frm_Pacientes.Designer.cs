@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.tbpPrincipalPacientes = new DevExpress.XtraTab.XtraTabControl();
             this.tabPacientes = new DevExpress.XtraTab.XtraTabPage();
@@ -38,7 +38,10 @@
             this.txtObservaciones = new System.Windows.Forms.RichTextBox();
             this.grpUbicaciones = new DevExpress.XtraEditors.GroupControl();
             this.dtgContactos = new System.Windows.Forms.DataGridView();
+            this.NombreContacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelefonoContacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgTelefonos = new System.Windows.Forms.DataGridView();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgDirecciones = new System.Windows.Forms.DataGridView();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblContactos = new DevExpress.XtraEditors.LabelControl();
@@ -128,9 +131,6 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnCargar = new DevExpress.XtraEditors.SimpleButton();
             this.menuEmergente = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreContacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelefonoContacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).BeginInit();
             this.tbpPrincipalPacientes.SuspendLayout();
             this.tabPacientes.SuspendLayout();
@@ -245,6 +245,20 @@
             this.dtgContactos.Size = new System.Drawing.Size(354, 90);
             this.dtgContactos.TabIndex = 26;
             // 
+            // NombreContacto
+            // 
+            this.NombreContacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NombreContacto.FillWeight = 108.6294F;
+            this.NombreContacto.HeaderText = "Nombre de Contacto";
+            this.NombreContacto.Name = "NombreContacto";
+            // 
+            // TelefonoContacto
+            // 
+            this.TelefonoContacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TelefonoContacto.FillWeight = 91.37056F;
+            this.TelefonoContacto.HeaderText = "Teléfono";
+            this.TelefonoContacto.Name = "TelefonoContacto";
+            // 
             // dtgTelefonos
             // 
             this.dtgTelefonos.AllowUserToOrderColumns = true;
@@ -264,6 +278,12 @@
             this.dtgTelefonos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dtgTelefonos.Size = new System.Drawing.Size(285, 90);
             this.dtgTelefonos.TabIndex = 25;
+            // 
+            // Telefono
+            // 
+            this.Telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Telefono.HeaderText = "Teléfonos";
+            this.Telefono.Name = "Telefono";
             // 
             // dtgDirecciones
             // 
@@ -639,13 +659,14 @@
             "",
             "Cedula",
             "Licencia de Conducir",
-            "NA",
+            "NA(Menor Edad)",
             "Pasaporte"});
             this.cmbTipoIdentificacion.Location = new System.Drawing.Point(514, 52);
             this.cmbTipoIdentificacion.Name = "cmbTipoIdentificacion";
             this.cmbTipoIdentificacion.Size = new System.Drawing.Size(128, 21);
             this.cmbTipoIdentificacion.Sorted = true;
             this.cmbTipoIdentificacion.TabIndex = 3;
+            this.cmbTipoIdentificacion.SelectedValueChanged += new System.EventHandler(this.cmbTipoIdentificacion_SelectedValueChanged);
             // 
             // txtNombres
             // 
@@ -974,14 +995,14 @@
             this.dtgHistorialClinico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaHistorial,
             this.Profesional});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgHistorialClinico.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgHistorialClinico.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgHistorialClinico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgHistorialClinico.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgHistorialClinico.Enabled = false;
@@ -1020,14 +1041,14 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.Observacion});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgConsultas.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgConsultas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgConsultas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgConsultas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgConsultas.Enabled = false;
@@ -1285,26 +1306,6 @@
             // menuEmergente
             // 
             this.menuEmergente.Name = "contextMenuStrip1";
-            // 
-            // Telefono
-            // 
-            this.Telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Telefono.HeaderText = "Teléfonos";
-            this.Telefono.Name = "Telefono";
-            // 
-            // NombreContacto
-            // 
-            this.NombreContacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NombreContacto.FillWeight = 108.6294F;
-            this.NombreContacto.HeaderText = "Nombre de Contacto";
-            this.NombreContacto.Name = "NombreContacto";
-            // 
-            // TelefonoContacto
-            // 
-            this.TelefonoContacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TelefonoContacto.FillWeight = 91.37056F;
-            this.TelefonoContacto.HeaderText = "Teléfono";
-            this.TelefonoContacto.Name = "TelefonoContacto";
             // 
             // Frm_Pacientes
             // 

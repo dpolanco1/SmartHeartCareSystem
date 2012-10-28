@@ -398,6 +398,11 @@ namespace aPresentationLayer
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
+            //Hago que mi datagrid sea enable true
+            dtgListaPacientes.Enabled = true;
+            try
+            {
+            //Busco todos los pacientes
             dtgListaPacientes.DataSource = Bl_Paciente.SearchAll();
             
             for (int i = 8; i <dtgListaPacientes.Columns.Count; i++)
@@ -408,6 +413,12 @@ namespace aPresentationLayer
             txtFiltro.Enabled = true;
             txtFiltro.Focus();
 
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hubo problemas para devolver los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void txtFiltro_KeyUp(object sender, KeyEventArgs e)
@@ -490,6 +501,15 @@ namespace aPresentationLayer
                {
                    MessageBox.Show("Hubo problemas para devolver los datos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
                }
+            }
+        }
+
+        private void cmbTipoIdentificacion_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cmbTipoIdentificacion.Text == "NA(Menor Edad)") 
+            {
+
+                txtIdentificacion.Enabled = false;
             }
         }
 
