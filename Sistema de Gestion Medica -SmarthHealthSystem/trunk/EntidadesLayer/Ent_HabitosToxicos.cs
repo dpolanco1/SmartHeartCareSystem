@@ -14,7 +14,7 @@ namespace EntidadesLayer
         public bool Te { get; set; }
         public bool Drogas { get; set; }
         public bool Otros { get; set; }
-        public bool Descripcion { get; set; }
+        public string Descripcion { get; set; }
 
 
     }
