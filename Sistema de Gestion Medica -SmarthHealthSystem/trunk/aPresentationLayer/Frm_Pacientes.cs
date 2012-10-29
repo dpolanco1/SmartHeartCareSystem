@@ -120,11 +120,12 @@ namespace aPresentationLayer
                         MessageBox.Show("Campos en negrita son obligatorios", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                     }
-                    else if (!Bl_ValidarControles.ValidaCedula(txtIdentificacion)) 
+                    else if (!Bl_ValidarControles.ValidaCedula(txtIdentificacion) && cmbTipoIdentificacion.Text == "Cedula"  ) 
                     {
                         MessageBox.Show("La cedula proporcionada no es valida", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         txtIdentificacion.Focus();
                     }
+                    
 
                     else
                     {
@@ -318,9 +319,9 @@ namespace aPresentationLayer
 
 
                                     // Valores Entidad Conctacto
-                                    if (dtgContactos.Rows.Count != 0)
+                                    if (dtgContactos.Rows.Count != 0 )
                                     {
-                                        bool seEliminoContactos = true;
+                                        bool seEliminoContactos = true; 
 
                                         if (!Bl_Contacto.Delete(Convert.ToInt32(txtIDPaciente.Text.Trim())))
                                         {
@@ -330,10 +331,12 @@ namespace aPresentationLayer
 
                                         for (int i = 0; i < dtgContactos.RowCount - 1; i++)
                                         {
+                                           
 
                                             contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
                                             contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
-                                            if (!Bl_Contacto.Insert(contacto) && seEliminoContactos == false)
+                                          
+                                             if (!Bl_Contacto.Insert(contacto) && seEliminoContactos == false)
                                             {
                                                 MessageBox.Show("Hubo problemas Actualizando los Contactos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
