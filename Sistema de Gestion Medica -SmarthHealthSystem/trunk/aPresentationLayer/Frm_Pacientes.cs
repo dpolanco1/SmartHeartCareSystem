@@ -120,6 +120,11 @@ namespace aPresentationLayer
                         MessageBox.Show("Campos en negrita son obligatorios", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                     }
+                    else if (!Bl_ValidarControles.ValidaCedula(txtIdentificacion)) 
+                    {
+                        MessageBox.Show("La cedula proporcionada no es valida", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        txtIdentificacion.Focus();
+                    }
 
                     else
                     {
@@ -212,7 +217,7 @@ namespace aPresentationLayer
                                             }
 
                                         }//fin del for dtgContactos
-                                }//fin if dtgContactos
+                                    }//fin if dtgContactos
 
 
                                     //Si todo paso bien
@@ -244,8 +249,8 @@ namespace aPresentationLayer
                                 {
                                     MessageBox.Show("Hay problemas de conexión a la base de datos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
-                             
-                               
+
+
 
                             }//fin de todos los insert con Nuevo
 
@@ -358,11 +363,11 @@ namespace aPresentationLayer
 
                                 }//fin del if UPDATE
                             }
-                            else 
+                            else
                             {
 
                                 MessageBox.Show("Hay problemas de conexión a la base de datos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            
+
                             }//FIN DEL IF EDITANDO
                         }//FIN DEL TRY
                         catch (Exception)
@@ -571,13 +576,19 @@ namespace aPresentationLayer
         {
             if (cmbTipoIdentificacion.Text == "NA(Menor Edad)")
             {
-
                 txtIdentificacion.Enabled = false;
             }
-            else 
+            else if (cmbTipoIdentificacion.Text == "Cedula")
             {
-
+                txtIdentificacion.Mask = "000-0000000-0";
                 txtIdentificacion.Enabled = true;
+                txtIdentificacion.Focus();
+               
+            }
+            else {
+                txtIdentificacion.Mask = null;
+                txtIdentificacion.Enabled = true;
+                txtIdentificacion.Focus();
             }
         }
 
@@ -675,6 +686,14 @@ namespace aPresentationLayer
         private void Frm_Pacientes_Load(object sender, EventArgs e)
         {
             CONSULTANDO = true;
+        }
+
+        private void Frm_Pacientes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //vuelvo a poner los estados del sistema
+            NUEVO = false;
+            EDITANDO = false;
+            CONSULTANDO = false;
         }
 
    

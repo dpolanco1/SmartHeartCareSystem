@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.tbpPrincipalPacientes = new DevExpress.XtraTab.XtraTabControl();
             this.tabPacientes = new DevExpress.XtraTab.XtraTabPage();
@@ -47,9 +47,9 @@
             this.lblTelefono = new DevExpress.XtraEditors.LabelControl();
             this.lblDirecciones = new DevExpress.XtraEditors.LabelControl();
             this.grpDatos = new DevExpress.XtraEditors.GroupControl();
+            this.txtIdentificacion = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNSS = new System.Windows.Forms.TextBox();
-            this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtAltura = new System.Windows.Forms.NumericUpDown();
             this.txtPeso = new System.Windows.Forms.NumericUpDown();
@@ -334,9 +334,9 @@
             // 
             // grpDatos
             // 
+            this.grpDatos.Controls.Add(this.txtIdentificacion);
             this.grpDatos.Controls.Add(this.txtEmail);
             this.grpDatos.Controls.Add(this.txtNSS);
-            this.grpDatos.Controls.Add(this.txtIdentificacion);
             this.grpDatos.Controls.Add(this.txtApellidos);
             this.grpDatos.Controls.Add(this.txtAltura);
             this.grpDatos.Controls.Add(this.txtPeso);
@@ -391,6 +391,13 @@
             this.grpDatos.TabIndex = 5;
             this.grpDatos.Text = "Datos del Paciente";
             // 
+            // txtIdentificacion
+            // 
+            this.txtIdentificacion.Location = new System.Drawing.Point(648, 53);
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(119, 21);
+            this.txtIdentificacion.TabIndex = 64;
+            // 
             // txtEmail
             // 
             this.txtEmail.Enabled = false;
@@ -408,15 +415,6 @@
             this.txtNSS.Name = "txtNSS";
             this.txtNSS.Size = new System.Drawing.Size(119, 21);
             this.txtNSS.TabIndex = 12;
-            // 
-            // txtIdentificacion
-            // 
-            this.txtIdentificacion.Enabled = false;
-            this.txtIdentificacion.Location = new System.Drawing.Point(648, 52);
-            this.txtIdentificacion.MaxLength = 15;
-            this.txtIdentificacion.Name = "txtIdentificacion";
-            this.txtIdentificacion.Size = new System.Drawing.Size(119, 21);
-            this.txtIdentificacion.TabIndex = 4;
             // 
             // txtApellidos
             // 
@@ -1157,14 +1155,14 @@
             this.dtgHistorialClinico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaHistorial,
             this.Profesional});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgHistorialClinico.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgHistorialClinico.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgHistorialClinico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgHistorialClinico.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgHistorialClinico.Enabled = false;
@@ -1203,14 +1201,14 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.Observacion});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgConsultas.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgConsultas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgConsultas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgConsultas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgConsultas.Enabled = false;
@@ -1463,6 +1461,7 @@
             this.Name = "Frm_Pacientes";
             this.Text = "Mantenimiento de Pacientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Pacientes_FormClosed);
             this.Load += new System.EventHandler(this.Frm_Pacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).EndInit();
             this.tbpPrincipalPacientes.ResumeLayout(false);
@@ -1586,7 +1585,6 @@
         private System.Windows.Forms.DateTimePicker txtFechaNacimiento;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtNSS;
-        private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.TextBox txtApellidos;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.RichTextBox txtObservaciones;
@@ -1598,5 +1596,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreContacto;
         private System.Windows.Forms.DataGridViewTextBoxColumn TelefonoContacto;
+        private System.Windows.Forms.MaskedTextBox txtIdentificacion;
     }
 }

@@ -42,6 +42,11 @@ namespace BussinesLogicLayer
                     contHijo.Text = String.Empty;
 
                 }
+                else if (contHijo is MaskedTextBox)
+                {
+                    contHijo.Text = String.Empty;
+
+                }
             }
 
         }
@@ -74,6 +79,11 @@ namespace BussinesLogicLayer
 
                 }
                 else if (contHijo is CheckBox)
+                {
+                    contHijo.Enabled = true;
+
+                }
+                else if (contHijo is MaskedTextBox)
                 {
                     contHijo.Enabled = true;
 
@@ -112,6 +122,11 @@ namespace BussinesLogicLayer
 
                 }
                 else if (contHijo is CheckBox)
+                {
+                    contHijo.Enabled = false;
+
+                }
+                else if (contHijo is MaskedTextBox)
                 {
                     contHijo.Enabled = false;
 
