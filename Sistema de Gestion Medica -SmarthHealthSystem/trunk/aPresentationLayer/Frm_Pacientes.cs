@@ -661,7 +661,7 @@ namespace aPresentationLayer
         private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
         {
             //si presinoo backspace y no esta vacio entonces que filte nuevamente.
-            if (e.KeyChar == 8 && !string.IsNullOrEmpty(txtFiltro.Text) ||) 
+            if (e.KeyChar == 8 && !string.IsNullOrEmpty(txtFiltro.Text) ) 
             {
                 string filtro = Convert.ToString(txtFiltro.Text.Trim());
 
