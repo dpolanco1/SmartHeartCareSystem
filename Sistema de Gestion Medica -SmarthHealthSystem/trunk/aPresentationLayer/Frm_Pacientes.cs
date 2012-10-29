@@ -118,6 +118,10 @@ namespace aPresentationLayer
                         String.IsNullOrEmpty(cmbGenero.Text))
                     {
                         MessageBox.Show("Campos en negrita son obligatorios", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                    }else if (Bl_ValidarControles.ValidaCedula())
+                    {
+                        
                     }
 
                     else
