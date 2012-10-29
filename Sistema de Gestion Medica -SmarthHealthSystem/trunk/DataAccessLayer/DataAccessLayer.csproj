@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Da_AntecedentesPersonales.cs" />
     <Compile Include="Da_Connection.cs" />
     <Compile Include="Da_Contacto.cs" />
     <Compile Include="Da_Direcciones.cs" />
+    <Compile Include="Da_HabitosToxicos.cs" />
     <Compile Include="Da_HistorialClinico.cs" />
     <Compile Include="Da_Paciente.cs" />
     <Compile Include="Da_Telefono.cs" />
