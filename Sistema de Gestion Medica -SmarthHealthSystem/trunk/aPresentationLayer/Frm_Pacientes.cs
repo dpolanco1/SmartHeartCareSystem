@@ -119,9 +119,6 @@ namespace aPresentationLayer
                     {
                         MessageBox.Show("Campos en negrita son obligatorios", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
-                    }else if (Bl_ValidarControles.ValidaCedula())
-                    {
-                        
                     }
 
                     else
