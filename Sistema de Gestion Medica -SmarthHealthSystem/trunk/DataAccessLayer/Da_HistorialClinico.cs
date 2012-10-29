@@ -29,7 +29,7 @@ namespace DataAccessLayer
 
                 command.Parameters.Add(new SqlParameter("@IDPaciente", entHistorialClinico.IDPaciente) { SqlDbType = SqlDbType.Int });
                 command.Parameters.Add(new SqlParameter("@RemitidoPor", entHistorialClinico.RemitidoPor) { SqlDbType = SqlDbType.NVarChar });
-                command.Parameters.Add(new SqlParameter("@SintomasEvoluciones", entHistorialClinico.SintomasEvoluciones) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@Sintomas", entHistorialClinico.SintomasEvoluciones) { SqlDbType = SqlDbType.NVarChar });
                 //Realizo el Query
                 command.ExecuteNonQuery();
 

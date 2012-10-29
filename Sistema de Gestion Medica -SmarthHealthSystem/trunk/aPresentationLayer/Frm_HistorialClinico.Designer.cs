@@ -57,39 +57,38 @@
             this.txtDescripcion1 = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.checkBox27 = new System.Windows.Forms.CheckBox();
-            this.checkBox46 = new System.Windows.Forms.CheckBox();
-            this.checkBox47 = new System.Windows.Forms.CheckBox();
-            this.checkBox48 = new System.Windows.Forms.CheckBox();
-            this.checkBox49 = new System.Windows.Forms.CheckBox();
-            this.checkBox50 = new System.Windows.Forms.CheckBox();
-            this.checkBox51 = new System.Windows.Forms.CheckBox();
+            this.chkOtros = new System.Windows.Forms.CheckBox();
+            this.chkDrogas = new System.Windows.Forms.CheckBox();
+            this.chkTe = new System.Windows.Forms.CheckBox();
+            this.chkCafe = new System.Windows.Forms.CheckBox();
+            this.chkAlcohol = new System.Windows.Forms.CheckBox();
+            this.chkTabaco = new System.Windows.Forms.CheckBox();
             this.grpAntecedetesPersonales = new DevExpress.XtraEditors.GroupControl();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescripcionAntecedentes = new System.Windows.Forms.TextBox();
             this.lblDescripPer = new DevExpress.XtraEditors.LabelControl();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkAlergias = new System.Windows.Forms.CheckBox();
+            this.chkCancer = new System.Windows.Forms.CheckBox();
+            this.chkEnferTransSexual = new System.Windows.Forms.CheckBox();
+            this.chkEnferdadHigado = new System.Windows.Forms.CheckBox();
+            this.chkObesidad = new System.Windows.Forms.CheckBox();
+            this.chkSentidoOlfato = new System.Windows.Forms.CheckBox();
+            this.chkConvusliones = new System.Windows.Forms.CheckBox();
+            this.chkEnfermedadRinon = new System.Windows.Forms.CheckBox();
+            this.chkDolorCabeza = new System.Windows.Forms.CheckBox();
+            this.chkAmigdalitis = new System.Windows.Forms.CheckBox();
+            this.chkUlceraPeptica = new System.Windows.Forms.CheckBox();
+            this.chkGastritis = new System.Windows.Forms.CheckBox();
+            this.chkASMA = new System.Windows.Forms.CheckBox();
+            this.chkACV = new System.Windows.Forms.CheckBox();
+            this.chkTiroides = new System.Windows.Forms.CheckBox();
+            this.chkEnfermedadPulmonar = new System.Windows.Forms.CheckBox();
+            this.chkEnfermedadHepatica = new System.Windows.Forms.CheckBox();
+            this.chkEnfermedadRenal = new System.Windows.Forms.CheckBox();
+            this.chkDiabetesMellitas = new System.Windows.Forms.CheckBox();
+            this.chkArritmia = new System.Windows.Forms.CheckBox();
+            this.chkValvulopatia = new System.Windows.Forms.CheckBox();
+            this.chkHipertensionArterial = new System.Windows.Forms.CheckBox();
+            this.chkInsuficienciaCardiaca = new System.Windows.Forms.CheckBox();
             this.chkInfartoMioPrev = new System.Windows.Forms.CheckBox();
             this.grpSintomasyEvolucion = new DevExpress.XtraEditors.GroupControl();
             this.txtSintomas = new System.Windows.Forms.TextBox();
@@ -434,12 +433,12 @@
             this.grpAntecedentesHabitosToxicos.Controls.Add(this.txtDescripcion1);
             this.grpAntecedentesHabitosToxicos.Controls.Add(this.labelControl1);
             this.grpAntecedentesHabitosToxicos.Controls.Add(this.checkBox27);
-            this.grpAntecedentesHabitosToxicos.Controls.Add(this.checkBox46);
-            this.grpAntecedentesHabitosToxicos.Controls.Add(this.checkBox47);
-            this.grpAntecedentesHabitosToxicos.Controls.Add(this.checkBox48);
-            this.grpAntecedentesHabitosToxicos.Controls.Add(this.checkBox49);
-            this.grpAntecedentesHabitosToxicos.Controls.Add(this.checkBox50);
-            this.grpAntecedentesHabitosToxicos.Controls.Add(this.checkBox51);
+            this.grpAntecedentesHabitosToxicos.Controls.Add(this.chkOtros);
+            this.grpAntecedentesHabitosToxicos.Controls.Add(this.chkDrogas);
+            this.grpAntecedentesHabitosToxicos.Controls.Add(this.chkTe);
+            this.grpAntecedentesHabitosToxicos.Controls.Add(this.chkCafe);
+            this.grpAntecedentesHabitosToxicos.Controls.Add(this.chkAlcohol);
+            this.grpAntecedentesHabitosToxicos.Controls.Add(this.chkTabaco);
             this.grpAntecedentesHabitosToxicos.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpAntecedentesHabitosToxicos.Location = new System.Drawing.Point(0, 385);
             this.grpAntecedentesHabitosToxicos.Name = "grpAntecedentesHabitosToxicos";
@@ -476,106 +475,105 @@
             this.checkBox27.Text = "Otros";
             this.checkBox27.UseVisualStyleBackColor = true;
             // 
-            // checkBox46
+            // chkOtros
             // 
-            this.checkBox46.AutoSize = true;
-            this.checkBox46.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox46.Enabled = false;
-            this.checkBox46.Location = new System.Drawing.Point(498, 25);
-            this.checkBox46.Name = "checkBox46";
-            this.checkBox46.Size = new System.Drawing.Size(53, 17);
-            this.checkBox46.TabIndex = 5;
-            this.checkBox46.Text = "Otros";
-            this.checkBox46.UseVisualStyleBackColor = true;
+            this.chkOtros.AutoSize = true;
+            this.chkOtros.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkOtros.Enabled = false;
+            this.chkOtros.Location = new System.Drawing.Point(498, 25);
+            this.chkOtros.Name = "chkOtros";
+            this.chkOtros.Size = new System.Drawing.Size(53, 17);
+            this.chkOtros.TabIndex = 5;
+            this.chkOtros.Text = "Otros";
+            this.chkOtros.UseVisualStyleBackColor = true;
             // 
-            // checkBox47
+            // chkDrogas
             // 
-            this.checkBox47.AutoSize = true;
-            this.checkBox47.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox47.Enabled = false;
-            this.checkBox47.Location = new System.Drawing.Point(396, 25);
-            this.checkBox47.Name = "checkBox47";
-            this.checkBox47.Size = new System.Drawing.Size(60, 17);
-            this.checkBox47.TabIndex = 4;
-            this.checkBox47.Text = "Drogas";
-            this.checkBox47.UseVisualStyleBackColor = true;
+            this.chkDrogas.AutoSize = true;
+            this.chkDrogas.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkDrogas.Enabled = false;
+            this.chkDrogas.Location = new System.Drawing.Point(396, 25);
+            this.chkDrogas.Name = "chkDrogas";
+            this.chkDrogas.Size = new System.Drawing.Size(60, 17);
+            this.chkDrogas.TabIndex = 4;
+            this.chkDrogas.Text = "Drogas";
+            this.chkDrogas.UseVisualStyleBackColor = true;
             // 
-            // checkBox48
+            // chkTe
             // 
-            this.checkBox48.AutoSize = true;
-            this.checkBox48.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox48.Enabled = false;
-            this.checkBox48.Location = new System.Drawing.Point(315, 25);
-            this.checkBox48.Name = "checkBox48";
-            this.checkBox48.Size = new System.Drawing.Size(38, 17);
-            this.checkBox48.TabIndex = 3;
-            this.checkBox48.Text = "Té";
-            this.checkBox48.UseVisualStyleBackColor = true;
+            this.chkTe.AutoSize = true;
+            this.chkTe.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkTe.Enabled = false;
+            this.chkTe.Location = new System.Drawing.Point(315, 25);
+            this.chkTe.Name = "chkTe";
+            this.chkTe.Size = new System.Drawing.Size(38, 17);
+            this.chkTe.TabIndex = 3;
+            this.chkTe.Text = "Té";
+            this.chkTe.UseVisualStyleBackColor = true;
             // 
-            // checkBox49
+            // chkCafe
             // 
-            this.checkBox49.AutoSize = true;
-            this.checkBox49.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox49.Enabled = false;
-            this.checkBox49.Location = new System.Drawing.Point(225, 25);
-            this.checkBox49.Name = "checkBox49";
-            this.checkBox49.Size = new System.Drawing.Size(49, 17);
-            this.checkBox49.TabIndex = 2;
-            this.checkBox49.Text = "Café";
-            this.checkBox49.UseVisualStyleBackColor = true;
+            this.chkCafe.AutoSize = true;
+            this.chkCafe.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkCafe.Enabled = false;
+            this.chkCafe.Location = new System.Drawing.Point(225, 25);
+            this.chkCafe.Name = "chkCafe";
+            this.chkCafe.Size = new System.Drawing.Size(49, 17);
+            this.chkCafe.TabIndex = 2;
+            this.chkCafe.Text = "Café";
+            this.chkCafe.UseVisualStyleBackColor = true;
             // 
-            // checkBox50
+            // chkAlcohol
             // 
-            this.checkBox50.AutoSize = true;
-            this.checkBox50.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox50.Enabled = false;
-            this.checkBox50.Location = new System.Drawing.Point(126, 25);
-            this.checkBox50.Name = "checkBox50";
-            this.checkBox50.Size = new System.Drawing.Size(60, 17);
-            this.checkBox50.TabIndex = 1;
-            this.checkBox50.Text = "Alcohol";
-            this.checkBox50.UseVisualStyleBackColor = true;
+            this.chkAlcohol.AutoSize = true;
+            this.chkAlcohol.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkAlcohol.Enabled = false;
+            this.chkAlcohol.Location = new System.Drawing.Point(126, 25);
+            this.chkAlcohol.Name = "chkAlcohol";
+            this.chkAlcohol.Size = new System.Drawing.Size(60, 17);
+            this.chkAlcohol.TabIndex = 1;
+            this.chkAlcohol.Text = "Alcohol";
+            this.chkAlcohol.UseVisualStyleBackColor = true;
             // 
-            // checkBox51
+            // chkTabaco
             // 
-            this.checkBox51.AutoSize = true;
-            this.checkBox51.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox51.Enabled = false;
-            this.checkBox51.Location = new System.Drawing.Point(16, 25);
-            this.checkBox51.Name = "checkBox51";
-            this.checkBox51.Size = new System.Drawing.Size(66, 17);
-            this.checkBox51.TabIndex = 0;
-            this.checkBox51.Text = "Tabasco";
-            this.checkBox51.UseVisualStyleBackColor = true;
+            this.chkTabaco.AutoSize = true;
+            this.chkTabaco.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkTabaco.Enabled = false;
+            this.chkTabaco.Location = new System.Drawing.Point(16, 25);
+            this.chkTabaco.Name = "chkTabaco";
+            this.chkTabaco.Size = new System.Drawing.Size(66, 17);
+            this.chkTabaco.TabIndex = 0;
+            this.chkTabaco.Text = "Tabasco";
+            this.chkTabaco.UseVisualStyleBackColor = true;
             // 
             // grpAntecedetesPersonales
             // 
-            this.grpAntecedetesPersonales.Controls.Add(this.textBox1);
+            this.grpAntecedetesPersonales.Controls.Add(this.txtDescripcionAntecedentes);
             this.grpAntecedetesPersonales.Controls.Add(this.lblDescripPer);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox25);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox23);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox22);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox21);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox20);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox19);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox18);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox17);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox16);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox15);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox14);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox13);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox12);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox11);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox10);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox9);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox8);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox7);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox6);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox5);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox4);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox3);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox2);
-            this.grpAntecedetesPersonales.Controls.Add(this.checkBox1);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkAlergias);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkCancer);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkEnferTransSexual);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkEnferdadHigado);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkObesidad);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkSentidoOlfato);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkConvusliones);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkEnfermedadRinon);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkDolorCabeza);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkAmigdalitis);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkUlceraPeptica);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkGastritis);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkASMA);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkACV);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkTiroides);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkEnfermedadPulmonar);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkEnfermedadHepatica);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkEnfermedadRenal);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkDiabetesMellitas);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkArritmia);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkValvulopatia);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkHipertensionArterial);
+            this.grpAntecedetesPersonales.Controls.Add(this.chkInsuficienciaCardiaca);
             this.grpAntecedetesPersonales.Controls.Add(this.chkInfartoMioPrev);
             this.grpAntecedetesPersonales.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpAntecedetesPersonales.Location = new System.Drawing.Point(0, 171);
@@ -584,14 +582,14 @@
             this.grpAntecedetesPersonales.TabIndex = 8;
             this.grpAntecedetesPersonales.Text = "Antecedentes Personales:";
             // 
-            // textBox1
+            // txtDescripcionAntecedentes
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(2, 158);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(1100, 54);
-            this.textBox1.TabIndex = 65;
+            this.txtDescripcionAntecedentes.Enabled = false;
+            this.txtDescripcionAntecedentes.Location = new System.Drawing.Point(2, 158);
+            this.txtDescripcionAntecedentes.Multiline = true;
+            this.txtDescripcionAntecedentes.Name = "txtDescripcionAntecedentes";
+            this.txtDescripcionAntecedentes.Size = new System.Drawing.Size(1100, 54);
+            this.txtDescripcionAntecedentes.TabIndex = 65;
             // 
             // lblDescripPer
             // 
@@ -601,293 +599,282 @@
             this.lblDescripPer.TabIndex = 49;
             this.lblDescripPer.Text = "Descrición:";
             // 
-            // checkBox25
+            // chkAlergias
             // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox25.Enabled = false;
-            this.checkBox25.Location = new System.Drawing.Point(866, 120);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(64, 17);
-            this.checkBox25.TabIndex = 26;
-            this.checkBox25.Text = "Alergias";
-            this.checkBox25.UseVisualStyleBackColor = true;
+            this.chkAlergias.AutoSize = true;
+            this.chkAlergias.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkAlergias.Enabled = false;
+            this.chkAlergias.Location = new System.Drawing.Point(866, 97);
+            this.chkAlergias.Name = "chkAlergias";
+            this.chkAlergias.Size = new System.Drawing.Size(64, 17);
+            this.chkAlergias.TabIndex = 26;
+            this.chkAlergias.Text = "Alergias";
+            this.chkAlergias.UseVisualStyleBackColor = true;
             // 
-            // checkBox23
+            // chkCancer
             // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox23.Enabled = false;
-            this.checkBox23.Location = new System.Drawing.Point(870, 97);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(60, 17);
-            this.checkBox23.TabIndex = 23;
-            this.checkBox23.Text = "Cancer";
-            this.checkBox23.UseVisualStyleBackColor = true;
+            this.chkCancer.AutoSize = true;
+            this.chkCancer.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkCancer.Enabled = false;
+            this.chkCancer.Location = new System.Drawing.Point(870, 74);
+            this.chkCancer.Name = "chkCancer";
+            this.chkCancer.Size = new System.Drawing.Size(60, 17);
+            this.chkCancer.TabIndex = 23;
+            this.chkCancer.Text = "Cancer";
+            this.chkCancer.UseVisualStyleBackColor = true;
             // 
-            // checkBox22
+            // chkEnferTransSexual
             // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox22.Enabled = false;
-            this.checkBox22.Location = new System.Drawing.Point(741, 74);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(189, 17);
-            this.checkBox22.TabIndex = 22;
-            this.checkBox22.Text = "Enfermedades Transmisión Sexual";
-            this.checkBox22.UseVisualStyleBackColor = true;
+            this.chkEnferTransSexual.AutoSize = true;
+            this.chkEnferTransSexual.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkEnferTransSexual.Enabled = false;
+            this.chkEnferTransSexual.Location = new System.Drawing.Point(741, 51);
+            this.chkEnferTransSexual.Name = "chkEnferTransSexual";
+            this.chkEnferTransSexual.Size = new System.Drawing.Size(189, 17);
+            this.chkEnferTransSexual.TabIndex = 22;
+            this.chkEnferTransSexual.Text = "Enfermedades Transmisión Sexual";
+            this.chkEnferTransSexual.UseVisualStyleBackColor = true;
+            this.chkEnferTransSexual.CheckedChanged += new System.EventHandler(this.checkBox22_CheckedChanged);
             // 
-            // checkBox21
+            // chkEnferdadHigado
             // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox21.Enabled = false;
-            this.checkBox21.Location = new System.Drawing.Point(782, 51);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(148, 17);
-            this.checkBox21.TabIndex = 21;
-            this.checkBox21.Text = "Enfermedades del Hígado";
-            this.checkBox21.UseVisualStyleBackColor = true;
+            this.chkEnferdadHigado.AutoSize = true;
+            this.chkEnferdadHigado.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkEnferdadHigado.Enabled = false;
+            this.chkEnferdadHigado.Location = new System.Drawing.Point(782, 28);
+            this.chkEnferdadHigado.Name = "chkEnferdadHigado";
+            this.chkEnferdadHigado.Size = new System.Drawing.Size(148, 17);
+            this.chkEnferdadHigado.TabIndex = 20;
+            this.chkEnferdadHigado.Text = "Enfermedades del Hígado";
+            this.chkEnferdadHigado.UseVisualStyleBackColor = true;
             // 
-            // checkBox20
+            // chkObesidad
             // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox20.Enabled = false;
-            this.checkBox20.Location = new System.Drawing.Point(782, 28);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(148, 17);
-            this.checkBox20.TabIndex = 20;
-            this.checkBox20.Text = "Enfermedades del Hígado";
-            this.checkBox20.UseVisualStyleBackColor = true;
+            this.chkObesidad.AutoSize = true;
+            this.chkObesidad.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkObesidad.Enabled = false;
+            this.chkObesidad.Location = new System.Drawing.Point(637, 120);
+            this.chkObesidad.Name = "chkObesidad";
+            this.chkObesidad.Size = new System.Drawing.Size(71, 17);
+            this.chkObesidad.TabIndex = 19;
+            this.chkObesidad.Text = "Obesidad";
+            this.chkObesidad.UseVisualStyleBackColor = true;
             // 
-            // checkBox19
+            // chkSentidoOlfato
             // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox19.Enabled = false;
-            this.checkBox19.Location = new System.Drawing.Point(637, 120);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(71, 17);
-            this.checkBox19.TabIndex = 19;
-            this.checkBox19.Text = "Obesidad";
-            this.checkBox19.UseVisualStyleBackColor = true;
+            this.chkSentidoOlfato.AutoSize = true;
+            this.chkSentidoOlfato.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkSentidoOlfato.Enabled = false;
+            this.chkSentidoOlfato.Location = new System.Drawing.Point(571, 97);
+            this.chkSentidoOlfato.Name = "chkSentidoOlfato";
+            this.chkSentidoOlfato.Size = new System.Drawing.Size(137, 17);
+            this.chkSentidoOlfato.TabIndex = 18;
+            this.chkSentidoOlfato.Text = "Sentido devil del Olfato";
+            this.chkSentidoOlfato.UseVisualStyleBackColor = true;
             // 
-            // checkBox18
+            // chkConvusliones
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox18.Enabled = false;
-            this.checkBox18.Location = new System.Drawing.Point(571, 97);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(137, 17);
-            this.checkBox18.TabIndex = 18;
-            this.checkBox18.Text = "Sentido devil del Olfato";
-            this.checkBox18.UseVisualStyleBackColor = true;
+            this.chkConvusliones.AutoSize = true;
+            this.chkConvusliones.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkConvusliones.Enabled = false;
+            this.chkConvusliones.Location = new System.Drawing.Point(619, 74);
+            this.chkConvusliones.Name = "chkConvusliones";
+            this.chkConvusliones.Size = new System.Drawing.Size(89, 17);
+            this.chkConvusliones.TabIndex = 17;
+            this.chkConvusliones.Text = "Convulsiones";
+            this.chkConvusliones.UseVisualStyleBackColor = true;
             // 
-            // checkBox17
+            // chkEnfermedadRinon
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox17.Enabled = false;
-            this.checkBox17.Location = new System.Drawing.Point(619, 74);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(89, 17);
-            this.checkBox17.TabIndex = 17;
-            this.checkBox17.Text = "Convulsiones";
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.chkEnfermedadRinon.AutoSize = true;
+            this.chkEnfermedadRinon.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkEnfermedadRinon.Enabled = false;
+            this.chkEnfermedadRinon.Location = new System.Drawing.Point(566, 51);
+            this.chkEnfermedadRinon.Name = "chkEnfermedadRinon";
+            this.chkEnfermedadRinon.Size = new System.Drawing.Size(142, 17);
+            this.chkEnfermedadRinon.TabIndex = 16;
+            this.chkEnfermedadRinon.Text = "Enfermadades del Riñon";
+            this.chkEnfermedadRinon.UseVisualStyleBackColor = true;
             // 
-            // checkBox16
+            // chkDolorCabeza
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox16.Enabled = false;
-            this.checkBox16.Location = new System.Drawing.Point(566, 51);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(142, 17);
-            this.checkBox16.TabIndex = 16;
-            this.checkBox16.Text = "Enfermadades del Riñon";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.chkDolorCabeza.AutoSize = true;
+            this.chkDolorCabeza.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkDolorCabeza.Enabled = false;
+            this.chkDolorCabeza.Location = new System.Drawing.Point(548, 28);
+            this.chkDolorCabeza.Name = "chkDolorCabeza";
+            this.chkDolorCabeza.Size = new System.Drawing.Size(160, 17);
+            this.chkDolorCabeza.TabIndex = 15;
+            this.chkDolorCabeza.Text = "Dolores Crónicos de Cabeza";
+            this.chkDolorCabeza.UseVisualStyleBackColor = true;
             // 
-            // checkBox15
+            // chkAmigdalitis
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox15.Enabled = false;
-            this.checkBox15.Location = new System.Drawing.Point(548, 28);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(160, 17);
-            this.checkBox15.TabIndex = 15;
-            this.checkBox15.Text = "Dolores Crónicos de Cabeza";
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.chkAmigdalitis.AutoSize = true;
+            this.chkAmigdalitis.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkAmigdalitis.Enabled = false;
+            this.chkAmigdalitis.Location = new System.Drawing.Point(417, 120);
+            this.chkAmigdalitis.Name = "chkAmigdalitis";
+            this.chkAmigdalitis.Size = new System.Drawing.Size(76, 17);
+            this.chkAmigdalitis.TabIndex = 14;
+            this.chkAmigdalitis.Text = "Amigdalitis";
+            this.chkAmigdalitis.UseVisualStyleBackColor = true;
             // 
-            // checkBox14
+            // chkUlceraPeptica
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox14.Enabled = false;
-            this.checkBox14.Location = new System.Drawing.Point(417, 120);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(76, 17);
-            this.checkBox14.TabIndex = 14;
-            this.checkBox14.Text = "Amigdalitis";
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.chkUlceraPeptica.AutoSize = true;
+            this.chkUlceraPeptica.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkUlceraPeptica.Enabled = false;
+            this.chkUlceraPeptica.Location = new System.Drawing.Point(399, 97);
+            this.chkUlceraPeptica.Name = "chkUlceraPeptica";
+            this.chkUlceraPeptica.Size = new System.Drawing.Size(94, 17);
+            this.chkUlceraPeptica.TabIndex = 13;
+            this.chkUlceraPeptica.Text = "Ulcera Peptica";
+            this.chkUlceraPeptica.UseVisualStyleBackColor = true;
             // 
-            // checkBox13
+            // chkGastritis
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox13.Enabled = false;
-            this.checkBox13.Location = new System.Drawing.Point(399, 97);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(94, 17);
-            this.checkBox13.TabIndex = 13;
-            this.checkBox13.Text = "Ulcera Peptica";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.chkGastritis.AutoSize = true;
+            this.chkGastritis.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkGastritis.Enabled = false;
+            this.chkGastritis.Location = new System.Drawing.Point(428, 74);
+            this.chkGastritis.Name = "chkGastritis";
+            this.chkGastritis.Size = new System.Drawing.Size(65, 17);
+            this.chkGastritis.TabIndex = 12;
+            this.chkGastritis.Text = "Gastritis";
+            this.chkGastritis.UseVisualStyleBackColor = true;
             // 
-            // checkBox12
+            // chkASMA
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox12.Enabled = false;
-            this.checkBox12.Location = new System.Drawing.Point(428, 74);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(65, 17);
-            this.checkBox12.TabIndex = 12;
-            this.checkBox12.Text = "Gastritis";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.chkASMA.AutoSize = true;
+            this.chkASMA.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkASMA.Enabled = false;
+            this.chkASMA.Location = new System.Drawing.Point(439, 51);
+            this.chkASMA.Name = "chkASMA";
+            this.chkASMA.Size = new System.Drawing.Size(54, 17);
+            this.chkASMA.TabIndex = 11;
+            this.chkASMA.Text = "ASMA";
+            this.chkASMA.UseVisualStyleBackColor = true;
             // 
-            // checkBox11
+            // chkACV
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox11.Enabled = false;
-            this.checkBox11.Location = new System.Drawing.Point(439, 51);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(54, 17);
-            this.checkBox11.TabIndex = 11;
-            this.checkBox11.Text = "ASMA";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.chkACV.AutoSize = true;
+            this.chkACV.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkACV.Enabled = false;
+            this.chkACV.Location = new System.Drawing.Point(447, 28);
+            this.chkACV.Name = "chkACV";
+            this.chkACV.Size = new System.Drawing.Size(46, 17);
+            this.chkACV.TabIndex = 10;
+            this.chkACV.Text = "ACV";
+            this.chkACV.UseVisualStyleBackColor = true;
             // 
-            // checkBox10
+            // chkTiroides
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox10.Enabled = false;
-            this.checkBox10.Location = new System.Drawing.Point(447, 28);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(46, 17);
-            this.checkBox10.TabIndex = 10;
-            this.checkBox10.Text = "ACV";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.chkTiroides.AutoSize = true;
+            this.chkTiroides.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkTiroides.Enabled = false;
+            this.chkTiroides.Location = new System.Drawing.Point(279, 120);
+            this.chkTiroides.Name = "chkTiroides";
+            this.chkTiroides.Size = new System.Drawing.Size(63, 17);
+            this.chkTiroides.TabIndex = 9;
+            this.chkTiroides.Text = "Tiroides";
+            this.chkTiroides.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // chkEnfermedadPulmonar
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox9.Enabled = false;
-            this.checkBox9.Location = new System.Drawing.Point(279, 120);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(63, 17);
-            this.checkBox9.TabIndex = 9;
-            this.checkBox9.Text = "Tiroides";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.chkEnfermedadPulmonar.AutoSize = true;
+            this.chkEnfermedadPulmonar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkEnfermedadPulmonar.Enabled = false;
+            this.chkEnfermedadPulmonar.Location = new System.Drawing.Point(211, 97);
+            this.chkEnfermedadPulmonar.Name = "chkEnfermedadPulmonar";
+            this.chkEnfermedadPulmonar.Size = new System.Drawing.Size(131, 17);
+            this.chkEnfermedadPulmonar.TabIndex = 8;
+            this.chkEnfermedadPulmonar.Text = "Enfermedad Pulmonar";
+            this.chkEnfermedadPulmonar.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // chkEnfermedadHepatica
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox8.Enabled = false;
-            this.checkBox8.Location = new System.Drawing.Point(211, 97);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(131, 17);
-            this.checkBox8.TabIndex = 8;
-            this.checkBox8.Text = "Enfermedad Pulmonar";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.chkEnfermedadHepatica.AutoSize = true;
+            this.chkEnfermedadHepatica.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkEnfermedadHepatica.Enabled = false;
+            this.chkEnfermedadHepatica.Location = new System.Drawing.Point(213, 74);
+            this.chkEnfermedadHepatica.Name = "chkEnfermedadHepatica";
+            this.chkEnfermedadHepatica.Size = new System.Drawing.Size(129, 17);
+            this.chkEnfermedadHepatica.TabIndex = 7;
+            this.chkEnfermedadHepatica.Text = "Enfermedad Hepática";
+            this.chkEnfermedadHepatica.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // chkEnfermedadRenal
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox7.Enabled = false;
-            this.checkBox7.Location = new System.Drawing.Point(213, 74);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(129, 17);
-            this.checkBox7.TabIndex = 7;
-            this.checkBox7.Text = "Enfermedad Hepática";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.chkEnfermedadRenal.AutoSize = true;
+            this.chkEnfermedadRenal.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkEnfermedadRenal.Enabled = false;
+            this.chkEnfermedadRenal.Location = new System.Drawing.Point(228, 51);
+            this.chkEnfermedadRenal.Name = "chkEnfermedadRenal";
+            this.chkEnfermedadRenal.Size = new System.Drawing.Size(114, 17);
+            this.chkEnfermedadRenal.TabIndex = 6;
+            this.chkEnfermedadRenal.Text = "Enfermedad Renal";
+            this.chkEnfermedadRenal.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // chkDiabetesMellitas
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox6.Enabled = false;
-            this.checkBox6.Location = new System.Drawing.Point(228, 51);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(114, 17);
-            this.checkBox6.TabIndex = 6;
-            this.checkBox6.Text = "Enfermedad Renal";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chkDiabetesMellitas.AutoSize = true;
+            this.chkDiabetesMellitas.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkDiabetesMellitas.Enabled = false;
+            this.chkDiabetesMellitas.Location = new System.Drawing.Point(236, 28);
+            this.chkDiabetesMellitas.Name = "chkDiabetesMellitas";
+            this.chkDiabetesMellitas.Size = new System.Drawing.Size(106, 17);
+            this.chkDiabetesMellitas.TabIndex = 5;
+            this.chkDiabetesMellitas.Text = "Diabetes Mellitas";
+            this.chkDiabetesMellitas.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chkArritmia
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox5.Enabled = false;
-            this.checkBox5.Location = new System.Drawing.Point(236, 28);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(106, 17);
-            this.checkBox5.TabIndex = 5;
-            this.checkBox5.Text = "Diabetes Mellitas";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chkArritmia.AutoSize = true;
+            this.chkArritmia.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkArritmia.Enabled = false;
+            this.chkArritmia.Location = new System.Drawing.Point(97, 120);
+            this.chkArritmia.Name = "chkArritmia";
+            this.chkArritmia.Size = new System.Drawing.Size(63, 17);
+            this.chkArritmia.TabIndex = 4;
+            this.chkArritmia.Text = "Arritmia";
+            this.chkArritmia.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chkValvulopatia
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox4.Enabled = false;
-            this.checkBox4.Location = new System.Drawing.Point(97, 120);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(63, 17);
-            this.checkBox4.TabIndex = 4;
-            this.checkBox4.Text = "Arritmia";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkValvulopatia.AutoSize = true;
+            this.chkValvulopatia.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkValvulopatia.Enabled = false;
+            this.chkValvulopatia.Location = new System.Drawing.Point(76, 97);
+            this.chkValvulopatia.Name = "chkValvulopatia";
+            this.chkValvulopatia.Size = new System.Drawing.Size(84, 17);
+            this.chkValvulopatia.TabIndex = 3;
+            this.chkValvulopatia.Text = "Valvulopatia";
+            this.chkValvulopatia.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chkHipertensionArterial
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox3.Enabled = false;
-            this.checkBox3.Location = new System.Drawing.Point(76, 97);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(84, 17);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "Valvulopatia";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkHipertensionArterial.AutoSize = true;
+            this.chkHipertensionArterial.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkHipertensionArterial.Enabled = false;
+            this.chkHipertensionArterial.Location = new System.Drawing.Point(36, 74);
+            this.chkHipertensionArterial.Name = "chkHipertensionArterial";
+            this.chkHipertensionArterial.Size = new System.Drawing.Size(124, 17);
+            this.chkHipertensionArterial.TabIndex = 2;
+            this.chkHipertensionArterial.Text = "Hipertensión Arterial";
+            this.chkHipertensionArterial.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkInsuficienciaCardiaca
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox2.Enabled = false;
-            this.checkBox2.Location = new System.Drawing.Point(36, 74);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(124, 17);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "Hipertensión Arterial";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox1.Enabled = false;
-            this.checkBox1.Location = new System.Drawing.Point(30, 51);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Insuficiencia Cardiaca";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkInsuficienciaCardiaca.AutoSize = true;
+            this.chkInsuficienciaCardiaca.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkInsuficienciaCardiaca.Enabled = false;
+            this.chkInsuficienciaCardiaca.Location = new System.Drawing.Point(30, 51);
+            this.chkInsuficienciaCardiaca.Name = "chkInsuficienciaCardiaca";
+            this.chkInsuficienciaCardiaca.Size = new System.Drawing.Size(130, 17);
+            this.chkInsuficienciaCardiaca.TabIndex = 1;
+            this.chkInsuficienciaCardiaca.Text = "Insuficiencia Cardiaca";
+            this.chkInsuficienciaCardiaca.UseVisualStyleBackColor = true;
             // 
             // chkInfartoMioPrev
             // 
@@ -1370,38 +1357,37 @@
         private DevExpress.XtraEditors.GroupControl grpAntecedentesHabitosToxicos;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.CheckBox checkBox27;
-        private System.Windows.Forms.CheckBox checkBox46;
-        private System.Windows.Forms.CheckBox checkBox47;
-        private System.Windows.Forms.CheckBox checkBox48;
-        private System.Windows.Forms.CheckBox checkBox49;
-        private System.Windows.Forms.CheckBox checkBox50;
-        private System.Windows.Forms.CheckBox checkBox51;
+        private System.Windows.Forms.CheckBox chkOtros;
+        private System.Windows.Forms.CheckBox chkDrogas;
+        private System.Windows.Forms.CheckBox chkTe;
+        private System.Windows.Forms.CheckBox chkCafe;
+        private System.Windows.Forms.CheckBox chkAlcohol;
+        private System.Windows.Forms.CheckBox chkTabaco;
         private DevExpress.XtraEditors.GroupControl grpAntecedetesPersonales;
         private DevExpress.XtraEditors.LabelControl lblDescripPer;
-        private System.Windows.Forms.CheckBox checkBox25;
-        private System.Windows.Forms.CheckBox checkBox23;
-        private System.Windows.Forms.CheckBox checkBox22;
-        private System.Windows.Forms.CheckBox checkBox21;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.CheckBox checkBox19;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkAlergias;
+        private System.Windows.Forms.CheckBox chkCancer;
+        private System.Windows.Forms.CheckBox chkEnferTransSexual;
+        private System.Windows.Forms.CheckBox chkEnferdadHigado;
+        private System.Windows.Forms.CheckBox chkObesidad;
+        private System.Windows.Forms.CheckBox chkSentidoOlfato;
+        private System.Windows.Forms.CheckBox chkConvusliones;
+        private System.Windows.Forms.CheckBox chkEnfermedadRinon;
+        private System.Windows.Forms.CheckBox chkDolorCabeza;
+        private System.Windows.Forms.CheckBox chkAmigdalitis;
+        private System.Windows.Forms.CheckBox chkUlceraPeptica;
+        private System.Windows.Forms.CheckBox chkGastritis;
+        private System.Windows.Forms.CheckBox chkASMA;
+        private System.Windows.Forms.CheckBox chkACV;
+        private System.Windows.Forms.CheckBox chkTiroides;
+        private System.Windows.Forms.CheckBox chkEnfermedadPulmonar;
+        private System.Windows.Forms.CheckBox chkEnfermedadHepatica;
+        private System.Windows.Forms.CheckBox chkEnfermedadRenal;
+        private System.Windows.Forms.CheckBox chkDiabetesMellitas;
+        private System.Windows.Forms.CheckBox chkArritmia;
+        private System.Windows.Forms.CheckBox chkValvulopatia;
+        private System.Windows.Forms.CheckBox chkHipertensionArterial;
+        private System.Windows.Forms.CheckBox chkInsuficienciaCardiaca;
         private System.Windows.Forms.CheckBox chkInfartoMioPrev;
         private DevExpress.XtraEditors.GroupControl grpSintomasyEvolucion;
         private DevExpress.XtraEditors.GroupControl grpDatosGenerales;
@@ -1451,7 +1437,7 @@
         private System.Windows.Forms.TextBox txtDescripcion3;
         private System.Windows.Forms.TextBox txtDescripcion2;
         private System.Windows.Forms.TextBox txtDescripcion1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescripcionAntecedentes;
         private System.Windows.Forms.TextBox txtIDpaciente;
         private DevExpress.XtraEditors.LabelControl labelControl9;
     }

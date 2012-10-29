@@ -7,12 +7,15 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BussinesLogicLayer;
+using EntidadesLayer;
+
 
 namespace aPresentationLayer
 {
     public partial class Frm_HistorialClinico : DevExpress.XtraEditors.XtraForm
     {
-        EntidadesLayer.Ent_HistorialClinico entHistorial = new EntidadesLayer.Ent_HistorialClinico();
+        Ent_HistorialClinico entHistorial = new Ent_HistorialClinico();
+        Ent_AntecedentesPersonales entAntecedes = new Ent_AntecedentesPersonales();
       
    
 
@@ -46,9 +49,38 @@ namespace aPresentationLayer
             entHistorial.RemitidoPor = txtRemitidoPor.Text;
             entHistorial.SintomasEvoluciones = txtSintomas.Text;
 
+            entAntecedes.InfartoMiocardioPrevio = chkInfartoMioPrev.Checked;
+            entAntecedes.InsuficienciaCardiaca = chkInsuficienciaCardiaca.Checked;
+            entAntecedes.HipertensionArterial = chkHipertensionArterial.Checked;
+            entAntecedes.Valvulopatia = chkValvulopatia.Checked;
+            entAntecedes.Arritmia = chkArritmia.Checked;
+            entAntecedes.DiabetisMellitas =  chkDiabetesMellitas.Checked;
+            entAntecedes.EnfermedadRenal = chkEnfermedadRenal.Checked;
+            entAntecedes.EnfermedadHepatica = chkEnfermedadHepatica.Checked;
+            entAntecedes.EnfermedadPulmonar = chkEnfermedadPulmonar.Checked;
+            entAntecedes.Tiroides = chkTiroides.Checked;
+            entAntecedes.ACV = chkACV.Checked;
+            entAntecedes.ASMA = chkASMA.Checked;
+            entAntecedes.Gastritis = chkGastritis.Checked;
+            entAntecedes.UlceraPeptica = chkUlceraPeptica.Checked;
+            entAntecedes.Amigdalitis = chkAmigdalitis.Checked;
+            entAntecedes.DoloresCronicosCabeza = chkDolorCabeza.Checked;
+            entAntecedes.EnfermedadesRinon = chkEnfermedadRinon.Checked;
+            entAntecedes.Convulsiones = chkConvusliones.Checked;
+            entAntecedes.SentidoDevilOlfato = chkSentidoOlfato.Checked;
+            entAntecedes.Obesidad = chkObesidad.Checked;
+            entAntecedes.EnfermedadesHigado = chkEnferdadHigado.Checked;
+            entAntecedes.EnfermedadesTransmisionSexual = chkEnferTransSexual.Checked;
+            entAntecedes.Cancer = chkCancer.Checked;
+            entAntecedes.Alergias = chkAlergias.Checked;
+            entAntecedes.Descripcion = txtDescripcionAntecedentes.Text;
+
+
 
 
             BussinesLogicLayer.Bl_HistorialClinico.Insert(entHistorial);
+            BussinesLogicLayer.Bl_AntecedentesPersonales.Insert(entAntecedes);
+
 
         }
 
@@ -72,6 +104,11 @@ namespace aPresentationLayer
             //Busco todos los pacientes
            
                   
+
+        }
+
+        private void checkBox22_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }
