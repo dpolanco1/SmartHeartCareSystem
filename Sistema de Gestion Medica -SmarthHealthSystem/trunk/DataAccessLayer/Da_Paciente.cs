@@ -146,7 +146,7 @@ namespace DataAccessLayer
             return flag;
         
         }
-        public static bool Delete(Ent_Paciente EntidadPaciente) 
+        public static bool Delete(int IDPaciente) 
         
         {
             bool flag = false;
@@ -162,7 +162,7 @@ namespace DataAccessLayer
                 Da_Connection.Get.Open();
 
                 //Paso los valores para la tabla Pacientes.
-                command.Parameters.Add(new SqlParameter("@IDPaciente", EntidadPaciente.IDPaciente) { SqlDbType = SqlDbType.NVarChar });
+                command.Parameters.Add(new SqlParameter("@IDPaciente", IDPaciente) { SqlDbType = SqlDbType.NVarChar });
                
 
                 //Ejecuto el Query

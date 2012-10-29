@@ -67,7 +67,7 @@ namespace BussinesLogicLayer
 
         }
 
-        public static bool Delete(Ent_Direcciones entDirecciones)
+        public static bool Delete(int IDPaciente)
         {
             //instancio el metodo
             Da_Direcciones daDirecciones = GetDaDirecciones();
@@ -75,12 +75,12 @@ namespace BussinesLogicLayer
             //Validaciones De Lugar
             bool flag = false;
 
-            if (entDirecciones.IDPaciente.Equals(String.Empty))
+            if (IDPaciente < 1)
             {
                 flag = false;
 
             }
-            else if (Da_Direcciones.Delete(entDirecciones))
+            else if (Da_Direcciones.Delete(IDPaciente))
             {
 
                 flag = true;

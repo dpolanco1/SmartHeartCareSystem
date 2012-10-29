@@ -23,9 +23,10 @@ namespace aPresentationLayer
         readonly Ent_Telefono telefonos = new Ent_Telefono();
         readonly Ent_Contacto contacto = new Ent_Contacto();
 
-        //variables del Sistema
-        private static bool NUEVO { get; set; }
-        private static bool EDITANDO { get; set; }
+        //variables del Frm_Paciente
+        private static bool NUEVO;
+        private static bool EDITANDO;
+        private static bool CONSULTANDO;
 
 
         private static Frm_Pacientes frm_pacientes; // Referencia estática al mismo formulario
@@ -52,13 +53,13 @@ namespace aPresentationLayer
         private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //Si tengo seleccionado el tabPacientes entonces que se realice 
-            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes)
+            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && !NUEVO == true)
             {
                 /*Cambio las variable del sistema a Nuevo = True (indicando que es un nuevo registro) y 
                 Editando = False (me aseguro que este en false)*/
 
                 NUEVO = true;
-                EDITANDO = false;
+                CONSULTANDO = false;
 
                 //Limpio los Txt
                 Bl_AdministrarControles.VaciarText(frm_pacientes);
@@ -74,13 +75,13 @@ namespace aPresentationLayer
 
                 //Botones habilitados y Deshabilitados
 
-                btnNuevo.Enabled = false;
+               /* btnNuevo.Enabled = false;
                 btnGuardar.Enabled = true;
                 btnEditar.Enabled = false;
                 btnCancelar.Enabled = true;
                 btnImprimir.Enabled = false;
                 btnEnviar.Enabled = false;
-                btnEliminar.Enabled = false;
+                btnEliminar.Enabled = false;*/
 
                 //Desabilito el txtIDPaciente
                 txtIDPaciente.Enabled = false;
@@ -224,13 +225,15 @@ namespace aPresentationLayer
 
                                 //Botones habilitados y Deshabilitados
 
-                                btnNuevo.Enabled = true;
+                               /* btnNuevo.Enabled = true;
                                 btnGuardar.Enabled = false;
                                 btnEditar.Enabled = true;
                                 btnCancelar.Enabled = false;
                                 btnImprimir.Enabled = true;
                                 btnEnviar.Enabled = true;
-                                btnEliminar.Enabled = true;
+                                btnEliminar.Enabled = true;*/
+
+                                NUEVO = false;
 
                                 //Deshabilito los Txt
                                 Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
@@ -336,13 +339,13 @@ namespace aPresentationLayer
 
                                 //Botones habilitados y Deshabilitados
 
-                                btnNuevo.Enabled = true;
+                             /*   btnNuevo.Enabled = true;
                                 btnGuardar.Enabled = false;
                                 btnEditar.Enabled = true;
                                 btnCancelar.Enabled = false;
                                 btnImprimir.Enabled = true;
                                 btnEnviar.Enabled = true;
-                                btnEliminar.Enabled = true;
+                                btnEliminar.Enabled = true;*/
 
                                 //Deshabilito los Txt
                                 Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
@@ -389,13 +392,13 @@ namespace aPresentationLayer
 
                 //Botones habilitados y Deshabilitados
 
-                btnNuevo.Enabled = false;
+              /*  btnNuevo.Enabled = false;
                 btnGuardar.Enabled = true;
                 btnEditar.Enabled = false;
                 btnCancelar.Enabled = true;
                 btnImprimir.Enabled = true;
                 btnEnviar.Enabled = true;
-                btnEliminar.Enabled = false;
+                btnEliminar.Enabled = false;*/
 
 
                 //Habilitos los Txt
@@ -423,13 +426,14 @@ namespace aPresentationLayer
                 {
                     //Botones habilitados y Deshabilitados
 
-                    btnNuevo.Enabled = true;
+                  /*  btnNuevo.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnEditar.Enabled = false;
                     btnCancelar.Enabled = false;
                     btnImprimir.Enabled = true;
                     btnEnviar.Enabled = true;
-                    btnEliminar.Enabled = true;
+                    btnEliminar.Enabled = true;*/
+
 
                     //Limpio los Txt
                     Bl_AdministrarControles.VaciarText(frm_pacientes);
@@ -499,10 +503,6 @@ namespace aPresentationLayer
 
         }
 
-        private void btnBuscar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Frm_Buscar.frm_Buscar().Show(this);
-        }
 
         private void dtgListaPacientes_Click(object sender, EventArgs e)
         {
@@ -587,9 +587,13 @@ namespace aPresentationLayer
 
         private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && !string.IsNullOrEmpty(txtNombres.Text))
+            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && !string.IsNullOrEmpty(txtNombres.Text) && !EDITANDO == true)
             {
+                DialogResult Respuesta = MessageBox.Show("Desea realmente eliminar el registro?", "Smarth Health Care", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                if (Respuesta == DialogResult.Yes) 
+                {
+               
                 using (TransactionScope scope = new TransactionScope())
                 {
 
@@ -643,7 +647,7 @@ namespace aPresentationLayer
                     scope.Complete();
                 
                 }//fin del Scope
-
+                }
 
             }// fin del if
 
@@ -661,6 +665,11 @@ namespace aPresentationLayer
                     + "OR NSS Like '%" + filtro + "%'";
                 dtgListaPacientes.Refresh();
             }
+        }
+
+        private void Frm_Pacientes_Load(object sender, EventArgs e)
+        {
+            CONSULTANDO = true;
         }
 
    

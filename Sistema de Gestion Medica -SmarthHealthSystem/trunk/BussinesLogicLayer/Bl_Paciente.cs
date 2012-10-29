@@ -72,7 +72,7 @@ namespace BussinesLogicLayer
 
         }
 
-        public static bool Delete(Ent_Paciente entPaciente)
+        public static bool Delete(int IDPaciente)
         {
             //instancio el metodo
             Da_Paciente daPersona = GetDaPersona();
@@ -80,13 +80,13 @@ namespace BussinesLogicLayer
             //Validaciones De Lugar
             bool flag = false;
 
-            if (String.IsNullOrEmpty(entPaciente.IDPaciente))
+            if (IDPaciente < 1)
             {
 
                 flag = false;
 
             }
-            else if (Da_Paciente.Delete(entPaciente))
+            else if (Da_Paciente.Delete(IDPaciente))
             {
 
                 flag = true;

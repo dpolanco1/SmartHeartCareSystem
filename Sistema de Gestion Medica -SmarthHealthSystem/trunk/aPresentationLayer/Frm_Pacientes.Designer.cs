@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.tbpPrincipalPacientes = new DevExpress.XtraTab.XtraTabControl();
             this.tabPacientes = new DevExpress.XtraTab.XtraTabPage();
@@ -122,7 +122,6 @@
             this.btnImprimir = new DevExpress.XtraBars.BarButtonItem();
             this.btnEnviar = new DevExpress.XtraBars.BarButtonItem();
             this.btnEliminar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnBuscar = new DevExpress.XtraBars.BarButtonItem();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
@@ -1157,14 +1156,14 @@
             this.dtgHistorialClinico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaHistorial,
             this.Profesional});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgHistorialClinico.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgHistorialClinico.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgHistorialClinico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgHistorialClinico.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgHistorialClinico.Enabled = false;
@@ -1203,14 +1202,14 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.Observacion});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgConsultas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgConsultas.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgConsultas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgConsultas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgConsultas.Enabled = false;
@@ -1302,8 +1301,7 @@
             this.btnCancelar,
             this.btnImprimir,
             this.btnEnviar,
-            this.btnEliminar,
-            this.btnBuscar});
+            this.btnEliminar});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 9;
             this.barManager1.StatusBar = this.bar3;
@@ -1321,8 +1319,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnCancelar),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnImprimir),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEnviar),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.Caption, this.btnBuscar, "Buscar", true)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEliminar)});
             this.bar1.OptionsBar.AllowQuickCustomization = false;
             this.bar1.Text = "Custom 2";
             // 
@@ -1339,7 +1336,6 @@
             // btnGuardar
             // 
             this.btnGuardar.Caption = "Guardar";
-            this.btnGuardar.Enabled = false;
             this.btnGuardar.Glyph = global::aPresentationLayer.Properties.Resources.save;
             this.btnGuardar.Id = 2;
             this.btnGuardar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G));
@@ -1370,7 +1366,6 @@
             // btnImprimir
             // 
             this.btnImprimir.Caption = "Imprimir";
-            this.btnImprimir.Enabled = false;
             this.btnImprimir.Glyph = global::aPresentationLayer.Properties.Resources.Imprimir;
             this.btnImprimir.Id = 5;
             this.btnImprimir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I));
@@ -1380,7 +1375,6 @@
             // btnEnviar
             // 
             this.btnEnviar.Caption = "Enviar";
-            this.btnEnviar.Enabled = false;
             this.btnEnviar.Glyph = global::aPresentationLayer.Properties.Resources.send;
             this.btnEnviar.Id = 6;
             this.btnEnviar.Name = "btnEnviar";
@@ -1395,16 +1389,6 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnEliminar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminar_ItemClick);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Caption = "Buscar";
-            this.btnBuscar.Glyph = global::aPresentationLayer.Properties.Resources.Zoom_icon;
-            this.btnBuscar.Id = 8;
-            this.btnBuscar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnBuscar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBuscar_ItemClick);
             // 
             // bar2
             // 
@@ -1482,6 +1466,7 @@
             this.Name = "Frm_Pacientes";
             this.Text = "Mantenimiento de Pacientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_Pacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).EndInit();
             this.tbpPrincipalPacientes.ResumeLayout(false);
             this.tabPacientes.ResumeLayout(false);
@@ -1612,7 +1597,6 @@
         private DevExpress.XtraEditors.SimpleButton btnCargar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private DevExpress.XtraEditors.TextEdit txtFiltro;
-        private DevExpress.XtraBars.BarButtonItem btnBuscar;
         private System.Windows.Forms.ContextMenuStrip menuEmergente;
         private System.Windows.Forms.DataGridView dtgListaPacientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
