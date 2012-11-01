@@ -129,7 +129,6 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnCargar = new DevExpress.XtraEditors.SimpleButton();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).BeginInit();
             this.tbpPrincipalPacientes.SuspendLayout();
             this.tabPacientes.SuspendLayout();
@@ -158,7 +157,6 @@
             this.grpFiltroListaPacientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFiltro.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // barDockControlTop
@@ -1451,10 +1449,6 @@
             this.btnCargar.Text = "Cargar Pacientes";
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // Frm_Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1500,7 +1494,6 @@
             this.grpFiltroListaPacientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtFiltro.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1605,6 +1598,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreContacto;
         private System.Windows.Forms.DataGridViewTextBoxColumn TelefonoContacto;
         private System.Windows.Forms.MaskedTextBox txtIdentificacion;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
