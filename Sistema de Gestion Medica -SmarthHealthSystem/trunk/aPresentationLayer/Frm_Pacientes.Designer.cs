@@ -394,16 +394,17 @@
             // 
             // txtIdentificacion
             // 
+            this.txtIdentificacion.Enabled = false;
             this.txtIdentificacion.Location = new System.Drawing.Point(648, 53);
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.Size = new System.Drawing.Size(119, 21);
-            this.txtIdentificacion.TabIndex = 64;
+            this.txtIdentificacion.TabIndex = 4;
             // 
             // txtEmail
             // 
             this.txtEmail.Enabled = false;
             this.txtEmail.Location = new System.Drawing.Point(747, 99);
-            this.txtEmail.MaxLength = 150;
+            this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(395, 21);
             this.txtEmail.TabIndex = 13;
@@ -421,6 +422,7 @@
             // 
             this.txtApellidos.Enabled = false;
             this.txtApellidos.Location = new System.Drawing.Point(303, 52);
+            this.txtApellidos.MaxLength = 100;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(205, 21);
             this.txtApellidos.TabIndex = 2;
@@ -833,6 +835,7 @@
             // 
             this.txtNombres.Enabled = false;
             this.txtNombres.Location = new System.Drawing.Point(93, 52);
+            this.txtNombres.MaxLength = 100;
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(205, 21);
             this.txtNombres.TabIndex = 1;
