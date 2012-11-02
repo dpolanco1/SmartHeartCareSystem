@@ -475,12 +475,15 @@ namespace aPresentationLayer
                                     {
                                         for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
                                         {
-
-                                            direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value).Trim();
-                                            if (!Bl_Direcciones.Insert(direcciones))
+                                           
+                                            if (!string.IsNullOrEmpty(Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value)))
                                             {
-                                                MessageBox.Show("Hubo problemas para insertar las direcciones paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                            }
+                                                //paso el valor de la columna a la entidad
+                                                direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value).Trim();
+                                               
+                                                if (Bl_Direcciones.Insert(direcciones)) { } else { MessageBox.Show("Hubo problemas para insertar las direcciones paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+                                            }//fin del if
 
 
                                         }//fin del for dtgDirecciones
@@ -518,9 +521,10 @@ namespace aPresentationLayer
                                             }
 
                                         }//fin del for dtgContactos
+
                                     }else if (Bl_Paciente.Insert(paciente))
-                                
-                                {
+                                    
+                                    {
                                         txtIDPaciente.Text = Bl_Paciente.SearchIDPaciente().ToString();
 
 
