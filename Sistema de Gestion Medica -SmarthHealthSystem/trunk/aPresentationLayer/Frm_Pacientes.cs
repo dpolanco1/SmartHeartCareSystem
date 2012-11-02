@@ -4,12 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using BussinesLogicLayer;
-using EntidadesLayer;
-using System.Xml;
 using System.Transactions;
+using System.Windows.Forms;
+using System.Xml;
+using BussinesLogicLayer;
+using DevExpress.XtraEditors;
+using EntidadesLayer;
 
 
 
@@ -437,6 +437,7 @@ namespace aPresentationLayer
                         {
 
                             //Valores Entidad Paciente
+                            txtIDPaciente.Text = Bl_Paciente.SearchIDPaciente().ToString();//para actualizar
                             paciente.IDPaciente = txtIDPaciente.Text.Trim();
                             paciente.Nombres = txtNombres.Text;
                             paciente.Apellidos = txtApellidos.Text;
@@ -461,24 +462,21 @@ namespace aPresentationLayer
                             paciente.Activo = chkActivo.Checked;
                             paciente.EnvioEmail = chkEnviarEmail.Checked;
                             paciente.Observaciones = txtObservaciones.Text;
+                           
 
 
                             //-----------------------------------------------------INSERT--------------------------------------------------------------------//
 
                             if (NUEVO == true)
                             {
-                                //Si se inserto el paciente bien pasale el ID al txtIDPaciente
-                                if (Bl_Paciente.Insert(paciente))
-                                {
-                                    txtIDPaciente.Text = Bl_Paciente.SearchIDPaciente().ToString();
-
+                       
                                     //Valores Entidad Direcciones
                                     if (dtgDirecciones.Rows.Count != 0)
                                     {
                                         for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
                                         {
 
-                                            direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value);
+                                            direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value).Trim();
                                             if (!Bl_Direcciones.Insert(direcciones))
                                             {
                                                 MessageBox.Show("Hubo problemas para insertar las direcciones paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -488,9 +486,7 @@ namespace aPresentationLayer
                                         }//fin del for dtgDirecciones
 
 
-                                    }
-
-                                    if (dtgTelefonos.Rows.Count != 0)
+                                    }else if (dtgTelefonos.Rows.Count != 0)
                                     {
                                         for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
                                         {
@@ -500,15 +496,14 @@ namespace aPresentationLayer
                                             if (!Bl_Telefono.Insert(telefonos))
                                             {
                                                 MessageBox.Show("Hubo problemas para insertar los telefonos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                               
                                             }
 
 
                                         }//fin del for dtgTelefonos
 
 
-                                    }
-
-                                    if (dtgContactos.Rows.Count != 0)
+                                    }else if (dtgContactos.Rows.Count != 0)
                                     {
                                         for (int i = 0; i < dtgContactos.RowCount - 1; i++)
                                         {
@@ -519,33 +514,38 @@ namespace aPresentationLayer
                                             if (!Bl_Contacto.Insert(contacto))
                                             {
                                                 MessageBox.Show("Hubo problemas para insertar los contactos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                               
                                             }
 
                                         }//fin del for dtgContactos
-                                    }//fin if dtgContactos
+                                    }else if (Bl_Paciente.Insert(paciente))
+                                
+                                {
+                                        txtIDPaciente.Text = Bl_Paciente.SearchIDPaciente().ToString();
 
 
-                                    //Si todo paso bien
+                                        //Si todo paso bien
 
-                                    MessageBox.Show("Los datos del paciente fueron insertados correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        MessageBox.Show("Los datos del paciente fueron insertados correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                    //Botones habilitados y Deshabilitados
+                                        //Botones habilitados y Deshabilitados
 
-                                    /* btnNuevo.Enabled = true;
-                                     btnGuardar.Enabled = false;
-                                     btnEditar.Enabled = true;
-                                     btnCancelar.Enabled = false;
-                                     btnImprimir.Enabled = true;
-                                     btnEnviar.Enabled = true;
-                                     btnEliminar.Enabled = true;*/
+                                        /* btnNuevo.Enabled = true;
+                                         btnGuardar.Enabled = false;
+                                         btnEditar.Enabled = true;
+                                         btnCancelar.Enabled = false;
+                                         btnImprimir.Enabled = true;
+                                         btnEnviar.Enabled = true;
+                                         btnEliminar.Enabled = true;*/
 
-                                    NUEVO = false;
+                                        NUEVO = false;
 
-                                    //Deshabilito los Txt
-                                    Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+                                        //Deshabilito los Txt
+                                        Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
 
-                                    //Deshabilito los Datagried
-                                    Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+                                        //Deshabilito los Datagried
+                                        Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+                                    //Si se inserto el paciente bien pasale el ID al txtIDPaciente
 
                                 }//fin del insert Bl_Contacto.Insert
 
@@ -553,6 +553,7 @@ namespace aPresentationLayer
                                 else
                                 {
                                     MessageBox.Show("Hay problemas de conexión a la base de datos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                   
                                 }
 
 
@@ -564,10 +565,6 @@ namespace aPresentationLayer
                                 //si existe un problema entonces muestro un mensaje de aviso al usuario.
                             else if (EDITANDO == true)
                             {
-
-                                txtIDPaciente.Text = Bl_Paciente.SearchIDPaciente().ToString();
-                                if (Bl_Paciente.Update(paciente))
-                                {
 
                                     //Valores Entidad Direcciones
                                     if (dtgDirecciones.Rows.Count != 0)
@@ -590,16 +587,14 @@ namespace aPresentationLayer
                                             if (!Bl_Direcciones.Insert(direcciones) && seEliminoDirecciones == false)
                                             {
                                                 MessageBox.Show("Hubo problemas Actualizando las direcciones paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                               
                                             }
 
                                         }
 
 
-                                    }//fin del Bl_Direcciones.Insert
-
-
-                                    //   Valores Entidad Telefonos
-                                    if (dtgTelefonos.Rows.Count != 0)
+                                    }else  if (dtgTelefonos.Rows.Count != 0)
+                                   
                                     {
                                         bool seEliminoTelefonos = true;
 
@@ -615,15 +610,13 @@ namespace aPresentationLayer
                                             if (!Bl_Telefono.Insert(telefonos) && seEliminoTelefonos == true)
                                             {
                                                 MessageBox.Show("Hubo problemas Actualizando los telefonos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                               
                                             }
                                         }
 
 
-                                    }//fin del insert Bl_Telefono.Insert
-
-
-                                    // Valores Entidad Conctacto
-                                    if (dtgContactos.Rows.Count != 0)
+                                    }else   if (dtgContactos.Rows.Count != 0)
+                                    
                                     {
                                         bool seEliminoContactos = true;
 
@@ -643,42 +636,42 @@ namespace aPresentationLayer
                                             if (!Bl_Contacto.Insert(contacto) && seEliminoContactos == false)
                                             {
                                                 MessageBox.Show("Hubo problemas Actualizando los Contactos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                               
 
                                             }
 
                                         }//fin del for dtgContactos
 
-                                    }//fin del IF DtgContactos
+                                    }else  if (Bl_Paciente.Update(paciente))
+                                    {
 
-                                    MessageBox.Show("La edición se realizó correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        MessageBox.Show("La edición se realizó correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                    //Botones habilitados y Deshabilitados
+                                        //Botones habilitados y Deshabilitados
 
-                                    /*   btnNuevo.Enabled = true;
-                                       btnGuardar.Enabled = false;
-                                       btnEditar.Enabled = true;
-                                       btnCancelar.Enabled = false;
-                                       btnImprimir.Enabled = true;
-                                       btnEnviar.Enabled = true;
-                                       btnEliminar.Enabled = true;*/
+                                        /*   btnNuevo.Enabled = true;
+                                           btnGuardar.Enabled = false;
+                                           btnEditar.Enabled = true;
+                                           btnCancelar.Enabled = false;
+                                           btnImprimir.Enabled = true;
+                                           btnEnviar.Enabled = true;
+                                           btnEliminar.Enabled = true;*/
 
-                                    //Deshabilito los Txt
-                                    Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+                                        //Deshabilito los Txt
+                                        Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
 
-                                    //Deshabilito los Datagried
-                                    Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+                                        //Deshabilito los Datagried
+                                        Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
 
                                 }//fin del if UPDATE
                             }
-                            else
-                            {
-
-                                MessageBox.Show("Hay problemas de conexión a la base de datos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                            }//FIN DEL IF EDITANDO
+                           
+  
+                            
                         }//FIN DEL TRY
                         catch (Exception)
                         {
+                            MessageBox.Show("Hay problemas de conexión a la base de datos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                         }
 
