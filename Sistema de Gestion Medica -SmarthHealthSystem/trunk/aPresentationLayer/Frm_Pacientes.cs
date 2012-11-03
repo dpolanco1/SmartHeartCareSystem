@@ -481,7 +481,7 @@ namespace aPresentationLayer
                                                 //paso el valor de la columna a la entidad
                                                 direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value).Trim();
                                                
-                                                if (Bl_Direcciones.Insert(direcciones)) { } else { MessageBox.Show("Hubo problemas para insertar las direcciones paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                                                if (!Bl_Direcciones.Insert(direcciones)){ MessageBox.Show("Hubo problemas para insertar las direcciones del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
                                             }//fin del if
 
