@@ -29,6 +29,26 @@ namespace BussinesLogicLayer
 
         }
 
+        //Para Verificar que los Telefonos,Celulares,Fax estan llenado de Forma Correcta en Daragried
+        public static bool ValidarTelefonoGV(String Telefono)
+        {
+            string expresion = "[0-9]{9}";//declaramos nuestra expresion regular
+            bool Flag;
+
+            if (System.Text.RegularExpressions.Regex.IsMatch(Telefono, expresion))
+            {
+                if (System.Text.RegularExpressions.Regex.Replace(Telefono, expresion, String.Empty).Length == 0)
+                { Flag = true; }
+                else
+                { Flag = false; }
+            }
+            else
+            {
+                Flag = false;
+            }
+            return Flag;
+        }
+
         //Para Verificar que la cedula sea Correcta
         public static bool ValidaCedula(MaskedTextBox Txt)
         {
