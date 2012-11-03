@@ -167,16 +167,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SmartHearthCareDbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SmartHearthCareDbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SmartHearthCareDbDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SmartHearthCareDbDataSet1.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Frm_Agenda.resx">
@@ -243,28 +233,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="SmartHearthCareDbDataSet.xsc">
-      <DependentUpon>SmartHearthCareDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SmartHearthCareDbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SmartHearthCareDbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SmartHearthCareDbDataSet.xss">
-      <DependentUpon>SmartHearthCareDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SmartHearthCareDbDataSet1.xsc">
-      <DependentUpon>SmartHearthCareDbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="SmartHearthCareDbDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SmartHearthCareDbDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SmartHearthCareDbDataSet1.xss">
-      <DependentUpon>SmartHearthCareDbDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Settings.settings">

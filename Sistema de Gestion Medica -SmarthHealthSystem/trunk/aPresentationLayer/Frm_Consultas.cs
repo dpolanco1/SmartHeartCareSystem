@@ -46,10 +46,7 @@ namespace aPresentationLayer
 
         private void Frm_Consultas_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'smartHearthCareDbDataSet1.tbl_pacientes' table. You can move, or remove it, as needed.
-            this.tbl_pacientesTableAdapter.Fill(this.smartHearthCareDbDataSet1.tbl_pacientes);
-            // TODO: This line of code loads data into the 'smartHearthCareDbDataSet.tbl_medicos' table. You can move, or remove it, as needed.
-            this.tbl_medicosTableAdapter.Fill(this.smartHearthCareDbDataSet.tbl_medicos);
+            
 
         }
     }

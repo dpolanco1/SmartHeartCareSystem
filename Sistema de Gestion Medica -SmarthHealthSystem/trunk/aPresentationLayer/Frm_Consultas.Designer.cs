@@ -50,8 +50,6 @@
             this.txtNombrePaciente = new DevExpress.XtraEditors.TextEdit();
             this.lblNombrePaciente = new DevExpress.XtraEditors.LabelControl();
             this.searchPaciente = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.tblpacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.smartHearthCareDbDataSet1 = new aPresentationLayer.SmartHearthCareDbDataSet1();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblPaciente = new DevExpress.XtraEditors.LabelControl();
             this.grpDatosMedicos = new DevExpress.XtraEditors.GroupControl();
@@ -62,8 +60,6 @@
             this.txtNombreMedico = new DevExpress.XtraEditors.TextEdit();
             this.lblNombreMedico = new DevExpress.XtraEditors.LabelControl();
             this.searchMedico = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.tblmedicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.smartHearthCareDbDataSet = new aPresentationLayer.SmartHearthCareDbDataSet();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblMedico = new DevExpress.XtraEditors.LabelControl();
             this.tabListadeConsultas = new DevExpress.XtraTab.XtraTabPage();
@@ -86,8 +82,6 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.tbl_medicosTableAdapter = new aPresentationLayer.SmartHearthCareDbDataSetTableAdapters.tbl_medicosTableAdapter();
-            this.tbl_pacientesTableAdapter = new aPresentationLayer.SmartHearthCareDbDataSet1TableAdapters.tbl_pacientesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tabPrincipalConsultas)).BeginInit();
             this.tabPrincipalConsultas.SuspendLayout();
             this.tabConsultas.SuspendLayout();
@@ -103,8 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombrePaciente.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPaciente.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblpacientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartHearthCareDbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpDatosMedicos)).BeginInit();
             this.grpDatosMedicos.SuspendLayout();
@@ -112,8 +104,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreMedico.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchMedico.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblmedicosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartHearthCareDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             this.tabListadeConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -347,22 +337,11 @@
             this.searchPaciente.Name = "searchPaciente";
             this.searchPaciente.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.searchPaciente.Properties.DataSource = this.tblpacientesBindingSource;
             this.searchPaciente.Properties.DisplayMember = "Nombre";
             this.searchPaciente.Properties.ValueMember = "IdPaciente";
             this.searchPaciente.Properties.View = this.gridView2;
             this.searchPaciente.Size = new System.Drawing.Size(356, 20);
             this.searchPaciente.TabIndex = 4;
-            // 
-            // tblpacientesBindingSource
-            // 
-            this.tblpacientesBindingSource.DataMember = "tbl_pacientes";
-            this.tblpacientesBindingSource.DataSource = this.smartHearthCareDbDataSet1;
-            // 
-            // smartHearthCareDbDataSet1
-            // 
-            this.smartHearthCareDbDataSet1.DataSetName = "SmartHearthCareDbDataSet1";
-            this.smartHearthCareDbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView2
             // 
@@ -448,22 +427,11 @@
             this.searchMedico.Name = "searchMedico";
             this.searchMedico.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.searchMedico.Properties.DataSource = this.tblmedicosBindingSource;
             this.searchMedico.Properties.DisplayMember = "Nombre";
             this.searchMedico.Properties.ValueMember = "IdMedico";
             this.searchMedico.Properties.View = this.searchLookUpEdit1View;
             this.searchMedico.Size = new System.Drawing.Size(386, 20);
             this.searchMedico.TabIndex = 3;
-            // 
-            // tblmedicosBindingSource
-            // 
-            this.tblmedicosBindingSource.DataMember = "tbl_medicos";
-            this.tblmedicosBindingSource.DataSource = this.smartHearthCareDbDataSet;
-            // 
-            // smartHearthCareDbDataSet
-            // 
-            this.smartHearthCareDbDataSet.DataSetName = "SmartHearthCareDbDataSet";
-            this.smartHearthCareDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // searchLookUpEdit1View
             // 
@@ -682,14 +650,6 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1015, 69);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 484);
             // 
-            // tbl_medicosTableAdapter
-            // 
-            this.tbl_medicosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tbl_pacientesTableAdapter
-            // 
-            this.tbl_pacientesTableAdapter.ClearBeforeFill = true;
-            // 
             // Frm_Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -723,8 +683,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombrePaciente.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPaciente.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblpacientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartHearthCareDbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpDatosMedicos)).EndInit();
             this.grpDatosMedicos.ResumeLayout(false);
@@ -733,8 +691,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreMedico.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchMedico.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblmedicosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartHearthCareDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             this.tabListadeConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -802,11 +758,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private SmartHearthCareDbDataSet smartHearthCareDbDataSet;
-        private System.Windows.Forms.BindingSource tblmedicosBindingSource;
-        private SmartHearthCareDbDataSetTableAdapters.tbl_medicosTableAdapter tbl_medicosTableAdapter;
-        private SmartHearthCareDbDataSet1 smartHearthCareDbDataSet1;
-        private System.Windows.Forms.BindingSource tblpacientesBindingSource;
-        private SmartHearthCareDbDataSet1TableAdapters.tbl_pacientesTableAdapter tbl_pacientesTableAdapter;
+    
     }
 }
