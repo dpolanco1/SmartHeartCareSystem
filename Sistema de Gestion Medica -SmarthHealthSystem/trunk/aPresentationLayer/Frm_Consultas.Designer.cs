@@ -553,7 +553,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Caption = "Editar";
+            this.btnEditar.Caption = "&Editar";
             this.btnEditar.Enabled = false;
             this.btnEditar.Glyph = global::aPresentationLayer.Properties.Resources.Edit;
             this.btnEditar.Id = 3;
