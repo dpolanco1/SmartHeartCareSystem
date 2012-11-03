@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Bl_AdministrarControles.cs" />
     <Compile Include="Bl_AntecedentesPersonales.cs" />
+    <Compile Include="BL_Consultas.cs" />
     <Compile Include="Bl_Contacto.cs" />
     <Compile Include="Bl_Direcciones.cs" />
     <Compile Include="Bl_HabitosToxicos.cs" />

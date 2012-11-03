@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Da_AntecedentesPersonales.cs" />
     <Compile Include="Da_Connection.cs" />
+    <Compile Include="Da_Consultas.cs" />
     <Compile Include="Da_Contacto.cs" />
     <Compile Include="Da_Direcciones.cs" />
     <Compile Include="Da_HabitosToxicos.cs" />

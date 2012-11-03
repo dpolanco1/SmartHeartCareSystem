@@ -69,6 +69,7 @@
     <Reference Include="DevExpress.XtraScheduler.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Transactions" />
@@ -161,6 +162,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHearthCareDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartHearthCareDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartHearthCareDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartHearthCareDbDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Frm_Agenda.resx">
@@ -227,8 +243,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="SmartHearthCareDbDataSet.xsc">
+      <DependentUpon>SmartHearthCareDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SmartHearthCareDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartHearthCareDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartHearthCareDbDataSet.xss">
+      <DependentUpon>SmartHearthCareDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SmartHearthCareDbDataSet1.xsc">
+      <DependentUpon>SmartHearthCareDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SmartHearthCareDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartHearthCareDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartHearthCareDbDataSet1.xss">
+      <DependentUpon>SmartHearthCareDbDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
