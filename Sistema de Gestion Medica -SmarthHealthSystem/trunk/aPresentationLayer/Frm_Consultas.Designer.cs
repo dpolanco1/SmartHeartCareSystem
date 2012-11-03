@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabPrincipalConsultas = new DevExpress.XtraTab.XtraTabControl();
             this.tabConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -35,10 +36,6 @@
             this.memoMovito = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.dateFechaConsulta = new DevExpress.XtraEditors.DateEdit();
-            this.txtNoConsulta = new DevExpress.XtraEditors.TextEdit();
-            this.lblFecha = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblTipoSangre = new DevExpress.XtraEditors.LabelControl();
@@ -53,6 +50,8 @@
             this.txtNombrePaciente = new DevExpress.XtraEditors.TextEdit();
             this.lblNombrePaciente = new DevExpress.XtraEditors.LabelControl();
             this.searchPaciente = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.tblpacientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.smartHearthCareDbDataSet1 = new aPresentationLayer.SmartHearthCareDbDataSet1();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblPaciente = new DevExpress.XtraEditors.LabelControl();
             this.grpDatosMedicos = new DevExpress.XtraEditors.GroupControl();
@@ -63,12 +62,16 @@
             this.txtNombreMedico = new DevExpress.XtraEditors.TextEdit();
             this.lblNombreMedico = new DevExpress.XtraEditors.LabelControl();
             this.searchMedico = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.tblmedicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.smartHearthCareDbDataSet = new aPresentationLayer.SmartHearthCareDbDataSet();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblMedico = new DevExpress.XtraEditors.LabelControl();
             this.tabListadeConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.dateFechaConsulta = new DevExpress.XtraEditors.DateEdit();
+            this.lblFecha = new DevExpress.XtraEditors.LabelControl();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnNuevo = new DevExpress.XtraBars.BarButtonItem();
             this.btnGuardar = new DevExpress.XtraBars.BarButtonItem();
@@ -83,6 +86,8 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.tbl_medicosTableAdapter = new aPresentationLayer.SmartHearthCareDbDataSetTableAdapters.tbl_medicosTableAdapter();
+            this.tbl_pacientesTableAdapter = new aPresentationLayer.SmartHearthCareDbDataSet1TableAdapters.tbl_pacientesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tabPrincipalConsultas)).BeginInit();
             this.tabPrincipalConsultas.SuspendLayout();
             this.tabConsultas.SuspendLayout();
@@ -90,9 +95,6 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoDiagnostico.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoMovito.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateFechaConsulta.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateFechaConsulta.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNoConsulta.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spinEdit3.Properties)).BeginInit();
@@ -101,6 +103,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombrePaciente.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPaciente.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblpacientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smartHearthCareDbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpDatosMedicos)).BeginInit();
             this.grpDatosMedicos.SuspendLayout();
@@ -108,10 +112,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreMedico.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchMedico.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblmedicosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smartHearthCareDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             this.tabListadeConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateFechaConsulta.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateFechaConsulta.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,8 +150,6 @@
             this.groupControl2.Controls.Add(this.memoMovito);
             this.groupControl2.Controls.Add(this.labelControl3);
             this.groupControl2.Controls.Add(this.labelControl2);
-            this.groupControl2.Controls.Add(this.txtNoConsulta);
-            this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 197);
             this.groupControl2.Name = "groupControl2";
@@ -153,21 +159,21 @@
             // 
             // memoDiagnostico
             // 
-            this.memoDiagnostico.Location = new System.Drawing.Point(80, 178);
+            this.memoDiagnostico.Location = new System.Drawing.Point(74, 133);
             this.memoDiagnostico.Name = "memoDiagnostico";
             this.memoDiagnostico.Size = new System.Drawing.Size(733, 51);
             this.memoDiagnostico.TabIndex = 8;
             // 
             // memoMovito
             // 
-            this.memoMovito.Location = new System.Drawing.Point(80, 110);
+            this.memoMovito.Location = new System.Drawing.Point(74, 65);
             this.memoMovito.Name = "memoMovito";
             this.memoMovito.Size = new System.Drawing.Size(733, 51);
             this.memoMovito.TabIndex = 7;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(15, 180);
+            this.labelControl3.Location = new System.Drawing.Point(9, 135);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(55, 13);
             this.labelControl3.TabIndex = 6;
@@ -175,47 +181,11 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(34, 112);
+            this.labelControl2.Location = new System.Drawing.Point(28, 67);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(32, 13);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Motivo";
-            // 
-            // dateFechaConsulta
-            // 
-            this.dateFechaConsulta.EditValue = new System.DateTime(2012, 10, 13, 23, 26, 13, 119);
-            this.dateFechaConsulta.Enabled = false;
-            this.dateFechaConsulta.Location = new System.Drawing.Point(818, 26);
-            this.dateFechaConsulta.Name = "dateFechaConsulta";
-            this.dateFechaConsulta.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateFechaConsulta.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateFechaConsulta.Size = new System.Drawing.Size(82, 20);
-            this.dateFechaConsulta.TabIndex = 4;
-            // 
-            // txtNoConsulta
-            // 
-            this.txtNoConsulta.Location = new System.Drawing.Point(80, 40);
-            this.txtNoConsulta.Name = "txtNoConsulta";
-            this.txtNoConsulta.Size = new System.Drawing.Size(164, 20);
-            this.txtNoConsulta.TabIndex = 3;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.Location = new System.Drawing.Point(779, 29);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(29, 13);
-            this.lblFecha.TabIndex = 2;
-            this.lblFecha.Text = "Fecha";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(8, 43);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(62, 13);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "No. Consulta";
             // 
             // groupControl1
             // 
@@ -377,9 +347,22 @@
             this.searchPaciente.Name = "searchPaciente";
             this.searchPaciente.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.searchPaciente.Properties.DataSource = this.tblpacientesBindingSource;
+            this.searchPaciente.Properties.DisplayMember = "Nombre";
+            this.searchPaciente.Properties.ValueMember = "IdPaciente";
             this.searchPaciente.Properties.View = this.gridView2;
             this.searchPaciente.Size = new System.Drawing.Size(356, 20);
             this.searchPaciente.TabIndex = 4;
+            // 
+            // tblpacientesBindingSource
+            // 
+            this.tblpacientesBindingSource.DataMember = "tbl_pacientes";
+            this.tblpacientesBindingSource.DataSource = this.smartHearthCareDbDataSet1;
+            // 
+            // smartHearthCareDbDataSet1
+            // 
+            this.smartHearthCareDbDataSet1.DataSetName = "SmartHearthCareDbDataSet1";
+            this.smartHearthCareDbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView2
             // 
@@ -465,9 +448,22 @@
             this.searchMedico.Name = "searchMedico";
             this.searchMedico.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.searchMedico.Properties.DataSource = this.tblmedicosBindingSource;
+            this.searchMedico.Properties.DisplayMember = "Nombre";
+            this.searchMedico.Properties.ValueMember = "IdMedico";
             this.searchMedico.Properties.View = this.searchLookUpEdit1View;
             this.searchMedico.Size = new System.Drawing.Size(386, 20);
             this.searchMedico.TabIndex = 3;
+            // 
+            // tblmedicosBindingSource
+            // 
+            this.tblmedicosBindingSource.DataMember = "tbl_medicos";
+            this.tblmedicosBindingSource.DataSource = this.smartHearthCareDbDataSet;
+            // 
+            // smartHearthCareDbDataSet
+            // 
+            this.smartHearthCareDbDataSet.DataSetName = "SmartHearthCareDbDataSet";
+            this.smartHearthCareDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // searchLookUpEdit1View
             // 
@@ -506,6 +502,27 @@
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            // 
+            // dateFechaConsulta
+            // 
+            this.dateFechaConsulta.EditValue = new System.DateTime(2012, 10, 13, 23, 26, 13, 119);
+            this.dateFechaConsulta.Enabled = false;
+            this.dateFechaConsulta.Location = new System.Drawing.Point(818, 26);
+            this.dateFechaConsulta.Name = "dateFechaConsulta";
+            this.dateFechaConsulta.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateFechaConsulta.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.dateFechaConsulta.Size = new System.Drawing.Size(82, 20);
+            this.dateFechaConsulta.TabIndex = 4;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Location = new System.Drawing.Point(779, 29);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(29, 13);
+            this.lblFecha.TabIndex = 2;
+            this.lblFecha.Text = "Fecha";
             // 
             // barManager1
             // 
@@ -559,12 +576,12 @@
             // btnGuardar
             // 
             this.btnGuardar.Caption = "Guardar";
-            this.btnGuardar.Enabled = false;
             this.btnGuardar.Glyph = global::aPresentationLayer.Properties.Resources.save;
             this.btnGuardar.Id = 2;
             this.btnGuardar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G));
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnGuardar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGuardar_ItemClick);
             // 
             // btnEditar
             // 
@@ -665,6 +682,14 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1015, 69);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 484);
             // 
+            // tbl_medicosTableAdapter
+            // 
+            this.tbl_medicosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbl_pacientesTableAdapter
+            // 
+            this.tbl_pacientesTableAdapter.ClearBeforeFill = true;
+            // 
             // Frm_Consultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -680,6 +705,7 @@
             this.Name = "Frm_Consultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Médica";
+            this.Load += new System.EventHandler(this.Frm_Consultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabPrincipalConsultas)).EndInit();
             this.tabPrincipalConsultas.ResumeLayout(false);
             this.tabConsultas.ResumeLayout(false);
@@ -688,9 +714,6 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoDiagnostico.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoMovito.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateFechaConsulta.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateFechaConsulta.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNoConsulta.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -700,6 +723,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombrePaciente.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchPaciente.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblpacientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smartHearthCareDbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpDatosMedicos)).EndInit();
             this.grpDatosMedicos.ResumeLayout(false);
@@ -708,10 +733,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombreMedico.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchMedico.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblmedicosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smartHearthCareDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             this.tabListadeConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateFechaConsulta.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateFechaConsulta.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -728,9 +757,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.DateEdit dateFechaConsulta;
-        private DevExpress.XtraEditors.TextEdit txtNoConsulta;
         private DevExpress.XtraEditors.LabelControl lblFecha;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.ComboBox comboBox1;
         private DevExpress.XtraEditors.LabelControl lblTipoSangre;
@@ -775,5 +802,11 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private SmartHearthCareDbDataSet smartHearthCareDbDataSet;
+        private System.Windows.Forms.BindingSource tblmedicosBindingSource;
+        private SmartHearthCareDbDataSetTableAdapters.tbl_medicosTableAdapter tbl_medicosTableAdapter;
+        private SmartHearthCareDbDataSet1 smartHearthCareDbDataSet1;
+        private System.Windows.Forms.BindingSource tblpacientesBindingSource;
+        private SmartHearthCareDbDataSet1TableAdapters.tbl_pacientesTableAdapter tbl_pacientesTableAdapter;
     }
 }
