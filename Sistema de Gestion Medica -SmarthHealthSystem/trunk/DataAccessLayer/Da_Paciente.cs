@@ -228,6 +228,7 @@ namespace DataAccessLayer
         }//fin del Metodo
         public static int SearchIDPaciente()
         {
+            int IDPaciente = 0;
             try
             {
 
@@ -240,7 +241,7 @@ namespace DataAccessLayer
                 var dr = command.ExecuteReader();
                 while (dr.Read())
                 {
-                    return dr.GetInt32(0);
+                    IDPaciente =  dr.GetOrdinal("IDPaciente");
                 }
 
 
@@ -261,7 +262,7 @@ namespace DataAccessLayer
 
             }//fin del Finally
 
-            return 0;
+            return IDPaciente;
         }
     }
 }

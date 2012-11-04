@@ -169,7 +169,7 @@
             // tbpPrincipalPacientes
             // 
             this.tbpPrincipalPacientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbpPrincipalPacientes.Location = new System.Drawing.Point(0, 65);
+            this.tbpPrincipalPacientes.Location = new System.Drawing.Point(0, 69);
             this.tbpPrincipalPacientes.Name = "tbpPrincipalPacientes";
             this.tbpPrincipalPacientes.SelectedTabPage = this.tabPacientes;
             this.tbpPrincipalPacientes.Size = new System.Drawing.Size(1157, 664);
@@ -1361,7 +1361,7 @@
             this.btnCancelar.Caption = "Cancelar";
             this.btnCancelar.Glyph = global::aPresentationLayer.Properties.Resources.Cancel;
             this.btnCancelar.Id = 4;
-            this.btnCancelar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C));
+            this.btnCancelar.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnCancelar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCancelar_ItemClick);
@@ -1380,6 +1380,7 @@
             this.btnEnviar.Caption = "Enviar";
             this.btnEnviar.Glyph = global::aPresentationLayer.Properties.Resources.send;
             this.btnEnviar.Id = 6;
+            this.btnEnviar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
@@ -1388,7 +1389,7 @@
             this.btnEliminar.Caption = "Eliminar";
             this.btnEliminar.Glyph = global::aPresentationLayer.Properties.Resources.Delete;
             this.btnEliminar.Id = 7;
-            this.btnEliminar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
+            this.btnEliminar.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.btnEliminar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminar_ItemClick);
@@ -1420,28 +1421,28 @@
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl1.Size = new System.Drawing.Size(1157, 65);
+            this.barDockControl1.Size = new System.Drawing.Size(1157, 69);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 717);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1157, 25);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 719);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1157, 23);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 65);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 652);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 69);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 650);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1157, 65);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 652);
+            this.barDockControlRight.Location = new System.Drawing.Point(1157, 69);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 650);
             // 
             // btnCargar
             // 

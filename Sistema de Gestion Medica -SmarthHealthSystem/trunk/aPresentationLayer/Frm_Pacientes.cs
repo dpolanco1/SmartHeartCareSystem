@@ -180,7 +180,7 @@ namespace aPresentationLayer
             try
             {
             //Busco todos los pacientes
-            dtgListaPacientes.DataSource = Bl_Paciente.SearchAll();
+                dtgListaPacientes.DataSource = Bl_Paciente.SearchAll();
             
             for (int i = 8; i <dtgListaPacientes.Columns.Count; i++)
             {
@@ -312,7 +312,8 @@ namespace aPresentationLayer
 
         private void btnEliminar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && !string.IsNullOrEmpty(txtNombres.Text) && !EDITANDO == true)
+            //si tenemos el tabpaciente activo y textID no esta vacio y no se esta editando entonces borra.
+            if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && !string.IsNullOrEmpty(txtIDPaciente.Text) && !EDITANDO == true)
             {
                 DialogResult Respuesta = MessageBox.Show("Desea realmente eliminar el registro?", "Smarth Health Care", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -336,15 +337,6 @@ namespace aPresentationLayer
                         else 
                         
                         {
-                            //Botones habilitados y Deshabilitados
-
-                            btnNuevo.Enabled = true;
-                            btnGuardar.Enabled = false;
-                            btnEditar.Enabled = false;
-                            btnCancelar.Enabled = false;
-                            btnImprimir.Enabled = true;
-                            btnEnviar.Enabled = true;
-                            btnEliminar.Enabled = true;
 
                             //Limpio los Txt
                             Bl_AdministrarControles.VaciarText(frm_pacientes);
@@ -476,53 +468,45 @@ namespace aPresentationLayer
                                         for (int i = 0; i < dtgDirecciones.RowCount - 1; i++)
                                         {
                                            
-                                            if (!string.IsNullOrEmpty(Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value)))
-                                            {
-                                                //paso el valor de la columna a la entidad
+                                              //paso el valor de la columna a la entidad
                                                 direcciones.Direccion = Convert.ToString(dtgDirecciones.Rows[i].Cells[0].Value).Trim();
-                                               
-                                                if (!Bl_Direcciones.Insert(direcciones)){ MessageBox.Show("Hubo problemas para insertar las direcciones del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-
-                                            }//fin del if
-
+                                                Bl_Direcciones.Insert(direcciones);
 
                                         }//fin del for dtgDirecciones
 
 
-                                    }else if (dtgTelefonos.Rows.Count != 0)
+                                    }//fin insert direcciones
+                                
+                                if (dtgTelefonos.Rows.Count != 0)
                                     {
                                         for (int i = 0; i < dtgTelefonos.RowCount - 1; i++)
                                         {
 
-                                            telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value);
+                                            telefonos.Telefono = Convert.ToString(dtgTelefonos.Rows[i].Cells[0].Value).Trim();
 
-                                            if (!Bl_Telefono.Insert(telefonos))
-                                            {
-                                                MessageBox.Show("Hubo problemas para insertar los telefonos del paciente, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                               
-                                            }
-
+                                            Bl_Telefono.Insert(telefonos);
 
                                         }//fin del for dtgTelefonos
 
 
-                                    }else if (dtgContactos.Rows.Count != 0)
+                                    }//fin insert Telefonos
+                                
+                                if (dtgContactos.Rows.Count != 0)
                                     {
                                         for (int i = 0; i < dtgContactos.RowCount - 1; i++)
                                         {
 
-                                            contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value);
-                                            contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value);
+                                            contacto.Contacto = Convert.ToString(dtgContactos.Rows[i].Cells[0].Value).Trim();
+                                            contacto.Telefono = Convert.ToString(dtgContactos.Rows[i].Cells[1].Value).Trim();
 
-                                            if (!Bl_Contacto.Insert(contacto))
-                                            {
-                                                MessageBox.Show("Hubo problemas para insertar los contactos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                               
-                                            }
+                                            Bl_Contacto.Insert(contacto);
+                                         
 
                                         }//fin del for dtgContactos
 
-                                    }else if (Bl_Paciente.Insert(paciente))
+                                    }//fin insert Contactos
+                                
+                                if (Bl_Paciente.Insert(paciente))
                                     
                                     {
                                         txtIDPaciente.Text = Bl_Paciente.SearchIDPaciente().ToString();
@@ -531,16 +515,6 @@ namespace aPresentationLayer
                                         //Si todo paso bien
 
                                         MessageBox.Show("Los datos del paciente fueron insertados correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                        //Botones habilitados y Deshabilitados
-
-                                        /* btnNuevo.Enabled = true;
-                                         btnGuardar.Enabled = false;
-                                         btnEditar.Enabled = true;
-                                         btnCancelar.Enabled = false;
-                                         btnImprimir.Enabled = true;
-                                         btnEnviar.Enabled = true;
-                                         btnEliminar.Enabled = true;*/
 
                                         NUEVO = false;
 
@@ -650,16 +624,6 @@ namespace aPresentationLayer
                                     {
 
                                         MessageBox.Show("La edición se realizó correctamente", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                        //Botones habilitados y Deshabilitados
-
-                                        /*   btnNuevo.Enabled = true;
-                                           btnGuardar.Enabled = false;
-                                           btnEditar.Enabled = true;
-                                           btnCancelar.Enabled = false;
-                                           btnImprimir.Enabled = true;
-                                           btnEnviar.Enabled = true;
-                                           btnEliminar.Enabled = true;*/
 
                                         //Deshabilito los Txt
                                         Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
