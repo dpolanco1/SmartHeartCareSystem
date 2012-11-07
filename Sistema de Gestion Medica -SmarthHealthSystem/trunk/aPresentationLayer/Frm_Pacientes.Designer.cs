@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.tbpPrincipalPacientes = new DevExpress.XtraTab.XtraTabControl();
             this.tabPacientes = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtObservaciones = new System.Windows.Forms.RichTextBox();
             this.grpUbicaciones = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.txtTelefonoContacto = new System.Windows.Forms.TextBox();
+            this.txtTelefonoContacto = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefonos = new System.Windows.Forms.MaskedTextBox();
+            this.btnEliminarContacto = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAgregarContacto = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEliminarTelefonos = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAgregarTelefonos = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEliminarDireccion = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAgregarDireccion = new DevExpress.XtraEditors.SimpleButton();
             this.txtNombreContacto = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.dtgContactos = new System.Windows.Forms.DataGridView();
             this.NombreContacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +55,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.dtgDirecciones = new System.Windows.Forms.DataGridView();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblContactos = new DevExpress.XtraEditors.LabelControl();
             this.lblTelefono = new DevExpress.XtraEditors.LabelControl();
             this.lblDirecciones = new DevExpress.XtraEditors.LabelControl();
             this.grpDatos = new DevExpress.XtraEditors.GroupControl();
@@ -221,21 +220,20 @@
             // 
             // grpUbicaciones
             // 
-            this.grpUbicaciones.Controls.Add(this.simpleButton5);
-            this.grpUbicaciones.Controls.Add(this.simpleButton6);
-            this.grpUbicaciones.Controls.Add(this.simpleButton3);
-            this.grpUbicaciones.Controls.Add(this.simpleButton4);
-            this.grpUbicaciones.Controls.Add(this.simpleButton2);
-            this.grpUbicaciones.Controls.Add(this.simpleButton1);
             this.grpUbicaciones.Controls.Add(this.txtTelefonoContacto);
+            this.grpUbicaciones.Controls.Add(this.txtTelefonos);
+            this.grpUbicaciones.Controls.Add(this.btnEliminarContacto);
+            this.grpUbicaciones.Controls.Add(this.btnAgregarContacto);
+            this.grpUbicaciones.Controls.Add(this.btnEliminarTelefonos);
+            this.grpUbicaciones.Controls.Add(this.btnAgregarTelefonos);
+            this.grpUbicaciones.Controls.Add(this.btnEliminarDireccion);
+            this.grpUbicaciones.Controls.Add(this.btnAgregarDireccion);
             this.grpUbicaciones.Controls.Add(this.txtNombreContacto);
-            this.grpUbicaciones.Controls.Add(this.txtTelefono);
             this.grpUbicaciones.Controls.Add(this.txtDireccion);
             this.grpUbicaciones.Controls.Add(this.dtgContactos);
             this.grpUbicaciones.Controls.Add(this.dtgTelefonos);
             this.grpUbicaciones.Controls.Add(this.labelControl3);
             this.grpUbicaciones.Controls.Add(this.dtgDirecciones);
-            this.grpUbicaciones.Controls.Add(this.lblContactos);
             this.grpUbicaciones.Controls.Add(this.lblTelefono);
             this.grpUbicaciones.Controls.Add(this.lblDirecciones);
             this.grpUbicaciones.Dock = System.Windows.Forms.DockStyle.Top;
@@ -245,68 +243,83 @@
             this.grpUbicaciones.TabIndex = 6;
             this.grpUbicaciones.Text = "Datos de Ubicación:";
             // 
-            // simpleButton5
-            // 
-            this.simpleButton5.Image = global::aPresentationLayer.Properties.Resources.Actions_dialog_close_icon;
-            this.simpleButton5.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton5.Location = new System.Drawing.Point(1122, 46);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(20, 21);
-            this.simpleButton5.TabIndex = 36;
-            // 
-            // simpleButton6
-            // 
-            this.simpleButton6.Image = global::aPresentationLayer.Properties.Resources.bullet_add_icon;
-            this.simpleButton6.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton6.Location = new System.Drawing.Point(1096, 46);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(20, 21);
-            this.simpleButton6.TabIndex = 35;
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Image = global::aPresentationLayer.Properties.Resources.Actions_dialog_close_icon;
-            this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(747, 46);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(20, 21);
-            this.simpleButton3.TabIndex = 34;
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.Image = global::aPresentationLayer.Properties.Resources.bullet_add_icon;
-            this.simpleButton4.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton4.Location = new System.Drawing.Point(721, 46);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(20, 21);
-            this.simpleButton4.TabIndex = 33;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Image = global::aPresentationLayer.Properties.Resources.Actions_dialog_close_icon;
-            this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(471, 46);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(20, 21);
-            this.simpleButton2.TabIndex = 32;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Image = global::aPresentationLayer.Properties.Resources.bullet_add_icon;
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(445, 46);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(20, 21);
-            this.simpleButton1.TabIndex = 31;
-            // 
             // txtTelefonoContacto
             // 
             this.txtTelefonoContacto.Enabled = false;
-            this.txtTelefonoContacto.Location = new System.Drawing.Point(968, 46);
-            this.txtTelefonoContacto.MaxLength = 100;
+            this.txtTelefonoContacto.Location = new System.Drawing.Point(980, 46);
+            this.txtTelefonoContacto.Mask = "(999)000-0000";
             this.txtTelefonoContacto.Name = "txtTelefonoContacto";
-            this.txtTelefonoContacto.Size = new System.Drawing.Size(124, 21);
-            this.txtTelefonoContacto.TabIndex = 30;
+            this.txtTelefonoContacto.Size = new System.Drawing.Size(110, 21);
+            this.txtTelefonoContacto.TabIndex = 25;
+            // 
+            // txtTelefonos
+            // 
+            this.txtTelefonos.Enabled = false;
+            this.txtTelefonos.Location = new System.Drawing.Point(605, 46);
+            this.txtTelefonos.Mask = "(999)000-0000";
+            this.txtTelefonos.Name = "txtTelefonos";
+            this.txtTelefonos.Size = new System.Drawing.Size(110, 21);
+            this.txtTelefonos.TabIndex = 23;
+            // 
+            // btnEliminarContacto
+            // 
+            this.btnEliminarContacto.Image = global::aPresentationLayer.Properties.Resources.Actions_dialog_close_icon;
+            this.btnEliminarContacto.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnEliminarContacto.Location = new System.Drawing.Point(1122, 46);
+            this.btnEliminarContacto.Name = "btnEliminarContacto";
+            this.btnEliminarContacto.Size = new System.Drawing.Size(20, 21);
+            this.btnEliminarContacto.TabIndex = 36;
+            this.btnEliminarContacto.Click += new System.EventHandler(this.btnEliminarContacto_Click);
+            // 
+            // btnAgregarContacto
+            // 
+            this.btnAgregarContacto.Image = global::aPresentationLayer.Properties.Resources.bullet_add_icon;
+            this.btnAgregarContacto.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnAgregarContacto.Location = new System.Drawing.Point(1096, 46);
+            this.btnAgregarContacto.Name = "btnAgregarContacto";
+            this.btnAgregarContacto.Size = new System.Drawing.Size(20, 21);
+            this.btnAgregarContacto.TabIndex = 35;
+            this.btnAgregarContacto.Click += new System.EventHandler(this.btnAgregarContacto_Click);
+            // 
+            // btnEliminarTelefonos
+            // 
+            this.btnEliminarTelefonos.Image = global::aPresentationLayer.Properties.Resources.Actions_dialog_close_icon;
+            this.btnEliminarTelefonos.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnEliminarTelefonos.Location = new System.Drawing.Point(747, 46);
+            this.btnEliminarTelefonos.Name = "btnEliminarTelefonos";
+            this.btnEliminarTelefonos.Size = new System.Drawing.Size(20, 21);
+            this.btnEliminarTelefonos.TabIndex = 34;
+            this.btnEliminarTelefonos.Click += new System.EventHandler(this.btnEliminarTelefonos_Click);
+            // 
+            // btnAgregarTelefonos
+            // 
+            this.btnAgregarTelefonos.Image = global::aPresentationLayer.Properties.Resources.bullet_add_icon;
+            this.btnAgregarTelefonos.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnAgregarTelefonos.Location = new System.Drawing.Point(721, 46);
+            this.btnAgregarTelefonos.Name = "btnAgregarTelefonos";
+            this.btnAgregarTelefonos.Size = new System.Drawing.Size(20, 21);
+            this.btnAgregarTelefonos.TabIndex = 33;
+            this.btnAgregarTelefonos.Click += new System.EventHandler(this.btnAgregarTelefonos_Click);
+            // 
+            // btnEliminarDireccion
+            // 
+            this.btnEliminarDireccion.Image = global::aPresentationLayer.Properties.Resources.Actions_dialog_close_icon;
+            this.btnEliminarDireccion.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnEliminarDireccion.Location = new System.Drawing.Point(579, 46);
+            this.btnEliminarDireccion.Name = "btnEliminarDireccion";
+            this.btnEliminarDireccion.Size = new System.Drawing.Size(20, 21);
+            this.btnEliminarDireccion.TabIndex = 32;
+            this.btnEliminarDireccion.Click += new System.EventHandler(this.btnEliminarDireccion_Click);
+            // 
+            // btnAgregarDireccion
+            // 
+            this.btnAgregarDireccion.Image = global::aPresentationLayer.Properties.Resources.bullet_add_icon;
+            this.btnAgregarDireccion.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnAgregarDireccion.Location = new System.Drawing.Point(553, 46);
+            this.btnAgregarDireccion.Name = "btnAgregarDireccion";
+            this.btnAgregarDireccion.Size = new System.Drawing.Size(20, 21);
+            this.btnAgregarDireccion.TabIndex = 31;
+            this.btnAgregarDireccion.Click += new System.EventHandler(this.btnAgregarDireccion_Click);
             // 
             // txtNombreContacto
             // 
@@ -314,31 +327,22 @@
             this.txtNombreContacto.Location = new System.Drawing.Point(773, 46);
             this.txtNombreContacto.MaxLength = 100;
             this.txtNombreContacto.Name = "txtNombreContacto";
-            this.txtNombreContacto.Size = new System.Drawing.Size(189, 21);
-            this.txtNombreContacto.TabIndex = 29;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Enabled = false;
-            this.txtTelefono.Location = new System.Drawing.Point(497, 46);
-            this.txtTelefono.MaxLength = 100;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(219, 21);
-            this.txtTelefono.TabIndex = 28;
+            this.txtNombreContacto.Size = new System.Drawing.Size(201, 21);
+            this.txtNombreContacto.TabIndex = 24;
             // 
             // txtDireccion
             // 
             this.txtDireccion.Enabled = false;
-            this.txtDireccion.Location = new System.Drawing.Point(11, 46);
+            this.txtDireccion.Location = new System.Drawing.Point(9, 46);
             this.txtDireccion.MaxLength = 100;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(428, 21);
-            this.txtDireccion.TabIndex = 27;
+            this.txtDireccion.Size = new System.Drawing.Size(538, 21);
+            this.txtDireccion.TabIndex = 22;
             // 
             // dtgContactos
             // 
             this.dtgContactos.AllowUserToOrderColumns = true;
-            this.dtgContactos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgContactos.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dtgContactos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dtgContactos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -353,7 +357,7 @@
             this.dtgContactos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgContactos.RowHeadersVisible = false;
             this.dtgContactos.Size = new System.Drawing.Size(369, 113);
-            this.dtgContactos.TabIndex = 26;
+            this.dtgContactos.TabIndex = 28;
             // 
             // NombreContacto
             // 
@@ -361,6 +365,7 @@
             this.NombreContacto.FillWeight = 108.6294F;
             this.NombreContacto.HeaderText = "Nombre de Contacto";
             this.NombreContacto.Name = "NombreContacto";
+            this.NombreContacto.ReadOnly = true;
             // 
             // TelefonoContacto
             // 
@@ -368,11 +373,12 @@
             this.TelefonoContacto.FillWeight = 91.37056F;
             this.TelefonoContacto.HeaderText = "Teléfono";
             this.TelefonoContacto.Name = "TelefonoContacto";
+            this.TelefonoContacto.ReadOnly = true;
             // 
             // dtgTelefonos
             // 
             this.dtgTelefonos.AllowUserToOrderColumns = true;
-            this.dtgTelefonos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgTelefonos.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dtgTelefonos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dtgTelefonos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -380,20 +386,21 @@
             this.Telefono});
             this.dtgTelefonos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgTelefonos.EnableHeadersVisualStyles = false;
-            this.dtgTelefonos.Location = new System.Drawing.Point(497, 73);
+            this.dtgTelefonos.Location = new System.Drawing.Point(605, 73);
             this.dtgTelefonos.Name = "dtgTelefonos";
             this.dtgTelefonos.ReadOnly = true;
             this.dtgTelefonos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgTelefonos.RowHeadersVisible = false;
             this.dtgTelefonos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgTelefonos.Size = new System.Drawing.Size(270, 113);
-            this.dtgTelefonos.TabIndex = 25;
+            this.dtgTelefonos.Size = new System.Drawing.Size(162, 113);
+            this.dtgTelefonos.TabIndex = 27;
             // 
             // Telefono
             // 
             this.Telefono.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Telefono.HeaderText = "Teléfonos";
             this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
             // 
             // labelControl3
             // 
@@ -405,7 +412,7 @@
             // 
             // dtgDirecciones
             // 
-            this.dtgDirecciones.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgDirecciones.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
             this.dtgDirecciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dtgDirecciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgDirecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -420,26 +427,19 @@
             this.dtgDirecciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgDirecciones.RowHeadersVisible = false;
             this.dtgDirecciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDirecciones.Size = new System.Drawing.Size(482, 113);
-            this.dtgDirecciones.TabIndex = 24;
+            this.dtgDirecciones.Size = new System.Drawing.Size(590, 113);
+            this.dtgDirecciones.TabIndex = 26;
             // 
             // Direccion
             // 
             this.Direccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Direccion.HeaderText = "Direccción";
             this.Direccion.Name = "Direccion";
-            // 
-            // lblContactos
-            // 
-            this.lblContactos.Location = new System.Drawing.Point(790, 27);
-            this.lblContactos.Name = "lblContactos";
-            this.lblContactos.Size = new System.Drawing.Size(110, 13);
-            this.lblContactos.TabIndex = 5;
-            this.lblContactos.Text = "Personas de Contacto:";
+            this.Direccion.ReadOnly = true;
             // 
             // lblTelefono
             // 
-            this.lblTelefono.Location = new System.Drawing.Point(497, 27);
+            this.lblTelefono.Location = new System.Drawing.Point(605, 27);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(51, 13);
             this.lblTelefono.TabIndex = 3;
@@ -1279,14 +1279,14 @@
             this.dtgHistorialClinico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FechaHistorial,
             this.Profesional});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgHistorialClinico.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgHistorialClinico.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgHistorialClinico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgHistorialClinico.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgHistorialClinico.Enabled = false;
@@ -1325,14 +1325,14 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.Observacion});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgConsultas.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgConsultas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgConsultas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgConsultas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dtgConsultas.Enabled = false;
@@ -1642,7 +1642,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Observacion;
-        private DevExpress.XtraEditors.LabelControl lblContactos;
         private DevExpress.XtraEditors.LabelControl lblTelefono;
         private DevExpress.XtraEditors.LabelControl lblDirecciones;
         private DevExpress.XtraEditors.GroupControl grpDatos;
@@ -1722,16 +1721,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreContacto;
         private System.Windows.Forms.DataGridViewTextBoxColumn TelefonoContacto;
         private System.Windows.Forms.MaskedTextBox txtIdentificacion;
-        private System.Windows.Forms.TextBox txtTelefonoContacto;
-        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtDireccion;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton btnAgregarDireccion;
+        private DevExpress.XtraEditors.SimpleButton btnEliminarDireccion;
+        private DevExpress.XtraEditors.SimpleButton btnEliminarContacto;
+        private DevExpress.XtraEditors.SimpleButton btnAgregarContacto;
+        private DevExpress.XtraEditors.SimpleButton btnEliminarTelefonos;
+        private DevExpress.XtraEditors.SimpleButton btnAgregarTelefonos;
         private System.Windows.Forms.TextBox txtNombreContacto;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.MaskedTextBox txtTelefonoContacto;
+        private System.Windows.Forms.MaskedTextBox txtTelefonos;
     }
 }

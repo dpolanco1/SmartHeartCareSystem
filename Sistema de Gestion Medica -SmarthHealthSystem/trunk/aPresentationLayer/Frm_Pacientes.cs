@@ -616,6 +616,68 @@ namespace aPresentationLayer
 
         }
 
+        private void btnAgregarDireccion_Click(object sender, EventArgs e)
+        {
+            if (txtDireccion.TextLength != 0 && txtDireccion.Text != string.Empty) 
+            {
+                dtgDirecciones.Rows.Add(txtDireccion.Text.Trim());
+                txtDireccion.Text = string.Empty;
+                txtDireccion.Focus();
+            }
+        }
+
+        private void btnEliminarDireccion_Click(object sender, EventArgs e)
+        {
+           
+            if (dtgDirecciones.Rows.Count != 0 && dtgDirecciones.Rows.Count !=1)
+            {
+                dtgDirecciones.Rows.Remove(dtgDirecciones.CurrentRow);
+            }
+
+        }
+
+        private void btnAgregarTelefonos_Click(object sender, EventArgs e)
+        {
+          
+
+            if (Bl_ValidarControles.ValidarTelefono(txtTelefonos) && txtTelefonos.Text != string.Empty)
+            {
+                dtgTelefonos.Rows.Add(txtTelefonos.Text.Trim());
+                txtTelefonos.Text = string.Empty;
+                txtTelefonos.Focus();
+
+            }
+         
+        }
+
+        private void btnEliminarTelefonos_Click(object sender, EventArgs e)
+        {
+            if (dtgTelefonos.Rows.Count != 0 && dtgTelefonos.Rows.Count !=1)
+            {
+                dtgTelefonos.Rows.Remove(dtgTelefonos.CurrentRow);
+            } 
+        }
+
+        private void btnAgregarContacto_Click(object sender, EventArgs e)
+        {
+            if (txtNombreContacto.TextLength != 0 && txtNombreContacto.Text != string.Empty && txtTelefonoContacto.TextLength != 0 && Bl_ValidarControles.ValidarTelefono(txtTelefonoContacto))
+            {
+                dtgContactos.Rows.Add(txtNombreContacto.Text.Trim(),txtTelefonoContacto.Text.Trim());
+                txtNombreContacto.Text = string.Empty;
+                txtTelefonoContacto.Text = string.Empty;
+                txtNombreContacto.Focus();
+            }
+        }
+
+        private void btnEliminarContacto_Click(object sender, EventArgs e)
+        {
+            if (dtgContactos.Rows.Count != 0 && dtgContactos.Rows.Count !=1 )
+            {
+                dtgContactos.Rows.Remove(dtgContactos.CurrentRow);
+            } 
+        }
+
+
    
     }
 }

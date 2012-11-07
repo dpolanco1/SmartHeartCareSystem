@@ -13,24 +13,27 @@ namespace BussinesLogicLayer
         static ErrorProvider ErrPro = new ErrorProvider();
 
         //Para Verificar que los Telefonos,Celulares,Fax estan llenado de Forma Correcta
-        public static void ValidarTelefono(MaskedTextBox Txt, string mensaje)
+        public static bool ValidarTelefono(MaskedTextBox Txt)
         {
+            bool flag;
             Txt.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
             if (Txt.Text.Length != 0 && Txt.MaskFull == false)
             {
-                ErrPro.SetError(Txt, mensaje);
+                flag = false;
                 Txt.Focus();
             }
             else
             {
-                ErrPro.SetError(Txt, null);
+                flag = true;
             }
+
+            return flag;
 
         }
 
         //Para Verificar que los Telefonos,Celulares,Fax estan llenado de Forma Correcta en Daragried
-        public static bool ValidarTelefonoGV(String Telefono)
+        public static bool ValidarTelefono(String Telefono)
         {
             string expresion = "[0-9]{9}";//declaramos nuestra expresion regular
             bool Flag;
