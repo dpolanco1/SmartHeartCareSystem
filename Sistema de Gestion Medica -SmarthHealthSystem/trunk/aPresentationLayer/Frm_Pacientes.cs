@@ -277,9 +277,10 @@ namespace aPresentationLayer
                 txtIdentificacion.Focus();
                
             }
-            else {
+            else 
+            {
                 txtIdentificacion.Mask = null;
-                txtIdentificacion.Enabled = true;
+               txtIdentificacion.Enabled = true;
                 txtIdentificacion.Focus();
             }
         }
@@ -289,6 +290,7 @@ namespace aPresentationLayer
             if (dtgListaPacientes.Rows.Count != 0) 
             {
                 tbpPrincipalPacientes.SelectedTabPage = tabPacientes;
+                txtIdentificacion.Enabled = false;
             }
            
         }
@@ -403,7 +405,12 @@ namespace aPresentationLayer
                     {
                         MessageBox.Show("La cedula proporcionada no es valida", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                         txtIdentificacion.Focus();
-                    } 
+                    }else if(!Bl_ValidarControles.ValidarEmail(txtEmail) && txtEmail.Text != string.Empty)
+                    {
+                        MessageBox.Show("El email no es valido, favor verifique", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        txtEmail.Focus();
+                    
+                    }
 
 
                     else
@@ -623,7 +630,8 @@ namespace aPresentationLayer
 
         private void btnAgregarDireccion_Click(object sender, EventArgs e)
         {
-            if (txtDireccion.TextLength != 0 && txtDireccion.Text != string.Empty && txtDireccion.Text != "Agregar una direccion para el paciente") 
+            if (txtDireccion.TextLength != 0 && txtDireccion.Text != string.Empty 
+                && txtDireccion.Text != "Agregar una direccion para el paciente" && txtDireccion.Enabled == true) 
             {
                 dtgDirecciones.Rows.Add(txtDireccion.Text.Trim());
                 txtDireccion.Text = string.Empty;
@@ -633,8 +641,8 @@ namespace aPresentationLayer
 
         private void btnEliminarDireccion_Click(object sender, EventArgs e)
         {
-           
-            if (dtgDirecciones.Rows.Count != 0 && dtgDirecciones.Rows.Count !=1)
+
+            if (dtgDirecciones.Rows.Count != 0 && dtgDirecciones.Rows.Count != 1 && txtDireccion.Enabled ==true)
             {
                 dtgDirecciones.Rows.Remove(dtgDirecciones.CurrentRow);
             }
@@ -658,7 +666,7 @@ namespace aPresentationLayer
 
         private void btnEliminarTelefonos_Click(object sender, EventArgs e)
         {
-            if (dtgTelefonos.Rows.Count != 0 && dtgTelefonos.Rows.Count !=1)
+            if (dtgTelefonos.Rows.Count != 0 && dtgTelefonos.Rows.Count != 1 && txtTelefonos.Enabled == true)
             {
                 dtgTelefonos.Rows.Remove(dtgTelefonos.CurrentRow);
             } 
@@ -667,7 +675,8 @@ namespace aPresentationLayer
         private void btnAgregarContacto_Click(object sender, EventArgs e)
         {
             if (txtNombreContacto.TextLength != 0 && txtNombreContacto.Text != string.Empty && txtTelefonoContacto.TextLength != 0
-                && Bl_ValidarControles.ValidarTelefono(txtTelefonoContacto) && txtNombreContacto.Text != "Agregar nombre de contacto")
+                && Bl_ValidarControles.ValidarTelefono(txtTelefonoContacto) && txtNombreContacto.Text != "Agregar nombre de contacto"
+                && txtNombreContacto.Enabled == true)
             {
                 txtTelefonoContacto.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
 
@@ -680,7 +689,7 @@ namespace aPresentationLayer
 
         private void btnEliminarContacto_Click(object sender, EventArgs e)
         {
-            if (dtgContactos.Rows.Count != 0 && dtgContactos.Rows.Count !=1 )
+            if (dtgContactos.Rows.Count != 0 && dtgContactos.Rows.Count != 1 && txtNombreContacto.Enabled == true)
             {
                 dtgContactos.Rows.Remove(dtgContactos.CurrentRow);
             } 
