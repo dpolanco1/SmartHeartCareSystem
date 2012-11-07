@@ -104,24 +104,28 @@ namespace BussinesLogicLayer
         }
 
         //Para verficiar que los Email esten Escrito Correctamente
-        public static void ValidarEmail(TextBox Txt)
+        public static bool ValidarEmail(TextBox Txt)
         {
+            bool flag;
+
             if (Txt.Text != string.Empty)
             {
                 if (System.Text.RegularExpressions.Regex.IsMatch(Txt.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
                 {
-                    ErrPro.SetError(Txt, null);
+                    flag = true;
                 }
                 else
                 {
-                    ErrPro.SetError(Txt, "El E-Mail Esta Incorrecto");
+                    flag = false;
                     Txt.Focus();
                 }
             }
             else
             {
-                ErrPro.SetError(Txt, null);
+                flag = false;
             }
+
+            return flag;
         }//fin del Metodo ValidarEmail
 
     }
