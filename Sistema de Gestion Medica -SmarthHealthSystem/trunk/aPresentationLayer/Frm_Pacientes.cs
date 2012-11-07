@@ -70,18 +70,6 @@ namespace aPresentationLayer
                 //Habilitos los Txt
                 Bl_AdministrarControles.HabilitarText(frm_pacientes);
 
-                //Habilitos los Txt
-                Bl_AdministrarControles.HabilitarDGV(frm_pacientes);
-
-                //Botones habilitados y Deshabilitados
-
-               /* btnNuevo.Enabled = false;
-                btnGuardar.Enabled = true;
-                btnEditar.Enabled = false;
-                btnCancelar.Enabled = true;
-                btnImprimir.Enabled = false;
-                btnEnviar.Enabled = false;
-                btnEliminar.Enabled = false;*/
 
                 //Desabilito el txtIDPaciente
                 txtIDPaciente.Enabled = false;
@@ -626,7 +614,7 @@ namespace aPresentationLayer
 
             }//fin del Using Scope
 
-        }//fin del boton guardar
+        }
 
    
     }

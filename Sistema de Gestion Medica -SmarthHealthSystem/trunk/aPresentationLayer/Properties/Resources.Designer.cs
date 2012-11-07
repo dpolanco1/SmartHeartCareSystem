@@ -60,9 +60,30 @@ namespace aPresentationLayer.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Actions_dialog_close_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-dialog-close-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap add {
             get {
                 object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap bullet_add_icon {
+            get {
+                object obj = ResourceManager.GetObject("bullet-add-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Button_Delete_icon {
+            get {
+                object obj = ResourceManager.GetObject("Button-Delete-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
