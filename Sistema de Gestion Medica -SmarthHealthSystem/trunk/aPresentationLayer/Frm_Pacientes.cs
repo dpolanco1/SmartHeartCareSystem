@@ -83,6 +83,11 @@ namespace aPresentationLayer
                 NombreContacto.Visible = true;
                 TelefonoContacto.Visible = true;
 
+                //Agrego una descripcion para el control
+
+                txtDireccion.Text = "Agregar una direccion para el paciente";
+                txtNombreContacto.Text = "Agregar nombre de contacto";
+
             }//fin del If 
         }//fin del Boton Nuevo
 
@@ -618,7 +623,7 @@ namespace aPresentationLayer
 
         private void btnAgregarDireccion_Click(object sender, EventArgs e)
         {
-            if (txtDireccion.TextLength != 0 && txtDireccion.Text != string.Empty) 
+            if (txtDireccion.TextLength != 0 && txtDireccion.Text != string.Empty && txtDireccion.Text != "Agregar una direccion para el paciente") 
             {
                 dtgDirecciones.Rows.Add(txtDireccion.Text.Trim());
                 txtDireccion.Text = string.Empty;
@@ -660,7 +665,8 @@ namespace aPresentationLayer
 
         private void btnAgregarContacto_Click(object sender, EventArgs e)
         {
-            if (txtNombreContacto.TextLength != 0 && txtNombreContacto.Text != string.Empty && txtTelefonoContacto.TextLength != 0 && Bl_ValidarControles.ValidarTelefono(txtTelefonoContacto))
+            if (txtNombreContacto.TextLength != 0 && txtNombreContacto.Text != string.Empty && txtTelefonoContacto.TextLength != 0
+                && Bl_ValidarControles.ValidarTelefono(txtTelefonoContacto) && txtNombreContacto.Text != "Agregar nombre de contacto")
             {
                 dtgContactos.Rows.Add(txtNombreContacto.Text.Trim(),txtTelefonoContacto.Text.Trim());
                 txtNombreContacto.Text = string.Empty;
@@ -677,6 +683,38 @@ namespace aPresentationLayer
             } 
         }
 
+        private void txtDireccion_Click(object sender, EventArgs e)
+        {
+            txtDireccion.Text = string.Empty;
+            txtDireccion.ForeColor = Color.Black;
+        }
+
+        private void txtDireccion_Leave(object sender, EventArgs e)
+        {
+            if (txtDireccion.TextLength == 0)
+            {
+                txtDireccion.Text = "Agregar una direccion para el paciente";
+                txtDireccion.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void txtNombreContacto_Click(object sender, EventArgs e)
+        {
+            txtNombreContacto.Text = string.Empty;
+            txtNombreContacto.ForeColor = Color.Black;
+        }
+
+        private void txtNombreContacto_Leave(object sender, EventArgs e)
+        {
+            if (txtNombreContacto.TextLength == 0)
+            {
+                txtNombreContacto.Text = "Agregar nombre de contacto";
+                txtNombreContacto.ForeColor = Color.DarkGray;
+            }
+
+        }
+
+ 
 
    
     }
