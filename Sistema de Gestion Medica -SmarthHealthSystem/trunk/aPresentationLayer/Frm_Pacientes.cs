@@ -647,6 +647,7 @@ namespace aPresentationLayer
 
             if (Bl_ValidarControles.ValidarTelefono(txtTelefonos) && txtTelefonos.Text != string.Empty)
             {
+                txtTelefonos.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
                 dtgTelefonos.Rows.Add(txtTelefonos.Text.Trim());
                 txtTelefonos.Text = string.Empty;
                 txtTelefonos.Focus();
@@ -668,6 +669,8 @@ namespace aPresentationLayer
             if (txtNombreContacto.TextLength != 0 && txtNombreContacto.Text != string.Empty && txtTelefonoContacto.TextLength != 0
                 && Bl_ValidarControles.ValidarTelefono(txtTelefonoContacto) && txtNombreContacto.Text != "Agregar nombre de contacto")
             {
+                txtTelefonoContacto.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+
                 dtgContactos.Rows.Add(txtNombreContacto.Text.Trim(),txtTelefonoContacto.Text.Trim());
                 txtNombreContacto.Text = string.Empty;
                 txtTelefonoContacto.Text = string.Empty;
