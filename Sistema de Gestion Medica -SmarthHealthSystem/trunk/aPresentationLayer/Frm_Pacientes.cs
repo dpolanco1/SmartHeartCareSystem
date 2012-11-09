@@ -59,7 +59,7 @@ namespace aPresentationLayer
                 Editando = False (me aseguro que este en false)*/
 
                 NUEVO = true;
-                CONSULTANDO = false;
+                EDITANDO = false;
 
                 //Limpio los Txt
                 Bl_AdministrarControles.VaciarText(frm_pacientes);
@@ -126,17 +126,7 @@ namespace aPresentationLayer
 
                 if (Respuesta == DialogResult.Yes) 
                 {
-                    //Botones habilitados y Deshabilitados
-
-                  /*  btnNuevo.Enabled = true;
-                    btnGuardar.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnCancelar.Enabled = false;
-                    btnImprimir.Enabled = true;
-                    btnEnviar.Enabled = true;
-                    btnEliminar.Enabled = true;*/
-
-
+                   
                     //Limpio los Txt
                     Bl_AdministrarControles.VaciarText(frm_pacientes);
 
@@ -369,10 +359,6 @@ namespace aPresentationLayer
             }
         }
 
-        private void Frm_Pacientes_Load(object sender, EventArgs e)
-        {
-            CONSULTANDO = true;
-        }
 
         private void Frm_Pacientes_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -380,6 +366,7 @@ namespace aPresentationLayer
             NUEVO = false;
             EDITANDO = false;
             CONSULTANDO = false;
+
         }
 
         private void btnGuardar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -388,12 +375,11 @@ namespace aPresentationLayer
 
             using (TransactionScope scope = new TransactionScope())
             {
-
+                //si la conexcion esta disponible
                 if (Bl_Paciente.VerificarConecxion())
                 {
-
-                    //Si tengo seleccionado el tabPacientes, los botones estan enable true y estoy en un registro Nuevo entonces que se realice 
-                    if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true)
+                    //Si tengo seleccionado el tabPacientes, los botones estan enable false que se realice realice 
+                    if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && Bl_ValidarControles.ValidartxtDesHabilitados(frm_pacientes))
                     {
                         //Validar los datos importantes
 
@@ -602,6 +588,7 @@ namespace aPresentationLayer
 
                                         NUEVO = true;
                                         EDITANDO = false;
+                                        CONSULTANDO = true;
 
                                     }//fin del if UPDATE
                                 }
@@ -611,7 +598,7 @@ namespace aPresentationLayer
                             }//FIN DEL TRY
                             catch (Exception)
                             {
-                                MessageBox.Show("Hay problemas de conexión a la base de datos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Error, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                             }
 
@@ -620,11 +607,9 @@ namespace aPresentationLayer
 
 
                     }//Fin del If TabControl
-
-
-                }
-                else 
+                else if(!Bl_Paciente.VerificarConecxion())
                 {
+                        //si no hay una conexcion a la base de datos entonces emitira este mensaje.
                     MessageBox.Show("Hay problemas de conexión a la base de datos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 
@@ -632,7 +617,7 @@ namespace aPresentationLayer
 
                 //si todo esta bien y es el fin del If Tabcontrol envia los datos al sevidor
                 scope.Complete();
-
+                }
             }//fin del Using Scope
 
         }
@@ -733,6 +718,11 @@ namespace aPresentationLayer
                 txtNombreContacto.ForeColor = Color.DarkGray;
             }
 
+        }
+
+        private void Frm_Pacientes_Load(object sender, EventArgs e)
+        {
+            CONSULTANDO = true;
         }
 
  

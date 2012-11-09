@@ -23,7 +23,7 @@ namespace BussinesLogicLayer
         public static bool Insert(Ent_Paciente entPaciente)
         {
             //instancio el metodo
-            Da_Paciente daPersona = GetDaPersona();
+            Da_Paciente daPaciente = GetDaPaciente();
 
             //Validaciones De Lugar
             bool flag = false;
@@ -49,7 +49,7 @@ namespace BussinesLogicLayer
         {
 
             //instancio el metodo
-            Da_Paciente daPersona = GetDaPersona();
+            Da_Paciente daPaciente = GetDaPaciente();
 
             //Validaciones De Lugar
             bool flag = false;
@@ -75,7 +75,7 @@ namespace BussinesLogicLayer
         public static bool Delete(int IDPaciente)
         {
             //instancio el metodo
-            Da_Paciente daPersona = GetDaPersona();
+            Da_Paciente daPaciente = GetDaPaciente();
 
             //Validaciones De Lugar
             bool flag = false;
@@ -105,10 +105,17 @@ namespace BussinesLogicLayer
             return Da_Paciente.SearchIDPaciente();
         }
 
-               public static bool VerificarConecxion()
+         public static bool VerificarConecxion()
         {
+            bool flag = false;
+
+            if (Da_Paciente.VerificarConecxion())
+            {
+                flag = true;
+            }
+            else { flag = false; }
          
-            return Da_Paciente.VerificarConecxion();
+            return flag ;
         }
     }
 
