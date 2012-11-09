@@ -262,35 +262,32 @@ namespace DataAccessLayer
 
         public static bool VerificarConecxion()
         {
-            bool flag;
-
+            bool flag = false;
+     
             try
             {
 
                 Da_Connection.Get.Open();
+            
 
-                if (Da_Connection.Get.State != null || Da_Connection.Get.State != ConnectionState.Closed)
-                {
+                flag = true;
 
-                    flag = true;
+              
+            }
+            catch (Exception)
+            {
 
-                }
-                else 
-                {
-                    flag = false;
-                
-                }
-
+                Console.WriteLine("");
             }
             finally
             {
 
-                if (Da_Connection.Get.State != ConnectionState.Closed)
+                if (Da_Connection.Get != null && Da_Connection.Get.State == ConnectionState.Open)
                 {
                     Da_Connection.Get.Close();
                 }
 
-            }//fin del Finally
+            }//fin del Finally*/
 
             return flag;
         }

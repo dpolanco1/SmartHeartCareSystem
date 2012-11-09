@@ -128,57 +128,5 @@ namespace BussinesLogicLayer
             return flag;
         }//fin del Metodo ValidarEmail
 
-
-        public static bool ValidartxtDesHabilitados(Control control)
-        {
-            bool flag = false;
-            foreach (Control contHijo in control.Controls)
-            {
-
-                if (contHijo.HasChildren) ValidartxtDesHabilitados(contHijo);
-                if (contHijo is TextBox && contHijo.Enabled == false)
-                {
-                    //esta deshabilitado
-                    flag = true;
-                }
-                else if (contHijo is ComboBox  && contHijo.Enabled == false)
-                {
-
-                    flag = true;
-                }
-                else if (contHijo is DateTimePicker && contHijo.Enabled == false)
-                {
-      
-                    flag = true;
-
-                }
-                else if (contHijo is NumericUpDown && contHijo.Enabled == false)
-                {
-                    
-                    flag = true;
-
-                }
-                else if (contHijo is RichTextBox && contHijo.Enabled == false)
-                {
-                    flag = true;
-
-                }
-                else if (contHijo is CheckBox && contHijo.Enabled == false)
-                {
-                 
-                    flag = true;
-
-                }
-                else if (contHijo is MaskedTextBox && contHijo.Enabled == false)
-                {
-
-                    flag = true;
-
-                }
-            
-            }
-            return flag;
-        }
-
     }
 }

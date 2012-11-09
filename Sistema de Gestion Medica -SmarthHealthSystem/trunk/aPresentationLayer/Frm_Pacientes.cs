@@ -379,7 +379,7 @@ namespace aPresentationLayer
                 if (Bl_Paciente.VerificarConecxion())
                 {
                     //Si tengo seleccionado el tabPacientes, los botones estan enable false que se realice realice 
-                    if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && Bl_ValidarControles.ValidartxtDesHabilitados(frm_pacientes))
+                    if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true)
                     {
                         //Validar los datos importantes
 
@@ -607,17 +607,19 @@ namespace aPresentationLayer
 
 
                     }//Fin del If TabControl
-                else if(!Bl_Paciente.VerificarConecxion())
-                {
-                        //si no hay una conexcion a la base de datos entonces emitira este mensaje.
-                    MessageBox.Show("Hay problemas de conexión a la base de datos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                
-                }
+              
 
                 //si todo esta bien y es el fin del If Tabcontrol envia los datos al sevidor
-                scope.Complete();
+             
                 }
+                else if (!Bl_Paciente.VerificarConecxion() && txtNombres.Enabled ==  true)
+                {
+                    //si no hay una conexcion a la base de datos entonces emitira este mensaje.
+                    MessageBox.Show("Hay problemas de conexión a la base de datos, comuniquese con el administrador del sistema, disculpe los inconvenientes", "Smarth Health Care", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+                scope.Complete();
             }//fin del Using Scope
 
         }
