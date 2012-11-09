@@ -13,10 +13,10 @@ namespace BussinesLogicLayer
     public class Bl_Paciente
     {
 
-        private static Da_Paciente GetDaPersona()//metodo singleton
+        private static Da_Paciente GetDaPaciente()//metodo singleton
         {
-            Da_Paciente daPersona = new Da_Paciente();
-            return daPersona;
+            Da_Paciente daPaciente = new Da_Paciente();
+            return daPaciente;
         }
 
 
@@ -103,6 +103,12 @@ namespace BussinesLogicLayer
         public static int SearchIDPaciente()
         {
             return Da_Paciente.SearchIDPaciente();
+        }
+
+               public static bool VerificarConecxion()
+        {
+         
+            return Da_Paciente.VerificarConecxion();
         }
     }
 

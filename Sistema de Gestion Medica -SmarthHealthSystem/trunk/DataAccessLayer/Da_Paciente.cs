@@ -259,5 +259,40 @@ namespace DataAccessLayer
 
             return 0;
         }
+
+        public static bool VerificarConecxion()
+        {
+            bool flag;
+
+            try
+            {
+
+                Da_Connection.Get.Open();
+
+                if (Da_Connection.Get.State != null || Da_Connection.Get.State != ConnectionState.Closed)
+                {
+
+                    flag = true;
+
+                }
+                else 
+                {
+                    flag = false;
+                
+                }
+
+            }
+            finally
+            {
+
+                if (Da_Connection.Get.State != ConnectionState.Closed)
+                {
+                    Da_Connection.Get.Close();
+                }
+
+            }//fin del Finally
+
+            return flag;
+        }
     }
 }
