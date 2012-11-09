@@ -386,7 +386,7 @@ namespace aPresentationLayer
                 //si la conexcion esta disponible
                 if (Bl_Paciente.VerificarConecxion())
                 {
-                    //Si tengo seleccionado el tabPacientes, los botones estan enable false que se realice realice 
+                    //Si tengo seleccionado el tabPacientes, los botones estan enable false  
                     if (tbpPrincipalPacientes.SelectedTabPage == tabPacientes && txtNombres.Enabled == true)
                     {
                         //Validar los datos importantes
@@ -787,7 +787,15 @@ namespace aPresentationLayer
       
         }
 
- 
+        private void txtDireccion_Enter(object sender, EventArgs e)
+        {
+            txtDireccion.ForeColor = Color.Black;
+        }
+
+        private void txtNombreContacto_Enter(object sender, EventArgs e)
+        {
+            txtNombreContacto.ForeColor = Color.Black;
+        }
 
    
     }
