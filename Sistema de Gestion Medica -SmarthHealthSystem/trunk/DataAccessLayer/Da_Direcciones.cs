@@ -23,7 +23,7 @@ namespace DataAccessLayer
             {
 
                 //Utilizo la clase Command Insertar en un StroreProcedure
-                SqlCommand command = new SqlCommand("Spr_InsertDirecciones", Da_Connection.Get);
+                SqlCommand command = new SqlCommand("Spr_InsertDirecciones...", Da_Connection.Get);
                 command.CommandType = CommandType.StoredProcedure;
 
                 //Abro la conecxion 

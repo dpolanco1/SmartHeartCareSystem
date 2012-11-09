@@ -1509,6 +1509,7 @@
             this.btnEnviar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnEnviar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEnviar_ItemClick);
             // 
             // btnEliminar
             // 
