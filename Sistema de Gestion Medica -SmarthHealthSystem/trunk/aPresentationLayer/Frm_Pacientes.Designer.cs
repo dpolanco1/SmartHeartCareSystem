@@ -116,6 +116,9 @@
             this.Profesional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpConsultas = new DevExpress.XtraTab.XtraTabPage();
             this.dtgConsultas = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabListaPacientes = new DevExpress.XtraTab.XtraTabPage();
             this.dtgListaPacientes = new System.Windows.Forms.DataGridView();
             this.grpFiltroListaPacientes = new DevExpress.XtraEditors.GroupControl();
@@ -136,9 +139,6 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnCargar = new DevExpress.XtraEditors.SimpleButton();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tbpPrincipalPacientes)).BeginInit();
             this.tbpPrincipalPacientes.SuspendLayout();
             this.tabPacientes.SuspendLayout();
@@ -348,8 +348,8 @@
             // dtgContactos
             // 
             this.dtgContactos.AllowUserToOrderColumns = true;
-            this.dtgContactos.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
-            this.dtgContactos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dtgContactos.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dtgContactos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dtgContactos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgContactos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -384,7 +384,7 @@
             // dtgTelefonos
             // 
             this.dtgTelefonos.AllowUserToOrderColumns = true;
-            this.dtgTelefonos.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dtgTelefonos.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgTelefonos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dtgTelefonos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgTelefonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -418,7 +418,7 @@
             // 
             // dtgDirecciones
             // 
-            this.dtgDirecciones.BackgroundColor = System.Drawing.SystemColors.ScrollBar;
+            this.dtgDirecciones.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dtgDirecciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dtgDirecciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgDirecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1349,6 +1349,21 @@
             this.dtgConsultas.Size = new System.Drawing.Size(1141, 129);
             this.dtgConsultas.TabIndex = 2;
             // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Fecha ";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Profesional";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // Motivo
+            // 
+            this.Motivo.HeaderText = "Motivo";
+            this.Motivo.Name = "Motivo";
+            // 
             // tabListaPacientes
             // 
             this.tabListaPacientes.Controls.Add(this.dtgListaPacientes);
@@ -1563,21 +1578,6 @@
             this.btnCargar.TabIndex = 0;
             this.btnCargar.Text = "Cargar Pacientes";
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Fecha ";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Profesional";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // Motivo
-            // 
-            this.Motivo.HeaderText = "Motivo";
-            this.Motivo.Name = "Motivo";
             // 
             // Frm_Pacientes
             // 
