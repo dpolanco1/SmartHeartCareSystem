@@ -10,6 +10,7 @@ using System.Xml;
 using BussinesLogicLayer;
 using DevExpress.XtraEditors;
 using EntidadesLayer;
+using aPresentationLayer.Reportes;
 
 
 
@@ -789,6 +790,12 @@ namespace aPresentationLayer
         {
             txtNombreContacto.Text = string.Empty;
             txtNombreContacto.ForeColor = Color.Black;
+        }
+
+        private void btnImprimir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Rpt_DatosPacientes reportePacientes = new Rpt_DatosPacientes();
+            reportePacientes.ShowPreview();
         }
 
    

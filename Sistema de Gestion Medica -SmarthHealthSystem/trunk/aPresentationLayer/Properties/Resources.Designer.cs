@@ -95,6 +95,13 @@ namespace aPresentationLayer.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap corazón_1000 {
+            get {
+                object obj = ResourceManager.GetObject("corazón 1000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Delete {
             get {
                 object obj = ResourceManager.GetObject("Delete", resourceCulture);
