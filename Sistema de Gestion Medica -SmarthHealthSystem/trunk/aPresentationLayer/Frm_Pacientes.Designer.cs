@@ -330,7 +330,6 @@
             this.txtNombreContacto.Name = "txtNombreContacto";
             this.txtNombreContacto.Size = new System.Drawing.Size(201, 21);
             this.txtNombreContacto.TabIndex = 24;
-            this.txtNombreContacto.Click += new System.EventHandler(this.txtNombreContacto_Click);
             this.txtNombreContacto.Enter += new System.EventHandler(this.txtNombreContacto_Enter);
             this.txtNombreContacto.Leave += new System.EventHandler(this.txtNombreContacto_Leave);
             // 
@@ -343,7 +342,6 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(538, 21);
             this.txtDireccion.TabIndex = 22;
-            this.txtDireccion.Click += new System.EventHandler(this.txtDireccion_Click);
             this.txtDireccion.Enter += new System.EventHandler(this.txtDireccion_Enter);
             this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
             // 
@@ -1496,7 +1494,6 @@
             this.btnEnviar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.btnEnviar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEnviar_ItemClick);
             // 
             // btnEliminar
             // 

@@ -90,7 +90,9 @@ namespace aPresentationLayer
                 //Agrego una descripcion para el control
 
                 txtDireccion.Text = "Agregar una direccion para el paciente";
+                txtDireccion.ForeColor = Color.DarkGray;
                 txtNombreContacto.Text = "Agregar nombre de contacto";
+                txtNombreContacto.ForeColor = Color.DarkGray;
 
             }//fin del If 
         }//fin del Boton Nuevo
@@ -134,18 +136,19 @@ namespace aPresentationLayer
                     EDITANDO = false;
                     CONSULTANDO = false;
 
-                   
+                    //Deshabilito los Txt
+                    Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
+
+                    //Deshabilito los Datagried
+                    Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
+
                     //Limpio los Txt
                     Bl_AdministrarControles.VaciarText(frm_pacientes);
 
                     //Limpio los DatagriedView
                     Bl_AdministrarControles.VaciarDGV(frm_pacientes);
 
-                    //Deshabilito los Txt
-                    Bl_AdministrarControles.DeshabilitarText(frm_pacientes);
 
-                    //Deshabilito los Datagried
-                    Bl_AdministrarControles.DeshabilitarDGV(frm_pacientes);
 
                 }
              
@@ -746,32 +749,29 @@ namespace aPresentationLayer
             } 
         }
 
-        private void txtDireccion_Click(object sender, EventArgs e)
-        {
-            txtDireccion.Text = string.Empty;
-            txtDireccion.ForeColor = Color.Black;
-        }
 
         private void txtDireccion_Leave(object sender, EventArgs e)
         {
+            if (txtDireccion.Text == string.Empty) 
             
+            {
                 txtDireccion.Text = "Agregar una direccion para el paciente";
                 txtDireccion.ForeColor = Color.DarkGray;
+            }
+               
             
         }
 
-        private void txtNombreContacto_Click(object sender, EventArgs e)
-        {
-            txtNombreContacto.Text = string.Empty;
-            txtNombreContacto.ForeColor = Color.Black;
-        }
 
         private void txtNombreContacto_Leave(object sender, EventArgs e)
         {
-              txtNombreContacto.Text = "Agregar nombre de contacto";
-                txtNombreContacto.ForeColor = Color.DarkGray;
-            
+            if (txtNombreContacto.Text == string.Empty)
+            {
 
+                txtNombreContacto.Text = "Agregar nombre de contacto";
+                txtNombreContacto.ForeColor = Color.DarkGray;
+            }
+            
         }
 
         private void Frm_Pacientes_Load(object sender, EventArgs e)
@@ -779,18 +779,15 @@ namespace aPresentationLayer
             CONSULTANDO = true;
         }
 
-        private void btnEnviar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-        
-        }
-
         private void txtDireccion_Enter(object sender, EventArgs e)
         {
+            txtDireccion.Text = string.Empty;
             txtDireccion.ForeColor = Color.Black;
         }
 
         private void txtNombreContacto_Enter(object sender, EventArgs e)
         {
+            txtNombreContacto.Text = string.Empty;
             txtNombreContacto.ForeColor = Color.Black;
         }
 
