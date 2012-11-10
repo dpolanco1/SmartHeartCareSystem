@@ -754,11 +754,10 @@ namespace aPresentationLayer
 
         private void txtDireccion_Leave(object sender, EventArgs e)
         {
-            if (txtDireccion.TextLength == 0)
-            {
+            
                 txtDireccion.Text = "Agregar una direccion para el paciente";
                 txtDireccion.ForeColor = Color.DarkGray;
-            }
+            
         }
 
         private void txtNombreContacto_Click(object sender, EventArgs e)
@@ -769,11 +768,9 @@ namespace aPresentationLayer
 
         private void txtNombreContacto_Leave(object sender, EventArgs e)
         {
-            if (txtNombreContacto.TextLength == 0)
-            {
-                txtNombreContacto.Text = "Agregar nombre de contacto";
+              txtNombreContacto.Text = "Agregar nombre de contacto";
                 txtNombreContacto.ForeColor = Color.DarkGray;
-            }
+            
 
         }
 
@@ -784,7 +781,7 @@ namespace aPresentationLayer
 
         private void btnEnviar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-      
+        
         }
 
         private void txtDireccion_Enter(object sender, EventArgs e)
