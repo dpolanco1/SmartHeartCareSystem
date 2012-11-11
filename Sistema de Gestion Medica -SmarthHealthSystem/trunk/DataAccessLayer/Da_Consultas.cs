@@ -21,8 +21,8 @@ namespace DataAccessLayer
                 SqlCommand command = new SqlCommand("sp_insertarconsulta", Da_Connection.Get);
                 command.CommandType = CommandType.StoredProcedure;
                 Da_Connection.Get.Open();
-                command.Parameters.AddWithValue("@idpaciente", EntidadConsulta.IDPaciente);
                 command.Parameters.AddWithValue("@idmedico", EntidadConsulta.IDMedico);
+                command.Parameters.AddWithValue("@idpaciente", EntidadConsulta.IDPaciente);
                 command.Parameters.AddWithValue("@motivo", EntidadConsulta.Motivo);
                 command.Parameters.AddWithValue("@diagnostico", EntidadConsulta.Diagnostico);
                 command.Parameters.AddWithValue("@fechaconsulta", EntidadConsulta.Fecha);
@@ -44,7 +44,7 @@ namespace DataAccessLayer
                     Da_Connection.Get.Close();
                 }
 
-            }//y eso vaina? para llenar los combobox pero mejor pasale un metodo es lo mismo men que cuando inicie la app venga llenos ok
+            }
             return flag;
         }
     }

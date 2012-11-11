@@ -20,7 +20,7 @@ namespace BussinesLogicLayer
                 if (contHijo.HasChildren) VaciarText(contHijo);
                 if (contHijo is TextBox)
                 {
-                    contHijo.Text = String.Empty;
+                    contHijo.Text = string.Empty;
                 } else if (contHijo is ComboBox) 
                 {
                     contHijo.Text = String.Empty;

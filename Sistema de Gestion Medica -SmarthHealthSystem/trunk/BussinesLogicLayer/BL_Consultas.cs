@@ -16,16 +16,16 @@ namespace BussinesLogicLayer
         }
 
 
-        public static bool Insert(Ent_Consultas entConsulta, ref string error)
+        public static bool Insert(Ent_Consultas entConsulta)
         {
             //instancio el metodo
             Da_Consultas daConsulta = GetDaConsulta();
-            error = "";
+            
             //Validaciones De Lugar
             bool flag = false;
             try
             {
-                if (String.IsNullOrEmpty(entConsulta.Motivo) || String.IsNullOrEmpty(entConsulta.Diagnostico) || entConsulta.IDPaciente <= 0 || entConsulta.IDMedico <= 0)
+                if (String.IsNullOrEmpty(entConsulta.Motivo) || String.IsNullOrEmpty(entConsulta.Diagnostico) || entConsulta.IDPaciente == null || entConsulta.IDMedico == null)
                 {
 
                     flag = false;
@@ -38,7 +38,19 @@ namespace BussinesLogicLayer
 
                 }
             }
-            catch (Exception err) { error = err.Message; }
+            catch (Exception err) { throw new Exception(err.Message); }
+            return flag;
+        }
+        public static bool VerificarConexion()
+        {
+            bool flag = false;
+
+            if (Da_Paciente.VerificarConecxion())
+            {
+                flag = true;
+            }
+            else { flag = false; }
+
             return flag;
         }
     }
