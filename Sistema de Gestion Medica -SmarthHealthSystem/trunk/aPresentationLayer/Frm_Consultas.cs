@@ -38,21 +38,6 @@ namespace aPresentationLayer
             InitializeComponent();
         }
 
-         private void Frm_Consultas_Load(object sender, EventArgs e)
-        {
-            searchMedico.Properties.DataSource = BL_Consultas.GetAllMedicos();
-            searchMedico.Properties.ValueMember = "idmedico";
-            searchMedico.Properties.DisplayMember = "Medico";
-          
-
-            searchPaciente.Properties.DataSource = BL_Consultas.GetAllPacientes();
-            searchPaciente.Properties.ValueMember = "idpaciente";
-            searchPaciente.Properties.DisplayMember = "Paciente";
-            
-
-           
-        }
-
         private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (tabPrincipalConsultas.SelectedTabPage == tabConsultas)
@@ -71,21 +56,18 @@ namespace aPresentationLayer
                 txtdiagnostico.ForeColor = Color.DarkGray;
                 flag = 0;
                 flag2 = 0;
-                
             }
         }
 
 
         private void txtMotivo_Enter(object sender, EventArgs e)
         {
-            
             if (flag == 0)
             {
                 txtMotivo.Text = string.Empty;
                 txtMotivo.ForeColor = Color.Black;
                 flag = 1;
             }
-            
         }
 
         private void txtMotivo_Leave(object sender, EventArgs e)
@@ -118,8 +100,6 @@ namespace aPresentationLayer
             }
         }
 
-       
-
         private void searchLookUpEdit1View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             txtNombremedico.Text = searchMedico.Properties.View.GetFocusedRowCellValue("Medico").ToString();
@@ -133,24 +113,22 @@ namespace aPresentationLayer
             txtpeso.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("peso").ToString();
             txtaltura.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("altura").ToString();
             txttiposangre.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("tiposangre").ToString();
-
         }
         #region Funcion obtener edad
         private static int Edad(DateTime fechaNacimiento)
-            {
-             //Obtengo la diferencia en años.
-             int edad = DateTime.Now.Year - fechaNacimiento.Year;
+        {
+            //Obtengo la diferencia en años.
+            int edad = DateTime.Now.Year - fechaNacimiento.Year;
 
-             //Obtengo la fecha de cumpleaños de este año.
-             DateTime nacimientoAhora = fechaNacimiento.AddYears(edad);
-             //Le resto un año si la fecha actual es anterior 
-             //al día de nacimiento.
-             if (DateTime.Now.CompareTo(nacimientoAhora) < 0)
-                edad--; 
-             
+            //Obtengo la fecha de cumpleaños de este año.
+            DateTime nacimientoAhora = fechaNacimiento.AddYears(edad);
+            //Le resto un año si la fecha actual es anterior 
+            //al día de nacimiento.
+            if (DateTime.Now.CompareTo(nacimientoAhora) < 0)
+                edad--;
 
-             return edad;
-            }
+            return edad;
+        }
         #endregion
 
         private void btnGuardar_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -165,18 +143,16 @@ namespace aPresentationLayer
                         consulta.IDMedico = Convert.ToInt32(searchMedico.Properties.View.GetFocusedRowCellValue("idmedico"));
                         consulta.Motivo = txtMotivo.Text;
                         consulta.Diagnostico = txtdiagnostico.Text;
-                        if (BL_Consultas.Insert(consulta) && flag== 1 && flag2==1)
+                        if (BL_Consultas.Insert(consulta) && flag == 1 && flag2 == 1)
                         {
                             MessageBox.Show("Consulta registrada", "SmartHealthCare", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Bl_AdministrarControles.DeshabilitarText(this);
                             Bl_AdministrarControles.VaciarText(this);
                             searchMedico.Enabled = false;
                             searchPaciente.Enabled = false;
-                            
                         }
                         else
                             MessageBox.Show("Error guardando la consulta, verifique campos", "SmartHealthCare", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     }
                 }
                 else
@@ -188,13 +164,24 @@ namespace aPresentationLayer
 
         private void btnCancelar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           /* Bl_AdministrarControles.DeshabilitarText(this);
+            Bl_AdministrarControles.DeshabilitarText(this);
             Bl_AdministrarControles.VaciarText(this);
             searchMedico.Enabled = false;
-            searchPaciente.Enabled = false;*/
-            MessageBox.Show(searchMedico.Properties.View.GetFocusedRowCellValue("idmedico").ToString());
-            MessageBox.Show(searchPaciente.Properties.View.GetFocusedRowCellValue("idpaciente").ToString());
+            searchPaciente.Enabled = false;
         }
 
+        private void Frm_Consultas_Activated(object sender, EventArgs e)
+        {
+            searchMedico.Properties.DataSource = BL_Consultas.GetAllMedicos();
+            searchMedico.Properties.ValueMember = "idmedico";
+            searchMedico.Properties.DisplayMember = "Medico";
+
+
+            searchPaciente.Properties.DataSource = BL_Consultas.GetAllPacientes();
+            searchPaciente.Properties.ValueMember = "idpaciente";
+            searchPaciente.Properties.DisplayMember = "Paciente";
+        }
+
+  
     }
 }

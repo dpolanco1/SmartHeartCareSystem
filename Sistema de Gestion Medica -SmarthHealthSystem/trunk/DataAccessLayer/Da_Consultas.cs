@@ -25,7 +25,7 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@idpaciente", EntidadConsulta.IDPaciente);
                     command.Parameters.AddWithValue("@motivo", EntidadConsulta.Motivo);
                     command.Parameters.AddWithValue("@diagnostico", EntidadConsulta.Diagnostico);
-                    command.Parameters.AddWithValue("@fechaconsulta", EntidadConsulta.Fecha);
+                    command.Parameters.AddWithValue("@fechaconsulta", Ent_Consultas.Fecha);
                     int succed = Convert.ToInt16(command.ExecuteNonQuery());
                     if (succed > 0)
                         flag = true;

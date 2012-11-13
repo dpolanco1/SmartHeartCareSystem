@@ -12,6 +12,6 @@ namespace EntidadesLayer
         public int IDMedico { get; set; }
         public string Motivo { get; set; }
         public string Diagnostico { get; set; }
-        public DateTime Fecha { get { return DateTime.Today; } }
+        public static DateTime Fecha { get { return DateTime.Today; } }
     }
 }
