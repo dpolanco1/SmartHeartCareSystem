@@ -32,7 +32,7 @@
             this.tabHistorialClinico = new DevExpress.XtraTab.XtraTabControl();
             this.tabHistorial = new DevExpress.XtraTab.XtraTabPage();
             this.grpAntecedenteFamiliar = new DevExpress.XtraEditors.GroupControl();
-            this.txtDescripcion3 = new System.Windows.Forms.TextBox();
+            this.txtDescripcionFamiliares = new System.Windows.Forms.TextBox();
             this.memoExEdit3 = new DevExpress.XtraEditors.MemoExEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.memoExEdit2 = new DevExpress.XtraEditors.MemoExEdit();
@@ -40,13 +40,10 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.checkBox38 = new System.Windows.Forms.CheckBox();
             this.grpAntecedenteFarmaceuticos = new DevExpress.XtraEditors.GroupControl();
-            this.txtDescripcion2 = new System.Windows.Forms.TextBox();
-            this.checkBox35 = new System.Windows.Forms.CheckBox();
+            this.txtDescripcionFarmacologico = new System.Windows.Forms.TextBox();
             this.checkBox34 = new System.Windows.Forms.CheckBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.checkBox26 = new System.Windows.Forms.CheckBox();
             this.checkBox28 = new System.Windows.Forms.CheckBox();
             this.checkBox29 = new System.Windows.Forms.CheckBox();
             this.checkBox30 = new System.Windows.Forms.CheckBox();
@@ -54,10 +51,8 @@
             this.checkBox32 = new System.Windows.Forms.CheckBox();
             this.checkBox33 = new System.Windows.Forms.CheckBox();
             this.grpAntecedentesHabitosToxicos = new DevExpress.XtraEditors.GroupControl();
-            this.txtDescripcion1 = new System.Windows.Forms.TextBox();
+            this.txtDescripcionToxico = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
-            this.chkOtros = new System.Windows.Forms.CheckBox();
             this.chkDrogas = new System.Windows.Forms.CheckBox();
             this.chkTe = new System.Windows.Forms.CheckBox();
             this.chkCafe = new System.Windows.Forms.CheckBox();
@@ -91,22 +86,22 @@
             this.chkInsuficienciaCardiaca = new System.Windows.Forms.CheckBox();
             this.chkInfartoMioPrev = new System.Windows.Forms.CheckBox();
             this.grpSintomasyEvolucion = new DevExpress.XtraEditors.GroupControl();
-            this.txtSintomas = new System.Windows.Forms.TextBox();
+            this.txtSintomasyEvolucion = new System.Windows.Forms.TextBox();
             this.grpDatosGenerales = new DevExpress.XtraEditors.GroupControl();
             this.txtIDpaciente = new System.Windows.Forms.TextBox();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
-            this.txtHistorial = new System.Windows.Forms.TextBox();
+            this.txtIDHistorial = new System.Windows.Forms.TextBox();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.txtRemitidoPor = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.lblPeso = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.lblRemitente = new DevExpress.XtraEditors.LabelControl();
-            this.searchLookUpEdit1 = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.txtBuscarPaciente = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblBuscar = new DevExpress.XtraEditors.LabelControl();
             this.lblEdad = new DevExpress.XtraEditors.LabelControl();
@@ -150,7 +145,7 @@
             this.grpSintomasyEvolucion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpDatosGenerales)).BeginInit();
             this.grpDatosGenerales.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBuscarPaciente.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             this.tabListaHistorialesClinicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -184,7 +179,7 @@
             // 
             // grpAntecedenteFamiliar
             // 
-            this.grpAntecedenteFamiliar.Controls.Add(this.txtDescripcion3);
+            this.grpAntecedenteFamiliar.Controls.Add(this.txtDescripcionFamiliares);
             this.grpAntecedenteFamiliar.Controls.Add(this.memoExEdit3);
             this.grpAntecedenteFamiliar.Controls.Add(this.labelControl6);
             this.grpAntecedenteFamiliar.Controls.Add(this.memoExEdit2);
@@ -192,36 +187,35 @@
             this.grpAntecedenteFamiliar.Controls.Add(this.labelControl5);
             this.grpAntecedenteFamiliar.Controls.Add(this.labelControl4);
             this.grpAntecedenteFamiliar.Controls.Add(this.labelControl3);
-            this.grpAntecedenteFamiliar.Controls.Add(this.checkBox38);
             this.grpAntecedenteFamiliar.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpAntecedenteFamiliar.Location = new System.Drawing.Point(0, 522);
             this.grpAntecedenteFamiliar.Name = "grpAntecedenteFamiliar";
-            this.grpAntecedenteFamiliar.Size = new System.Drawing.Size(1104, 112);
+            this.grpAntecedenteFamiliar.Size = new System.Drawing.Size(1104, 75);
             this.grpAntecedenteFamiliar.TabIndex = 11;
             this.grpAntecedenteFamiliar.Text = "Antecedentes Familiares:";
             // 
-            // txtDescripcion3
+            // txtDescripcionFamiliares
             // 
-            this.txtDescripcion3.Enabled = false;
-            this.txtDescripcion3.Location = new System.Drawing.Point(624, 24);
-            this.txtDescripcion3.Multiline = true;
-            this.txtDescripcion3.Name = "txtDescripcion3";
-            this.txtDescripcion3.Size = new System.Drawing.Size(378, 48);
-            this.txtDescripcion3.TabIndex = 65;
+            this.txtDescripcionFamiliares.Enabled = false;
+            this.txtDescripcionFamiliares.Location = new System.Drawing.Point(566, 24);
+            this.txtDescripcionFamiliares.Multiline = true;
+            this.txtDescripcionFamiliares.Name = "txtDescripcionFamiliares";
+            this.txtDescripcionFamiliares.Size = new System.Drawing.Size(479, 48);
+            this.txtDescripcionFamiliares.TabIndex = 65;
             // 
             // memoExEdit3
             // 
             this.memoExEdit3.Enabled = false;
-            this.memoExEdit3.Location = new System.Drawing.Point(416, 29);
+            this.memoExEdit3.Location = new System.Drawing.Point(376, 29);
             this.memoExEdit3.Name = "memoExEdit3";
             this.memoExEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.memoExEdit3.Size = new System.Drawing.Size(135, 20);
+            this.memoExEdit3.Size = new System.Drawing.Size(104, 20);
             this.memoExEdit3.TabIndex = 58;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(380, 32);
+            this.labelControl6.Location = new System.Drawing.Point(340, 32);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(24, 13);
             this.labelControl6.TabIndex = 57;
@@ -230,11 +224,11 @@
             // memoExEdit2
             // 
             this.memoExEdit2.Enabled = false;
-            this.memoExEdit2.Location = new System.Drawing.Point(228, 29);
+            this.memoExEdit2.Location = new System.Drawing.Point(213, 29);
             this.memoExEdit2.Name = "memoExEdit2";
             this.memoExEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.memoExEdit2.Size = new System.Drawing.Size(135, 20);
+            this.memoExEdit2.Size = new System.Drawing.Size(104, 20);
             this.memoExEdit2.TabIndex = 56;
             // 
             // memoExEdit1
@@ -244,12 +238,12 @@
             this.memoExEdit1.Name = "memoExEdit1";
             this.memoExEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.memoExEdit1.Size = new System.Drawing.Size(135, 20);
+            this.memoExEdit1.Size = new System.Drawing.Size(104, 20);
             this.memoExEdit1.TabIndex = 55;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(192, 32);
+            this.labelControl5.Location = new System.Drawing.Point(177, 32);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(30, 13);
             this.labelControl5.TabIndex = 54;
@@ -265,31 +259,17 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(566, 25);
+            this.labelControl3.Location = new System.Drawing.Point(498, 24);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(52, 13);
             this.labelControl3.TabIndex = 49;
             this.labelControl3.Text = "Descrición:";
             // 
-            // checkBox38
-            // 
-            this.checkBox38.AutoSize = true;
-            this.checkBox38.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox38.Enabled = false;
-            this.checkBox38.Location = new System.Drawing.Point(1008, 35);
-            this.checkBox38.Name = "checkBox38";
-            this.checkBox38.Size = new System.Drawing.Size(53, 17);
-            this.checkBox38.TabIndex = 24;
-            this.checkBox38.Text = "Otros";
-            this.checkBox38.UseVisualStyleBackColor = true;
-            // 
             // grpAntecedenteFarmaceuticos
             // 
-            this.grpAntecedenteFarmaceuticos.Controls.Add(this.txtDescripcion2);
-            this.grpAntecedenteFarmaceuticos.Controls.Add(this.checkBox35);
+            this.grpAntecedenteFarmaceuticos.Controls.Add(this.txtDescripcionFarmacologico);
             this.grpAntecedenteFarmaceuticos.Controls.Add(this.checkBox34);
             this.grpAntecedenteFarmaceuticos.Controls.Add(this.labelControl2);
-            this.grpAntecedenteFarmaceuticos.Controls.Add(this.checkBox26);
             this.grpAntecedenteFarmaceuticos.Controls.Add(this.checkBox28);
             this.grpAntecedenteFarmaceuticos.Controls.Add(this.checkBox29);
             this.grpAntecedenteFarmaceuticos.Controls.Add(this.checkBox30);
@@ -303,33 +283,21 @@
             this.grpAntecedenteFarmaceuticos.TabIndex = 10;
             this.grpAntecedenteFarmaceuticos.Text = "Hábitos Farmaologicos:";
             // 
-            // txtDescripcion2
+            // txtDescripcionFarmacologico
             // 
-            this.txtDescripcion2.Enabled = false;
-            this.txtDescripcion2.Location = new System.Drawing.Point(624, 16);
-            this.txtDescripcion2.Multiline = true;
-            this.txtDescripcion2.Name = "txtDescripcion2";
-            this.txtDescripcion2.Size = new System.Drawing.Size(378, 48);
-            this.txtDescripcion2.TabIndex = 66;
-            // 
-            // checkBox35
-            // 
-            this.checkBox35.AutoSize = true;
-            this.checkBox35.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox35.Enabled = false;
-            this.checkBox35.Location = new System.Drawing.Point(450, 48);
-            this.checkBox35.Name = "checkBox35";
-            this.checkBox35.Size = new System.Drawing.Size(53, 17);
-            this.checkBox35.TabIndex = 51;
-            this.checkBox35.Text = "Otros";
-            this.checkBox35.UseVisualStyleBackColor = true;
+            this.txtDescripcionFarmacologico.Enabled = false;
+            this.txtDescripcionFarmacologico.Location = new System.Drawing.Point(566, 25);
+            this.txtDescripcionFarmacologico.Multiline = true;
+            this.txtDescripcionFarmacologico.Name = "txtDescripcionFarmacologico";
+            this.txtDescripcionFarmacologico.Size = new System.Drawing.Size(479, 39);
+            this.txtDescripcionFarmacologico.TabIndex = 66;
             // 
             // checkBox34
             // 
             this.checkBox34.AutoSize = true;
             this.checkBox34.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBox34.Enabled = false;
-            this.checkBox34.Location = new System.Drawing.Point(427, 29);
+            this.checkBox34.Location = new System.Drawing.Point(396, 28);
             this.checkBox34.Name = "checkBox34";
             this.checkBox34.Size = new System.Drawing.Size(76, 17);
             this.checkBox34.TabIndex = 50;
@@ -338,30 +306,18 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(571, 29);
+            this.labelControl2.Location = new System.Drawing.Point(498, 28);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(52, 13);
             this.labelControl2.TabIndex = 49;
             this.labelControl2.Text = "Descrición:";
-            // 
-            // checkBox26
-            // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox26.Enabled = false;
-            this.checkBox26.Location = new System.Drawing.Point(1008, 35);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(53, 17);
-            this.checkBox26.TabIndex = 24;
-            this.checkBox26.Text = "Otros";
-            this.checkBox26.UseVisualStyleBackColor = true;
             // 
             // checkBox28
             // 
             this.checkBox28.AutoSize = true;
             this.checkBox28.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBox28.Enabled = false;
-            this.checkBox28.Location = new System.Drawing.Point(286, 48);
+            this.checkBox28.Location = new System.Drawing.Point(267, 48);
             this.checkBox28.Name = "checkBox28";
             this.checkBox28.Size = new System.Drawing.Size(110, 17);
             this.checkBox28.TabIndex = 5;
@@ -373,7 +329,7 @@
             this.checkBox29.AutoSize = true;
             this.checkBox29.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkBox29.Enabled = false;
-            this.checkBox29.Location = new System.Drawing.Point(315, 29);
+            this.checkBox29.Location = new System.Drawing.Point(296, 29);
             this.checkBox29.Name = "checkBox29";
             this.checkBox29.Size = new System.Drawing.Size(81, 17);
             this.checkBox29.TabIndex = 4;
@@ -430,10 +386,8 @@
             // 
             // grpAntecedentesHabitosToxicos
             // 
-            this.grpAntecedentesHabitosToxicos.Controls.Add(this.txtDescripcion1);
+            this.grpAntecedentesHabitosToxicos.Controls.Add(this.txtDescripcionToxico);
             this.grpAntecedentesHabitosToxicos.Controls.Add(this.labelControl1);
-            this.grpAntecedentesHabitosToxicos.Controls.Add(this.checkBox27);
-            this.grpAntecedentesHabitosToxicos.Controls.Add(this.chkOtros);
             this.grpAntecedentesHabitosToxicos.Controls.Add(this.chkDrogas);
             this.grpAntecedentesHabitosToxicos.Controls.Add(this.chkTe);
             this.grpAntecedentesHabitosToxicos.Controls.Add(this.chkCafe);
@@ -446,46 +400,22 @@
             this.grpAntecedentesHabitosToxicos.TabIndex = 9;
             this.grpAntecedentesHabitosToxicos.Text = "Habitos Toxicos:";
             // 
-            // txtDescripcion1
+            // txtDescripcionToxico
             // 
-            this.txtDescripcion1.Enabled = false;
-            this.txtDescripcion1.Location = new System.Drawing.Point(624, 13);
-            this.txtDescripcion1.Multiline = true;
-            this.txtDescripcion1.Name = "txtDescripcion1";
-            this.txtDescripcion1.Size = new System.Drawing.Size(378, 48);
-            this.txtDescripcion1.TabIndex = 66;
+            this.txtDescripcionToxico.Enabled = false;
+            this.txtDescripcionToxico.Location = new System.Drawing.Point(566, 25);
+            this.txtDescripcionToxico.Multiline = true;
+            this.txtDescripcionToxico.Name = "txtDescripcionToxico";
+            this.txtDescripcionToxico.Size = new System.Drawing.Size(479, 36);
+            this.txtDescripcionToxico.TabIndex = 66;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(571, 26);
+            this.labelControl1.Location = new System.Drawing.Point(498, 26);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(52, 13);
             this.labelControl1.TabIndex = 50;
             this.labelControl1.Text = "Descrición:";
-            // 
-            // checkBox27
-            // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox27.Enabled = false;
-            this.checkBox27.Location = new System.Drawing.Point(1008, 35);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(53, 17);
-            this.checkBox27.TabIndex = 24;
-            this.checkBox27.Text = "Otros";
-            this.checkBox27.UseVisualStyleBackColor = true;
-            // 
-            // chkOtros
-            // 
-            this.chkOtros.AutoSize = true;
-            this.chkOtros.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkOtros.Enabled = false;
-            this.chkOtros.Location = new System.Drawing.Point(498, 25);
-            this.chkOtros.Name = "chkOtros";
-            this.chkOtros.Size = new System.Drawing.Size(53, 17);
-            this.chkOtros.TabIndex = 5;
-            this.chkOtros.Text = "Otros";
-            this.chkOtros.UseVisualStyleBackColor = true;
             // 
             // chkDrogas
             // 
@@ -890,7 +820,7 @@
             // 
             // grpSintomasyEvolucion
             // 
-            this.grpSintomasyEvolucion.Controls.Add(this.txtSintomas);
+            this.grpSintomasyEvolucion.Controls.Add(this.txtSintomasyEvolucion);
             this.grpSintomasyEvolucion.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpSintomasyEvolucion.Location = new System.Drawing.Point(0, 98);
             this.grpSintomasyEvolucion.Name = "grpSintomasyEvolucion";
@@ -898,15 +828,15 @@
             this.grpSintomasyEvolucion.TabIndex = 7;
             this.grpSintomasyEvolucion.Text = "Sintomas y Evolución:";
             // 
-            // txtSintomas
+            // txtSintomasyEvolucion
             // 
-            this.txtSintomas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSintomas.Enabled = false;
-            this.txtSintomas.Location = new System.Drawing.Point(2, 22);
-            this.txtSintomas.Multiline = true;
-            this.txtSintomas.Name = "txtSintomas";
-            this.txtSintomas.Size = new System.Drawing.Size(1100, 49);
-            this.txtSintomas.TabIndex = 64;
+            this.txtSintomasyEvolucion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSintomasyEvolucion.Enabled = false;
+            this.txtSintomasyEvolucion.Location = new System.Drawing.Point(2, 22);
+            this.txtSintomasyEvolucion.Multiline = true;
+            this.txtSintomasyEvolucion.Name = "txtSintomasyEvolucion";
+            this.txtSintomasyEvolucion.Size = new System.Drawing.Size(1100, 49);
+            this.txtSintomasyEvolucion.TabIndex = 64;
             // 
             // grpDatosGenerales
             // 
@@ -914,16 +844,16 @@
             this.grpDatosGenerales.Controls.Add(this.labelControl9);
             this.grpDatosGenerales.Controls.Add(this.txtPeso);
             this.grpDatosGenerales.Controls.Add(this.txtGenero);
-            this.grpDatosGenerales.Controls.Add(this.txtHistorial);
+            this.grpDatosGenerales.Controls.Add(this.txtIDHistorial);
             this.grpDatosGenerales.Controls.Add(this.txtEdad);
             this.grpDatosGenerales.Controls.Add(this.txtRemitidoPor);
-            this.grpDatosGenerales.Controls.Add(this.txtApellido);
-            this.grpDatosGenerales.Controls.Add(this.txtNombre);
+            this.grpDatosGenerales.Controls.Add(this.txtApellidos);
+            this.grpDatosGenerales.Controls.Add(this.txtNombres);
             this.grpDatosGenerales.Controls.Add(this.labelControl8);
             this.grpDatosGenerales.Controls.Add(this.lblPeso);
             this.grpDatosGenerales.Controls.Add(this.labelControl7);
             this.grpDatosGenerales.Controls.Add(this.lblRemitente);
-            this.grpDatosGenerales.Controls.Add(this.searchLookUpEdit1);
+            this.grpDatosGenerales.Controls.Add(this.txtBuscarPaciente);
             this.grpDatosGenerales.Controls.Add(this.lblBuscar);
             this.grpDatosGenerales.Controls.Add(this.lblEdad);
             this.grpDatosGenerales.Controls.Add(this.lblGenero);
@@ -954,7 +884,7 @@
             // txtPeso
             // 
             this.txtPeso.Enabled = false;
-            this.txtPeso.Location = new System.Drawing.Point(792, 69);
+            this.txtPeso.Location = new System.Drawing.Point(796, 69);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(89, 21);
             this.txtPeso.TabIndex = 68;
@@ -967,13 +897,13 @@
             this.txtGenero.Size = new System.Drawing.Size(89, 21);
             this.txtGenero.TabIndex = 67;
             // 
-            // txtHistorial
+            // txtIDHistorial
             // 
-            this.txtHistorial.Enabled = false;
-            this.txtHistorial.Location = new System.Drawing.Point(57, 24);
-            this.txtHistorial.Name = "txtHistorial";
-            this.txtHistorial.Size = new System.Drawing.Size(82, 21);
-            this.txtHistorial.TabIndex = 66;
+            this.txtIDHistorial.Enabled = false;
+            this.txtIDHistorial.Location = new System.Drawing.Point(57, 24);
+            this.txtIDHistorial.Name = "txtIDHistorial";
+            this.txtIDHistorial.Size = new System.Drawing.Size(82, 21);
+            this.txtIDHistorial.TabIndex = 66;
             // 
             // txtEdad
             // 
@@ -991,21 +921,21 @@
             this.txtRemitidoPor.Size = new System.Drawing.Size(288, 21);
             this.txtRemitidoPor.TabIndex = 64;
             // 
-            // txtApellido
+            // txtApellidos
             // 
-            this.txtApellido.Enabled = false;
-            this.txtApellido.Location = new System.Drawing.Point(376, 69);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(205, 21);
-            this.txtApellido.TabIndex = 63;
+            this.txtApellidos.Enabled = false;
+            this.txtApellidos.Location = new System.Drawing.Point(376, 69);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(205, 21);
+            this.txtApellidos.TabIndex = 63;
             // 
-            // txtNombre
+            // txtNombres
             // 
-            this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(160, 69);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(205, 21);
-            this.txtNombre.TabIndex = 62;
+            this.txtNombres.Enabled = false;
+            this.txtNombres.Location = new System.Drawing.Point(160, 69);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(205, 21);
+            this.txtNombres.TabIndex = 62;
             // 
             // labelControl8
             // 
@@ -1033,23 +963,23 @@
             // 
             // lblRemitente
             // 
-            this.lblRemitente.Location = new System.Drawing.Point(523, 25);
+            this.lblRemitente.Location = new System.Drawing.Point(523, 28);
             this.lblRemitente.Name = "lblRemitente";
             this.lblRemitente.Size = new System.Drawing.Size(64, 13);
             this.lblRemitente.TabIndex = 54;
             this.lblRemitente.Text = "Remitido Por:";
             // 
-            // searchLookUpEdit1
+            // txtBuscarPaciente
             // 
-            this.searchLookUpEdit1.Enabled = false;
-            this.searchLookUpEdit1.Location = new System.Drawing.Point(211, 25);
-            this.searchLookUpEdit1.Name = "searchLookUpEdit1";
-            this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtBuscarPaciente.Enabled = false;
+            this.txtBuscarPaciente.Location = new System.Drawing.Point(211, 25);
+            this.txtBuscarPaciente.Name = "txtBuscarPaciente";
+            this.txtBuscarPaciente.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.searchLookUpEdit1.Properties.View = this.searchLookUpEdit1View;
-            this.searchLookUpEdit1.Size = new System.Drawing.Size(245, 20);
-            this.searchLookUpEdit1.TabIndex = 51;
-            this.searchLookUpEdit1.EditValueChanged += new System.EventHandler(this.searchLookUpEdit1_EditValueChanged);
+            this.txtBuscarPaciente.Properties.View = this.searchLookUpEdit1View;
+            this.txtBuscarPaciente.Size = new System.Drawing.Size(282, 20);
+            this.txtBuscarPaciente.TabIndex = 51;
+            this.txtBuscarPaciente.EditValueChanged += new System.EventHandler(this.searchLookUpEdit1_EditValueChanged);
             // 
             // searchLookUpEdit1View
             // 
@@ -1068,7 +998,7 @@
             // 
             // lblEdad
             // 
-            this.lblEdad.Location = new System.Drawing.Point(586, 51);
+            this.lblEdad.Location = new System.Drawing.Point(593, 51);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(28, 13);
             this.lblEdad.TabIndex = 48;
@@ -1208,7 +1138,7 @@
             this.btnCancelar.Caption = "Cancelar";
             this.btnCancelar.Glyph = global::aPresentationLayer.Properties.Resources.Cancel;
             this.btnCancelar.Id = 4;
-            this.btnCancelar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C));
+            this.btnCancelar.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
@@ -1226,6 +1156,7 @@
             this.btnEnviar.Caption = "Enviar";
             this.btnEnviar.Glyph = global::aPresentationLayer.Properties.Resources.send;
             this.btnEnviar.Id = 6;
+            this.btnEnviar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
@@ -1234,7 +1165,7 @@
             this.btnEliminar.Caption = "Eliminar";
             this.btnEliminar.Glyph = global::aPresentationLayer.Properties.Resources.Delete;
             this.btnEliminar.Id = 7;
-            this.btnEliminar.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
+            this.btnEliminar.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
@@ -1325,7 +1256,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grpDatosGenerales)).EndInit();
             this.grpDatosGenerales.ResumeLayout(false);
             this.grpDatosGenerales.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBuscarPaciente.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             this.tabListaHistorialesClinicos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -1342,12 +1273,9 @@
         private DevExpress.XtraTab.XtraTabPage tabListaHistorialesClinicos;
         private DevExpress.XtraEditors.GroupControl grpAntecedenteFamiliar;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private System.Windows.Forms.CheckBox checkBox38;
         private DevExpress.XtraEditors.GroupControl grpAntecedenteFarmaceuticos;
-        private System.Windows.Forms.CheckBox checkBox35;
         private System.Windows.Forms.CheckBox checkBox34;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private System.Windows.Forms.CheckBox checkBox26;
         private System.Windows.Forms.CheckBox checkBox28;
         private System.Windows.Forms.CheckBox checkBox29;
         private System.Windows.Forms.CheckBox checkBox30;
@@ -1356,8 +1284,6 @@
         private System.Windows.Forms.CheckBox checkBox33;
         private DevExpress.XtraEditors.GroupControl grpAntecedentesHabitosToxicos;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.CheckBox checkBox27;
-        private System.Windows.Forms.CheckBox chkOtros;
         private System.Windows.Forms.CheckBox chkDrogas;
         private System.Windows.Forms.CheckBox chkTe;
         private System.Windows.Forms.CheckBox chkCafe;
@@ -1392,7 +1318,7 @@
         private DevExpress.XtraEditors.GroupControl grpSintomasyEvolucion;
         private DevExpress.XtraEditors.GroupControl grpDatosGenerales;
         private DevExpress.XtraEditors.LabelControl lblRemitente;
-        private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEdit1;
+        private DevExpress.XtraEditors.SearchLookUpEdit txtBuscarPaciente;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraEditors.LabelControl lblBuscar;
         private DevExpress.XtraEditors.LabelControl lblEdad;
@@ -1426,17 +1352,17 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private System.Windows.Forms.TextBox txtSintomas;
+        private System.Windows.Forms.TextBox txtSintomasyEvolucion;
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.TextBox txtGenero;
-        private System.Windows.Forms.TextBox txtHistorial;
+        private System.Windows.Forms.TextBox txtIDHistorial;
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.TextBox txtRemitidoPor;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDescripcion3;
-        private System.Windows.Forms.TextBox txtDescripcion2;
-        private System.Windows.Forms.TextBox txtDescripcion1;
+        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.TextBox txtDescripcionFamiliares;
+        private System.Windows.Forms.TextBox txtDescripcionFarmacologico;
+        private System.Windows.Forms.TextBox txtDescripcionToxico;
         private System.Windows.Forms.TextBox txtDescripcionAntecedentes;
         private System.Windows.Forms.TextBox txtIDpaciente;
         private DevExpress.XtraEditors.LabelControl labelControl9;

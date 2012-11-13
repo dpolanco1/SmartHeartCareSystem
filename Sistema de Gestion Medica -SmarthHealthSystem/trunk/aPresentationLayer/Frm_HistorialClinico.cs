@@ -14,8 +14,8 @@ namespace aPresentationLayer
 {
     public partial class Frm_HistorialClinico : DevExpress.XtraEditors.XtraForm
     {
-        Ent_HistorialClinico entHistorial = new Ent_HistorialClinico();
-        Ent_AntecedentesPersonales entAntecedes = new Ent_AntecedentesPersonales();
+        readonly Ent_HistorialClinico entHistorial = new Ent_HistorialClinico();
+        readonly Ent_AntecedentesPersonales entAntecedes = new Ent_AntecedentesPersonales();
       
    
 
@@ -47,7 +47,7 @@ namespace aPresentationLayer
 
             entHistorial.IDPaciente = Convert.ToInt32( txtIDpaciente.Text);
             entHistorial.RemitidoPor = txtRemitidoPor.Text;
-            entHistorial.SintomasEvoluciones = txtSintomas.Text;
+            entHistorial.SintomasEvoluciones = txtSintomasyEvolucion.Text;
 
             entAntecedes.InfartoMiocardioPrevio = chkInfartoMioPrev.Checked;
             entAntecedes.InsuficienciaCardiaca = chkInsuficienciaCardiaca.Checked;
@@ -73,7 +73,7 @@ namespace aPresentationLayer
             entAntecedes.EnfermedadesTransmisionSexual = chkEnferTransSexual.Checked;
             entAntecedes.Cancer = chkCancer.Checked;
             entAntecedes.Alergias = chkAlergias.Checked;
-            entAntecedes.Descripcion = txtDescripcionAntecedentes.Text;
+            entAntecedes.OtrosDescripcionPersonales = txtDescripcionAntecedentes.Text;
 
 
 
@@ -90,7 +90,7 @@ namespace aPresentationLayer
             Bl_AdministrarControles.HabilitarText(frm_historialclinico);
             //txtHistorial.Enabled = false;
             //txtIDpaciente.Enabled = false;
-            txtNombre.Focus();
+            txtNombres.Focus();
         }
 
         private void grpDatosGenerales_Paint(object sender, PaintEventArgs e)
