@@ -26,7 +26,7 @@ namespace BussinesLogicLayer
             bool flag = false;
             try
             {
-                if (String.IsNullOrEmpty(entConsulta.Motivo) || String.IsNullOrEmpty(entConsulta.Diagnostico) || entConsulta.IDPaciente == null || entConsulta.IDMedico == null)
+                if (String.IsNullOrEmpty(entConsulta.Motivo) || String.IsNullOrEmpty(entConsulta.Diagnostico))
                 {
 
                     flag = false;

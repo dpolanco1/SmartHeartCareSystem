@@ -180,6 +180,7 @@ namespace aPresentationLayer
             searchPaciente.Properties.DataSource = BL_Consultas.GetAllPacientes();
             searchPaciente.Properties.ValueMember = "idpaciente";
             searchPaciente.Properties.DisplayMember = "Paciente";
+            labelfecha.Text = DateTime.Today.ToShortDateString();
         }
 
   
