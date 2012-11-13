@@ -40,12 +40,17 @@ namespace aPresentationLayer
 
          private void Frm_Consultas_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'consultasDataSet.tbl_pacientes' table. You can move, or remove it, as needed.
-            this.tbl_pacientesTableAdapter.Fill(this.consultasDataSet.tbl_pacientes);
-            // TODO: This line of code loads data into the 'consultasDataSet.tbl_medicos' table. You can move, or remove it, as needed.
-            this.tbl_medicosTableAdapter.Fill(this.consultasDataSet.tbl_medicos);
-            labelfecha.Text = DateTime.Today.ToShortDateString();
+            searchMedico.Properties.DataSource = BL_Consultas.GetAllMedicos();
+            searchMedico.Properties.ValueMember = "idmedico";
+            searchMedico.Properties.DisplayMember = "Medico";
+          
 
+            searchPaciente.Properties.DataSource = BL_Consultas.GetAllPacientes();
+            searchPaciente.Properties.ValueMember = "idpaciente";
+            searchPaciente.Properties.DisplayMember = "Paciente";
+            
+
+           
         }
 
         private void btnNuevo_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -117,17 +122,17 @@ namespace aPresentationLayer
 
         private void searchLookUpEdit1View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            txtNombremedico.Text = searchMedico.Properties.View.GetFocusedRowCellValue("Nombre").ToString();
+            txtNombremedico.Text = searchMedico.Properties.View.GetFocusedRowCellValue("Medico").ToString();
             txtespacialidad.Text = searchMedico.Properties.View.GetFocusedRowCellValue("Especialidad").ToString();
         }
 
         private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            txtNombrePaciente.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("Nombre").ToString();
-            txtedad.Text = Edad(Convert.ToDateTime(searchPaciente.Properties.View.GetFocusedRowCellValue("FechaNacimiento"))).ToString();
-            txtpeso.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("Peso").ToString();
-            txtaltura.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("Altura").ToString();
-            txttiposangre.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("TipoSangre").ToString();
+            txtNombrePaciente.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("Paciente").ToString();
+            txtedad.Text = Edad(Convert.ToDateTime(searchPaciente.Properties.View.GetFocusedRowCellValue("fechanacimiento"))).ToString();
+            txtpeso.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("peso").ToString();
+            txtaltura.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("altura").ToString();
+            txttiposangre.Text = searchPaciente.Properties.View.GetFocusedRowCellValue("tiposangre").ToString();
 
         }
         #region Funcion obtener edad
@@ -156,8 +161,8 @@ namespace aPresentationLayer
                 {
                     if (tabPrincipalConsultas.SelectedTabPage == tabConsultas)
                     {
-                        consulta.IDPaciente = Convert.ToInt32(searchPaciente.Properties.View.GetFocusedRowCellValue("IdPaciente"));
-                        consulta.IDMedico = Convert.ToInt32(searchMedico.Properties.View.GetFocusedRowCellValue("IdMedico"));
+                        consulta.IDPaciente = Convert.ToInt32(searchPaciente.Properties.View.GetFocusedRowCellValue("idpaciente"));
+                        consulta.IDMedico = Convert.ToInt32(searchMedico.Properties.View.GetFocusedRowCellValue("idmedico"));
                         consulta.Motivo = txtMotivo.Text;
                         consulta.Diagnostico = txtdiagnostico.Text;
                         if (BL_Consultas.Insert(consulta) && flag== 1 && flag2==1)
@@ -183,10 +188,12 @@ namespace aPresentationLayer
 
         private void btnCancelar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Bl_AdministrarControles.DeshabilitarText(this);
+           /* Bl_AdministrarControles.DeshabilitarText(this);
             Bl_AdministrarControles.VaciarText(this);
             searchMedico.Enabled = false;
-            searchPaciente.Enabled = false;
+            searchPaciente.Enabled = false;*/
+            MessageBox.Show(searchMedico.Properties.View.GetFocusedRowCellValue("idmedico").ToString());
+            MessageBox.Show(searchPaciente.Properties.View.GetFocusedRowCellValue("idpaciente").ToString());
         }
 
     }

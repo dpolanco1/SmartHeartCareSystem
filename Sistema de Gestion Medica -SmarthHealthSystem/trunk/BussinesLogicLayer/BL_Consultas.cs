@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 
 namespace BussinesLogicLayer
 {
@@ -52,6 +53,15 @@ namespace BussinesLogicLayer
             else { flag = false; }
 
             return flag;
+        }
+
+        public static DataTable GetAllMedicos()
+        {
+            return Da_Consultas.GetAllMedicos();
+        }
+        public static DataTable GetAllPacientes()
+        {
+            return Da_Consultas.GetAllPacientes();
         }
     }
 }
