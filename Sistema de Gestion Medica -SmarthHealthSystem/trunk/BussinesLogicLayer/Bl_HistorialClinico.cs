@@ -14,17 +14,9 @@ namespace BussinesLogicLayer
      
         public static bool Insert(Ent_HistorialClinico entHistorialClinico)
         {
-            bool flag = false;
 
-            //Validaciones
-
-
-            Da_HistorialClinico.Insert(entHistorialClinico);
-            flag = true;
-           
-
-            return flag;
-
+            return Da_HistorialClinico.Insert(entHistorialClinico);
+            
         }
         public bool Update()
         {

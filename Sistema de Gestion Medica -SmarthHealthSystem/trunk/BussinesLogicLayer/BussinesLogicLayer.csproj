@@ -43,11 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bl_AdministrarControles.cs" />
+    <Compile Include="Bl_AntecedentesFamiliares.cs" />
+    <Compile Include="Bl_AntecedentesFarmacologicos.cs" />
     <Compile Include="Bl_AntecedentesPersonales.cs" />
     <Compile Include="BL_Consultas.cs" />
     <Compile Include="Bl_Contacto.cs" />
     <Compile Include="Bl_Direcciones.cs" />
-    <Compile Include="Bl_HabitosToxicos.cs" />
+    <Compile Include="Bl_AntecedentesToxicos.cs" />
     <Compile Include="Bl_HistorialClinico.cs" />
     <Compile Include="Bl_Paciente.cs" />
     <Compile Include="Bl_Telefono.cs" />

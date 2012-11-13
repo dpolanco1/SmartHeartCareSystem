@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Da_AntecedentesFamiliares.cs" />
+    <Compile Include="Da_AntecedentesFarmacologicos.cs" />
     <Compile Include="Da_AntecedentesPersonales.cs" />
+    <Compile Include="Da_AntecedentesToxicos.cs" />
     <Compile Include="Da_Connection.cs" />
     <Compile Include="Da_Consultas.cs" />
     <Compile Include="Da_Contacto.cs" />

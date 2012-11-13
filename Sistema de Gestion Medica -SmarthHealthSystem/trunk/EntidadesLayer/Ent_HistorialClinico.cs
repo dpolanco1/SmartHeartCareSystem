@@ -11,7 +11,7 @@ namespace EntidadesLayer
         public int IDPaciente { get; set; }
         public string RemitidoPor { get; set; }
         public string SintomasEvoluciones { get; set; }
-
+        public DateTime FechaCreacion { get; set; }
 
     }
 }

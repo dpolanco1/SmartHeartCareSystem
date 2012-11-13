@@ -7,9 +7,8 @@ namespace EntidadesLayer
 {
   public  class Ent_AntecedentesPersonales
     {
-        
-        public bool   IDAntecendesPersonales { get; set; }
-        public bool IDhistorial { get; set; }
+        public int IDAntecedentePersonales { get; set; }
+        public int IDHistorial { get; set; }
         public bool   InfartoMiocardioPrevio  { get; set; }
         public bool  InsuficienciaCardiaca  { get; set; }
         public bool  HipertensionArterial  { get; set; }
@@ -33,8 +32,8 @@ namespace EntidadesLayer
         public bool    EnfermedadesHigado { get; set; }
         public bool   EnfermedadesTransmisionSexual { get; set; }
         public bool     Cancer { get; set; }
-        public bool Alergias { get; set; }
-        public string Descripcion { get; set; }
+        public bool    Alergias { get; set; }
+        public string OtrosDescripcionPersonales { get; set; }
 
     }
 }

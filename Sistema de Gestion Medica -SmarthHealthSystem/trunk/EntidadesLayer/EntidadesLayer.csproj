@@ -39,11 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ent_AntecedentesFamiliares.cs" />
+    <Compile Include="Ent_AntecedentesFarmacologicos.cs" />
     <Compile Include="Ent_AntecedentesPersonales.cs" />
+    <Compile Include="Ent_AntecedentesToxicos.cs" />
     <Compile Include="Ent_Consultas.cs" />
     <Compile Include="Ent_Contacto.cs" />
     <Compile Include="Ent_Direcciones.cs" />
-    <Compile Include="Ent_HabitosToxicos.cs" />
     <Compile Include="Ent_HistorialClinico.cs" />
     <Compile Include="Ent_Paciente.cs" />
     <Compile Include="Ent_Telefono.cs" />

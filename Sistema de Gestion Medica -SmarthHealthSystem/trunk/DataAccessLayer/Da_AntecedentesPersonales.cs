@@ -19,15 +19,13 @@ namespace DataAccessLayer
           try
           {
               
-
-
-              SqlCommand command = new SqlCommand("Spr_Insert_AntecedentesPersonales", Da_Connection.Get);
+          SqlCommand command = new SqlCommand("Spr_Insert_AntecedentesPersonales", Da_Connection.Get);
           command.CommandType = CommandType.StoredProcedure;
 
           Da_Connection.Get.Open();
 
 
-          //command.Parameters.Add(new SqlParameter("@IDHistorial", entAntecedentes.IDhistorial) { SqlDbType = SqlDbType.Bit });
+          command.Parameters.Add(new SqlParameter("@IDHistorial", entAntecedentes.IDHistorial) { SqlDbType = SqlDbType.Int });
           command.Parameters.Add(new SqlParameter("@InfartoMiocardioPrevio", entAntecedentes.InfartoMiocardioPrevio) { SqlDbType = SqlDbType.Bit });
           command.Parameters.Add(new SqlParameter("@InsuficienciaCardiaca", entAntecedentes.InsuficienciaCardiaca) { SqlDbType = SqlDbType.Bit });
           command.Parameters.Add(new SqlParameter("@HipertensionArterial", entAntecedentes.HipertensionArterial) { SqlDbType = SqlDbType.Bit });
@@ -52,12 +50,17 @@ namespace DataAccessLayer
           command.Parameters.Add(new SqlParameter("@EnfermedadesTransmisionSexual", entAntecedentes.EnfermedadesTransmisionSexual) { SqlDbType = SqlDbType.Bit });
           command.Parameters.Add(new SqlParameter("@Cancer", entAntecedentes.Cancer) { SqlDbType = SqlDbType.Bit });
           command.Parameters.Add(new SqlParameter("@Alergias", entAntecedentes.Alergias) { SqlDbType = SqlDbType.Bit });
-          command.Parameters.Add(new SqlParameter("@Descripcion", entAntecedentes.Descripcion) { SqlDbType = SqlDbType.NVarChar });
+          command.Parameters.Add(new SqlParameter("@Descripcion", entAntecedentes.OtrosDescripcionPersonales) { SqlDbType = SqlDbType.NVarChar });
 
           command.ExecuteNonQuery();
 
               flag = true;
           }
+          catch (Exception ex)
+          {
+
+              Console.WriteLine(ex);
+          } // end catch
           finally
           {
 

@@ -10,15 +10,10 @@ namespace BussinesLogicLayer
   public  class Bl_AntecedentesPersonales
     {
 
-   
-
-      public static bool Insert(Ent_AntecedentesPersonales entAntecedes)
+      public static bool Insert(Ent_AntecedentesPersonales entAntecedesPersonales)
       { 
-      
           //Validaciones de Lugar
-
-
-        return  Da_AntecedentesPersonales.Insert(entAntecedes);
+        return  Da_AntecedentesPersonales.Insert(entAntecedesPersonales);
                 
       }
 
